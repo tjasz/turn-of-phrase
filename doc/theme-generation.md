@@ -19,6 +19,6 @@ The user can browse or search the library of themes created by other players bas
 The game device gives players the option to create custom themes
 through the following process:
 1. The user enters in a Title and Description for their theme.
-1. The system queries an LLM for 500 new challenges of the desired theme, each containing a main phrase and 4 related phrases. It provides the Title and Description from the user as well as a description of the gameplay as context.
+1. The system queries an LLM for 100 new challenges of the desired theme, each containing a main phrase and 4 related phrases. It provides the Title and Description from the user as well as a description of the gameplay as context.
 1. The system creates a new Theme in its database, as well as the new Challenges.
 1. The new Theme and set of Challenges are saved to the user's device for later use.
