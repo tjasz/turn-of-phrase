@@ -225,8 +225,8 @@ function App() {
             {challenge.Related.map((r: string, i: number) => <li key={i}>{r}</li>)}
           </ul>
           <div className="actions">
-            <button className="correct" onClick={handleCorrect}>✔️ Correct</button>
             <button className="skip" onClick={handleSkip}>❌ Skip</button>
+            <button className="correct" onClick={handleCorrect}>✔️ Correct</button>
           </div>
         </div>
       )}
