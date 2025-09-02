@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Challenge from './Challenge';
 import './App.css';
 
 // Theme data (General Knowledge)
@@ -219,16 +220,12 @@ function App() {
         )}
       </div>
       {timerActive && challenge && (
-        <div className="challenge">
-          <h3>{challenge.Main}</h3>
-          <ul>
-            {challenge.Related.map((r: string, i: number) => <li key={i}>{r}</li>)}
-          </ul>
-          <div className="actions">
-            <button className="skip" onClick={handleSkip}>❌ Skip</button>
-            <button className="correct" onClick={handleCorrect}>✔️ Correct</button>
-          </div>
-        </div>
+        <Challenge
+          main={challenge.Main}
+          related={challenge.Related}
+          onSkip={handleSkip}
+          onCorrect={handleCorrect}
+        />
       )}
       {showResults && (
         <div className="results">
