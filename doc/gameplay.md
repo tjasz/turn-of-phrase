@@ -32,9 +32,10 @@ Turn of Phrase is played with an electronic game device.
 
 The game device consists of a virtual timer, scorekeeper, and a stack of phrase challenges.
 
-On each phrase challenge is written a 1-3 word improper or proper noun phrase such as "refrigerator", "ice ax", or "The Lion King". Gerund phrases such as "cutting the cheese" could also be included.
+On each phrase challenge is written a 1-3 word improper or proper noun phrase such as "refrigerator", "ice ax", or "Lion King". Gerund phrases such as "cutting the cheese" could also be included.
 
-Each phrase challenge also includes 4 additional related 1-2 word phrases. A challenge where the main phrase is "George Washington" might include "First", "President", "United States", and "Founding Father".
+Each phrase challenge also includes 4 additional related 1-2 word phrases (these can be any part of speech). A challenge where the main phrase is "George Washington" might include "First", "President", "United States", and "Founding Father".
+Small, common words such as "the" or "of" will not be included.
 
 ## Taking Turns
 
