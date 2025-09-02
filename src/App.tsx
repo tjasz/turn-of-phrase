@@ -7,26 +7,10 @@ type Challenge = {
   Related: string[];
 };
 
-const generalTheme: {
+type Theme = {
   Title: string;
   Description: string;
   Challenges: Challenge[];
-} = {
-  Title: "General Knowledge",
-  Description: "Common everyday things that many people know.",
-  Challenges: [
-    { Main: "Refrigerator", Related: ["Cold", "Kitchen", "Food", "Appliance"] },
-    { Main: "Umbrella", Related: ["Rain", "Cover", "Weather", "Handle"] },
-    { Main: "Bicycle", Related: ["Wheels", "Pedal", "Ride", "Helmet"] },
-    { Main: "Toothbrush", Related: ["Teeth", "Brush", "Bathroom", "Clean"] },
-    { Main: "Television", Related: ["Screen", "Remote", "Watch", "Channel"] },
-    { Main: "Pencil", Related: ["Write", "Eraser", "Lead", "Paper"] },
-    { Main: "Backpack", Related: ["Bag", "Strap", "School", "Carry"] },
-    { Main: "Sunflower", Related: ["Yellow", "Tall", "Seed", "Bloom"] },
-    { Main: "Passport", Related: ["Travel", "Document", "Country", "Stamp"] },
-    { Main: "Chocolate", Related: ["Sweet", "Candy", "Cocoa", "Bar"] },
-    // ... (add more challenges as needed)
-  ]
 };
 
 const TURN_TIME_OPTIONS = [10, 20, 30, 40, 50, 60];
@@ -49,6 +33,11 @@ function App() {
   const [penalty, setPenalty] = useState(-1);
   const [gameStarted, setGameStarted] = useState(false);
 
+  // Theme loading
+  const [theme, setTheme] = useState<Theme | null>(null);
+  const [loadingTheme, setLoadingTheme] = useState(true);
+  const [themeError, setThemeError] = useState<string | null>(null);
+
   // Game states
   const [challenges, setChallenges] = useState<Challenge[]>([]);
   const [currentChallengeIdx, setCurrentChallengeIdx] = useState(0);
@@ -61,9 +50,28 @@ function App() {
   const [skippedCount, setSkippedCount] = useState(0);
   const [showResults, setShowResults] = useState(false);
 
+  // Load theme from public/themes/general.json
+  useEffect(() => {
+    setLoadingTheme(true);
+    fetch('/themes/general.json')
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load theme');
+        return res.json();
+      })
+      .then((data: Theme) => {
+        setTheme(data);
+        setLoadingTheme(false);
+      })
+      .catch(err => {
+        setThemeError(err.message);
+        setLoadingTheme(false);
+      });
+  }, []);
+
   // Start game
   const startGame = () => {
-    setChallenges(shuffle(generalTheme.Challenges));
+    if (!theme) return;
+    setChallenges(shuffle(theme.Challenges));
     setCurrentChallengeIdx(0);
     setScore(Array(numTeams).fill(0));
     setTurnTeam(0);
@@ -122,12 +130,21 @@ function App() {
   const winnerIdx = score.findIndex((s) => s >= pointsToWin);
 
   // UI
+  if (loadingTheme) {
+    return <div className="setup"><h1>Loading theme...</h1></div>;
+  }
+  if (themeError) {
+    return <div className="setup"><h1>Error loading theme</h1><p>{themeError}</p></div>;
+  }
+  if (!theme) {
+    return <div className="setup"><h1>No theme loaded</h1></div>;
+  }
   if (!gameStarted) {
     return (
       <div className="setup">
         <h1>Turn of Phrase</h1>
-        <h2>General Knowledge Theme</h2>
-        <p>{generalTheme.Description}</p>
+        <h2>{theme.Title}</h2>
+        <p>{theme.Description}</p>
         <div>
           <label>Number of Teams: </label>
           <input type="number" min={2} max={4} value={numTeams} onChange={e => {
