@@ -241,10 +241,7 @@ function App() {
       )}
       <Scoreboard scores={score} />
       <div className="timer">
-        <span>Time Left: {timer}s</span>
-        {!timerActive && !showResults && (
-          <div><button onClick={() => setTimerActive(true)}>Start Turn</button></div>
-        )}
+        <span>Time Left: <pre className="counter">{timer.toString().padStart(2, ' ')}</pre>s</span>
       </div>
       {timerActive && challenge && (
         <Challenge
@@ -260,6 +257,11 @@ function App() {
           onConfirm={endTurn}
         />
       )}
+      <div className="actions">
+        {!timerActive && !showResults && (
+          <div><button onClick={() => setTimerActive(true)}>Start Turn</button></div>
+        )}
+      </div>
     </div>
   );
 }
