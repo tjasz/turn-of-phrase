@@ -135,9 +135,11 @@ The phrase challenges presented in the stack come from the set selected.
 
 Built-in themes include the following:
 - General Knowledge
+- Animals
+- Food & Drink
 - Media (Music, Movies, TV)
 - Play (Sports, Games, Hobbies)
-- The World (Politics, Geography, History)
+- Our World (Politics, Geography, History)
 - Science
 
 The device also allows the creation of additional themes if connected to the internet.
