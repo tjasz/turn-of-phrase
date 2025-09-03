@@ -1,4 +1,5 @@
 import React from 'react';
+import GameBody from './GameBody';
 
 interface StartOfTurnProps {
   onConfirm: () => void;
@@ -6,9 +7,11 @@ interface StartOfTurnProps {
 
 const StartOfTurn: React.FC<StartOfTurnProps> = ({ onConfirm }) => {
   return (
-    <div className="start-of-turn">
-      <button onClick={onConfirm}>Start Turn</button>
-    </div>
+    <GameBody
+      actions={[
+        { label: 'Start Turn', action: onConfirm },
+      ]}
+    />
   );
 };
 

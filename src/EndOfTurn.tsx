@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import GameBody from "./GameBody";
 
 interface ChallengeSummary {
   main: string;
@@ -26,7 +27,11 @@ const EndOfTurn: React.FC<EndOfTurnProps> = ({ challenges, onConfirm }) => {
   const skippedCount = results.length - correctCount;
 
   return (
-    <div className="results">
+    <GameBody
+      actions={[
+        { label: 'Confirm & End Turn', action: () => onConfirm(correctCount, skippedCount) }
+      ]}
+    >
       <h2>End of Turn</h2>
       <ul>
         {results.map((challenge, idx) => (
@@ -44,10 +49,7 @@ const EndOfTurn: React.FC<EndOfTurnProps> = ({ challenges, onConfirm }) => {
       </ul>
       <p>Correct: {correctCount}</p>
       <p>Skipped: {skippedCount}</p>
-      <button onClick={() => onConfirm(correctCount, skippedCount)}>
-        Confirm & End Turn
-      </button>
-    </div>
+    </GameBody>
   );
 };
 
