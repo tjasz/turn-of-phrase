@@ -46,7 +46,7 @@ function App() {
   const [timerActive, setTimerActive] = useState(false);
   const [score, setScore] = useState(Array(numTeams).fill(0));
   const [turnTeam, setTurnTeam] = useState(0);
-  const [turnPlayer, setTurnPlayer] = useState(0);
+  const [turnPlayer, setTurnPlayer] = useState(Array(numTeams).fill(0));
   const [correctCount, setCorrectCount] = useState(0);
   const [skippedCount, setSkippedCount] = useState(0);
   const [showResults, setShowResults] = useState(false);
@@ -76,7 +76,7 @@ function App() {
     setCurrentChallengeIdx(0);
     setScore(Array(numTeams).fill(0));
     setTurnTeam(0);
-    setTurnPlayer(0);
+    setTurnPlayer(Array(numTeams).fill(0));
     setGameStarted(true);
     setShowResults(false);
     setTimer(turnTime);
@@ -118,7 +118,7 @@ function App() {
     });
     // Next team/player
     setTurnTeam((team) => (team + 1) % numTeams);
-    setTurnPlayer((player) => (player + 1) % playersPerTeam[turnTeam]);
+    setTurnPlayer((player) => player.map((p, i) => i === turnTeam ? (p + 1) % playersPerTeam[turnTeam] : p));
     setCurrentChallengeIdx((idx) => idx + 1);
     setTimer(turnTime);
     setTimerActive(false);
@@ -207,7 +207,7 @@ function App() {
   const challenge: Challenge | undefined = challenges[currentChallengeIdx];
   return (
     <div className="gameplay">
-      <h2>Team {turnTeam + 1} - Player {turnPlayer + 1}'s Turn</h2>
+      <h2>Team {turnTeam + 1} - Player {turnPlayer[turnTeam] + 1}'s Turn</h2>
       <div className="scoreboard">
         {score.map((s, i) => (
           <span key={i}>Team {i + 1}: {s} &nbsp;</span>
