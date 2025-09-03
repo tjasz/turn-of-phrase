@@ -8,6 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      base: '/turn-of-phrase/',
       manifest: {
         name: 'Turn of Phrase',
         short_name: 'Phrase',
