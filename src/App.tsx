@@ -4,6 +4,7 @@ import Timer from './Timer';
 import Challenge from './Challenge';
 import EndOfTurn from './EndOfTurn';
 import './App.css';
+import StartOfTurn from './StartOfTurn';
 
 // Theme data (General Knowledge)
 type Challenge = {
@@ -258,7 +259,7 @@ function App() {
       )}
       <div className="actions">
         {!timerActive && !showResults && (
-          <div><button onClick={() => setTimerActive(true)}>Start Turn</button></div>
+          <StartOfTurn onConfirm={() => setTimerActive(true)} />
         )}
       </div>
     </div>
