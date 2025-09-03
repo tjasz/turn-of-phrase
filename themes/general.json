@@ -1,0 +1,933 @@
+{
+  "Title": "General Knowledge",
+  "Description": "Common everyday things that many people know.",
+  "Challenges": [
+    {
+      "Main": "Refrigerator",
+      "Related": [
+        "Cold",
+        "Kitchen",
+        "Food",
+        "Appliance"
+      ]
+    },
+    {
+      "Main": "Umbrella",
+      "Related": [
+        "Rain",
+        "Cover",
+        "Weather",
+        "Handle"
+      ]
+    },
+    {
+      "Main": "Bicycle",
+      "Related": [
+        "Wheels",
+        "Pedal",
+        "Ride",
+        "Helmet"
+      ]
+    },
+    {
+      "Main": "Toothbrush",
+      "Related": [
+        "Teeth",
+        "Brush",
+        "Bathroom",
+        "Clean"
+      ]
+    },
+    {
+      "Main": "Television",
+      "Related": [
+        "Screen",
+        "Remote",
+        "Watch",
+        "Channel"
+      ]
+    },
+    {
+      "Main": "Pencil",
+      "Related": [
+        "Write",
+        "Eraser",
+        "Lead",
+        "Paper"
+      ]
+    },
+    {
+      "Main": "Backpack",
+      "Related": [
+        "Bag",
+        "Strap",
+        "School",
+        "Carry"
+      ]
+    },
+    {
+      "Main": "Sunflower",
+      "Related": [
+        "Yellow",
+        "Tall",
+        "Seed",
+        "Bloom"
+      ]
+    },
+    {
+      "Main": "Passport",
+      "Related": [
+        "Travel",
+        "Document",
+        "Country",
+        "Stamp"
+      ]
+    },
+    {
+      "Main": "Chocolate",
+      "Related": [
+        "Sweet",
+        "Candy",
+        "Cocoa",
+        "Bar"
+      ]
+    },
+    {
+      "Main": "Volcano",
+      "Related": [
+        "Lava",
+        "Eruption",
+        "Mountain",
+        "Ash"
+      ]
+    },
+    {
+      "Main": "Giraffe",
+      "Related": [
+        "Tall",
+        "Neck",
+        "Spots",
+        "Africa"
+      ]
+    },
+    {
+      "Main": "Subway",
+      "Related": [
+        "Train",
+        "Underground",
+        "Station",
+        "Transit"
+      ]
+    },
+    {
+      "Main": "Pyramid",
+      "Related": [
+        "Egypt",
+        "Triangle",
+        "Ancient",
+        "Stone"
+      ]
+    },
+    {
+      "Main": "Violin",
+      "Related": [
+        "String",
+        "Music",
+        "Bow",
+        "Orchestra"
+      ]
+    },
+    {
+      "Main": "Candle",
+      "Related": [
+        "Wax",
+        "Light",
+        "Flame",
+        "Scent"
+      ]
+    },
+    {
+      "Main": "Penguin",
+      "Related": [
+        "Bird",
+        "Ice",
+        "Waddle",
+        "Antarctica"
+      ]
+    },
+    {
+      "Main": "Jacket",
+      "Related": [
+        "Coat",
+        "Warm",
+        "Zipper",
+        "Sleeve"
+      ]
+    },
+    {
+      "Main": "Mountain",
+      "Related": [
+        "Peak",
+        "Climb",
+        "Range",
+        "Snow"
+      ]
+    },
+    {
+      "Main": "Telescope",
+      "Related": [
+        "Stars",
+        "Space",
+        "Lens",
+        "Observe"
+      ]
+    },
+    {
+      "Main": "Wallet",
+      "Related": [
+        "Money",
+        "Cards",
+        "Pocket",
+        "Leather"
+      ]
+    },
+    {
+      "Main": "Carpet",
+      "Related": [
+        "Floor",
+        "Rug",
+        "Soft",
+        "Room"
+      ]
+    },
+    {
+      "Main": "Cactus",
+      "Related": [
+        "Desert",
+        "Spines",
+        "Green",
+        "Plant"
+      ]
+    },
+    {
+      "Main": "Puzzle",
+      "Related": [
+        "Piece",
+        "Solve",
+        "Game",
+        "Picture"
+      ]
+    },
+    {
+      "Main": "Helicopter",
+      "Related": [
+        "Rotor",
+        "Fly",
+        "Pilot",
+        "Rescue"
+      ]
+    },
+    {
+      "Main": "Sandwich",
+      "Related": [
+        "Bread",
+        "Meat",
+        "Cheese",
+        "Lunch"
+      ]
+    },
+    {
+      "Main": "Compass",
+      "Related": [
+        "Direction",
+        "North",
+        "Travel",
+        "Magnet"
+      ]
+    },
+    {
+      "Main": "Robot",
+      "Related": [
+        "Machine",
+        "AI",
+        "Metal",
+        "Program"
+      ]
+    },
+    {
+      "Main": "Globe",
+      "Related": [
+        "Earth",
+        "Map",
+        "World",
+        "Spin"
+      ]
+    },
+    {
+      "Main": "Mosquito",
+      "Related": [
+        "Insect",
+        "Bite",
+        "Blood",
+        "Itch"
+      ]
+    },
+    {
+      "Main": "Castle",
+      "Related": [
+        "Fort",
+        "King",
+        "Stone",
+        "Tower"
+      ]
+    },
+    {
+      "Main": "Saxophone",
+      "Related": [
+        "Music",
+        "Brass",
+        "Jazz",
+        "Instrument"
+      ]
+    },
+    {
+      "Main": "Pumpkin",
+      "Related": [
+        "Orange",
+        "Halloween",
+        "Pie",
+        "Seed"
+      ]
+    },
+    {
+      "Main": "Elevator",
+      "Related": [
+        "Lift",
+        "Floor",
+        "Button",
+        "Building"
+      ]
+    },
+    {
+      "Main": "Dragon",
+      "Related": [
+        "Fire",
+        "Myth",
+        "Wings",
+        "Scales"
+      ]
+    },
+    {
+      "Main": "Suitcase",
+      "Related": [
+        "Travel",
+        "Luggage",
+        "Handle",
+        "Pack"
+      ]
+    },
+    {
+      "Main": "Parrot",
+      "Related": [
+        "Bird",
+        "Colorful",
+        "Talk",
+        "Feather"
+      ]
+    },
+    {
+      "Main": "Igloo",
+      "Related": [
+        "Ice",
+        "Snow",
+        "House",
+        "Cold"
+      ]
+    },
+    {
+      "Main": "Rocket",
+      "Related": [
+        "Space",
+        "Launch",
+        "Engine",
+        "Astronaut"
+      ]
+    },
+    {
+      "Main": "Banana",
+      "Related": [
+        "Fruit",
+        "Yellow",
+        "Peel",
+        "Monkey"
+      ]
+    },
+    {
+      "Main": "Mirror",
+      "Related": [
+        "Reflect",
+        "Glass",
+        "Image",
+        "Bathroom"
+      ]
+    },
+    {
+      "Main": "Sailboat",
+      "Related": [
+        "Water",
+        "Wind",
+        "Boat",
+        "Sail"
+      ]
+    },
+    {
+      "Main": "Panda",
+      "Related": [
+        "Bear",
+        "Black",
+        "White",
+        "Bamboo"
+      ]
+    },
+    {
+      "Main": "Stapler",
+      "Related": [
+        "Paper",
+        "Office",
+        "Metal",
+        "Pin"
+      ]
+    },
+    {
+      "Main": "Volleyball",
+      "Related": [
+        "Net",
+        "Ball",
+        "Serve",
+        "Team"
+      ]
+    },
+    {
+      "Main": "Lighthouse",
+      "Related": [
+        "Light",
+        "Coast",
+        "Tower",
+        "Guide"
+      ]
+    },
+    {
+      "Main": "Trophy",
+      "Related": [
+        "Win",
+        "Award",
+        "Gold",
+        "Prize"
+      ]
+    },
+    {
+      "Main": "Crayon",
+      "Related": [
+        "Color",
+        "Draw",
+        "Wax",
+        "Box"
+      ]
+    },
+    {
+      "Main": "Owl",
+      "Related": [
+        "Bird",
+        "Night",
+        "Hoot",
+        "Feather"
+      ]
+    },
+    {
+      "Main": "Keyboard",
+      "Related": [
+        "Type",
+        "Computer",
+        "Keys",
+        "Input"
+      ]
+    },
+    {
+      "Main": "Dolphin",
+      "Related": [
+        "Ocean",
+        "Swim",
+        "Smart",
+        "Mammal"
+      ]
+    },
+    {
+      "Main": "Pizza Cutter",
+      "Related": [
+        "Slice",
+        "Wheel",
+        "Kitchen",
+        "Sharp"
+      ]
+    },
+    {
+      "Main": "Firefighter",
+      "Related": [
+        "Rescue",
+        "Fire",
+        "Truck",
+        "Helmet"
+      ]
+    },
+    {
+      "Main": "Snowman",
+      "Related": [
+        "Winter",
+        "Snow",
+        "Carrot",
+        "Cold"
+      ]
+    },
+    {
+      "Main": "Garden",
+      "Related": [
+        "Plant",
+        "Flower",
+        "Soil",
+        "Grow"
+      ]
+    },
+    {
+      "Main": "Thermometer",
+      "Related": [
+        "Temperature",
+        "Heat",
+        "Cold",
+        "Measure"
+      ]
+    },
+    {
+      "Main": "Envelope",
+      "Related": [
+        "Mail",
+        "Letter",
+        "Stamp",
+        "Paper"
+      ]
+    },
+    {
+      "Main": "Flashlight",
+      "Related": [
+        "Light",
+        "Battery",
+        "Dark",
+        "Beam"
+      ]
+    },
+    {
+      "Main": "Dictionary",
+      "Related": [
+        "Words",
+        "Book",
+        "Definition",
+        "Language"
+      ]
+    },
+    {
+      "Main": "Thermos",
+      "Related": [
+        "Hot",
+        "Cold",
+        "Drink",
+        "Bottle"
+      ]
+    },
+    {
+      "Main": "Scissors",
+      "Related": [
+        "Cut",
+        "Blade",
+        "Paper",
+        "Sharp"
+      ]
+    },
+    {
+      "Main": "Calendar",
+      "Related": [
+        "Date",
+        "Month",
+        "Year",
+        "Schedule"
+      ]
+    },
+    {
+      "Main": "Microscope",
+      "Related": [
+        "Lens",
+        "Science",
+        "Small",
+        "View"
+      ]
+    },
+    {
+      "Main": "Suit",
+      "Related": [
+        "Jacket",
+        "Tie",
+        "Formal",
+        "Pants"
+      ]
+    },
+    {
+      "Main": "Camera",
+      "Related": [
+        "Photo",
+        "Lens",
+        "Picture",
+        "Flash"
+      ]
+    },
+    {
+      "Main": "Notebook",
+      "Related": [
+        "Paper",
+        "Write",
+        "School",
+        "Spiral"
+      ]
+    },
+    {
+      "Main": "Gloves",
+      "Related": [
+        "Hands",
+        "Warm",
+        "Winter",
+        "Fingers"
+      ]
+    },
+    {
+      "Main": "Clock",
+      "Related": [
+        "Time",
+        "Hour",
+        "Minute",
+        "Alarm"
+      ]
+    },
+    {
+      "Main": "Toaster",
+      "Related": [
+        "Bread",
+        "Kitchen",
+        "Toast",
+        "Heat"
+      ]
+    },
+    {
+      "Main": "Map",
+      "Related": [
+        "Directions",
+        "Country",
+        "Road",
+        "Travel"
+      ]
+    },
+    {
+      "Main": "Soap",
+      "Related": [
+        "Clean",
+        "Wash",
+        "Bubble",
+        "Bar"
+      ]
+    },
+    {
+      "Main": "Ruler",
+      "Related": [
+        "Measure",
+        "Length",
+        "Straight",
+        "Centimeter"
+      ]
+    },
+    {
+      "Main": "Chair",
+      "Related": [
+        "Sit",
+        "Leg",
+        "Seat",
+        "Table"
+      ]
+    },
+    {
+      "Main": "Blanket",
+      "Related": [
+        "Warm",
+        "Bed",
+        "Cover",
+        "Sleep"
+      ]
+    },
+    {
+      "Main": "Bottle",
+      "Related": [
+        "Water",
+        "Drink",
+        "Cap",
+        "Plastic"
+      ]
+    },
+    {
+      "Main": "Eagle",
+      "Related": [
+        "Bird",
+        "Fly",
+        "Wings",
+        "America"
+      ]
+    },
+    {
+      "Main": "Cookie",
+      "Related": [
+        "Sweet",
+        "Bake",
+        "Chocolate",
+        "Snack"
+      ]
+    },
+    {
+      "Main": "Hammer",
+      "Related": [
+        "Tool",
+        "Nail",
+        "Wood",
+        "Hit"
+      ]
+    },
+    {
+      "Main": "Shampoo",
+      "Related": [
+        "Hair",
+        "Wash",
+        "Bottle",
+        "Clean"
+      ]
+    },
+    {
+      "Main": "Tent",
+      "Related": [
+        "Camping",
+        "Outdoor",
+        "Pole",
+        "Canvas"
+      ]
+    },
+    {
+      "Main": "Apple",
+      "Related": [
+        "Fruit",
+        "Red",
+        "Tree",
+        "Pie"
+      ]
+    },
+    {
+      "Main": "Bus",
+      "Related": [
+        "Transport",
+        "School",
+        "Stop",
+        "Passenger"
+      ]
+    },
+    {
+      "Main": "Cloud",
+      "Related": [
+        "Sky",
+        "Rain",
+        "White",
+        "Weather"
+      ]
+    },
+    {
+      "Main": "Spoon",
+      "Related": [
+        "Eat",
+        "Soup",
+        "Metal",
+        "Bowl"
+      ]
+    },
+    {
+      "Main": "Desk",
+      "Related": [
+        "Work",
+        "Office",
+        "Table",
+        "Drawer"
+      ]
+    },
+    {
+      "Main": "Shirt",
+      "Related": [
+        "Clothes",
+        "Sleeve",
+        "Button",
+        "Collar"
+      ]
+    },
+    {
+      "Main": "Train",
+      "Related": [
+        "Track",
+        "Station",
+        "Engine",
+        "Travel"
+      ]
+    },
+    {
+      "Main": "Mouse",
+      "Related": [
+        "Computer",
+        "Click",
+        "Pointer",
+        "Scroll"
+      ]
+    },
+    {
+      "Main": "Egg",
+      "Related": [
+        "Breakfast",
+        "Shell",
+        "Chicken",
+        "Yolk"
+      ]
+    },
+    {
+      "Main": "Star",
+      "Related": [
+        "Sky",
+        "Night",
+        "Light",
+        "Space"
+      ]
+    },
+    {
+      "Main": "Wallet",
+      "Related": [
+        "Money",
+        "Cards",
+        "Pocket",
+        "Leather"
+      ]
+    },
+    {
+      "Main": "Soap",
+      "Related": [
+        "Clean",
+        "Wash",
+        "Bubble",
+        "Bar"
+      ]
+    },
+    {
+      "Main": "Fan",
+      "Related": [
+        "Air",
+        "Cool",
+        "Blade",
+        "Spin"
+      ]
+    },
+    {
+      "Main": "Radio",
+      "Related": [
+        "Music",
+        "Station",
+        "Speaker",
+        "Broadcast"
+      ]
+    },
+    {
+      "Main": "Bed",
+      "Related": [
+        "Sleep",
+        "Mattress",
+        "Pillow",
+        "Blanket"
+      ]
+    },
+    {
+      "Main": "Cup",
+      "Related": [
+        "Drink",
+        "Handle",
+        "Tea",
+        "Coffee"
+      ]
+    },
+    {
+      "Main": "Window",
+      "Related": [
+        "Glass",
+        "View",
+        "Frame",
+        "Open"
+      ]
+    },
+    {
+      "Main": "Leaf",
+      "Related": [
+        "Tree",
+        "Green",
+        "Plant",
+        "Fall"
+      ]
+    },
+    {
+      "Main": "Ring",
+      "Related": [
+        "Finger",
+        "Jewelry",
+        "Gold",
+        "Circle"
+      ]
+    },
+    {
+      "Main": "Bottle",
+      "Related": [
+        "Water",
+        "Drink",
+        "Cap",
+        "Plastic"
+      ]
+    },
+    {
+      "Main": "Bridge",
+      "Related": [
+        "River",
+        "Road",
+        "Cross",
+        "Support"
+      ]
+    },
+    {
+      "Main": "Cheese",
+      "Related": [
+        "Milk",
+        "Dairy",
+        "Slice",
+        "Food"
+      ]
+    },
+    {
+      "Main": "Triangle",
+      "Related": [
+        "Shape",
+        "Three",
+        "Side",
+        "Corner"
+      ]
+    }
+  ]
+}
