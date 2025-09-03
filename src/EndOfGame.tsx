@@ -9,12 +9,11 @@ interface EndOfGameProps {
 const EndOfGame: React.FC<EndOfGameProps> = ({ winnerIdx, onConfirm }) => {
   return (
     <GameBody
+      title={`Team ${winnerIdx + 1} Wins!`}
       actions={[
         { label: 'Play Again', action: onConfirm },
       ]}
-    >
-      <h1>Team {winnerIdx + 1} Wins!</h1>
-    </GameBody>
+    />
   );
 };
 

@@ -7,13 +7,15 @@ export interface GameAction {
 }
 
 interface GameBodyProps {
+  title: string;
   actions: GameAction[];
   children?: ReactNode;
 }
 
-const GameBody: React.FC<GameBodyProps> = ({ actions, children }) => {
+const GameBody: React.FC<GameBodyProps> = ({ title, actions, children }) => {
   return (
     <div className="gameBodyContainer">
+      <h3>{title}</h3>
       <div className="mainGameBody">
         {children}
       </div>

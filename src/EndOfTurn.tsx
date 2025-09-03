@@ -28,11 +28,11 @@ const EndOfTurn: React.FC<EndOfTurnProps> = ({ challenges, onConfirm }) => {
 
   return (
     <GameBody
+      title="End of Turn"
       actions={[
         { label: 'Confirm & End Turn', action: () => onConfirm(correctCount, skippedCount) }
       ]}
     >
-      <h2>End of Turn</h2>
       <ul>
         {results.map((challenge, idx) => (
           <li key={idx}>

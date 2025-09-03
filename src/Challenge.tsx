@@ -10,12 +10,12 @@ export type ChallengeProps = {
 
 const Challenge: React.FC<ChallengeProps> = ({ main, related, onSkip, onCorrect }) => (
   <GameBody
+    title={main}
     actions={[
       { label: '❌ Skip', action: onSkip },
       { label: '✔️ Correct', action: onCorrect },
     ]}
   >
-    <h3>{main}</h3>
     <ul>
       {related.map((r, i) => <li key={i}>{r}</li>)}
     </ul>

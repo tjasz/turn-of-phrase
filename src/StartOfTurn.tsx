@@ -8,6 +8,7 @@ interface StartOfTurnProps {
 const StartOfTurn: React.FC<StartOfTurnProps> = ({ onConfirm }) => {
   return (
     <GameBody
+      title="Start of Turn"
       actions={[
         { label: 'Start Turn', action: onConfirm },
       ]}
