@@ -5,6 +5,7 @@ import Challenge from './Challenge';
 import EndOfTurn from './EndOfTurn';
 import './App.css';
 import StartOfTurn from './StartOfTurn';
+import EndOfGame from './EndOfGame';
 
 // Theme data (General Knowledge)
 type Challenge = {
@@ -221,11 +222,10 @@ function App() {
 
   if (winnerIdx !== -1) {
     return (
-      <div className="winner">
-        <h1>Team {winnerIdx + 1} Wins!</h1>
-        <p>Score: {score[winnerIdx]}</p>
-        <button onClick={() => setGameStarted(false)}>Play Again</button>
-      </div>
+      <EndOfGame
+        winnerIdx={winnerIdx}
+        onConfirm={() => setGameStarted(false)}
+      />
     );
   }
 
