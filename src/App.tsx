@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Scoreboard from './Scoreboard';
+import Timer from './Timer';
 import Challenge from './Challenge';
 import EndOfTurn from './EndOfTurn';
 import './App.css';
@@ -240,9 +241,7 @@ function App() {
         </div>
       )}
       <Scoreboard scores={score} />
-      <div className="timer">
-        <span>Time Left: <pre className="counter">{timer.toString().padStart(2, ' ')}</pre>s</span>
-      </div>
+      <Timer timeLeft={timer} />
       {timerActive && challenge && (
         <Challenge
           main={challenge.Main}
