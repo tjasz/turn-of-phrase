@@ -15,8 +15,8 @@ interface GameBodyProps {
 const GameBody: React.FC<GameBodyProps> = ({ title, actions, children }) => {
   return (
     <div className="gameBodyContainer">
-      <h3>{title}</h3>
       <div className="mainGameBody">
+        <h3>{title}</h3>
         {children}
       </div>
       <div className="actions">

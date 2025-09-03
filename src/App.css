@@ -44,9 +44,15 @@
   color: #888;
 }
 
+.gameBodyContainer {}
+
 .mainGameBody {
   height: 40vh;
   overflow-y: auto;
+  background: #888;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 1em;
 }
 
 .mainGameBody ul {
