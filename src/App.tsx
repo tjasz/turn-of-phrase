@@ -257,11 +257,9 @@ function App() {
           onConfirm={endTurn}
         />
       )}
-      <div className="actions">
-        {!timerActive && !showResults && (
-          <StartOfTurn onConfirm={() => setTimerActive(true)} />
-        )}
-      </div>
+      {!timerActive && !showResults && (
+        <StartOfTurn onConfirm={() => setTimerActive(true)} />
+      )}
     </div>
   );
 }
