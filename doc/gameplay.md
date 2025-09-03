@@ -65,11 +65,11 @@ The player must describe the challenge's main phrase to their teammates, trying 
 
 Restrictions:
 - The player must not say any part of the main phrase or any part of the related phrases on the challenge.
-Ex: in the "George Washington" challenge example, a player could not say "The state of Washington is named after him." Exception: once the teammates have said a part of the phrase, the player may say that part.
-- The player must not say any part of one of the related phrases. Ex: in the "George Washington" challenge example, one of the related phrases is "Founding Father". The player could not say "Establishing Father" because "Father" is part of one of the related phrases. Exception: once the teammates have said a phrase or part of a phrase, the player may say it.
+Ex: in the "George Washington" challenge example, a player could not say "The state of Washington is named after him." They also could not say "Founding citizen of our country" because "Founding Father" is one of the related phrases. Exception: once the teammates have said a part of the phrase, the player may say that part.
+- The player must not say any other form of a word found in the main phrase or the related phrases, such as plural forms of nouns or conjugations of verbs. Even though "see" and "saw" sound very different, they are both forms of "to see". If one is in the related phrases, neither should be said.
 - The player should not describe the spelling of the phrase. Ex: do not say "starts with G".
 - The player must not describe the sound of the phrase. No "rhymes with" or "sounds like".
-- The player should not use gestures.
+- The player must not use gestures.
 
 Explicitly allowed strategies:
 - Describing the meaning of the phrase.
