@@ -48,8 +48,8 @@ function App() {
   const [score, setScore] = useState(Array(numTeams).fill(0));
   const [turnTeam, setTurnTeam] = useState(0);
   const [turnPlayer, setTurnPlayer] = useState(Array(numTeams).fill(0));
-  const [correctCount, setCorrectCount] = useState(0);
-  const [skippedCount, setSkippedCount] = useState(0);
+  // Track challenge results for the current turn
+  const [turnChallenges, setTurnChallenges] = useState<{ main: string; succeeded: boolean }[]>([]);
   const [showResults, setShowResults] = useState(false);
 
   // Load theme from public/themes/general.json
@@ -82,8 +82,7 @@ function App() {
     setShowResults(false);
     setTimer(turnTime);
     setTimerActive(false);
-    setCorrectCount(0);
-    setSkippedCount(0);
+    setTurnChallenges([]);
   };
 
   // Timer effect
@@ -102,16 +101,20 @@ function App() {
 
   // Handle challenge actions
   const handleCorrect = () => {
-    setCorrectCount((c) => c + 1);
+    // Mark current challenge as succeeded
+    const challenge = challenges[currentChallengeIdx];
+    setTurnChallenges(prev => [...prev, { main: challenge.Main, succeeded: true }]);
     setCurrentChallengeIdx((idx) => idx + 1);
   };
   const handleSkip = () => {
-    setSkippedCount((s) => s + 1);
+    // Mark current challenge as skipped
+    const challenge = challenges[currentChallengeIdx];
+    setTurnChallenges(prev => [...prev, { main: challenge.Main, succeeded: false }]);
     setCurrentChallengeIdx((idx) => idx + 1);
   };
 
   // End turn and update score
-  const endTurn = () => {
+  const endTurn = (correctCount: number, skippedCount: number) => {
     setScore((prev) => {
       const newScore = [...prev];
       newScore[turnTeam] += correctCount + penalty * skippedCount;
@@ -123,8 +126,7 @@ function App() {
     setCurrentChallengeIdx((idx) => idx + 1);
     setTimer(turnTime);
     setTimerActive(false);
-    setCorrectCount(0);
-    setSkippedCount(0);
+    setTurnChallenges([]);
     setShowResults(false);
   };
 
@@ -208,6 +210,8 @@ function App() {
 
   // Gameplay UI
   const challenge: Challenge | undefined = challenges[currentChallengeIdx];
+  // Exclude the last challenge (timed out) from review
+  const reviewedChallenges = turnChallenges;
   return (
     <div className="gameplay">
       <h2>Team {turnTeam + 1} - Player {turnPlayer[turnTeam] + 1}'s Turn</h2>
@@ -237,9 +241,8 @@ function App() {
       )}
       {showResults && (
         <EndOfTurn
-          correctCount={correctCount}
-          skippedCount={skippedCount}
-          endTurn={endTurn}
+          challenges={reviewedChallenges}
+          onConfirm={endTurn}
         />
       )}
     </div>
