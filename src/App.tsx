@@ -128,7 +128,9 @@ function App() {
   };
 
   // Check for winner
-  const winnerIdx = score.findIndex((s) => s >= pointsToWin);
+  const winnerIdx = score.some(s => s >= pointsToWin) && (turnTeam === 0)
+    ? score.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0)
+    : -1;
 
   // UI
   if (loadingTheme) {
@@ -208,6 +210,11 @@ function App() {
   return (
     <div className="gameplay">
       <h2>Team {turnTeam + 1} - Player {turnPlayer[turnTeam] + 1}'s Turn</h2>
+      {score.some(s => s >= pointsToWin) && (
+        <div className="final-round">
+          <h2>Final Round!</h2>
+        </div>
+      )}
       <div className="scoreboard">
         {score.map((s, i) => (
           <span key={i}>Team {i + 1}: {s} &nbsp;</span>
