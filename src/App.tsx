@@ -148,18 +148,18 @@ function App() {
         <p>{theme.Description}</p>
         <div>
           <label>Number of Teams: </label>
-          <input type="number" min={2} max={4} value={numTeams} onChange={e => {
-            const val = Math.max(2, Math.min(4, Number(e.target.value)));
+          <input type="number" min={2} max={5} value={numTeams} onChange={e => {
+            const val = Math.max(2, Math.min(5, Number(e.target.value)));
             setNumTeams(val);
             setPlayersPerTeam(Array(val).fill(2));
           }} />
         </div>
         <div>
-          {Array(numTeams).map((_, i) => (
+          {Array(numTeams).fill(0).map((_, i) => (
             <div key={i}>
               <label>Players in Team {i + 1}: </label>
-              <input type="number" min={1} max={8} value={playersPerTeam[i] || 2} onChange={e => {
-                const val = Math.max(1, Math.min(8, Number(e.target.value)));
+              <input type="number" min={2} max={12} value={playersPerTeam[i] || 2} onChange={e => {
+                const val = Math.max(2, Math.min(12, Number(e.target.value)));
                 setPlayersPerTeam(prev => {
                   const arr = [...prev];
                   arr[i] = val;
