@@ -57,11 +57,12 @@ function App() {
   const [showResults, setShowResults] = useState(false);
 
   // Load theme when selectedThemeFile changes
+  console.log(import.meta.env.BASE_URL)
   useEffect(() => {
     setLoadingTheme(true);
     setTheme(null);
     setThemeError(null);
-    fetch(`${import.meta.env.BASE_URL}/themes/${selectedThemeFile}`)
+    fetch(`${import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL}/themes/${selectedThemeFile}`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to load theme');
         return res.json();
