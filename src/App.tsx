@@ -36,8 +36,10 @@ function App() {
   const [gameStarted, setGameStarted] = useState(false);
 
   // Theme selection and loading
-  const themeFiles = ['general.json', 'animals.json'];
-  const [selectedThemeFile, setSelectedThemeFile] = useState<string>(themeFiles[0]);
+  // Dynamically get theme files using import.meta.glob
+  const themeModules = import.meta.glob('/public/themes/*.json');
+  const themeFiles = Object.keys(themeModules).map(path => path.split('/').pop()!);
+  const [selectedThemeFile, setSelectedThemeFile] = useState<string>(themeFiles[0] || '');
   const [theme, setTheme] = useState<Theme | null>(null);
   const [loadingTheme, setLoadingTheme] = useState(false);
   const [themeError, setThemeError] = useState<string | null>(null);
