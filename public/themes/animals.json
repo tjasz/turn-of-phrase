@@ -1,0 +1,852 @@
+{
+  "Title": "Animals",
+  "Description": "Commonly-known animals.",
+  "Challenges": [
+    {
+      "Main": "Lion",
+      "Related": [
+        "Mane",
+        "Roar",
+        "Savannah",
+        "Pride"
+      ]
+    },
+    {
+      "Main": "Elephant",
+      "Related": [
+        "Trunk",
+        "Tusks",
+        "Large",
+        "Africa"
+      ]
+    },
+    {
+      "Main": "Dolphin",
+      "Related": [
+        "Ocean",
+        "Smart",
+        "Swim",
+        "Mammal"
+      ]
+    },
+    {
+      "Main": "Penguin",
+      "Related": [
+        "Ice",
+        "Waddle",
+        "Antarctica",
+        "Bird"
+      ]
+    },
+    {
+      "Main": "Giraffe",
+      "Related": [
+        "Neck",
+        "Tall",
+        "Spots",
+        "Africa"
+      ]
+    },
+    {
+      "Main": "Tiger",
+      "Related": [
+        "Stripes",
+        "Jungle",
+        "Big Cat",
+        "Predator"
+      ]
+    },
+    {
+      "Main": "Bear",
+      "Related": [
+        "Hibernation",
+        "Fur",
+        "Claws",
+        "Forest"
+      ]
+    },
+    {
+      "Main": "Wolf",
+      "Related": [
+        "Pack",
+        "Howl",
+        "Forest",
+        "Predator"
+      ]
+    },
+    {
+      "Main": "Kangaroo",
+      "Related": [
+        "Pouch",
+        "Jump",
+        "Australia",
+        "Marsupial"
+      ]
+    },
+    {
+      "Main": "Horse",
+      "Related": [
+        "Hoof",
+        "Mane",
+        "Gallop",
+        "Stable"
+      ]
+    },
+    {
+      "Main": "Rabbit",
+      "Related": [
+        "Hop",
+        "Burrow",
+        "Carrot",
+        "Ears"
+      ]
+    },
+    {
+      "Main": "Owl",
+      "Related": [
+        "Night",
+        "Hoot",
+        "Feather",
+        "Eyes"
+      ]
+    },
+    {
+      "Main": "Shark",
+      "Related": [
+        "Fin",
+        "Ocean",
+        "Teeth",
+        "Predator"
+      ]
+    },
+    {
+      "Main": "Frog",
+      "Related": [
+        "Jump",
+        "Pond",
+        "Green",
+        "Tadpole"
+      ]
+    },
+    {
+      "Main": "Snake",
+      "Related": [
+        "Slither",
+        "Venom",
+        "Scales",
+        "Reptile"
+      ]
+    },
+    {
+      "Main": "Monkey",
+      "Related": [
+        "Banana",
+        "Tree",
+        "Swing",
+        "Tail"
+      ]
+    },
+    {
+      "Main": "Dog",
+      "Related": [
+        "Bark",
+        "Pet",
+        "Tail",
+        "Fetch"
+      ]
+    },
+    {
+      "Main": "Cat",
+      "Related": [
+        "Meow",
+        "Whiskers",
+        "Pet",
+        "Claws"
+      ]
+    },
+    {
+      "Main": "Zebra",
+      "Related": [
+        "Stripes",
+        "Africa",
+        "Grassland",
+        "Hoof"
+      ]
+    },
+    {
+      "Main": "Crocodile",
+      "Related": [
+        "River",
+        "Teeth",
+        "Reptile",
+        "Swamp"
+      ]
+    },
+    {
+      "Main": "Bat",
+      "Related": [
+        "Night",
+        "Wings",
+        "Cave",
+        "Mammal"
+      ]
+    },
+    {
+      "Main": "Peacock",
+      "Related": [
+        "Feather",
+        "Colorful",
+        "Tail",
+        "Display"
+      ]
+    },
+    {
+      "Main": "Goat",
+      "Related": [
+        "Horn",
+        "Farm",
+        "Milk",
+        "Hoof"
+      ]
+    },
+    {
+      "Main": "Sheep",
+      "Related": [
+        "Wool",
+        "Farm",
+        "Flock",
+        "Hoof"
+      ]
+    },
+    {
+      "Main": "Cow",
+      "Related": [
+        "Milk",
+        "Farm",
+        "Hoof",
+        "Grass"
+      ]
+    },
+    {
+      "Main": "Pig",
+      "Related": [
+        "Mud",
+        "Farm",
+        "Snout",
+        "Oink"
+      ]
+    },
+    {
+      "Main": "Chicken",
+      "Related": [
+        "Egg",
+        "Farm",
+        "Feather",
+        "Cluck"
+      ]
+    },
+    {
+      "Main": "Duck",
+      "Related": [
+        "Quack",
+        "Pond",
+        "Feather",
+        "Bill"
+      ]
+    },
+    {
+      "Main": "Turkey",
+      "Related": [
+        "Feather",
+        "Gobble",
+        "Farm",
+        "Tail"
+      ]
+    },
+    {
+      "Main": "Deer",
+      "Related": [
+        "Antler",
+        "Forest",
+        "Hoof",
+        "Fawn"
+      ]
+    },
+    {
+      "Main": "Moose",
+      "Related": [
+        "Antler",
+        "Large",
+        "Forest",
+        "Hoof"
+      ]
+    },
+    {
+      "Main": "Hippopotamus",
+      "Related": [
+        "River",
+        "Large",
+        "Africa",
+        "Mouth"
+      ]
+    },
+    {
+      "Main": "Rhinoceros",
+      "Related": [
+        "Horn",
+        "Thick Skin",
+        "Africa",
+        "Large"
+      ]
+    },
+    {
+      "Main": "Squirrel",
+      "Related": [
+        "Nut",
+        "Tree",
+        "Tail",
+        "Climb"
+      ]
+    },
+    {
+      "Main": "Mouse",
+      "Related": [
+        "Small",
+        "Cheese",
+        "Tail",
+        "Rodent"
+      ]
+    },
+    {
+      "Main": "Rat",
+      "Related": [
+        "Rodent",
+        "Tail",
+        "City",
+        "Cheese"
+      ]
+    },
+    {
+      "Main": "Beaver",
+      "Related": [
+        "Dam",
+        "Tail",
+        "Wood",
+        "River"
+      ]
+    },
+    {
+      "Main": "Otter",
+      "Related": [
+        "River",
+        "Swim",
+        "Fur",
+        "Playful"
+      ]
+    },
+    {
+      "Main": "Seal",
+      "Related": [
+        "Ocean",
+        "Flipper",
+        "Swim",
+        "Blubber"
+      ]
+    },
+    {
+      "Main": "Walrus",
+      "Related": [
+        "Tusk",
+        "Blubber",
+        "Ocean",
+        "Whiskers"
+      ]
+    },
+    {
+      "Main": "Camel",
+      "Related": [
+        "Desert",
+        "Hump",
+        "Sand",
+        "Long Neck"
+      ]
+    },
+    {
+      "Main": "Leopard",
+      "Related": [
+        "Spots",
+        "Big Cat",
+        "Jungle",
+        "Predator"
+      ]
+    },
+    {
+      "Main": "Cheetah",
+      "Related": [
+        "Fast",
+        "Spots",
+        "Savannah",
+        "Big Cat"
+      ]
+    },
+    {
+      "Main": "Hyena",
+      "Related": [
+        "Laugh",
+        "Savannah",
+        "Pack",
+        "Predator"
+      ]
+    },
+    {
+      "Main": "Ant",
+      "Related": [
+        "Colony",
+        "Small",
+        "Insect",
+        "Work"
+      ]
+    },
+    {
+      "Main": "Bee",
+      "Related": [
+        "Honey",
+        "Hive",
+        "Insect",
+        "Sting"
+      ]
+    },
+    {
+      "Main": "Butterfly",
+      "Related": [
+        "Wings",
+        "Colorful",
+        "Caterpillar",
+        "Flower"
+      ]
+    },
+    {
+      "Main": "Spider",
+      "Related": [
+        "Web",
+        "Eight Legs",
+        "Insect",
+        "Crawl"
+      ]
+    },
+    {
+      "Main": "Crab",
+      "Related": [
+        "Claw",
+        "Ocean",
+        "Shell",
+        "Sand"
+      ]
+    },
+    {
+      "Main": "Lobster",
+      "Related": [
+        "Claw",
+        "Ocean",
+        "Red",
+        "Shell"
+      ]
+    },
+    {
+      "Main": "Octopus",
+      "Related": [
+        "Tentacle",
+        "Ocean",
+        "Ink",
+        "Smart"
+      ]
+    },
+    {
+      "Main": "Jellyfish",
+      "Related": [
+        "Ocean",
+        "Tentacle",
+        "Sting",
+        "Transparent"
+      ]
+    },
+    {
+      "Main": "Starfish",
+      "Related": [
+        "Ocean",
+        "Arm",
+        "Sand",
+        "Echinoderm"
+      ]
+    },
+    {
+      "Main": "Clam",
+      "Related": [
+        "Shell",
+        "Ocean",
+        "Pearl",
+        "Sand"
+      ]
+    },
+    {
+      "Main": "Snail",
+      "Related": [
+        "Shell",
+        "Slow",
+        "Garden",
+        "Trail"
+      ]
+    },
+    {
+      "Main": "Slug",
+      "Related": [
+        "Garden",
+        "Slow",
+        "Trail",
+        "No Shell"
+      ]
+    },
+    {
+      "Main": "Parrot",
+      "Related": [
+        "Colorful",
+        "Talk",
+        "Feather",
+        "Tropical"
+      ]
+    },
+    {
+      "Main": "Eagle",
+      "Related": [
+        "Wings",
+        "America",
+        "Nest",
+        "Predator"
+      ]
+    },
+    {
+      "Main": "Falcon",
+      "Related": [
+        "Fast",
+        "Wings",
+        "Predator",
+        "Sky"
+      ]
+    },
+    {
+      "Main": "Hawk",
+      "Related": [
+        "Predator",
+        "Wings",
+        "Sky",
+        "Nest"
+      ]
+    },
+    {
+      "Main": "Swan",
+      "Related": [
+        "White",
+        "Lake",
+        "Feather",
+        "Graceful"
+      ]
+    },
+    {
+      "Main": "Goose",
+      "Related": [
+        "Lake",
+        "Feather",
+        "Honk",
+        "Fly"
+      ]
+    },
+    {
+      "Main": "Pigeon",
+      "Related": [
+        "City",
+        "Fly",
+        "Bird",
+        "Coop"
+      ]
+    },
+    {
+      "Main": "Flamingo",
+      "Related": [
+        "Pink",
+        "Leg",
+        "Lake",
+        "Bird"
+      ]
+    },
+    {
+      "Main": "Woodpecker",
+      "Related": [
+        "Tree",
+        "Peck",
+        "Beak",
+        "Forest"
+      ]
+    },
+    {
+      "Main": "Robin",
+      "Related": [
+        "Red Breast",
+        "Bird",
+        "Spring",
+        "Nest"
+      ]
+    },
+    {
+      "Main": "Crow",
+      "Related": [
+        "Black",
+        "Bird",
+        "Smart",
+        "Caw"
+      ]
+    },
+    {
+      "Main": "Sparrow",
+      "Related": [
+        "Small",
+        "Bird",
+        "Nest",
+        "Fly"
+      ]
+    },
+    {
+      "Main": "Hummingbird",
+      "Related": [
+        "Small",
+        "Fast",
+        "Flower",
+        "Wings"
+      ]
+    },
+    {
+      "Main": "Peacock",
+      "Related": [
+        "Colorful",
+        "Tail",
+        "Display",
+        "Bird"
+      ]
+    },
+    {
+      "Main": "Turkey",
+      "Related": [
+        "Feather",
+        "Gobble",
+        "Farm",
+        "Tail"
+      ]
+    },
+    {
+      "Main": "Rooster",
+      "Related": [
+        "Crow",
+        "Farm",
+        "Feather",
+        "Morning"
+      ]
+    },
+    {
+      "Main": "Lizard",
+      "Related": [
+        "Reptile",
+        "Tail",
+        "Scales",
+        "Sun"
+      ]
+    },
+    {
+      "Main": "Turtle",
+      "Related": [
+        "Shell",
+        "Slow",
+        "Reptile",
+        "Water"
+      ]
+    },
+    {
+      "Main": "Alligator",
+      "Related": [
+        "Swamp",
+        "Teeth",
+        "Reptile",
+        "Green"
+      ]
+    },
+    {
+      "Main": "Salamander",
+      "Related": [
+        "Amphibian",
+        "Tail",
+        "Moist",
+        "Small"
+      ]
+    },
+    {
+      "Main": "Toad",
+      "Related": [
+        "Wart",
+        "Hop",
+        "Amphibian",
+        "Pond"
+      ]
+    },
+    {
+      "Main": "Mole",
+      "Related": [
+        "Dig",
+        "Tunnel",
+        "Small",
+        "Blind"
+      ]
+    },
+    {
+      "Main": "Hedgehog",
+      "Related": [
+        "Spine",
+        "Small",
+        "Roll",
+        "Nocturnal"
+      ]
+    },
+    {
+      "Main": "Porcupine",
+      "Related": [
+        "Quill",
+        "Rodent",
+        "Forest",
+        "Spine"
+      ]
+    },
+    {
+      "Main": "Armadillo",
+      "Related": [
+        "Armor",
+        "Roll",
+        "Insect",
+        "Shell"
+      ]
+    },
+    {
+      "Main": "Sloth",
+      "Related": [
+        "Slow",
+        "Tree",
+        "Sleep",
+        "Climb"
+      ]
+    },
+    {
+      "Main": "Chimpanzee",
+      "Related": [
+        "Smart",
+        "Ape",
+        "Jungle",
+        "Tool"
+      ]
+    },
+    {
+      "Main": "Orangutan",
+      "Related": [
+        "Ape",
+        "Red",
+        "Jungle",
+        "Tree"
+      ]
+    },
+    {
+      "Main": "Gorilla",
+      "Related": [
+        "Large",
+        "Ape",
+        "Jungle",
+        "Strength"
+      ]
+    },
+    {
+      "Main": "Panda",
+      "Related": [
+        "Bear",
+        "Bamboo",
+        "Black",
+        "White"
+      ]
+    },
+    {
+      "Main": "Koala",
+      "Related": [
+        "Eucalyptus",
+        "Australia",
+        "Tree",
+        "Marsupial"
+      ]
+    },
+    {
+      "Main": "Platypus",
+      "Related": [
+        "Duck Bill",
+        "Australia",
+        "Egg",
+        "Mammal"
+      ]
+    },
+    {
+      "Main": "Raccoon",
+      "Related": [
+        "Mask",
+        "Trash",
+        "Night",
+        "Tail"
+      ]
+    },
+    {
+      "Main": "Skunk",
+      "Related": [
+        "Smell",
+        "Black",
+        "White",
+        "Tail"
+      ]
+    },
+    {
+      "Main": "Weasel",
+      "Related": [
+        "Small",
+        "Long",
+        "Fur",
+        "Predator"
+      ]
+    },
+    {
+      "Main": "Ferret",
+      "Related": [
+        "Long",
+        "Pet",
+        "Fur",
+        "Tunnel"
+      ]
+    },
+    {
+      "Main": "Mink",
+      "Related": [
+        "Fur",
+        "Small",
+        "Water",
+        "Predator"
+      ]
+    },
+    {
+      "Main": "Otter",
+      "Related": [
+        "River",
+        "Swim",
+        "Fur",
+        "Playful"
+      ]
+    }
+  ]
+}
