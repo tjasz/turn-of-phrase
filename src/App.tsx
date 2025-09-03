@@ -35,9 +35,11 @@ function App() {
   const [penalty, setPenalty] = useState(-1);
   const [gameStarted, setGameStarted] = useState(false);
 
-  // Theme loading
+  // Theme selection and loading
+  const themeFiles = ['general.json', 'animals.json'];
+  const [selectedThemeFile, setSelectedThemeFile] = useState<string>(themeFiles[0]);
   const [theme, setTheme] = useState<Theme | null>(null);
-  const [loadingTheme, setLoadingTheme] = useState(true);
+  const [loadingTheme, setLoadingTheme] = useState(false);
   const [themeError, setThemeError] = useState<string | null>(null);
 
   // Game states
@@ -52,10 +54,12 @@ function App() {
   const [turnChallenges, setTurnChallenges] = useState<{ main: string; succeeded: boolean }[]>([]);
   const [showResults, setShowResults] = useState(false);
 
-  // Load theme from public/themes/general.json
+  // Load theme when selectedThemeFile changes
   useEffect(() => {
     setLoadingTheme(true);
-    fetch('/themes/general.json')
+    setTheme(null);
+    setThemeError(null);
+    fetch(`/themes/${selectedThemeFile}`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to load theme');
         return res.json();
@@ -68,7 +72,7 @@ function App() {
         setThemeError(err.message);
         setLoadingTheme(false);
       });
-  }, []);
+  }, [selectedThemeFile]);
 
   // Start game
   const startGame = () => {
@@ -149,8 +153,20 @@ function App() {
     return (
       <div className="setup">
         <h1>Turn of Phrase</h1>
-        <h2>{theme.Title}</h2>
-        <p>{theme.Description}</p>
+        <div>
+          <label>Theme: </label>
+          <select value={selectedThemeFile} onChange={e => setSelectedThemeFile(e.target.value)}>
+            {themeFiles.map(file => (
+              <option key={file} value={file}>{file.replace('.json', '').replace(/\b\w/g, l => l.toUpperCase())}</option>
+            ))}
+          </select>
+        </div>
+        {theme && (
+          <>
+            <h2>{theme.Title}</h2>
+            <p>{theme.Description}</p>
+          </>
+        )}
         <div>
           <label>Number of Teams: </label>
           <input type="number" min={2} max={5} value={numTeams} onChange={e => {
@@ -193,7 +209,7 @@ function App() {
             <option value={-2}>-2</option>
           </select>
         </div>
-        <button className="start-btn" onClick={startGame}>Start Game</button>
+        <button className="start-btn" onClick={startGame} disabled={!theme}>Start Game</button>
       </div>
     );
   }
