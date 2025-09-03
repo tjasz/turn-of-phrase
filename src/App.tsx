@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Scoreboard from './Scoreboard';
 import Challenge from './Challenge';
 import EndOfTurn from './EndOfTurn';
 import './App.css';
@@ -57,7 +58,6 @@ function App() {
   const [showResults, setShowResults] = useState(false);
 
   // Load theme when selectedThemeFile changes
-  console.log(import.meta.env.BASE_URL)
   useEffect(() => {
     setLoadingTheme(true);
     setTheme(null);
@@ -239,11 +239,7 @@ function App() {
           <h2>Final Round!</h2>
         </div>
       )}
-      <div className="scoreboard">
-        {score.map((s, i) => (
-          <span key={i}>Team {i + 1}: {s} &nbsp;</span>
-        ))}
-      </div>
+      <Scoreboard scores={score} />
       <div className="timer">
         <span>Time Left: {timer}s</span>
         {!timerActive && !showResults && (
