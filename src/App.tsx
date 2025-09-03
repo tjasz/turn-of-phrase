@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Challenge from './Challenge';
+import EndOfTurn from './EndOfTurn';
 import './App.css';
 
 // Theme data (General Knowledge)
@@ -235,12 +236,11 @@ function App() {
         />
       )}
       {showResults && (
-        <div className="results">
-          <h3>Turn Over!</h3>
-          <p>Correct: {correctCount}</p>
-          <p>Skipped/Violated: {skippedCount}</p>
-          <button onClick={endTurn}>Confirm & Next Turn</button>
-        </div>
+        <EndOfTurn
+          correctCount={correctCount}
+          skippedCount={skippedCount}
+          endTurn={endTurn}
+        />
       )}
     </div>
   );
