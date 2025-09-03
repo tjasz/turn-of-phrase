@@ -61,7 +61,7 @@ function App() {
     setLoadingTheme(true);
     setTheme(null);
     setThemeError(null);
-    fetch(`/themes/${selectedThemeFile}`)
+    fetch(`${import.meta.env.BASE_URL}/themes/${selectedThemeFile}`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to load theme');
         return res.json();
