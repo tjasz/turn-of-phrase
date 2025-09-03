@@ -119,7 +119,7 @@ function App() {
     // Next team/player
     setTurnTeam((team) => (team + 1) % numTeams);
     setTurnPlayer((player) => (player + 1) % playersPerTeam[turnTeam]);
-    setCurrentChallengeIdx((idx) => idx);
+    setCurrentChallengeIdx((idx) => idx + 1);
     setTimer(turnTime);
     setTimerActive(false);
     setCorrectCount(0);
