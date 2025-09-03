@@ -223,7 +223,7 @@ function App() {
       <div className="timer">
         <span>Time Left: {timer}s</span>
         {!timerActive && !showResults && (
-          <button onClick={() => setTimerActive(true)}>Start Turn</button>
+          <div><button onClick={() => setTimerActive(true)}>Start Turn</button></div>
         )}
       </div>
       {timerActive && challenge && (
