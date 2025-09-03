@@ -1,4 +1,5 @@
 import React from "react";
+import Counter from "./Counter";
 
 interface ScoreboardProps {
   scores: number[];
@@ -8,7 +9,7 @@ const Scoreboard: React.FC<ScoreboardProps> = ({ scores }) => {
   return (
     <div className="scoreboard">
       {scores.map((score, idx) => (
-        <span key={idx}>Team {idx + 1}: <span className="counter">{score.toString().padStart(2, ' ')}</span> &nbsp;</span>
+        <span key={idx}>Team {idx + 1}: <Counter value={score} width={2} /> &nbsp;</span>
       ))}
     </div>
   );

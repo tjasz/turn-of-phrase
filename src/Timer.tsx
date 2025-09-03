@@ -1,4 +1,5 @@
 import React from "react";
+import Counter from "./Counter";
 
 interface TimerProps {
   timeLeft: number;
@@ -7,7 +8,7 @@ interface TimerProps {
 const Timer: React.FC<TimerProps> = ({ timeLeft }) => (
   <div className="timer">
     <span style={{ color: timeLeft === 0 ? 'red' : undefined }}>
-      Time Left: <span className="counter">{timeLeft.toString().padStart(2, ' ')}</span>s
+      Time Left: <Counter value={timeLeft} width={2} />s
     </span>
   </div>
 );
