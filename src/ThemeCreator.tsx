@@ -16,7 +16,7 @@ const ThemeCreator: React.FC<ThemeCreatorProps> = ({ onCreateTheme }) => {
   const createTheme = () => {
     setLoadingTheme(true);
     setThemeError(null);
-    getAiTheme(description, apiKey)
+    getAiTheme(title, description, apiKey)
       .then(data => {
         onCreateTheme({ Challenges: data, Title: title, Description: description });
         setLoadingTheme(false);
