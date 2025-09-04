@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ThemeCreator from "./ThemeCreator";
 
 interface ThemeSelectorProps {
   onSelectTheme: (theme: Theme) => void;
@@ -56,6 +57,10 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectTheme }) => {
           &gt;
         </button>
       </div>
+      <ThemeCreator onCreateTheme={theme => {
+        setTheme(theme);
+        onSelectTheme(theme);
+      }} />
     </div >
   );
 };
