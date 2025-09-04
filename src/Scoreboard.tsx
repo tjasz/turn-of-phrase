@@ -33,8 +33,11 @@ const Scoreboard: React.FC<ScoreboardProps> = ({ scores, pointsToWin }) => {
     "#c8c",
   ];
 
+  // allow 2 rem for each team and for the axis and top label
+  const height = 2 * (scores.length + 2);
+
   return (
-    <div className="scoreboard" style={{ width: "100%", height: `${4 * scores.length}rem` }}>
+    <div className="scoreboard" style={{ width: "100%", height: `${height}rem` }}>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
