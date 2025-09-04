@@ -53,7 +53,7 @@
   border-radius: 8px;
   margin: 0 auto 2vh auto;
   padding: 0;
-  filter: drop-shadow(5px 5px .5vh #000);
+  filter: drop-shadow(2px 2px 2px #000);
 }
 
 .mainGameBody ul {
@@ -65,4 +65,12 @@
   font-size: 1.2em;
   white-space: pre;
   font-family: 'Courier New', Courier, monospace;
+}
+
+.timer {
+  max-width: 50vh;
+  margin: 1vh auto;
+  border: 1px solid #000;
+  border-radius: 8px;
+  filter: drop-shadow(2px 2px 2px #000);
 }

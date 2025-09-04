@@ -73,7 +73,7 @@ function App() {
   // Game states
   const [challenges, setChallenges] = useState<Challenge[]>([]);
   const [currentChallengeIdx, setCurrentChallengeIdx] = useState(0);
-  const [timer, setTimer] = useState(turnTime);
+  const [timer, setTimer] = useState(turnTime * 1000);
   const [timerActive, setTimerActive] = useState(false);
   const [score, setScore] = useState(Array(numTeams).fill(0));
   const [turnTeam, setTurnTeam] = useState(0);
@@ -112,7 +112,7 @@ function App() {
     setTurnPlayer(Array(numTeams).fill(0));
     setGameStarted(true);
     setShowResults(false);
-    setTimer(turnTime);
+    setTimer(turnTime * 1000);
     setTimerActive(false);
     setTurnChallenges([]);
   };
@@ -126,8 +126,8 @@ function App() {
       return;
     }
     const interval = setInterval(() => {
-      setTimer((t) => t > 0 ? t - 1 : 0);
-    }, 1000);
+      setTimer((t) => t > 0 ? t - 100 : 0);
+    }, 100);
     return () => clearInterval(interval);
   }, [timerActive, timer]);
 
@@ -156,7 +156,7 @@ function App() {
     setTurnTeam((team) => (team + 1) % numTeams);
     setTurnPlayer((player) => player.map((p, i) => i === turnTeam ? (p + 1) % playersPerTeam[turnTeam] : p));
     setCurrentChallengeIdx((idx) => idx + 1);
-    setTimer(turnTime);
+    setTimer(turnTime * 1000);
     setTimerActive(false);
     setTurnChallenges([]);
     setShowResults(false);
@@ -254,7 +254,7 @@ function App() {
           <h2>Final Round!</h2>
         </div>
       )}
-      <Timer timeLeft={timer} />
+      <Timer timeLeft={timer} totalTime={turnTime * 1000} />
       {winnerIdx !== -1 && (
         <EndOfGame
           winnerIdx={winnerIdx}

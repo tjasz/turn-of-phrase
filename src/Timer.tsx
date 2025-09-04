@@ -3,14 +3,20 @@ import Counter from "./Counter";
 
 interface TimerProps {
   timeLeft: number;
+  totalTime: number;
 }
 
-const Timer: React.FC<TimerProps> = ({ timeLeft }) => (
-  <div className="timer">
-    <span style={{ color: timeLeft === 0 ? 'red' : undefined }}>
-      Time Left: <Counter value={timeLeft} width={2} />s
-    </span>
-  </div>
-);
+const Timer: React.FC<TimerProps> = ({ timeLeft, totalTime }) => {
+  const percentLeft = (timeLeft / totalTime) * 100;
+  return (
+    <div className="timer" style={{
+      background: `linear-gradient(to right, #8c8 ${percentLeft}%, #c88 ${percentLeft}% 100%)`
+    }}>
+      <span>
+        Time Left: <Counter value={Math.ceil(timeLeft / 1000)} width={2} />s
+      </span>
+    </div>
+  );
+}
 
 export default Timer;
