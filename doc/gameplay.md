@@ -103,6 +103,9 @@ In a game between Team A, Team B, and Team C:
 
 After the redemption turns, the team with the most points wins.
 
+If after the redemption turns, two teams are tied for first, additional rounds are played.
+After each additional round, if a team is in the lead, that team has won.
+
 ## Variations / Configuration
 
 Several game mechanics can be varied in order to create slightly different gameplay.

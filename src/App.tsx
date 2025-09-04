@@ -30,6 +30,29 @@ function shuffle<T>(array: T[]): T[] {
   return arr;
 }
 
+function getWinner(scores: number[]): number {
+  if (scores.length === 0) {
+    return -1;
+  }
+
+  let maxI: number[] = [];
+  let max: number | undefined = undefined;
+  for (let i = 0; i < scores.length; i++) {
+    if (max === undefined || scores[i] > max) {
+      max = scores[i];
+      maxI = [i];
+    } else if (scores[i] === max) {
+      maxI.push(i);
+    }
+  }
+  // if there is a tie, there is no winner
+  if (maxI.length > 1) {
+    return -1;
+  }
+
+  return maxI[0];
+}
+
 function App() {
   // Game setup states
   const [numTeams, setNumTeams] = useState(2);
@@ -142,7 +165,7 @@ function App() {
 
   // Check for winner
   const winnerIdx = score.some(s => s >= pointsToWin) && (turnTeam === 0)
-    ? score.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0)
+    ? getWinner(score)
     : -1;
 
   // UI
