@@ -28,7 +28,6 @@ const Scoreboard: React.FC<ScoreboardProps> = ({ scores, pointsToWin }) => {
   const colors = [
     "#c88",
     "#8c8",
-    "#88c",
     "#cc8",
     "#8cc",
     "#c8c",
