@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Scoreboard from './Scoreboard';
 import Timer from './Timer';
 import Challenge from './Challenge';
 import EndOfTurn from './EndOfTurn';

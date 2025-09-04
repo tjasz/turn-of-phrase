@@ -5,8 +5,6 @@ import {
   Bar,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
   ReferenceLine,
   ResponsiveContainer,
   LabelList,
