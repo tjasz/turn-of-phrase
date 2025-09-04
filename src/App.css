@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
   text-align: center;
 }
 
@@ -47,12 +47,14 @@
 .gameBodyContainer {}
 
 .mainGameBody {
-  height: 40vh;
+  height: 50vh;
+  max-width: 50vh;
   overflow-y: auto;
   background: #888;
   border: 1px solid #000;
   border-radius: 8px;
-  padding: 1em;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .mainGameBody ul {
