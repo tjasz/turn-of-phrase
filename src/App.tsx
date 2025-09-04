@@ -255,11 +255,12 @@ function App() {
           <h2>Final Round!</h2>
         </div>
       )}
-      <Scoreboard scores={score} />
       <Timer timeLeft={timer} />
       {winnerIdx !== -1 && (
         <EndOfGame
           winnerIdx={winnerIdx}
+          scores={score}
+          pointsToWin={pointsToWin}
           onConfirm={() => setGameStarted(false)}
         />
       )}
@@ -278,7 +279,11 @@ function App() {
         />
       )}
       {!timerActive && !showResults && winnerIdx === -1 && (
-        <StartOfTurn onConfirm={() => setTimerActive(true)} />
+        <StartOfTurn
+          scores={score}
+          pointsToWin={pointsToWin}
+          onConfirm={() => setTimerActive(true)}
+        />
       )}
     </div>
   );
