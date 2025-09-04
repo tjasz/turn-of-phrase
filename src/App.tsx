@@ -5,18 +5,7 @@ import EndOfTurn from './EndOfTurn';
 import './App.css';
 import StartOfTurn from './StartOfTurn';
 import EndOfGame from './EndOfGame';
-
-// Theme data (General Knowledge)
-type Challenge = {
-  Main: string;
-  Related: string[];
-};
-
-type Theme = {
-  Title: string;
-  Description: string;
-  Challenges: Challenge[];
-};
+import ThemeSelector from './ThemeSelector';
 
 const TURN_TIME_OPTIONS = [10, 20, 30, 40, 50, 60];
 
@@ -61,14 +50,7 @@ function App() {
   const [penalty, setPenalty] = useState(-1);
   const [gameStarted, setGameStarted] = useState(false);
 
-  // Theme selection and loading
-  // Dynamically get theme files using import.meta.glob
-  const themeModules = import.meta.glob('/public/themes/*.json');
-  const themeFiles = Object.keys(themeModules).map(path => path.split('/').pop()!);
-  const [selectedThemeFile, setSelectedThemeFile] = useState<string>(themeFiles[0] || '');
   const [theme, setTheme] = useState<Theme | null>(null);
-  const [loadingTheme, setLoadingTheme] = useState(false);
-  const [themeError, setThemeError] = useState<string | null>(null);
 
   // Game states
   const [challenges, setChallenges] = useState<Challenge[]>([]);
@@ -81,26 +63,6 @@ function App() {
   // Track challenge results for the current turn
   const [turnChallenges, setTurnChallenges] = useState<{ main: string; succeeded: boolean }[]>([]);
   const [showResults, setShowResults] = useState(false);
-
-  // Load theme when selectedThemeFile changes
-  useEffect(() => {
-    setLoadingTheme(true);
-    setTheme(null);
-    setThemeError(null);
-    fetch(`${import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL}/themes/${selectedThemeFile}`)
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to load theme');
-        return res.json();
-      })
-      .then((data: Theme) => {
-        setTheme(data);
-        setLoadingTheme(false);
-      })
-      .catch(err => {
-        setThemeError(err.message);
-        setLoadingTheme(false);
-      });
-  }, [selectedThemeFile]);
 
   // Start game
   const startGame = () => {
@@ -168,33 +130,11 @@ function App() {
     : -1;
 
   // UI
-  if (loadingTheme) {
-    return <div className="setup"><h1>Loading theme...</h1></div>;
-  }
-  if (themeError) {
-    return <div className="setup"><h1>Error loading theme</h1><p>{themeError}</p></div>;
-  }
-  if (!theme) {
-    return <div className="setup"><h1>No theme loaded</h1></div>;
-  }
   if (!gameStarted) {
     return (
       <div className="setup">
         <h1>Turn of Phrase</h1>
-        <div>
-          <label>Theme: </label>
-          <select value={selectedThemeFile} onChange={e => setSelectedThemeFile(e.target.value)}>
-            {themeFiles.map(file => (
-              <option key={file} value={file}>{file.replace('.json', '').replace(/\b\w/g, l => l.toUpperCase())}</option>
-            ))}
-          </select>
-        </div>
-        {theme && (
-          <>
-            <h2>{theme.Title}</h2>
-            <p>{theme.Description}</p>
-          </>
-        )}
+        <ThemeSelector onSelectTheme={setTheme} />
         <div>
           <label>Number of Teams: </label>
           <input type="number" min={2} max={5} value={numTeams} onChange={e => {

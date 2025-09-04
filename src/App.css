@@ -73,3 +73,15 @@
   border: 1px solid #000;
   border-radius: 8px;
 }
+
+.themeDescriptionContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.themeDescription {
+  height: 8rem;
+  width: 60vw;
+  max-width: 800px;
+}
