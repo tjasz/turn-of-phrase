@@ -5,13 +5,14 @@ import Scoreboard from './Scoreboard';
 interface StartOfTurnProps {
   scores: number[];
   pointsToWin: number;
+  isFinalRound: boolean;
   onConfirm: () => void;
 }
 
-const StartOfTurn: React.FC<StartOfTurnProps> = ({ scores, pointsToWin, onConfirm }) => {
+const StartOfTurn: React.FC<StartOfTurnProps> = ({ scores, pointsToWin, isFinalRound, onConfirm }) => {
   return (
     <GameBody
-      title="Start of Turn"
+      title={isFinalRound ? "Final Round!" : "Start of Turn"}
       actions={[
         { label: 'Start Turn', action: onConfirm },
       ]}

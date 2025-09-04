@@ -249,11 +249,6 @@ function App() {
   return (
     <div className="gameplay">
       <h2>Team {turnTeam + 1} - Player {turnPlayer[turnTeam] + 1}'s Turn</h2>
-      {score.some(s => s >= pointsToWin) && (
-        <div className="final-round">
-          <h2>Final Round!</h2>
-        </div>
-      )}
       <Timer timeLeft={timer} totalTime={turnTime * 1000} />
       {winnerIdx !== -1 && (
         <EndOfGame
@@ -281,6 +276,7 @@ function App() {
         <StartOfTurn
           scores={score}
           pointsToWin={pointsToWin}
+          isFinalRound={score.some(s => s >= pointsToWin)}
           onConfirm={() => setTimerActive(true)}
         />
       )}
