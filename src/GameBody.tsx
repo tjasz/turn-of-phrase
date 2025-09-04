@@ -13,6 +13,7 @@ interface GameBodyProps {
 }
 
 const GameBody: React.FC<GameBodyProps> = ({ title, actions, children }) => {
+  const buttonWidth = 100 / actions.length;
   return (
     <div className="gameBodyContainer">
       <div className="mainGameBody">
@@ -21,7 +22,7 @@ const GameBody: React.FC<GameBodyProps> = ({ title, actions, children }) => {
       </div>
       <div className="actions">
         {actions.map((a, idx) => (
-          <button key={idx} onClick={a.action}>
+          <button key={idx} onClick={a.action} style={{ width: `${buttonWidth}%` }}>
             {a.label}
           </button>
         ))}
