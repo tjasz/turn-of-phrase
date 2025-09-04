@@ -243,15 +243,6 @@ function App() {
     );
   }
 
-  if (winnerIdx !== -1) {
-    return (
-      <EndOfGame
-        winnerIdx={winnerIdx}
-        onConfirm={() => setGameStarted(false)}
-      />
-    );
-  }
-
   // Gameplay UI
   const challenge: Challenge | undefined = challenges[currentChallengeIdx];
   // Exclude the last challenge (timed out) from review
@@ -266,6 +257,12 @@ function App() {
       )}
       <Scoreboard scores={score} />
       <Timer timeLeft={timer} />
+      {winnerIdx !== -1 && (
+        <EndOfGame
+          winnerIdx={winnerIdx}
+          onConfirm={() => setGameStarted(false)}
+        />
+      )}
       {timerActive && challenge && (
         <Challenge
           main={challenge.Main}
@@ -280,7 +277,7 @@ function App() {
           onConfirm={endTurn}
         />
       )}
-      {!timerActive && !showResults && (
+      {!timerActive && !showResults && winnerIdx === -1 && (
         <StartOfTurn onConfirm={() => setTimerActive(true)} />
       )}
     </div>
