@@ -24,7 +24,7 @@ const ThemeCreator: React.FC<ThemeCreatorProps> = ({ onCreateTheme }) => {
           Description: description,
           Challenges: data
         };
-        localStorage.setItem(`theme:${title}`, JSON.stringify(themeObj));
+        localStorage.setItem(`turn-of-phrase/theme:${title}`, JSON.stringify(themeObj));
         onCreateTheme(themeObj);
         setLoadingTheme(false);
       })

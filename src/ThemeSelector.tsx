@@ -16,7 +16,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectTheme }) => {
     const themes: { key: string; theme: Theme }[] = [];
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
-      if (key && key.startsWith('theme:')) {
+      if (key && key.startsWith('turn-of-phrase/theme:')) {
         try {
           const theme = JSON.parse(localStorage.getItem(key)!);
           if (theme && theme.Title) {
