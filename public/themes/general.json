@@ -633,15 +633,6 @@
       ]
     },
     {
-      "Main": "Soap",
-      "Related": [
-        "Clean",
-        "Wash",
-        "Bubble",
-        "Bar"
-      ]
-    },
-    {
       "Main": "Ruler",
       "Related": [
         "Measure",
@@ -813,15 +804,6 @@
       ]
     },
     {
-      "Main": "Wallet",
-      "Related": [
-        "Money",
-        "Cards",
-        "Pocket",
-        "Leather"
-      ]
-    },
-    {
       "Main": "Soap",
       "Related": [
         "Clean",
@@ -891,15 +873,6 @@
         "Jewelry",
         "Gold",
         "Circle"
-      ]
-    },
-    {
-      "Main": "Bottle",
-      "Related": [
-        "Water",
-        "Drink",
-        "Cap",
-        "Plastic"
       ]
     },
     {

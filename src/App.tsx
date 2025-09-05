@@ -6,6 +6,7 @@ import './App.css';
 import StartOfTurn from './StartOfTurn';
 import EndOfGame from './EndOfGame';
 import ThemeSelector from './ThemeSelector';
+import { validateChallenges } from './openai';
 
 const TURN_TIME_OPTIONS = [10, 20, 30, 40, 50, 60];
 
@@ -134,7 +135,13 @@ function App() {
     return (
       <div className="setup">
         <h1>Turn of Phrase</h1>
-        <ThemeSelector onSelectTheme={setTheme} />
+        <ThemeSelector onSelectTheme={theme => {
+          setTheme(theme);
+          const challengeErrors = validateChallenges(theme.Challenges);
+          if (challengeErrors.length > 0) {
+            console.warn(`Selected theme "${theme.Title}" has invalid challenges:`, challengeErrors);
+          }
+        }} />
         <div>
           <label>Number of Teams: </label>
           <input type="number" min={2} max={5} value={numTeams} onChange={e => {

@@ -197,7 +197,7 @@
         "Feather",
         "Colorful",
         "Tail",
-        "Display"
+        "Bird"
       ]
     },
     {
@@ -257,10 +257,10 @@
     {
       "Main": "Turkey",
       "Related": [
-        "Feather",
+        "Bird",
         "Gobble",
-        "Farm",
-        "Tail"
+        "Sandwich",
+        "Thanksgiving"
       ]
     },
     {
@@ -339,9 +339,9 @@
       "Main": "Otter",
       "Related": [
         "River",
+        "Sea",
         "Swim",
-        "Fur",
-        "Playful"
+        "Fur"
       ]
     },
     {
@@ -624,24 +624,6 @@
       ]
     },
     {
-      "Main": "Peacock",
-      "Related": [
-        "Colorful",
-        "Tail",
-        "Display",
-        "Bird"
-      ]
-    },
-    {
-      "Main": "Turkey",
-      "Related": [
-        "Feather",
-        "Gobble",
-        "Farm",
-        "Tail"
-      ]
-    },
-    {
       "Main": "Rooster",
       "Related": [
         "Crow",
@@ -837,15 +819,6 @@
         "Small",
         "Water",
         "Predator"
-      ]
-    },
-    {
-      "Main": "Otter",
-      "Related": [
-        "River",
-        "Swim",
-        "Fur",
-        "Playful"
       ]
     }
   ]
