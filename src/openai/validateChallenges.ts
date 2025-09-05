@@ -10,7 +10,8 @@ export function validateChallenges(challenges: Challenge[]): ChallengeErrors[] {
     if (typeof challenge.Main !== "string") {
       challengeErrors.push({ index: i, message: `The "Main" property is not a string, but is ${typeof challenge.Main}.` });
     }
-    if (challenge.Main.split(" ").length > 2) {
+    // although guidance is that Main phrase should be no more than 2 words long, only hard-enforce a 4 word limit
+    if (challenge.Main.split(" ").length > 4) {
       challengeErrors.push({ index: i, message: `The "Main" property "${challenge.Main}" is more than 2 words long.` });
     }
     if (mainPhrasesSeen.has(challenge.Main)) {
