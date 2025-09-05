@@ -93,7 +93,10 @@ export async function getAiTheme(title: string, description: string, apiKey: str
 
     // if response is empty, re-prompt and continue
     if (!result.choices[0].message.content) {
-      messages.push({ role: "user", content: "The assistant did not generate a valid response. Please try again. Include only the JSON as output. Do not apologize or explain your error." });
+      messages.push({
+        role: "user",
+        content: "The assistant did not generate a response. Please try again."
+      });
       continue;
     }
 
@@ -106,36 +109,68 @@ export async function getAiTheme(title: string, description: string, apiKey: str
       challenges = JSON.parse(result.choices[0].message.content);
       console.log(challenges);
     } catch (error) {
-      messages.push({ role: "user", content: "The assistant did not generate a valid JSON response. Please try again. Include only the JSON as output. Do not apologize or explain your error." });
+      messages.push({
+        role: "user",
+        content: "The assistant response was not valid JSON. Please try again."
+      });
       continue;
     }
 
     // check if there are at least 100 challenges
     if (challenges!.length < 100) {
-      messages.push({ role: "user", content: "The assistant did not generate enough challenges. Please generate 100 challenges. Include only the JSON as output. Do not apologize or explain your error." });
+      messages.push({
+        role: "user",
+        content: `The assistant only generated ${challenges!.length} challenges. Generate at least 100 challenges. Please try again.`
+      });
       continue;
     }
 
-    // ensure each challenge has a main phrase
-    let hasChallengeError = false;
+    // validate every challenge according to the guidelines
+    const challengeErrors: { index: number, message: string }[] = [];
+    const mainPhrasesSeen = new Set<string>();
     for (let i = 0; i < challenges!.length; ++i) {
       const challenge = challenges![i];
-      if (!challenge.Main || typeof challenge.Main !== "string") {
-        messages.push({ role: "user", content: `The assistant did not generate valid challenges. Each Challenge should have a string property named "Main", but the ${i + 1}th Challenge did not. Try again. Include only the JSON as output. Do not apologize or explain your error.` });
-        hasChallengeError = true;
-        break;
+      // validate the main phrase
+      if (!challenge.Main) {
+        challengeErrors.push({ index: i, message: 'The "Main" property is missing.' });
+      }
+      if (typeof challenge.Main !== "string") {
+        challengeErrors.push({ index: i, message: `The "Main" property is not a string, but is ${typeof challenge.Main}.` });
       }
       if (challenge.Main.split(" ").length > 2) {
-        messages.push({ role: "user", content: `The assistant did not generate valid challenges. The main phrase ${challenge.Main} is more than 2 words long. Try again. Include only the JSON as output. Do not apologize or explain your error.` });
-        break;
+        challengeErrors.push({ index: i, message: `The "Main" property "${challenge.Main}" is more than 2 words long.` });
       }
-      if (!challenge.Related || !Array.isArray(challenge.Related) || challenge.Related.length !== 4 || typeof challenge.Related[0] !== "string" || challenge.Related.some(c => c.split(" ").length > 2)) {
-        messages.push({ role: "user", content: `The assistant did not generate valid challenges. Each Challenge should have a property named "Related" that is an array of exactly 4 strings, each 1-2 words long. Try again. Include only the JSON as output. Do not apologize or explain your error.` });
-        hasChallengeError = true;
-        break;
+      if (mainPhrasesSeen.has(challenge.Main)) {
+        challengeErrors.push({ index: i, message: `The "Main" property must be unique, but "${challenge.Main}" is duplicated.` });
+      } else {
+        mainPhrasesSeen.add(challenge.Main);
+      }
+      // validate the related phrases
+      if (!challenge.Related) {
+        challengeErrors.push({ index: i, message: 'The "Related" property is missing.' });
+      }
+      if (!Array.isArray(challenge.Related)) {
+        challengeErrors.push({ index: i, message: `The "Related" property is not an array, but is ${typeof challenge.Related}.` });
+      }
+      if (challenge.Related.length !== 4) {
+        challengeErrors.push({ index: i, message: `The "Related" property must be an array of exactly 4 strings, but has ${challenge.Related.length}.` });
+      }
+      if (challenge.Related.some(c => typeof c !== "string")) {
+        challengeErrors.push({ index: i, message: `The "Related" property must be an array of strings, but one or more elements are not strings.` });
+      }
+      const overlongRelatedPhrases = challenge.Related.filter(c => c.split(" ").length > 2);
+      if (overlongRelatedPhrases.length > 0) {
+        challengeErrors.push({ index: i, message: `The "Related" property must be an array of strings, each 1-2 words long, but the following are too long: ${overlongRelatedPhrases.join(", ")}.` });
       }
     }
-    if (hasChallengeError) {
+    if (challengeErrors.length > 0) {
+      messages.push({
+        role: "user",
+        content: `Some of the challenges generated were not valid. The following challenges had errors:
+        ${challengeErrors.map(e => `Challenge ${e.index + 1}: ${e.message}`).join("\n")}
+        Please try again.
+        `
+      });
       continue;
     }
 
