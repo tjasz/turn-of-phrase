@@ -24,11 +24,11 @@ const Scoreboard: React.FC<ScoreboardProps> = ({ scores, pointsToWin }) => {
   }));
 
   const colors = [
-    "#c88",
-    "#8c8",
-    "#cc8",
-    "#8cc",
-    "#c8c",
+    "var(--team-red)",
+    "var(--team-green)",
+    "var(--team-purple)",
+    "var(--team-yellow)",
+    "var(--team-blue)",
   ];
 
   // allow 2 rem for each team and for the axis and top label
@@ -42,15 +42,15 @@ const Scoreboard: React.FC<ScoreboardProps> = ({ scores, pointsToWin }) => {
           layout="vertical"
           margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
         >
-          <XAxis type="number" domain={[0, Math.max(pointsToWin, ...scores) + 5]} stroke="black" />
-          <YAxis type="category" dataKey="name" stroke="black" />
-          <Bar dataKey="score" fill="#8884d8" name="Score">
+          <XAxis type="number" domain={[0, Math.max(pointsToWin, ...scores) + 5]} stroke="var(--text)" />
+          <YAxis type="category" dataKey="name" stroke="var(--text)" />
+          <Bar dataKey="score" name="Score">
             <LabelList dataKey="score" position="right" />
             {data.map((_, index) => (
               <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
             ))}
           </Bar>
-          <ReferenceLine x={pointsToWin} stroke="black" label={{ value: "W", position: "top", fill: "black" }} />
+          <ReferenceLine x={pointsToWin} stroke="var(--text)" label={{ value: "W", position: "top", fill: "var(--text)" }} />
         </BarChart>
       </ResponsiveContainer>
     </div>
