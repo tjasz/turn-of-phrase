@@ -1,0 +1,1059 @@
+{
+  "Title": "Food and Drink",
+  "Description": "Common foods, drinks both soft and hard, cooking utensils and appliances, cooking methods, and cuisines.",
+  "Challenges": [
+    {
+      "Main": "Pizza",
+      "Related": [
+        "Italian",
+        "Cheese",
+        "Tomato",
+        "Crust"
+      ]
+    },
+    {
+      "Main": "Sushi",
+      "Related": [
+        "Japanese",
+        "Rice",
+        "Fish",
+        "Seaweed"
+      ]
+    },
+    {
+      "Main": "Burger",
+      "Related": [
+        "Beef",
+        "Bun",
+        "Cheese",
+        "Fast Food"
+      ]
+    },
+    {
+      "Main": "Pasta",
+      "Related": [
+        "Italian",
+        "Noodles",
+        "Sauce",
+        "Dinner"
+      ]
+    },
+    {
+      "Main": "Coffee",
+      "Related": [
+        "Caffeine",
+        "Bean",
+        "Brew",
+        "Morning"
+      ]
+    },
+    {
+      "Main": "Tea",
+      "Related": [
+        "Leaves",
+        "Hot",
+        "Drink",
+        "Herbal"
+      ]
+    },
+    {
+      "Main": "Steak",
+      "Related": [
+        "Beef",
+        "Grill",
+        "Medium",
+        "Dinner"
+      ]
+    },
+    {
+      "Main": "Taco",
+      "Related": [
+        "Mexican",
+        "Corn",
+        "Spicy",
+        "Shell"
+      ]
+    },
+    {
+      "Main": "Salad",
+      "Related": [
+        "Vegetables",
+        "Lettuce",
+        "Dressing",
+        "Healthy"
+      ]
+    },
+    {
+      "Main": "Wine",
+      "Related": [
+        "Grape",
+        "Red",
+        "White",
+        "Alcohol"
+      ]
+    },
+    {
+      "Main": "Whiskey",
+      "Related": [
+        "Barrel",
+        "Scotch",
+        "Bourbon",
+        "Distill"
+      ]
+    },
+    {
+      "Main": "Oven",
+      "Related": [
+        "Bake",
+        "Heat",
+        "Kitchen",
+        "Appliance"
+      ]
+    },
+    {
+      "Main": "Blender",
+      "Related": [
+        "Mix",
+        "Smoothie",
+        "Electric",
+        "Kitchen"
+      ]
+    },
+    {
+      "Main": "Skillet",
+      "Related": [
+        "Frying Pan",
+        "Cook",
+        "Stove",
+        "Oil"
+      ]
+    },
+    {
+      "Main": "Grilling",
+      "Related": [
+        "Barbecue",
+        "Charcoal",
+        "Smoke",
+        "Outdoor"
+      ]
+    },
+    {
+      "Main": "Boiling",
+      "Related": [
+        "Water",
+        "Heat",
+        "Steam",
+        "Cook"
+      ]
+    },
+    {
+      "Main": "Roasting",
+      "Related": [
+        "Oven",
+        "Meat",
+        "Brown",
+        "Heat"
+      ]
+    },
+    {
+      "Main": "Baking",
+      "Related": [
+        "Oven",
+        "Bread",
+        "Cake",
+        "Pastry"
+      ]
+    },
+    {
+      "Main": "Chopping",
+      "Related": [
+        "Knife",
+        "Cut",
+        "Vegetables",
+        "Prep"
+      ]
+    },
+    {
+      "Main": "Simmering",
+      "Related": [
+        "Low Heat",
+        "Liquid",
+        "Slow",
+        "Cook"
+      ]
+    },
+    {
+      "Main": "Stir Fry",
+      "Related": [
+        "Asian",
+        "Wok",
+        "Vegetables",
+        "Quick"
+      ]
+    },
+    {
+      "Main": "Curry",
+      "Related": [
+        "Spices",
+        "Indian",
+        "Sauce",
+        "Rice"
+      ]
+    },
+    {
+      "Main": "Cheeseburger",
+      "Related": [
+        "Beef",
+        "Bun",
+        "Cheese",
+        "Fast Food"
+      ]
+    },
+    {
+      "Main": "Fries",
+      "Related": [
+        "Potatoes",
+        "Fried",
+        "Fast Food",
+        "Salt"
+      ]
+    },
+    {
+      "Main": "Smoothie",
+      "Related": [
+        "Fruit",
+        "Blender",
+        "Cold",
+        "Drink"
+      ]
+    },
+    {
+      "Main": "Lemonade",
+      "Related": [
+        "Lemon",
+        "Cold",
+        "Sweet",
+        "Drink"
+      ]
+    },
+    {
+      "Main": "Cocktail",
+      "Related": [
+        "Alcohol",
+        "Mixer",
+        "Glass",
+        "Bar"
+      ]
+    },
+    {
+      "Main": "Sausage",
+      "Related": [
+        "Pork",
+        "Grill",
+        "Breakfast",
+        "Meat"
+      ]
+    },
+    {
+      "Main": "Pancakes",
+      "Related": [
+        "Breakfast",
+        "Syrup",
+        "Flour",
+        "Stack"
+      ]
+    },
+    {
+      "Main": "Waffle",
+      "Related": [
+        "Breakfast",
+        "Syrup",
+        "Grid",
+        "Crispy"
+      ]
+    },
+    {
+      "Main": "Toaster",
+      "Related": [
+        "Bread",
+        "Kitchen",
+        "Appliance",
+        "Heat"
+      ]
+    },
+    {
+      "Main": "Microwave",
+      "Related": [
+        "Heat",
+        "Quick",
+        "Kitchen",
+        "Appliance"
+      ]
+    },
+    {
+      "Main": "Ice Cream",
+      "Related": [
+        "Frozen",
+        "Sweet",
+        "Dessert",
+        "Cold"
+      ]
+    },
+    {
+      "Main": "Chocolate",
+      "Related": [
+        "Sweet",
+        "Cocoa",
+        "Candy",
+        "Brown"
+      ]
+    },
+    {
+      "Main": "Cheese",
+      "Related": [
+        "Dairy",
+        "Milk",
+        "Yellow",
+        "Slice"
+      ]
+    },
+    {
+      "Main": "Bread",
+      "Related": [
+        "Wheat",
+        "Bake",
+        "Loaf",
+        "Slice"
+      ]
+    },
+    {
+      "Main": "Rice",
+      "Related": [
+        "Grain",
+        "White",
+        "Boil",
+        "Staple"
+      ]
+    },
+    {
+      "Main": "Soup",
+      "Related": [
+        "Broth",
+        "Hot",
+        "Bowl",
+        "Vegetables"
+      ]
+    },
+    {
+      "Main": "Dumplings",
+      "Related": [
+        "Asian",
+        "Steamed",
+        "Fillings",
+        "Wrap"
+      ]
+    },
+    {
+      "Main": "Kebab",
+      "Related": [
+        "Grill",
+        "Meat",
+        "Skewer",
+        "Middle East"
+      ]
+    },
+    {
+      "Main": "Lasagna",
+      "Related": [
+        "Pasta",
+        "Italian",
+        "Cheese",
+        "Layers"
+      ]
+    },
+    {
+      "Main": "Clam Chowder",
+      "Related": [
+        "Soup",
+        "Seafood",
+        "Creamy",
+        "New England"
+      ]
+    },
+    {
+      "Main": "Eggplant",
+      "Related": [
+        "Vegetable",
+        "Purple",
+        "Bake",
+        "Mediterranean"
+      ]
+    },
+    {
+      "Main": "Avocado",
+      "Related": [
+        "Green",
+        "Fruit",
+        "Guacamole",
+        "Creamy"
+      ]
+    },
+    {
+      "Main": "Mayonnaise",
+      "Related": [
+        "Sauce",
+        "Egg",
+        "Condiment",
+        "Creamy"
+      ]
+    },
+    {
+      "Main": "Ketchup",
+      "Related": [
+        "Tomato",
+        "Condiment",
+        "Red",
+        "Sauce"
+      ]
+    },
+    {
+      "Main": "Mustard",
+      "Related": [
+        "Yellow",
+        "Condiment",
+        "Spicy",
+        "Sauce"
+      ]
+    },
+    {
+      "Main": "Gravy",
+      "Related": [
+        "Sauce",
+        "Meat",
+        "Brown",
+        "Dinner"
+      ]
+    },
+    {
+      "Main": "Croissant",
+      "Related": [
+        "French",
+        "Pastry",
+        "Butter",
+        "Flaky"
+      ]
+    },
+    {
+      "Main": "Bagel",
+      "Related": [
+        "Bread",
+        "Circle",
+        "Breakfast",
+        "Chewy"
+      ]
+    },
+    {
+      "Main": "Pretzel",
+      "Related": [
+        "Snack",
+        "Twist",
+        "Salt",
+        "Baked"
+      ]
+    },
+    {
+      "Main": "Tortilla",
+      "Related": [
+        "Flatbread",
+        "Mexican",
+        "Corn",
+        "Wrap"
+      ]
+    },
+    {
+      "Main": "Guacamole",
+      "Related": [
+        "Avocado",
+        "Dip",
+        "Mexican",
+        "Green"
+      ]
+    },
+    {
+      "Main": "Hummus",
+      "Related": [
+        "Chickpea",
+        "Dip",
+        "Middle East",
+        "Creamy"
+      ]
+    },
+    {
+      "Main": "Falafel",
+      "Related": [
+        "Chickpea",
+        "Fried",
+        "Middle East",
+        "Snack"
+      ]
+    },
+    {
+      "Main": "Sausage Roll",
+      "Related": [
+        "Pastry",
+        "Meat",
+        "Snack",
+        "Baked"
+      ]
+    },
+    {
+      "Main": "Barbecue",
+      "Related": [
+        "Grill",
+        "Smoke",
+        "Meat",
+        "Outdoor"
+      ]
+    },
+    {
+      "Main": "Fondue",
+      "Related": [
+        "Cheese",
+        "Pot",
+        "Dipping",
+        "Swiss"
+      ]
+    },
+    {
+      "Main": "Muffin",
+      "Related": [
+        "Bake",
+        "Sweet",
+        "Breakfast",
+        "Cupcake"
+      ]
+    },
+    {
+      "Main": "Cupcake",
+      "Related": [
+        "Cake",
+        "Frosting",
+        "Sweet",
+        "Small"
+      ]
+    },
+    {
+      "Main": "Pudding",
+      "Related": [
+        "Dessert",
+        "Sweet",
+        "Custard",
+        "Creamy"
+      ]
+    },
+    {
+      "Main": "Carbonara",
+      "Related": [
+        "Pasta",
+        "Bacon",
+        "Cream",
+        "Italian"
+      ]
+    },
+    {
+      "Main": "Risotto",
+      "Related": [
+        "Rice",
+        "Creamy",
+        "Italian",
+        "Dinner"
+      ]
+    },
+    {
+      "Main": "Chili",
+      "Related": [
+        "Spicy",
+        "Beans",
+        "Meat",
+        "Stew"
+      ]
+    },
+    {
+      "Main": "Buffalo Wings",
+      "Related": [
+        "Chicken",
+        "Spicy",
+        "Sauce",
+        "Appetizer"
+      ]
+    },
+    {
+      "Main": "Sourdough",
+      "Related": [
+        "Bread",
+        "Ferment",
+        "Crusty",
+        "Starter"
+      ]
+    },
+    {
+      "Main": "Macaroni",
+      "Related": [
+        "Pasta",
+        "Elbow",
+        "Cheese",
+        "Bake"
+      ]
+    },
+    {
+      "Main": "Macarons",
+      "Related": [
+        "French",
+        "Pastry",
+        "Almond",
+        "Sweet"
+      ]
+    },
+    {
+      "Main": "Tiramisu",
+      "Related": [
+        "Dessert",
+        "Coffee",
+        "Italian",
+        "Cream"
+      ]
+    },
+    {
+      "Main": "Espresso",
+      "Related": [
+        "Coffee",
+        "Strong",
+        "Shot",
+        "Italian"
+      ]
+    },
+    {
+      "Main": "Latte",
+      "Related": [
+        "Coffee",
+        "Milk",
+        "Foam",
+        "Drink"
+      ]
+    },
+    {
+      "Main": "Cappuccino",
+      "Related": [
+        "Coffee",
+        "Milk",
+        "Foam",
+        "Italian"
+      ]
+    },
+    {
+      "Main": "Martini",
+      "Related": [
+        "Cocktail",
+        "Gin",
+        "Olive",
+        "Shake"
+      ]
+    },
+    {
+      "Main": "Margarita",
+      "Related": [
+        "Cocktail",
+        "Tequila",
+        "Lime",
+        "Salt"
+      ]
+    },
+    {
+      "Main": "Sangria",
+      "Related": [
+        "Wine",
+        "Fruit",
+        "Spanish",
+        "Punch"
+      ]
+    },
+    {
+      "Main": "Paella",
+      "Related": [
+        "Spanish",
+        "Rice",
+        "Seafood",
+        "Saffron"
+      ]
+    },
+    {
+      "Main": "Gnocchi",
+      "Related": [
+        "Potato",
+        "Italian",
+        "Pasta",
+        "Dumpling"
+      ]
+    },
+    {
+      "Main": "Pesto",
+      "Related": [
+        "Basil",
+        "Sauce",
+        "Italian",
+        "Green"
+      ]
+    },
+    {
+      "Main": "Quiche",
+      "Related": [
+        "Pie",
+        "Egg",
+        "Cheese",
+        "French"
+      ]
+    },
+    {
+      "Main": "Baguette",
+      "Related": [
+        "French",
+        "Bread",
+        "Long",
+        "Crusty"
+      ]
+    },
+    {
+      "Main": "Dim Sum",
+      "Related": [
+        "Chinese",
+        "Steamed",
+        "Bite",
+        "Dumplings"
+      ]
+    },
+    {
+      "Main": "Spring Roll",
+      "Related": [
+        "Asian",
+        "Wrap",
+        "Vegetables",
+        "Fried"
+      ]
+    },
+    {
+      "Main": "Pho",
+      "Related": [
+        "Vietnamese",
+        "Soup",
+        "Noodles",
+        "Broth"
+      ]
+    },
+    {
+      "Main": "Ramen",
+      "Related": [
+        "Japanese",
+        "Noodles",
+        "Soup",
+        "Broth"
+      ]
+    },
+    {
+      "Main": "Chow Mein",
+      "Related": [
+        "Chinese",
+        "Noodles",
+        "Stir Fry",
+        "Vegetables"
+      ]
+    },
+    {
+      "Main": "Fajitas",
+      "Related": [
+        "Mexican",
+        "Grill",
+        "Meat",
+        "Peppers"
+      ]
+    },
+    {
+      "Main": "Nachos",
+      "Related": [
+        "Tortilla",
+        "Cheese",
+        "Jalapeno",
+        "Snack"
+      ]
+    },
+    {
+      "Main": "Biryani",
+      "Related": [
+        "Indian",
+        "Rice",
+        "Spices",
+        "Meat"
+      ]
+    },
+    {
+      "Main": "Samosa",
+      "Related": [
+        "Indian",
+        "Fried",
+        "Pastry",
+        "Spicy"
+      ]
+    },
+    {
+      "Main": "Chutney",
+      "Related": [
+        "Sauce",
+        "Spicy",
+        "Indian",
+        "Condiment"
+      ]
+    },
+    {
+      "Main": "Baklava",
+      "Related": [
+        "Pastry",
+        "Honey",
+        "Nuts",
+        "Middle East"
+      ]
+    },
+    {
+      "Main": "Tzatziki",
+      "Related": [
+        "Greek",
+        "Yogurt",
+        "Cucumber",
+        "Sauce"
+      ]
+    },
+    {
+      "Main": "Moussaka",
+      "Related": [
+        "Greek",
+        "Eggplant",
+        "Meat",
+        "Baked"
+      ]
+    },
+    {
+      "Main": "Ceviche",
+      "Related": [
+        "Seafood",
+        "Citrus",
+        "Peruvian",
+        "Raw"
+      ]
+    },
+    {
+      "Main": "Empanada",
+      "Related": [
+        "Pastry",
+        "Meat",
+        "Latin",
+        "Baked"
+      ]
+    },
+    {
+      "Main": "Churros",
+      "Related": [
+        "Fried",
+        "Sweet",
+        "Spanish",
+        "Sugar"
+      ]
+    },
+    {
+      "Main": "Gelato",
+      "Related": [
+        "Italian",
+        "Ice Cream",
+        "Creamy",
+        "Dessert"
+      ]
+    },
+    {
+      "Main": "Crepe",
+      "Related": [
+        "French",
+        "Thin",
+        "Pancake",
+        "Sweet"
+      ]
+    },
+    {
+      "Main": "Fondant",
+      "Related": [
+        "Cake",
+        "Icing",
+        "Sugar",
+        "Smooth"
+      ]
+    },
+    {
+      "Main": "Marinade",
+      "Related": [
+        "Sauce",
+        "Flavor",
+        "Meat",
+        "Soak"
+      ]
+    },
+    {
+      "Main": "Searing",
+      "Related": [
+        "High Heat",
+        "Meat",
+        "Brown",
+        "Cook"
+      ]
+    },
+    {
+      "Main": "Steaming",
+      "Related": [
+        "Cook",
+        "Hot",
+        "Vegetables",
+        "Moisture"
+      ]
+    },
+    {
+      "Main": "Whisk",
+      "Related": [
+        "Beat",
+        "Eggs",
+        "Mix",
+        "Kitchen"
+      ]
+    },
+    {
+      "Main": "Spatula",
+      "Related": [
+        "Flip",
+        "Cook",
+        "Pan",
+        "Kitchen"
+      ]
+    },
+    {
+      "Main": "Colander",
+      "Related": [
+        "Drain",
+        "Pasta",
+        "Kitchen",
+        "Strainer"
+      ]
+    },
+    {
+      "Main": "Grater",
+      "Related": [
+        "Shred",
+        "Cheese",
+        "Vegetables",
+        "Kitchen"
+      ]
+    },
+    {
+      "Main": "Saucepan",
+      "Related": [
+        "Cook",
+        "Stove",
+        "Liquid",
+        "Kitchen"
+      ]
+    },
+    {
+      "Main": "Rolling Pin",
+      "Related": [
+        "Dough",
+        "Flatten",
+        "Bake",
+        "Kitchen"
+      ]
+    },
+    {
+      "Main": "Meatball",
+      "Related": [
+        "Ground",
+        "Beef",
+        "Sauce",
+        "Italian"
+      ]
+    },
+    {
+      "Main": "Clafoutis",
+      "Related": [
+        "French",
+        "Cherry",
+        "Dessert",
+        "Baked"
+      ]
+    },
+    {
+      "Main": "Bouillabaisse",
+      "Related": [
+        "French",
+        "Seafood",
+        "Soup",
+        "Provence"
+      ]
+    },
+    {
+      "Main": "Tabbouleh",
+      "Related": [
+        "Salad",
+        "Parsley",
+        "Middle East",
+        "Bulgur"
+      ]
+    },
+    {
+      "Main": "Croquette",
+      "Related": [
+        "Fried",
+        "Potato",
+        "Snack",
+        "Breaded"
+      ]
+    },
+    {
+      "Main": "Tartar",
+      "Related": [
+        "Raw",
+        "Beef",
+        "Dish",
+        "Sauce"
+      ]
+    },
+    {
+      "Main": "Baba Ganoush",
+      "Related": [
+        "Eggplant",
+        "Middle East",
+        "Dip",
+        "Smoky"
+      ]
+    },
+    {
+      "Main": "Pita",
+      "Related": [
+        "Bread",
+        "Middle East",
+        "Pocket",
+        "Flatbread"
+      ]
+    },
+    {
+      "Main": "Ratatouille",
+      "Related": [
+        "French",
+        "Vegetables",
+        "Stew",
+        "Mediterranean"
+      ]
+    }
+  ]
+}

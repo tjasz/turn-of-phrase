@@ -1,0 +1,492 @@
+{
+  "Title": "Media",
+  "Description": "well known books, plays, TV shows, movies, magazines, music, podcasts and celebrities",
+  "Challenges": [
+    {
+      "Main": "Harry Potter",
+      "Related": [
+        "Wizard",
+        "Hogwarts",
+        "J.K. Rowling",
+        "Magic"
+      ]
+    },
+    {
+      "Main": "Game of Thrones",
+      "Related": [
+        "Dragons",
+        "Westeros",
+        "Fantasy",
+        "HBO"
+      ]
+    },
+    {
+      "Main": "Breaking Bad",
+      "Related": [
+        "Meth",
+        "Chemistry",
+        "Walter White",
+        "AMC"
+      ]
+    },
+    {
+      "Main": "The Beatles",
+      "Related": [
+        "Band",
+        "Liverpool",
+        "John Lennon",
+        "1960s"
+      ]
+    },
+    {
+      "Main": "The Simpsons",
+      "Related": [
+        "Cartoon",
+        "Springfield",
+        "Homer",
+        "Fox"
+      ]
+    },
+    {
+      "Main": "Friends",
+      "Related": [
+        "Sitcom",
+        "Central Perk",
+        "Rachel",
+        "NBC"
+      ]
+    },
+    {
+      "Main": "Lord of the Rings",
+      "Related": [
+        "Tolkien",
+        "Middle-earth",
+        "Frodo",
+        "Fantasy"
+      ]
+    },
+    {
+      "Main": "Forbes",
+      "Related": [
+        "Magazine",
+        "Business",
+        "Finance",
+        "Entrepreneurship"
+      ]
+    },
+    {
+      "Main": "The Crown",
+      "Related": [
+        "Netflix",
+        "Queen Elizabeth",
+        "Royalty",
+        "Drama"
+      ]
+    },
+    {
+      "Main": "Stranger Things",
+      "Related": [
+        "Netflix",
+        "Hawkins",
+        "Upside Down",
+        "80s"
+      ]
+    },
+    {
+      "Main": "Moby Dick",
+      "Related": [
+        "Whale",
+        "Ishmael",
+        "Melville",
+        "Sea"
+      ]
+    },
+    {
+      "Main": "New York Times",
+      "Related": [
+        "Newspaper",
+        "Journalism",
+        "Breaking News",
+        "Editorial"
+      ]
+    },
+    {
+      "Main": "The Godfather",
+      "Related": [
+        "Mafia",
+        "Corleone",
+        "Crime",
+        "Coppola"
+      ]
+    },
+    {
+      "Main": "The Daily",
+      "Related": [
+        "Podcast",
+        "News",
+        "New York",
+        "Michael Barbaro"
+      ]
+    },
+    {
+      "Main": "The Wire",
+      "Related": [
+        "Baltimore",
+        "Police",
+        "HBO",
+        "Crime"
+      ]
+    },
+    {
+      "Main": "Vogue",
+      "Related": [
+        "Fashion",
+        "Magazine",
+        "Style",
+        "Runway"
+      ]
+    },
+    {
+      "Main": "Star Wars",
+      "Related": [
+        "Jedi",
+        "Lightsaber",
+        "Skywalker",
+        "Space"
+      ]
+    },
+    {
+      "Main": "The Office",
+      "Related": [
+        "Sitcom",
+        "Dunder Mifflin",
+        "Michael Scott",
+        "NBC"
+      ]
+    },
+    {
+      "Main": "Hamilton",
+      "Related": [
+        "Musical",
+        "Founding Father",
+        "Lin-Manuel Miranda",
+        "Broadway"
+      ]
+    },
+    {
+      "Main": "The Guardian",
+      "Related": [
+        "Newspaper",
+        "UK",
+        "Journalism",
+        "News"
+      ]
+    },
+    {
+      "Main": "Twilight",
+      "Related": [
+        "Vampires",
+        "Bella",
+        "Stephenie Meyer",
+        "Team Edward"
+      ]
+    },
+    {
+      "Main": "Rolling Stone",
+      "Related": [
+        "Magazine",
+        "Music",
+        "Culture",
+        "Interviews"
+      ]
+    },
+    {
+      "Main": "Washington Post",
+      "Related": [
+        "Newspaper",
+        "Journalism",
+        "US Politics",
+        "Breaking News"
+      ]
+    },
+    {
+      "Main": "Billie Eilish",
+      "Related": [
+        "Singer",
+        "Pop",
+        "Grammy",
+        "Young"
+      ]
+    },
+    {
+      "Main": "The Hobbit",
+      "Related": [
+        "Tolkien",
+        "Middle-earth",
+        "Bilbo",
+        "Fantasy"
+      ]
+    },
+    {
+      "Main": "Black Panther",
+      "Related": [
+        "Marvel",
+        "Wakanda",
+        "Chadwick Boseman",
+        "Superhero"
+      ]
+    },
+    {
+      "Main": "Daily Show",
+      "Related": [
+        "Comedy",
+        "Jon Stewart",
+        "News",
+        "Satire"
+      ]
+    },
+    {
+      "Main": "Great Gatsby",
+      "Related": [
+        "Fitzgerald",
+        "1920s",
+        "Wealth",
+        "Novel"
+      ]
+    },
+    {
+      "Main": "Oprah Winfrey",
+      "Related": [
+        "Talk Show",
+        "Host",
+        "Television",
+        "Interview"
+      ]
+    },
+    {
+      "Main": "Shakespeare",
+      "Related": [
+        "Playwright",
+        "Romeo",
+        "Hamlet",
+        "Elizabethan"
+      ]
+    },
+    {
+      "Main": "The Atlantic",
+      "Related": [
+        "Magazine",
+        "Politics",
+        "Culture",
+        "Essays"
+      ]
+    },
+    {
+      "Main": "Twilight Zone",
+      "Related": [
+        "TV Show",
+        "Sci-Fi",
+        "Rod Serling",
+        "Twist"
+      ]
+    },
+    {
+      "Main": "Big Bang Theory",
+      "Related": [
+        "Sitcom",
+        "Sheldon",
+        "Nerds",
+        "CBS"
+      ]
+    },
+    {
+      "Main": "New York Post",
+      "Related": [
+        "Newspaper",
+        "Tabloid",
+        "NYC",
+        "Headlines"
+      ]
+    },
+    {
+      "Main": "Wall Street Journal",
+      "Related": [
+        "Newspaper",
+        "Finance",
+        "Business",
+        "Editorial"
+      ]
+    },
+    {
+      "Main": "Daily Mail",
+      "Related": [
+        "Newspaper",
+        "UK",
+        "Tabloid",
+        "News"
+      ]
+    },
+    {
+      "Main": "The Incredibles",
+      "Related": [
+        "Pixar",
+        "Superheroes",
+        "Animation",
+        "Family"
+      ]
+    },
+    {
+      "Main": "Hunger Games",
+      "Related": [
+        "Dystopia",
+        "Katniss",
+        "Suzanne Collins",
+        "Rebellion"
+      ]
+    },
+    {
+      "Main": "The Matrix",
+      "Related": [
+        "Simulation",
+        "Keanu Reeves",
+        "Sci-Fi",
+        "Action"
+      ]
+    },
+    {
+      "Main": "Fault in Our Stars",
+      "Related": [
+        "John Green",
+        "Romance",
+        "Cancer",
+        "Young Adult"
+      ]
+    },
+    {
+      "Main": "The Avengers",
+      "Related": [
+        "Marvel",
+        "Superheroes",
+        "Infinity War",
+        "Earth"
+      ]
+    },
+    {
+      "Main": "Big Lebowski",
+      "Related": [
+        "Coen Brothers",
+        "Cult Classic",
+        "Bowling",
+        "Dude Abides"
+      ]
+    },
+    {
+      "Main": "West Wing",
+      "Related": [
+        "Politics",
+        "White House",
+        "Drama",
+        "NBC"
+      ]
+    },
+    {
+      "Main": "Crown Jewels",
+      "Related": [
+        "Royalty",
+        "British",
+        "Regalia",
+        "Monarchy"
+      ]
+    },
+    {
+      "Main": "Social Network",
+      "Related": [
+        "Facebook",
+        "Mark Zuckerberg",
+        "Drama",
+        "Movie"
+      ]
+    },
+    {
+      "Main": "The Irishman",
+      "Related": [
+        "Scorsese",
+        "Mafia",
+        "De Niro",
+        "Crime"
+      ]
+    },
+    {
+      "Main": "Daily Telegraph",
+      "Related": [
+        "Newspaper",
+        "UK",
+        "Conservative",
+        "News"
+      ]
+    },
+    {
+      "Main": "Handmaid's Tale",
+      "Related": [
+        "Dystopia",
+        "Margaret Atwood",
+        "TV Show",
+        "Gilead"
+      ]
+    },
+    {
+      "Main": "Daily Beast",
+      "Related": [
+        "News",
+        "Online",
+        "Journalism",
+        "Media"
+      ]
+    },
+    {
+      "Main": "Great British Bake Off",
+      "Related": [
+        "Cooking",
+        "Competition",
+        "BBC",
+        "Baking"
+      ]
+    },
+    {
+      "Main": "The Witcher",
+      "Related": [
+        "Netflix",
+        "Fantasy",
+        "Geralt",
+        "Books"
+      ]
+    },
+    {
+      "Main": "The Economist",
+      "Related": [
+        "Magazine",
+        "Finance",
+        "Politics",
+        "Global"
+      ]
+    },
+    {
+      "Main": "The Mandalorian",
+      "Related": [
+        "Star Wars",
+        "Disney+",
+        "Baby Yoda",
+        "Bounty Hunter"
+      ]
+    },
+    {
+      "Main": "Matrix Reloaded",
+      "Related": [
+        "Sequel",
+        "Keanu Reeves",
+        "Sci-Fi",
+        "Action"
+      ]
+    }
+  ]
+}

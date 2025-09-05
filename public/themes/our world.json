@@ -1,0 +1,771 @@
+{
+  "Title": "Our World",
+  "Description": "Well known geography concepts, landmarks, major countries and cities of the world, continents, oceans, large seas, famous historical and political events and figures.",
+  "Challenges": [
+    {
+      "Main": "Mount Everest",
+      "Related": [
+        "Himalayas",
+        "Highest Peak",
+        "Nepal",
+        "Climbing"
+      ]
+    },
+    {
+      "Main": "Sahara Desert",
+      "Related": [
+        "Africa",
+        "Sand",
+        "Dunes",
+        "Arid"
+      ]
+    },
+    {
+      "Main": "Amazon River",
+      "Related": [
+        "South America",
+        "Longest",
+        "Rainforest",
+        "Water"
+      ]
+    },
+    {
+      "Main": "Great Wall",
+      "Related": [
+        "China",
+        "Ancient",
+        "Fortification",
+        "Ming Dynasty"
+      ]
+    },
+    {
+      "Main": "Eiffel Tower",
+      "Related": [
+        "Paris",
+        "France",
+        "Landmark",
+        "Iron"
+      ]
+    },
+    {
+      "Main": "Grand Canyon",
+      "Related": [
+        "Arizona",
+        "USA",
+        "Geology",
+        "Colorado River"
+      ]
+    },
+    {
+      "Main": "Niagara Falls",
+      "Related": [
+        "Waterfall",
+        "Canada",
+        "USA",
+        "Hydropower"
+      ]
+    },
+    {
+      "Main": "Sydney Opera",
+      "Related": [
+        "Australia",
+        "Landmark",
+        "Harbor",
+        "Performing Arts"
+      ]
+    },
+    {
+      "Main": "Great Barrier",
+      "Related": [
+        "Coral Reef",
+        "Australia",
+        "Marine",
+        "Biodiversity"
+      ]
+    },
+    {
+      "Main": "Mount Kilimanjaro",
+      "Related": [
+        "Tanzania",
+        "Africa",
+        "Volcano",
+        "Snow"
+      ]
+    },
+    {
+      "Main": "Victoria Falls",
+      "Related": [
+        "Zambia",
+        "Zimbabwe",
+        "Waterfall",
+        "Africa"
+      ]
+    },
+    {
+      "Main": "Stonehenge",
+      "Related": [
+        "England",
+        "Ancient",
+        "Megalith",
+        "Archaeology"
+      ]
+    },
+    {
+      "Main": "Machu Picchu",
+      "Related": [
+        "Peru",
+        "Inca",
+        "Ruins",
+        "Mountains"
+      ]
+    },
+    {
+      "Main": "Bali Island",
+      "Related": [
+        "Indonesia",
+        "Tourism",
+        "Beach",
+        "Culture"
+      ]
+    },
+    {
+      "Main": "Yellowstone",
+      "Related": [
+        "USA",
+        "National Park",
+        "Geothermal",
+        "Wildlife"
+      ]
+    },
+    {
+      "Main": "Ganges River",
+      "Related": [
+        "India",
+        "Holy",
+        "Water",
+        "Bengal"
+      ]
+    },
+    {
+      "Main": "Angkor Wat",
+      "Related": [
+        "Cambodia",
+        "Temple",
+        "Khmer",
+        "Ancient"
+      ]
+    },
+    {
+      "Main": "Mount Fuji",
+      "Related": [
+        "Japan",
+        "Volcano",
+        "Iconic",
+        "Snow"
+      ]
+    },
+    {
+      "Main": "Big Ben",
+      "Related": [
+        "London",
+        "Clock Tower",
+        "UK",
+        "Parliament"
+      ]
+    },
+    {
+      "Main": "Taj Mahal",
+      "Related": [
+        "India",
+        "Mausoleum",
+        "Marble",
+        "Mughal"
+      ]
+    },
+    {
+      "Main": "Statue Liberty",
+      "Related": [
+        "USA",
+        "New York",
+        "Freedom",
+        "Gift"
+      ]
+    },
+    {
+      "Main": "Cape Horn",
+      "Related": [
+        "Chile",
+        "South America",
+        "Cape",
+        "Rough Seas"
+      ]
+    },
+    {
+      "Main": "Alps Mountains",
+      "Related": [
+        "Europe",
+        "Skiing",
+        "Switzerland",
+        "Peaks"
+      ]
+    },
+    {
+      "Main": "Great Lakes",
+      "Related": [
+        "USA",
+        "Canada",
+        "Freshwater",
+        "Superior"
+      ]
+    },
+    {
+      "Main": "Suez Canal",
+      "Related": [
+        "Egypt",
+        "Shipping",
+        "Red Sea",
+        "Trade"
+      ]
+    },
+    {
+      "Main": "Amazon Rainforest",
+      "Related": [
+        "Brazil",
+        "Biodiversity",
+        "Trees",
+        "Deforestation"
+      ]
+    },
+    {
+      "Main": "Berlin Wall",
+      "Related": [
+        "Germany",
+        "Cold War",
+        "Division",
+        "Fall"
+      ]
+    },
+    {
+      "Main": "Denali Peak",
+      "Related": [
+        "Alaska",
+        "USA",
+        "Highest",
+        "Snow"
+      ]
+    },
+    {
+      "Main": "Gobi Desert",
+      "Related": [
+        "Asia",
+        "Mongolia",
+        "Arid",
+        "Sand"
+      ]
+    },
+    {
+      "Main": "Petra Ruins",
+      "Related": [
+        "Jordan",
+        "Ancient",
+        "Rock-cut",
+        "Nabatean"
+      ]
+    },
+    {
+      "Main": "Victoria Island",
+      "Related": [
+        "Canada",
+        "Arctic",
+        "Northern",
+        "Territory"
+      ]
+    },
+    {
+      "Main": "Elbrus Peak",
+      "Related": [
+        "Russia",
+        "Europe",
+        "Volcano",
+        "Highest"
+      ]
+    },
+    {
+      "Main": "Lake Baikal",
+      "Related": [
+        "Russia",
+        "Deepest",
+        "Freshwater",
+        "Siberia"
+      ]
+    },
+    {
+      "Main": "Rushmore Mount",
+      "Related": [
+        "USA",
+        "Presidents",
+        "South Dakota",
+        "Monument"
+      ]
+    },
+    {
+      "Main": "Bermuda Triangle",
+      "Related": [
+        "Atlantic Ocean",
+        "Mystery",
+        "Disappearances",
+        "Triangle"
+      ]
+    },
+    {
+      "Main": "Casablanca",
+      "Related": [
+        "Morocco",
+        "Atlantic",
+        "Port",
+        "Africa"
+      ]
+    },
+    {
+      "Main": "Coral Sea",
+      "Related": [
+        "Australia",
+        "Ocean",
+        "Reef",
+        "Marine"
+      ]
+    },
+    {
+      "Main": "Himalayan Range",
+      "Related": [
+        "Asia",
+        "Mountains",
+        "Nepal",
+        "India"
+      ]
+    },
+    {
+      "Main": "Lake Victoria",
+      "Related": [
+        "Africa",
+        "Largest",
+        "Freshwater",
+        "Nile"
+      ]
+    },
+    {
+      "Main": "Galapagos",
+      "Related": [
+        "Ecuador",
+        "Wildlife",
+        "Darwin",
+        "Volcano"
+      ]
+    },
+    {
+      "Main": "Maldives",
+      "Related": [
+        "Indian Ocean",
+        "Resort",
+        "Coral",
+        "Tropical"
+      ]
+    },
+    {
+      "Main": "Red Sea",
+      "Related": [
+        "Middle East",
+        "Saltwater",
+        "Egypt",
+        "Coral"
+      ]
+    },
+    {
+      "Main": "Smoky Mountains",
+      "Related": [
+        "USA",
+        "National Park",
+        "Tennessee",
+        "Cumberland"
+      ]
+    },
+    {
+      "Main": "Yangtze River",
+      "Related": [
+        "China",
+        "Longest",
+        "Asia",
+        "Hydroelectric"
+      ]
+    },
+    {
+      "Main": "Vesuvius",
+      "Related": [
+        "Italy",
+        "Volcano",
+        "Pompeii",
+        "Eruption"
+      ]
+    },
+    {
+      "Main": "Iguazu Falls",
+      "Related": [
+        "Argentina",
+        "Brazil",
+        "Waterfall",
+        "Jungle"
+      ]
+    },
+    {
+      "Main": "Rocky Mountains",
+      "Related": [
+        "USA",
+        "Canada",
+        "Peaks",
+        "Hiking"
+      ]
+    },
+    {
+      "Main": "Lake Michigan",
+      "Related": [
+        "USA",
+        "Great Lakes",
+        "Chicago",
+        "Freshwater"
+      ]
+    },
+    {
+      "Main": "Sydney Harbor",
+      "Related": [
+        "Australia",
+        "Bridge",
+        "Opera",
+        "Waterfront"
+      ]
+    },
+    {
+      "Main": "Olympus",
+      "Related": [
+        "Greece",
+        "Mythology",
+        "Peak",
+        "Ancient"
+      ]
+    },
+    {
+      "Main": "K2",
+      "Related": [
+        "Pakistan",
+        "China",
+        "Peak",
+        "Climbing"
+      ]
+    },
+    {
+      "Main": "Amazon Basin",
+      "Related": [
+        "South America",
+        "Rainforest",
+        "Biodiversity",
+        "River"
+      ]
+    },
+    {
+      "Main": "Lake Titicaca",
+      "Related": [
+        "Peru",
+        "Bolivia",
+        "High Altitude",
+        "Largest"
+      ]
+    },
+    {
+      "Main": "Chichen Itza",
+      "Related": [
+        "Mexico",
+        "Mayan",
+        "Pyramid",
+        "Ancient"
+      ]
+    },
+    {
+      "Main": "Loch Ness",
+      "Related": [
+        "Scotland",
+        "Lake",
+        "Monster",
+        "Nessie"
+      ]
+    },
+    {
+      "Main": "Kremlin",
+      "Related": [
+        "Russia",
+        "Government",
+        "Fortress",
+        "Red Square"
+      ]
+    },
+    {
+      "Main": "Etna",
+      "Related": [
+        "Italy",
+        "Volcano",
+        "Sicily",
+        "Eruption"
+      ]
+    },
+    {
+      "Main": "Superior Lake",
+      "Related": [
+        "Great Lakes",
+        "USA",
+        "Canada",
+        "Freshwater"
+      ]
+    },
+    {
+      "Main": "Death Valley",
+      "Related": [
+        "USA",
+        "California",
+        "Hot",
+        "Desert"
+      ]
+    },
+    {
+      "Main": "Istanbul",
+      "Related": [
+        "Turkey",
+        "Bosporus",
+        "Europe Asia",
+        "Historic"
+      ]
+    },
+    {
+      "Main": "Siberian Tundra",
+      "Related": [
+        "Russia",
+        "Cold",
+        "Permafrost",
+        "Arctic"
+      ]
+    },
+    {
+      "Main": "Rainier",
+      "Related": [
+        "USA",
+        "Washington",
+        "Volcano",
+        "Snow"
+      ]
+    },
+    {
+      "Main": "Zion Park",
+      "Related": [
+        "USA",
+        "Utah",
+        "Canyon",
+        "National"
+      ]
+    },
+    {
+      "Main": "Victoria Desert",
+      "Related": [
+        "Australia",
+        "Arid",
+        "Outback",
+        "Sand"
+      ]
+    },
+    {
+      "Main": "Kosciuszko",
+      "Related": [
+        "Australia",
+        "Peak",
+        "Snowy Mountains",
+        "Highest"
+      ]
+    },
+    {
+      "Main": "Tahoe Lake",
+      "Related": [
+        "USA",
+        "California",
+        "Nevada",
+        "Freshwater"
+      ]
+    },
+    {
+      "Main": "Sinai",
+      "Related": [
+        "Egypt",
+        "Biblical",
+        "Mountain",
+        "Religious"
+      ]
+    },
+    {
+      "Main": "Bengal Bay",
+      "Related": [
+        "Indian Ocean",
+        "Asia",
+        "Coast",
+        "Tropical"
+      ]
+    },
+    {
+      "Main": "Ararat",
+      "Related": [
+        "Turkey",
+        "Volcano",
+        "Biblical",
+        "Peak"
+      ]
+    },
+    {
+      "Main": "Elgon",
+      "Related": [
+        "Uganda",
+        "Kenya",
+        "Volcano",
+        "Peak"
+      ]
+    },
+    {
+      "Main": "Chad Lake",
+      "Related": [
+        "Africa",
+        "Shrinking",
+        "Freshwater",
+        "Sahel"
+      ]
+    },
+    {
+      "Main": "Makalu",
+      "Related": [
+        "Nepal",
+        "Himalayas",
+        "Peak",
+        "Climbing"
+      ]
+    },
+    {
+      "Main": "Logan Peak",
+      "Related": [
+        "Canada",
+        "Yukon",
+        "Snow",
+        "Highest"
+      ]
+    },
+    {
+      "Main": "Loire Valley",
+      "Related": [
+        "France",
+        "Rivers",
+        "Castles",
+        "Wine"
+      ]
+    },
+    {
+      "Main": "Aconcagua",
+      "Related": [
+        "Argentina",
+        "Peak",
+        "Andes",
+        "Highest"
+      ]
+    },
+    {
+      "Main": "Winnipeg Lake",
+      "Related": [
+        "Canada",
+        "Freshwater",
+        "Manitoba",
+        "Large"
+      ]
+    },
+    {
+      "Main": "Pelée",
+      "Related": [
+        "Martinique",
+        "Volcano",
+        "Eruption",
+        "Caribbean"
+      ]
+    },
+    {
+      "Main": "Hood",
+      "Related": [
+        "USA",
+        "Oregon",
+        "Volcano",
+        "Snow"
+      ]
+    },
+    {
+      "Main": "Ontario Lake",
+      "Related": [
+        "Great Lakes",
+        "USA",
+        "Canada",
+        "Freshwater"
+      ]
+    },
+    {
+      "Main": "Blanc",
+      "Related": [
+        "Europe",
+        "Alps",
+        "Peak",
+        "France Italy"
+      ]
+    },
+    {
+      "Main": "Kailash",
+      "Related": [
+        "Tibet",
+        "Sacred",
+        "Peak",
+        "Pilgrimage"
+      ]
+    },
+    {
+      "Main": "Kinabalu",
+      "Related": [
+        "Malaysia",
+        "Borneo",
+        "Peak",
+        "Tropical"
+      ]
+    },
+    {
+      "Main": "Geneva Lake",
+      "Related": [
+        "Switzerland",
+        "France",
+        "Freshwater",
+        "Alps"
+      ]
+    },
+    {
+      "Main": "Meru",
+      "Related": [
+        "Tanzania",
+        "Volcano",
+        "Africa",
+        "Peak"
+      ]
+    },
+    {
+      "Main": "McKinley",
+      "Related": [
+        "Alaska",
+        "USA",
+        "Denali",
+        "Peak"
+      ]
+    }
+  ]
+}

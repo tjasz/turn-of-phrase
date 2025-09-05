@@ -1,0 +1,753 @@
+{
+  "Title": "Science",
+  "Description": "Well-known concepts from a variety of scientific disciplines.",
+  "Challenges": [
+    {
+      "Main": "Gravity",
+      "Related": [
+        "Newton",
+        "Force",
+        "Earth",
+        "Attraction"
+      ]
+    },
+    {
+      "Main": "Evolution",
+      "Related": [
+        "Darwin",
+        "Natural Selection",
+        "Species",
+        "Adaptation"
+      ]
+    },
+    {
+      "Main": "Atom",
+      "Related": [
+        "Electron",
+        "Nucleus",
+        "Proton",
+        "Element"
+      ]
+    },
+    {
+      "Main": "DNA",
+      "Related": [
+        "Genetics",
+        "Double Helix",
+        "Chromosome",
+        "Molecule"
+      ]
+    },
+    {
+      "Main": "Relativity",
+      "Related": [
+        "Einstein",
+        "Space-Time",
+        "Physics",
+        "Theory"
+      ]
+    },
+    {
+      "Main": "Black Hole",
+      "Related": [
+        "Singularity",
+        "Event Horizon",
+        "Space",
+        "Gravity"
+      ]
+    },
+    {
+      "Main": "Photosynthesis",
+      "Related": [
+        "Chlorophyll",
+        "Plants",
+        "Sunlight",
+        "Oxygen"
+      ]
+    },
+    {
+      "Main": "Neuron",
+      "Related": [
+        "Brain",
+        "Synapse",
+        "Nerve",
+        "Signal"
+      ]
+    },
+    {
+      "Main": "Quantum Mechanics",
+      "Related": [
+        "Particle",
+        "Physics",
+        "Wave",
+        "Uncertainty"
+      ]
+    },
+    {
+      "Main": "Thermodynamics",
+      "Related": [
+        "Energy",
+        "Heat",
+        "Entropy",
+        "Laws"
+      ]
+    },
+    {
+      "Main": "Mendel",
+      "Related": [
+        "Genetics",
+        "Peas",
+        "Inheritance",
+        "Traits"
+      ]
+    },
+    {
+      "Main": "Big Bang",
+      "Related": [
+        "Universe",
+        "Cosmology",
+        "Expansion",
+        "Origin"
+      ]
+    },
+    {
+      "Main": "Cell Biology",
+      "Related": [
+        "Membrane",
+        "Organelles",
+        "Microscope",
+        "Biology"
+      ]
+    },
+    {
+      "Main": "Periodic Table",
+      "Related": [
+        "Elements",
+        "Mendeleev",
+        "Chemistry",
+        "Groups"
+      ]
+    },
+    {
+      "Main": "Ecosystem",
+      "Related": [
+        "Environment",
+        "Organisms",
+        "Interactions",
+        "Habitat"
+      ]
+    },
+    {
+      "Main": "Plate Tectonics",
+      "Related": [
+        "Earthquake",
+        "Continents",
+        "Mantle",
+        "Geology"
+      ]
+    },
+    {
+      "Main": "Hubble Telescope",
+      "Related": [
+        "Telescope",
+        "Universe",
+        "Expansion",
+        "Astronomy"
+      ]
+    },
+    {
+      "Main": "Vaccination",
+      "Related": [
+        "Immunity",
+        "Disease",
+        "Virus",
+        "Prevention"
+      ]
+    },
+    {
+      "Main": "Enzyme",
+      "Related": [
+        "Catalyst",
+        "Reaction",
+        "Biochemistry",
+        "Protein"
+      ]
+    },
+    {
+      "Main": "Blackbody Radiation",
+      "Related": [
+        "Radiation",
+        "Temperature",
+        "Physics",
+        "Spectrum"
+      ]
+    },
+    {
+      "Main": "Schrodinger",
+      "Related": [
+        "Cat",
+        "Quantum Physics",
+        "Uncertainty",
+        "Wave"
+      ]
+    },
+    {
+      "Main": "Platelet",
+      "Related": [
+        "Blood",
+        "Clotting",
+        "Cells",
+        "Injury"
+      ]
+    },
+    {
+      "Main": "Heredity",
+      "Related": [
+        "Genes",
+        "Inheritance",
+        "Traits",
+        "Biology"
+      ]
+    },
+    {
+      "Main": "Supernova",
+      "Related": [
+        "Star",
+        "Explosion",
+        "Astronomy",
+        "Nebula"
+      ]
+    },
+    {
+      "Main": "Molecule",
+      "Related": [
+        "Atoms",
+        "Bond",
+        "Compound",
+        "Chemistry"
+      ]
+    },
+    {
+      "Main": "Catalyst",
+      "Related": [
+        "Reaction",
+        "Speed",
+        "Chemistry",
+        "Enzyme"
+      ]
+    },
+    {
+      "Main": "Oxygen",
+      "Related": [
+        "Air",
+        "Breathing",
+        "Element",
+        "Gas"
+      ]
+    },
+    {
+      "Main": "Magnetism",
+      "Related": [
+        "Magnet",
+        "Field",
+        "Poles",
+        "Attraction"
+      ]
+    },
+    {
+      "Main": "Thermometer",
+      "Related": [
+        "Temperature",
+        "Measurement",
+        "Mercury",
+        "Science"
+      ]
+    },
+    {
+      "Main": "Fossil",
+      "Related": [
+        "Dinosaur",
+        "Geology",
+        "Preservation",
+        "Ancient"
+      ]
+    },
+    {
+      "Main": "Gene",
+      "Related": [
+        "DNA",
+        "Chromosome",
+        "Inheritance",
+        "Trait"
+      ]
+    },
+    {
+      "Main": "Solar System",
+      "Related": [
+        "Planets",
+        "Sun",
+        "Orbit",
+        "Astronomy"
+      ]
+    },
+    {
+      "Main": "Neutron",
+      "Related": [
+        "Nucleus",
+        "Particle",
+        "Neutral",
+        "Physics"
+      ]
+    },
+    {
+      "Main": "Antibody",
+      "Related": [
+        "Immune",
+        "Protein",
+        "Virus",
+        "Defense"
+      ]
+    },
+    {
+      "Main": "Evolutionary Tree",
+      "Related": [
+        "Species",
+        "Phylogeny",
+        "Ancestor",
+        "Biology"
+      ]
+    },
+    {
+      "Main": "Electricity",
+      "Related": [
+        "Current",
+        "Charge",
+        "Voltage",
+        "Power"
+      ]
+    },
+    {
+      "Main": "Chromosome",
+      "Related": [
+        "DNA",
+        "Gene",
+        "Cell",
+        "Inheritance"
+      ]
+    },
+    {
+      "Main": "Radiation",
+      "Related": [
+        "Energy",
+        "Waves",
+        "Radioactive",
+        "Physics"
+      ]
+    },
+    {
+      "Main": "Gravity Wave",
+      "Related": [
+        "Space",
+        "Einstein",
+        "Ripples",
+        "Physics"
+      ]
+    },
+    {
+      "Main": "Bacteria",
+      "Related": [
+        "Microbe",
+        "Infection",
+        "Antibiotic",
+        "Cell"
+      ]
+    },
+    {
+      "Main": "Fission",
+      "Related": [
+        "Nuclear",
+        "Splitting",
+        "Energy",
+        "Reaction"
+      ]
+    },
+    {
+      "Main": "Fusion",
+      "Related": [
+        "Nuclear",
+        "Sun",
+        "Energy",
+        "Reaction"
+      ]
+    },
+    {
+      "Main": "Pythagoras",
+      "Related": [
+        "Triangle",
+        "Mathematics",
+        "Theorem",
+        "Right Angle"
+      ]
+    },
+    {
+      "Main": "Newton",
+      "Related": [
+        "Gravity",
+        "Laws",
+        "Motion",
+        "Physics"
+      ]
+    },
+    {
+      "Main": "E=mc2",
+      "Related": [
+        "Energy",
+        "Mass",
+        "Einstein",
+        "Relativity"
+      ]
+    },
+    {
+      "Main": "Ozone",
+      "Related": [
+        "Atmosphere",
+        "Layer",
+        "Protection",
+        "UV"
+      ]
+    },
+    {
+      "Main": "DNA Replication",
+      "Related": [
+        "Cell",
+        "Genetics",
+        "Mitosis",
+        "Helix"
+      ]
+    },
+    {
+      "Main": "Higgs Boson",
+      "Related": [
+        "Particle",
+        "Physics",
+        "LHC",
+        "Mass"
+      ]
+    },
+    {
+      "Main": "Telescope",
+      "Related": [
+        "Astronomy",
+        "Lens",
+        "Observation",
+        "Space"
+      ]
+    },
+    {
+      "Main": "Electron Particle",
+      "Related": [
+        "Charge",
+        "Atom",
+        "Particle",
+        "Negative"
+      ]
+    },
+    {
+      "Main": "Volcano",
+      "Related": [
+        "Lava",
+        "Eruption",
+        "Magma",
+        "Earth"
+      ]
+    },
+    {
+      "Main": "Magnet",
+      "Related": [
+        "Magnetism",
+        "Poles",
+        "Attraction",
+        "Field"
+      ]
+    },
+    {
+      "Main": "Antibiotic",
+      "Related": [
+        "Bacteria",
+        "Medicine",
+        "Infection",
+        "Treatment"
+      ]
+    },
+    {
+      "Main": "Hypothesis",
+      "Related": [
+        "Experiment",
+        "Theory",
+        "Science",
+        "Test"
+      ]
+    },
+    {
+      "Main": "Magnetosphere",
+      "Related": [
+        "Earth",
+        "Field",
+        "Solar Wind",
+        "Protection"
+      ]
+    },
+    {
+      "Main": "Genome",
+      "Related": [
+        "DNA",
+        "Genetics",
+        "Sequencing",
+        "Biology"
+      ]
+    },
+    {
+      "Main": "Solar Flare",
+      "Related": [
+        "Sun",
+        "Radiation",
+        "Space",
+        "Storm"
+      ]
+    },
+    {
+      "Main": "Periodicity",
+      "Related": [
+        "Elements",
+        "Table",
+        "Chemistry",
+        "Mendeleev"
+      ]
+    },
+    {
+      "Main": "Biology",
+      "Related": [
+        "Life",
+        "Organisms",
+        "Cells",
+        "Science"
+      ]
+    },
+    {
+      "Main": "Genomics",
+      "Related": [
+        "Genome",
+        "DNA",
+        "Sequencing",
+        "Biology"
+      ]
+    },
+    {
+      "Main": "Neuroscience",
+      "Related": [
+        "Brain",
+        "Nerve",
+        "Cognition",
+        "Behavior"
+      ]
+    },
+    {
+      "Main": "Immunology",
+      "Related": [
+        "Immune",
+        "Antibody",
+        "Vaccine",
+        "Defense"
+      ]
+    },
+    {
+      "Main": "Microbiology",
+      "Related": [
+        "Bacteria",
+        "Virus",
+        "Microbe",
+        "Pathogen"
+      ]
+    },
+    {
+      "Main": "Biochemistry",
+      "Related": [
+        "Enzyme",
+        "Protein",
+        "Molecule",
+        "Reaction"
+      ]
+    },
+    {
+      "Main": "Pathology",
+      "Related": [
+        "Disease",
+        "Diagnosis",
+        "Tissue",
+        "Medicine"
+      ]
+    },
+    {
+      "Main": "Pharmacology",
+      "Related": [
+        "Drugs",
+        "Medicine",
+        "Treatment",
+        "Chemistry"
+      ]
+    },
+    {
+      "Main": "Chromatography",
+      "Related": [
+        "Separation",
+        "Chemistry",
+        "Laboratory",
+        "Technique"
+      ]
+    },
+    {
+      "Main": "Biome",
+      "Related": [
+        "Ecosystem",
+        "Climate",
+        "Flora",
+        "Fauna"
+      ]
+    },
+    {
+      "Main": "Isotope",
+      "Related": [
+        "Atoms",
+        "Nucleus",
+        "Element",
+        "Neutron"
+      ]
+    },
+    {
+      "Main": "Antigen",
+      "Related": [
+        "Immune",
+        "Protein",
+        "Antibody",
+        "Defense"
+      ]
+    },
+    {
+      "Main": "Ligand",
+      "Related": [
+        "Molecule",
+        "Binding",
+        "Receptor",
+        "Chemistry"
+      ]
+    },
+    {
+      "Main": "Cytoplasm",
+      "Related": [
+        "Cell",
+        "Organelles",
+        "Fluid",
+        "Biology"
+      ]
+    },
+    {
+      "Main": "Xylem",
+      "Related": [
+        "Plant",
+        "Water",
+        "Transport",
+        "Tissue"
+      ]
+    },
+    {
+      "Main": "Mitochondria",
+      "Related": [
+        "Cell",
+        "Energy",
+        "ATP",
+        "Organelle"
+      ]
+    },
+    {
+      "Main": "Hemoglobin",
+      "Related": [
+        "Blood",
+        "Oxygen",
+        "Protein",
+        "Red Cells"
+      ]
+    },
+    {
+      "Main": "Geology",
+      "Related": [
+        "Rocks",
+        "Earth",
+        "Fossil",
+        "Minerals"
+      ]
+    },
+    {
+      "Main": "Meteorology",
+      "Related": [
+        "Weather",
+        "Atmosphere",
+        "Climate",
+        "Forecast"
+      ]
+    },
+    {
+      "Main": "Psychology",
+      "Related": [
+        "Mind",
+        "Behavior",
+        "Cognition",
+        "Mental"
+      ]
+    },
+    {
+      "Main": "Sociology",
+      "Related": [
+        "Society",
+        "Culture",
+        "Behavior",
+        "Groups"
+      ]
+    },
+    {
+      "Main": "Ecology",
+      "Related": [
+        "Environment",
+        "Organisms",
+        "Ecosystem",
+        "Interaction"
+      ]
+    },
+    {
+      "Main": "Botany",
+      "Related": [
+        "Plants",
+        "Biology",
+        "Flora",
+        "Photosynthesis"
+      ]
+    },
+    {
+      "Main": "Zoology",
+      "Related": [
+        "Animals",
+        "Biology",
+        "Fauna",
+        "Behavior"
+      ]
+    },
+    {
+      "Main": "Astronomy",
+      "Related": [
+        "Stars",
+        "Planets",
+        "Space",
+        "Universe"
+      ]
+    }
+  ]
+}
