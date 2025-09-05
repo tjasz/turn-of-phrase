@@ -1,248 +1,59 @@
 {
-  "Title": "Science",
-  "Description": "Well-known concepts from a variety of scientific disciplines.",
+  "Title": "Science 3",
+  "Description": "Well-known concepts and figures from a variety of scientific disciplines.",
   "Challenges": [
     {
-      "Main": "Gravity",
+      "Main": "Quantum",
       "Related": [
-        "Newton",
-        "Force",
-        "Earth",
-        "Attraction"
-      ]
-    },
-    {
-      "Main": "Evolution",
-      "Related": [
-        "Darwin",
-        "Natural Selection",
-        "Species",
-        "Adaptation"
-      ]
-    },
-    {
-      "Main": "Atom",
-      "Related": [
-        "Electron",
-        "Nucleus",
-        "Proton",
-        "Element"
-      ]
-    },
-    {
-      "Main": "DNA",
-      "Related": [
-        "Genetics",
-        "Double Helix",
-        "Chromosome",
-        "Molecule"
+        "Physics",
+        "Mechanics",
+        "Wave",
+        "Particle"
       ]
     },
     {
       "Main": "Relativity",
       "Related": [
         "Einstein",
-        "Space-Time",
-        "Physics",
-        "Theory"
-      ]
-    },
-    {
-      "Main": "Black Hole",
-      "Related": [
-        "Singularity",
-        "Event Horizon",
         "Space",
+        "Time",
         "Gravity"
       ]
     },
     {
-      "Main": "Photosynthesis",
+      "Main": "Atom",
       "Related": [
-        "Chlorophyll",
-        "Plants",
-        "Sunlight",
-        "Oxygen"
+        "Nucleus",
+        "Electron",
+        "Proton",
+        "Neutron"
       ]
     },
     {
-      "Main": "Neuron",
+      "Main": "Photon",
       "Related": [
-        "Brain",
-        "Synapse",
-        "Nerve",
-        "Signal"
-      ]
-    },
-    {
-      "Main": "Quantum Mechanics",
-      "Related": [
+        "Light",
         "Particle",
-        "Physics",
         "Wave",
-        "Uncertainty"
+        "Quantum"
       ]
     },
     {
-      "Main": "Thermodynamics",
+      "Main": "Gravity",
       "Related": [
-        "Energy",
-        "Heat",
-        "Entropy",
-        "Laws"
+        "Force",
+        "Mass",
+        "Earth",
+        "Acceleration"
       ]
     },
     {
-      "Main": "Mendel",
+      "Main": "Electron",
       "Related": [
-        "Genetics",
-        "Peas",
-        "Inheritance",
-        "Traits"
-      ]
-    },
-    {
-      "Main": "Big Bang",
-      "Related": [
-        "Universe",
-        "Cosmology",
-        "Expansion",
-        "Origin"
-      ]
-    },
-    {
-      "Main": "Cell Biology",
-      "Related": [
-        "Membrane",
-        "Organelles",
-        "Microscope",
-        "Biology"
-      ]
-    },
-    {
-      "Main": "Periodic Table",
-      "Related": [
-        "Elements",
-        "Mendeleev",
-        "Chemistry",
-        "Groups"
-      ]
-    },
-    {
-      "Main": "Ecosystem",
-      "Related": [
-        "Environment",
-        "Organisms",
-        "Interactions",
-        "Habitat"
-      ]
-    },
-    {
-      "Main": "Plate Tectonics",
-      "Related": [
-        "Earthquake",
-        "Continents",
-        "Mantle",
-        "Geology"
-      ]
-    },
-    {
-      "Main": "Hubble Telescope",
-      "Related": [
-        "Telescope",
-        "Universe",
-        "Expansion",
-        "Astronomy"
-      ]
-    },
-    {
-      "Main": "Vaccination",
-      "Related": [
-        "Immunity",
-        "Disease",
-        "Virus",
-        "Prevention"
-      ]
-    },
-    {
-      "Main": "Enzyme",
-      "Related": [
-        "Catalyst",
-        "Reaction",
-        "Biochemistry",
-        "Protein"
-      ]
-    },
-    {
-      "Main": "Blackbody Radiation",
-      "Related": [
-        "Radiation",
-        "Temperature",
-        "Physics",
-        "Spectrum"
-      ]
-    },
-    {
-      "Main": "Schrodinger",
-      "Related": [
-        "Cat",
-        "Quantum Physics",
-        "Uncertainty",
-        "Wave"
-      ]
-    },
-    {
-      "Main": "Platelet",
-      "Related": [
-        "Blood",
-        "Clotting",
-        "Cells",
-        "Injury"
-      ]
-    },
-    {
-      "Main": "Heredity",
-      "Related": [
-        "Genes",
-        "Inheritance",
-        "Traits",
-        "Biology"
-      ]
-    },
-    {
-      "Main": "Supernova",
-      "Related": [
-        "Star",
-        "Explosion",
-        "Astronomy",
-        "Nebula"
-      ]
-    },
-    {
-      "Main": "Molecule",
-      "Related": [
-        "Atoms",
-        "Bond",
-        "Compound",
-        "Chemistry"
-      ]
-    },
-    {
-      "Main": "Catalyst",
-      "Related": [
-        "Reaction",
-        "Speed",
-        "Chemistry",
-        "Enzyme"
-      ]
-    },
-    {
-      "Main": "Oxygen",
-      "Related": [
-        "Air",
-        "Breathing",
-        "Element",
-        "Gas"
+        "Charge",
+        "Particle",
+        "Orbit",
+        "Shell"
       ]
     },
     {
@@ -250,44 +61,17 @@
       "Related": [
         "Magnet",
         "Field",
-        "Poles",
-        "Attraction"
+        "Force",
+        "Electromagnet"
       ]
     },
     {
-      "Main": "Thermometer",
+      "Main": "Wave",
       "Related": [
-        "Temperature",
-        "Measurement",
-        "Mercury",
-        "Science"
-      ]
-    },
-    {
-      "Main": "Fossil",
-      "Related": [
-        "Dinosaur",
-        "Geology",
-        "Preservation",
-        "Ancient"
-      ]
-    },
-    {
-      "Main": "Gene",
-      "Related": [
-        "DNA",
-        "Chromosome",
-        "Inheritance",
-        "Trait"
-      ]
-    },
-    {
-      "Main": "Solar System",
-      "Related": [
-        "Planets",
-        "Sun",
-        "Orbit",
-        "Astronomy"
+        "Frequency",
+        "Amplitude",
+        "Sound",
+        "Light"
       ]
     },
     {
@@ -296,34 +80,313 @@
         "Nucleus",
         "Particle",
         "Neutral",
+        "Proton"
+      ]
+    },
+    {
+      "Main": "Proton",
+      "Related": [
+        "Nucleus",
+        "Positive",
+        "Charge",
+        "Particle"
+      ]
+    },
+    {
+      "Main": "Energy",
+      "Related": [
+        "Kinetic",
+        "Potential",
+        "Power",
+        "Work"
+      ]
+    },
+    {
+      "Main": "Force",
+      "Related": [
+        "Newton",
+        "Mass",
+        "Acceleration",
+        "Gravity"
+      ]
+    },
+    {
+      "Main": "Inertia",
+      "Related": [
+        "Motion",
+        "Mass",
+        "Resistance",
+        "Newton"
+      ]
+    },
+    {
+      "Main": "Momentum",
+      "Related": [
+        "Mass",
+        "Velocity",
+        "Impulse",
         "Physics"
       ]
     },
     {
-      "Main": "Antibody",
+      "Main": "Thermodynamics",
       "Related": [
-        "Immune",
-        "Protein",
-        "Virus",
-        "Defense"
+        "Heat",
+        "Energy",
+        "Entropy",
+        "System"
       ]
     },
     {
-      "Main": "Evolutionary Tree",
+      "Main": "Entropy",
       "Related": [
-        "Species",
-        "Phylogeny",
-        "Ancestor",
-        "Biology"
+        "Disorder",
+        "Thermodynamics",
+        "Energy",
+        "System"
       ]
     },
     {
-      "Main": "Electricity",
+      "Main": "Particle",
       "Related": [
-        "Current",
+        "Atom",
+        "Electron",
+        "Proton",
+        "Neutron"
+      ]
+    },
+    {
+      "Main": "Nucleus",
+      "Related": [
+        "Atom",
+        "Proton",
+        "Neutron",
+        "Core"
+      ]
+    },
+    {
+      "Main": "Black Hole",
+      "Related": [
+        "Space",
+        "Gravity",
+        "Singularity",
+        "Event Horizon"
+      ]
+    },
+    {
+      "Main": "Supernova",
+      "Related": [
+        "Explosion",
+        "Star",
+        "Nebula",
+        "Light"
+      ]
+    },
+    {
+      "Main": "Molecule",
+      "Related": [
+        "Atom",
+        "Bond",
+        "Compound",
+        "Chemical"
+      ]
+    },
+    {
+      "Main": "Acid",
+      "Related": [
+        "pH",
+        "Base",
+        "Corrosive",
+        "Chemical"
+      ]
+    },
+    {
+      "Main": "Base",
+      "Related": [
+        "Alkali",
+        "pH",
+        "Acid",
+        "Chemical"
+      ]
+    },
+    {
+      "Main": "Catalyst",
+      "Related": [
+        "Reaction",
+        "Enzyme",
+        "Speed",
+        "Chemical"
+      ]
+    },
+    {
+      "Main": "Element",
+      "Related": [
+        "Periodic",
+        "Table",
+        "Atom",
+        "Chemical"
+      ]
+    },
+    {
+      "Main": "Ion",
+      "Related": [
         "Charge",
-        "Voltage",
-        "Power"
+        "Atom",
+        "Electron",
+        "Positive"
+      ]
+    },
+    {
+      "Main": "Compound",
+      "Related": [
+        "Molecule",
+        "Chemical",
+        "Bond",
+        "Element"
+      ]
+    },
+    {
+      "Main": "Solution",
+      "Related": [
+        "Solvent",
+        "Solute",
+        "Mixture",
+        "Liquid"
+      ]
+    },
+    {
+      "Main": "Reaction",
+      "Related": [
+        "Chemical",
+        "Equation",
+        "Energy",
+        "Catalyst"
+      ]
+    },
+    {
+      "Main": "Organic",
+      "Related": [
+        "Chemistry",
+        "Carbon",
+        "Compound",
+        "Life"
+      ]
+    },
+    {
+      "Main": "Polymer",
+      "Related": [
+        "Chain",
+        "Molecule",
+        "Plastic",
+        "Monomer"
+      ]
+    },
+    {
+      "Main": "Isotope",
+      "Related": [
+        "Atom",
+        "Neutron",
+        "Nucleus",
+        "Radioactive"
+      ]
+    },
+    {
+      "Main": "Electrolysis",
+      "Related": [
+        "Electricity",
+        "Chemical",
+        "Reaction",
+        "Electrode"
+      ]
+    },
+    {
+      "Main": "pH",
+      "Related": [
+        "Acid",
+        "Base",
+        "Scale",
+        "Measurement"
+      ]
+    },
+    {
+      "Main": "Oxidation",
+      "Related": [
+        "Reaction",
+        "Electron",
+        "Rust",
+        "Chemical"
+      ]
+    },
+    {
+      "Main": "Periodic Table",
+      "Related": [
+        "Element",
+        "Chemistry",
+        "Mendeleev",
+        "Symbol"
+      ]
+    },
+    {
+      "Main": "Alkali",
+      "Related": [
+        "Base",
+        "Chemical",
+        "Metal",
+        "pH"
+      ]
+    },
+    {
+      "Main": "Halogen",
+      "Related": [
+        "Element",
+        "Group",
+        "Fluorine",
+        "Chlorine"
+      ]
+    },
+    {
+      "Main": "Salt",
+      "Related": [
+        "Sodium",
+        "Chloride",
+        "Compound",
+        "Crystal"
+      ]
+    },
+    {
+      "Main": "Solvent",
+      "Related": [
+        "Liquid",
+        "Solution",
+        "Solute",
+        "Dissolve"
+      ]
+    },
+    {
+      "Main": "Cell",
+      "Related": [
+        "Biology",
+        "Membrane",
+        "Nucleus",
+        "Organism"
+      ]
+    },
+    {
+      "Main": "DNA",
+      "Related": [
+        "Genetics",
+        "Chromosome",
+        "Gene",
+        "Molecule"
+      ]
+    },
+    {
+      "Main": "Gene",
+      "Related": [
+        "DNA",
+        "Chromosome",
+        "Trait",
+        "Inheritance"
       ]
     },
     {
@@ -331,26 +394,44 @@
       "Related": [
         "DNA",
         "Gene",
+        "Nucleus",
+        "Cell"
+      ]
+    },
+    {
+      "Main": "Protein",
+      "Related": [
+        "Amino Acid",
+        "Enzyme",
+        "Structure",
+        "Molecule"
+      ]
+    },
+    {
+      "Main": "Enzyme",
+      "Related": [
+        "Catalyst",
+        "Protein",
+        "Reaction",
+        "Biology"
+      ]
+    },
+    {
+      "Main": "Organism",
+      "Related": [
+        "Life",
         "Cell",
-        "Inheritance"
+        "Species",
+        "Biology"
       ]
     },
     {
-      "Main": "Radiation",
+      "Main": "Virus",
       "Related": [
-        "Energy",
-        "Waves",
-        "Radioactive",
-        "Physics"
-      ]
-    },
-    {
-      "Main": "Gravity Wave",
-      "Related": [
-        "Space",
-        "Einstein",
-        "Ripples",
-        "Physics"
+        "Infection",
+        "Pathogen",
+        "DNA",
+        "RNA"
       ]
     },
     {
@@ -363,137 +444,1010 @@
       ]
     },
     {
-      "Main": "Fission",
+      "Main": "Ecosystem",
       "Related": [
-        "Nuclear",
-        "Splitting",
-        "Energy",
-        "Reaction"
+        "Environment",
+        "Species",
+        "Habitat",
+        "Biology"
       ]
     },
     {
-      "Main": "Fusion",
+      "Main": "Mutation",
       "Related": [
-        "Nuclear",
-        "Sun",
-        "Energy",
-        "Reaction"
+        "Gene",
+        "DNA",
+        "Change",
+        "Evolution"
       ]
     },
     {
-      "Main": "Pythagoras",
+      "Main": "Evolution",
       "Related": [
-        "Triangle",
-        "Mathematics",
-        "Theorem",
-        "Right Angle"
+        "Natural",
+        "Selection",
+        "Mutation",
+        "Species"
       ]
     },
     {
-      "Main": "Newton",
+      "Main": "Neuron",
       "Related": [
-        "Gravity",
-        "Laws",
-        "Motion",
-        "Physics"
+        "Brain",
+        "Nerve",
+        "Signal",
+        "Cell"
       ]
     },
     {
-      "Main": "E=mc2",
+      "Main": "Hormone",
       "Related": [
-        "Energy",
-        "Mass",
-        "Einstein",
-        "Relativity"
+        "Chemical",
+        "Signal",
+        "Gland",
+        "Body"
       ]
     },
     {
-      "Main": "Ozone",
-      "Related": [
-        "Atmosphere",
-        "Layer",
-        "Protection",
-        "UV"
-      ]
-    },
-    {
-      "Main": "DNA Replication",
+      "Main": "Tissue",
       "Related": [
         "Cell",
-        "Genetics",
-        "Mitosis",
-        "Helix"
+        "Organ",
+        "Biology",
+        "Structure"
       ]
     },
     {
-      "Main": "Higgs Boson",
+      "Main": "Receptor",
       "Related": [
-        "Particle",
-        "Physics",
-        "LHC",
-        "Mass"
+        "Cell",
+        "Signal",
+        "Protein",
+        "Membrane"
+      ]
+    },
+    {
+      "Main": "Antibody",
+      "Related": [
+        "Immune",
+        "Protein",
+        "Infection",
+        "Defense"
+      ]
+    },
+    {
+      "Main": "Photosynthesis",
+      "Related": [
+        "Plant",
+        "Light",
+        "Chlorophyll",
+        "Energy"
+      ]
+    },
+    {
+      "Main": "Mitosis",
+      "Related": [
+        "Cell",
+        "Division",
+        "Chromosome",
+        "Biology"
+      ]
+    },
+    {
+      "Main": "RNA",
+      "Related": [
+        "Molecule",
+        "Protein",
+        "Genetics",
+        "DNA"
+      ]
+    },
+    {
+      "Main": "Planet",
+      "Related": [
+        "Orbit",
+        "Star",
+        "Solar",
+        "Earth"
+      ]
+    },
+    {
+      "Main": "Star",
+      "Related": [
+        "Light",
+        "Galaxy",
+        "Fusion",
+        "Sun"
+      ]
+    },
+    {
+      "Main": "Galaxy",
+      "Related": [
+        "Stars",
+        "Universe",
+        "Milky Way",
+        "Space"
+      ]
+    },
+    {
+      "Main": "Nebula",
+      "Related": [
+        "Gas",
+        "Dust",
+        "Star",
+        "Cloud"
+      ]
+    },
+    {
+      "Main": "Asteroid",
+      "Related": [
+        "Space",
+        "Rock",
+        "Orbit",
+        "Meteor"
+      ]
+    },
+    {
+      "Main": "Comet",
+      "Related": [
+        "Ice",
+        "Tail",
+        "Orbit",
+        "Space"
+      ]
+    },
+    {
+      "Main": "Orbit",
+      "Related": [
+        "Planet",
+        "Star",
+        "Gravity",
+        "Path"
+      ]
+    },
+    {
+      "Main": "Cosmos",
+      "Related": [
+        "Universe",
+        "Space",
+        "Stars",
+        "Galaxy"
+      ]
+    },
+    {
+      "Main": "Quasar",
+      "Related": [
+        "Galaxy",
+        "Light",
+        "Energy",
+        "Black Hole"
+      ]
+    },
+    {
+      "Main": "Meteor",
+      "Related": [
+        "Rock",
+        "Space",
+        "Atmosphere",
+        "Fireball"
       ]
     },
     {
       "Main": "Telescope",
       "Related": [
-        "Astronomy",
         "Lens",
-        "Observation",
+        "Astronomy",
+        "Space",
+        "Observation"
+      ]
+    },
+    {
+      "Main": "Solar",
+      "Related": [
+        "System",
+        "Energy",
+        "Sun",
+        "Planet"
+      ]
+    },
+    {
+      "Main": "Universe",
+      "Related": [
+        "Space",
+        "Galaxy",
+        "Stars",
+        "Cosmos"
+      ]
+    },
+    {
+      "Main": "Exoplanet",
+      "Related": [
+        "Planet",
+        "Orbit",
+        "Star",
         "Space"
       ]
     },
     {
-      "Main": "Electron Particle",
+      "Main": "Eclipse",
       "Related": [
-        "Charge",
-        "Atom",
-        "Particle",
-        "Negative"
+        "Moon",
+        "Sun",
+        "Shadow",
+        "Orbit"
+      ]
+    },
+    {
+      "Main": "Constellation",
+      "Related": [
+        "Stars",
+        "Sky",
+        "Pattern",
+        "Astronomy"
+      ]
+    },
+    {
+      "Main": "Light Year",
+      "Related": [
+        "Distance",
+        "Space",
+        "Speed",
+        "Astronomy"
+      ]
+    },
+    {
+      "Main": "Rock",
+      "Related": [
+        "Mineral",
+        "Earth",
+        "Stone",
+        "Geology"
+      ]
+    },
+    {
+      "Main": "Mineral",
+      "Related": [
+        "Crystal",
+        "Rock",
+        "Element",
+        "Geology"
+      ]
+    },
+    {
+      "Main": "Fossil",
+      "Related": [
+        "Dinosaur",
+        "Rock",
+        "History",
+        "Paleontology"
+      ]
+    },
+    {
+      "Main": "Plate",
+      "Related": [
+        "Tectonic",
+        "Earth",
+        "Movement",
+        "Geology"
+      ]
+    },
+    {
+      "Main": "Magma",
+      "Related": [
+        "Lava",
+        "Volcano",
+        "Earth",
+        "Molten"
+      ]
+    },
+    {
+      "Main": "Erosion",
+      "Related": [
+        "Water",
+        "Wind",
+        "Soil",
+        "Geology"
+      ]
+    },
+    {
+      "Main": "Sediment",
+      "Related": [
+        "Rock",
+        "Soil",
+        "Deposit",
+        "Layer"
       ]
     },
     {
       "Main": "Volcano",
       "Related": [
-        "Lava",
         "Eruption",
+        "Lava",
         "Magma",
-        "Earth"
+        "Mountain"
       ]
     },
     {
-      "Main": "Magnet",
+      "Main": "Crystal",
       "Related": [
-        "Magnetism",
-        "Poles",
-        "Attraction",
-        "Field"
+        "Mineral",
+        "Structure",
+        "Geology",
+        "Gem"
+      ]
+    },
+    {
+      "Main": "Earthquake",
+      "Related": [
+        "Seismic",
+        "Fault",
+        "Tremor",
+        "Plate"
+      ]
+    },
+    {
+      "Main": "Mantle",
+      "Related": [
+        "Earth",
+        "Layer",
+        "Geology",
+        "Core"
+      ]
+    },
+    {
+      "Main": "Core",
+      "Related": [
+        "Earth",
+        "Center",
+        "Mantle",
+        "Molten"
+      ]
+    },
+    {
+      "Main": "Fault",
+      "Related": [
+        "Earthquake",
+        "Tectonic",
+        "Crack",
+        "Plate"
+      ]
+    },
+    {
+      "Main": "Lava",
+      "Related": [
+        "Volcano",
+        "Magma",
+        "Eruption",
+        "Molten"
+      ]
+    },
+    {
+      "Main": "Basalt",
+      "Related": [
+        "Rock",
+        "Volcanic",
+        "Igneous",
+        "Geology"
+      ]
+    },
+    {
+      "Main": "Quartz",
+      "Related": [
+        "Mineral",
+        "Crystal",
+        "Silicon",
+        "Geology"
+      ]
+    },
+    {
+      "Main": "Geode",
+      "Related": [
+        "Rock",
+        "Crystal",
+        "Cavity",
+        "Mineral"
+      ]
+    },
+    {
+      "Main": "Canyon",
+      "Related": [
+        "River",
+        "Erosion",
+        "Valley",
+        "Geology"
+      ]
+    },
+    {
+      "Main": "Glacier",
+      "Related": [
+        "Ice",
+        "Snow",
+        "Cold",
+        "Movement"
+      ]
+    },
+    {
+      "Main": "Tectonics",
+      "Related": [
+        "Plate",
+        "Earthquake",
+        "Movement",
+        "Geology"
+      ]
+    },
+    {
+      "Main": "Algorithm",
+      "Related": [
+        "Computer",
+        "Code",
+        "Procedure",
+        "Step"
+      ]
+    },
+    {
+      "Main": "Binary",
+      "Related": [
+        "Code",
+        "Computer",
+        "Digits",
+        "Two"
+      ]
+    },
+    {
+      "Main": "Data",
+      "Related": [
+        "Information",
+        "Computer",
+        "Analysis",
+        "Storage"
+      ]
+    },
+    {
+      "Main": "Network",
+      "Related": [
+        "Computer",
+        "Connection",
+        "Internet",
+        "System"
+      ]
+    },
+    {
+      "Main": "Code",
+      "Related": [
+        "Computer",
+        "Programming",
+        "Language",
+        "Software"
+      ]
+    },
+    {
+      "Main": "Software",
+      "Related": [
+        "Computer",
+        "Program",
+        "Application",
+        "System"
+      ]
+    },
+    {
+      "Main": "Hardware",
+      "Related": [
+        "Computer",
+        "Physical",
+        "Device",
+        "Component"
+      ]
+    },
+    {
+      "Main": "Processor",
+      "Related": [
+        "Computer",
+        "CPU",
+        "Speed",
+        "Chip"
+      ]
+    },
+    {
+      "Main": "Cache",
+      "Related": [
+        "Memory",
+        "Computer",
+        "Speed",
+        "Storage"
+      ]
+    },
+    {
+      "Main": "Database",
+      "Related": [
+        "Information",
+        "Storage",
+        "Computer",
+        "Query"
+      ]
+    },
+    {
+      "Main": "Compiler",
+      "Related": [
+        "Code",
+        "Programming",
+        "Translate",
+        "Computer"
+      ]
+    },
+    {
+      "Main": "Encryption",
+      "Related": [
+        "Security",
+        "Code",
+        "Data",
+        "Protection"
+      ]
+    },
+    {
+      "Main": "Protocol",
+      "Related": [
+        "Network",
+        "Communication",
+        "Rules",
+        "Data"
+      ]
+    },
+    {
+      "Main": "Interface",
+      "Related": [
+        "User",
+        "Computer",
+        "Design",
+        "System"
+      ]
+    },
+    {
+      "Main": "Debugging",
+      "Related": [
+        "Code",
+        "Error",
+        "Fix",
+        "Programming"
+      ]
+    },
+    {
+      "Main": "Server",
+      "Related": [
+        "Computer",
+        "Network",
+        "Data",
+        "Host"
+      ]
+    },
+    {
+      "Main": "Cloud",
+      "Related": [
+        "Storage",
+        "Internet",
+        "Data",
+        "Computing"
+      ]
+    },
+    {
+      "Main": "Bug",
+      "Related": [
+        "Error",
+        "Code",
+        "Software",
+        "Programming"
+      ]
+    },
+    {
+      "Main": "Pixel",
+      "Related": [
+        "Image",
+        "Screen",
+        "Display",
+        "Computer"
+      ]
+    },
+    {
+      "Main": "Firewall",
+      "Related": [
+        "Security",
+        "Network",
+        "Protection",
+        "Computer"
+      ]
+    },
+    {
+      "Main": "Algebra",
+      "Related": [
+        "Math",
+        "Equation",
+        "Variable",
+        "Expression"
+      ]
+    },
+    {
+      "Main": "Geometry",
+      "Related": [
+        "Shapes",
+        "Angles",
+        "Math",
+        "Space"
+      ]
+    },
+    {
+      "Main": "Calculus",
+      "Related": [
+        "Derivative",
+        "Integral",
+        "Math",
+        "Function"
+      ]
+    },
+    {
+      "Main": "Matrix",
+      "Related": [
+        "Math",
+        "Array",
+        "Linear",
+        "Algebra"
+      ]
+    },
+    {
+      "Main": "Probability",
+      "Related": [
+        "Chance",
+        "Statistics",
+        "Math",
+        "Event"
+      ]
+    },
+    {
+      "Main": "Theorem",
+      "Related": [
+        "Proof",
+        "Math",
+        "Statement",
+        "Logic"
+      ]
+    },
+    {
+      "Main": "Vector",
+      "Related": [
+        "Math",
+        "Direction",
+        "Magnitude",
+        "Quantity"
+      ]
+    },
+    {
+      "Main": "Function",
+      "Related": [
+        "Math",
+        "Variable",
+        "Input",
+        "Output"
+      ]
+    },
+    {
+      "Main": "Equation",
+      "Related": [
+        "Math",
+        "Balance",
+        "Expression",
+        "Variable"
+      ]
+    },
+    {
+      "Main": "Statistics",
+      "Related": [
+        "Data",
+        "Analysis",
+        "Math",
+        "Probability"
+      ]
+    },
+    {
+      "Main": "Integral",
+      "Related": [
+        "Calculus",
+        "Area",
+        "Sum",
+        "Math"
+      ]
+    },
+    {
+      "Main": "Derivative",
+      "Related": [
+        "Calculus",
+        "Slope",
+        "Rate",
+        "Math"
+      ]
+    },
+    {
+      "Main": "Graph",
+      "Related": [
+        "Plot",
+        "Math",
+        "Data",
+        "Chart"
+      ]
+    },
+    {
+      "Main": "Number",
+      "Related": [
+        "Digit",
+        "Math",
+        "Value",
+        "Quantity"
+      ]
+    },
+    {
+      "Main": "Sequence",
+      "Related": [
+        "Order",
+        "Math",
+        "Series",
+        "Pattern"
+      ]
+    },
+    {
+      "Main": "Limit",
+      "Related": [
+        "Calculus",
+        "Math",
+        "Approach",
+        "Value"
+      ]
+    },
+    {
+      "Main": "Set",
+      "Related": [
+        "Math",
+        "Collection",
+        "Elements",
+        "Group"
+      ]
+    },
+    {
+      "Main": "Variable",
+      "Related": [
+        "Math",
+        "Symbol",
+        "Unknown",
+        "Value"
+      ]
+    },
+    {
+      "Main": "Ratio",
+      "Related": [
+        "Math",
+        "Proportion",
+        "Fraction",
+        "Comparison"
+      ]
+    },
+    {
+      "Main": "Angle",
+      "Related": [
+        "Math",
+        "Degree",
+        "Geometry",
+        "Measure"
+      ]
+    },
+    {
+      "Main": "Pollution",
+      "Related": [
+        "Environment",
+        "Air",
+        "Water",
+        "Contamination"
+      ]
+    },
+    {
+      "Main": "Climate",
+      "Related": [
+        "Weather",
+        "Environment",
+        "Temperature",
+        "Change"
+      ]
+    },
+    {
+      "Main": "Biodiversity",
+      "Related": [
+        "Species",
+        "Ecosystem",
+        "Environment",
+        "Variety"
+      ]
+    },
+    {
+      "Main": "Conservation",
+      "Related": [
+        "Environment",
+        "Protection",
+        "Wildlife",
+        "Nature"
+      ]
+    },
+    {
+      "Main": "Recycling",
+      "Related": [
+        "Waste",
+        "Environment",
+        "Reuse",
+        "Materials"
+      ]
+    },
+    {
+      "Main": "Carbon",
+      "Related": [
+        "Element",
+        "Dioxide",
+        "Emission",
+        "Cycle"
+      ]
+    },
+    {
+      "Main": "Ozone",
+      "Related": [
+        "Layer",
+        "Atmosphere",
+        "Protection",
+        "Gas"
+      ]
+    },
+    {
+      "Main": "Habitat",
+      "Related": [
+        "Environment",
+        "Species",
+        "Home",
+        "Ecosystem"
+      ]
+    },
+    {
+      "Main": "Sustainability",
+      "Related": [
+        "Environment",
+        "Resources",
+        "Future",
+        "Conservation"
+      ]
+    },
+    {
+      "Main": "Deforestation",
+      "Related": [
+        "Trees",
+        "Forest",
+        "Environment",
+        "Loss"
+      ]
+    },
+    {
+      "Main": "Emission",
+      "Related": [
+        "Pollution",
+        "Gas",
+        "Carbon",
+        "Release"
+      ]
+    },
+    {
+      "Main": "Renewable",
+      "Related": [
+        "Energy",
+        "Solar",
+        "Wind",
+        "Sustainable"
+      ]
+    },
+    {
+      "Main": "Fossil Fuel",
+      "Related": [
+        "Energy",
+        "Carbon",
+        "Coal",
+        "Oil"
+      ]
+    },
+    {
+      "Main": "Greenhouse",
+      "Related": [
+        "Gas",
+        "Effect",
+        "Climate",
+        "Temperature"
+      ]
+    },
+    {
+      "Main": "Soil",
+      "Related": [
+        "Earth",
+        "Plant",
+        "Nutrients",
+        "Environment"
+      ]
+    },
+    {
+      "Main": "Water",
+      "Related": [
+        "Liquid",
+        "H2O",
+        "Ocean",
+        "River"
+      ]
+    },
+    {
+      "Main": "Air",
+      "Related": [
+        "Atmosphere",
+        "Gas",
+        "Oxygen",
+        "Breath"
+      ]
+    },
+    {
+      "Main": "Waste",
+      "Related": [
+        "Garbage",
+        "Trash",
+        "Pollution",
+        "Disposal"
+      ]
+    },
+    {
+      "Main": "Brain",
+      "Related": [
+        "Neurons",
+        "Cognition",
+        "Organ",
+        "Nervous"
+      ]
+    },
+    {
+      "Main": "Vaccine",
+      "Related": [
+        "Immunization",
+        "Disease",
+        "Injection",
+        "Prevention"
       ]
     },
     {
       "Main": "Antibiotic",
       "Related": [
+        "Infection",
         "Bacteria",
         "Medicine",
-        "Infection",
         "Treatment"
       ]
     },
     {
-      "Main": "Hypothesis",
+      "Main": "Organ",
       "Related": [
-        "Experiment",
-        "Theory",
-        "Science",
-        "Test"
+        "Body",
+        "Function",
+        "System",
+        "Tissue"
       ]
     },
     {
-      "Main": "Magnetosphere",
+      "Main": "Disease",
       "Related": [
-        "Earth",
-        "Field",
-        "Solar Wind",
+        "Illness",
+        "Infection",
+        "Pathogen",
+        "Health"
+      ]
+    },
+    {
+      "Main": "Immune",
+      "Related": [
+        "System",
+        "Defense",
+        "Antibody",
         "Protection"
       ]
     },
@@ -502,251 +1456,242 @@
       "Related": [
         "DNA",
         "Genetics",
-        "Sequencing",
-        "Biology"
+        "Sequence",
+        "Organism"
       ]
     },
     {
-      "Main": "Solar Flare",
+      "Main": "Pathogen",
       "Related": [
-        "Sun",
-        "Radiation",
-        "Space",
-        "Storm"
-      ]
-    },
-    {
-      "Main": "Periodicity",
-      "Related": [
-        "Elements",
-        "Table",
-        "Chemistry",
-        "Mendeleev"
-      ]
-    },
-    {
-      "Main": "Biology",
-      "Related": [
-        "Life",
-        "Organisms",
-        "Cells",
-        "Science"
-      ]
-    },
-    {
-      "Main": "Genomics",
-      "Related": [
-        "Genome",
-        "DNA",
-        "Sequencing",
-        "Biology"
-      ]
-    },
-    {
-      "Main": "Neuroscience",
-      "Related": [
-        "Brain",
-        "Nerve",
-        "Cognition",
-        "Behavior"
-      ]
-    },
-    {
-      "Main": "Immunology",
-      "Related": [
-        "Immune",
-        "Antibody",
-        "Vaccine",
-        "Defense"
-      ]
-    },
-    {
-      "Main": "Microbiology",
-      "Related": [
-        "Bacteria",
         "Virus",
-        "Microbe",
-        "Pathogen"
+        "Bacteria",
+        "Infection",
+        "Disease"
       ]
     },
     {
-      "Main": "Biochemistry",
+      "Main": "Therapy",
       "Related": [
-        "Enzyme",
-        "Protein",
-        "Molecule",
-        "Reaction"
+        "Treatment",
+        "Medicine",
+        "Recovery",
+        "Health"
       ]
     },
     {
-      "Main": "Pathology",
+      "Main": "Diagnosis",
       "Related": [
         "Disease",
-        "Diagnosis",
-        "Tissue",
-        "Medicine"
+        "Medical",
+        "Test",
+        "Health"
       ]
     },
     {
-      "Main": "Pharmacology",
+      "Main": "Surgery",
       "Related": [
-        "Drugs",
-        "Medicine",
-        "Treatment",
-        "Chemistry"
+        "Operation",
+        "Medical",
+        "Procedure",
+        "Hospital"
       ]
     },
     {
-      "Main": "Chromatography",
+      "Main": "Symptom",
       "Related": [
-        "Separation",
-        "Chemistry",
-        "Laboratory",
-        "Technique"
+        "Disease",
+        "Sign",
+        "Illness",
+        "Health"
       ]
     },
     {
-      "Main": "Biome",
+      "Main": "Infection",
       "Related": [
-        "Ecosystem",
-        "Climate",
-        "Flora",
-        "Fauna"
+        "Pathogen",
+        "Disease",
+        "Bacteria",
+        "Virus"
       ]
     },
     {
-      "Main": "Isotope",
+      "Main": "Blood",
       "Related": [
-        "Atoms",
-        "Nucleus",
-        "Element",
-        "Neutron"
-      ]
-    },
-    {
-      "Main": "Antigen",
-      "Related": [
-        "Immune",
-        "Protein",
-        "Antibody",
-        "Defense"
-      ]
-    },
-    {
-      "Main": "Ligand",
-      "Related": [
-        "Molecule",
-        "Binding",
-        "Receptor",
-        "Chemistry"
-      ]
-    },
-    {
-      "Main": "Cytoplasm",
-      "Related": [
+        "Circulation",
         "Cell",
-        "Organelles",
-        "Fluid",
-        "Biology"
-      ]
-    },
-    {
-      "Main": "Xylem",
-      "Related": [
-        "Plant",
-        "Water",
-        "Transport",
-        "Tissue"
-      ]
-    },
-    {
-      "Main": "Mitochondria",
-      "Related": [
-        "Cell",
-        "Energy",
-        "ATP",
-        "Organelle"
-      ]
-    },
-    {
-      "Main": "Hemoglobin",
-      "Related": [
-        "Blood",
         "Oxygen",
-        "Protein",
-        "Red Cells"
+        "Vessel"
       ]
     },
     {
-      "Main": "Geology",
+      "Main": "Cognition",
       "Related": [
-        "Rocks",
-        "Earth",
-        "Fossil",
-        "Minerals"
+        "Brain",
+        "Thinking",
+        "Knowledge",
+        "Mind"
       ]
     },
     {
-      "Main": "Meteorology",
+      "Main": "Memory",
       "Related": [
-        "Weather",
-        "Atmosphere",
-        "Climate",
-        "Forecast"
+        "Brain",
+        "Recall",
+        "Information",
+        "Mind"
       ]
     },
     {
-      "Main": "Psychology",
+      "Main": "Perception",
+      "Related": [
+        "Senses",
+        "Brain",
+        "Interpretation",
+        "Mind"
+      ]
+    },
+    {
+      "Main": "Emotion",
+      "Related": [
+        "Feeling",
+        "Mind",
+        "Psychology",
+        "Mood"
+      ]
+    },
+    {
+      "Main": "Behavior",
+      "Related": [
+        "Action",
+        "Response",
+        "Psychology",
+        "Mind"
+      ]
+    },
+    {
+      "Main": "Learning",
+      "Related": [
+        "Education",
+        "Mind",
+        "Knowledge",
+        "Skill"
+      ]
+    },
+    {
+      "Main": "Motivation",
+      "Related": [
+        "Drive",
+        "Mind",
+        "Goal",
+        "Psychology"
+      ]
+    },
+    {
+      "Main": "Intelligence",
       "Related": [
         "Mind",
-        "Behavior",
+        "IQ",
         "Cognition",
-        "Mental"
+        "Ability"
       ]
     },
     {
-      "Main": "Sociology",
+      "Main": "Attention",
       "Related": [
-        "Society",
-        "Culture",
+        "Focus",
+        "Mind",
+        "Concentration",
+        "Awareness"
+      ]
+    },
+    {
+      "Main": "Consciousness",
+      "Related": [
+        "Mind",
+        "Awareness",
+        "Thought",
+        "Psychology"
+      ]
+    },
+    {
+      "Main": "Neurotransmitter",
+      "Related": [
+        "Brain",
+        "Signal",
+        "Nerve",
+        "Chemical"
+      ]
+    },
+    {
+      "Main": "Psychosis",
+      "Related": [
+        "Mental",
+        "Disorder",
+        "Mind",
+        "Illness"
+      ]
+    },
+    {
+      "Main": "Stress",
+      "Related": [
+        "Mind",
+        "Pressure",
+        "Psychology",
+        "Health"
+      ]
+    },
+    {
+      "Main": "Personality",
+      "Related": [
+        "Traits",
+        "Mind",
         "Behavior",
-        "Groups"
+        "Psychology"
       ]
     },
     {
-      "Main": "Ecology",
+      "Main": "Development",
       "Related": [
-        "Environment",
-        "Organisms",
-        "Ecosystem",
-        "Interaction"
+        "Growth",
+        "Change",
+        "Mind",
+        "Psychology"
       ]
     },
     {
-      "Main": "Botany",
+      "Main": "Sensation",
       "Related": [
-        "Plants",
-        "Biology",
-        "Flora",
-        "Photosynthesis"
+        "Senses",
+        "Perception",
+        "Feeling",
+        "Mind"
       ]
     },
     {
-      "Main": "Zoology",
+      "Main": "Dream",
       "Related": [
-        "Animals",
-        "Biology",
-        "Fauna",
-        "Behavior"
+        "Sleep",
+        "Mind",
+        "Subconscious",
+        "Psychology"
       ]
     },
     {
-      "Main": "Astronomy",
+      "Main": "Mind",
       "Related": [
-        "Stars",
-        "Planets",
-        "Space",
-        "Universe"
+        "Brain",
+        "Thought",
+        "Consciousness",
+        "Psychology"
+      ]
+    },
+    {
+      "Main": "Phobia",
+      "Related": [
+        "Fear",
+        "Anxiety",
+        "Mind",
+        "Psychology"
       ]
     }
   ]

@@ -1,0 +1,996 @@
+{
+  "Title": "Medicine",
+  "Description": "",
+  "Challenges": [
+    {
+      "Main": "Heart",
+      "Related": [
+        "Cardiac",
+        "Valve",
+        "Chamber",
+        "Pulse"
+      ]
+    },
+    {
+      "Main": "Liver",
+      "Related": [
+        "Hepatic",
+        "Detox",
+        "Bile",
+        "Metabolism"
+      ]
+    },
+    {
+      "Main": "Kidney",
+      "Related": [
+        "Nephron",
+        "Filter",
+        "Ureter",
+        "Dialysis"
+      ]
+    },
+    {
+      "Main": "Lung",
+      "Related": [
+        "Alveoli",
+        "Respire",
+        "Bronchi",
+        "Oxygen"
+      ]
+    },
+    {
+      "Main": "Brain",
+      "Related": [
+        "Cerebrum",
+        "Neuron",
+        "Cortex",
+        "Mind"
+      ]
+    },
+    {
+      "Main": "Stomach",
+      "Related": [
+        "Acid",
+        "Digest",
+        "Gastric",
+        "Enzyme"
+      ]
+    },
+    {
+      "Main": "Pancreas",
+      "Related": [
+        "Insulin",
+        "Endocrine",
+        "Digestive",
+        "Islets"
+      ]
+    },
+    {
+      "Main": "Spleen",
+      "Related": [
+        "Immunity",
+        "Filter",
+        "Lymph",
+        "Red Cells"
+      ]
+    },
+    {
+      "Main": "Intestine",
+      "Related": [
+        "Absorb",
+        "Colon",
+        "Villi",
+        "Digest"
+      ]
+    },
+    {
+      "Main": "Bladder",
+      "Related": [
+        "Urine",
+        "Store",
+        "Urethra",
+        "Detrusor"
+      ]
+    },
+    {
+      "Main": "Esophagus",
+      "Related": [
+        "Swallow",
+        "Peristalsis",
+        "Muscle",
+        "Tube"
+      ]
+    },
+    {
+      "Main": "Gallbladder",
+      "Related": [
+        "Bile",
+        "Storage",
+        "Digest",
+        "Removal"
+      ]
+    },
+    {
+      "Main": "Thyroid",
+      "Related": [
+        "Hormone",
+        "Gland",
+        "Metabolism",
+        "Neck"
+      ]
+    },
+    {
+      "Main": "Appendix",
+      "Related": [
+        "Inflamed",
+        "Blind",
+        "Abdomen",
+        "Removal"
+      ]
+    },
+    {
+      "Main": "Skin",
+      "Related": [
+        "Epidermis",
+        "Dermis",
+        "Protect",
+        "Melanin"
+      ]
+    },
+    {
+      "Main": "Bone",
+      "Related": [
+        "Calcium",
+        "Marrow",
+        "Skeleton",
+        "Osteo"
+      ]
+    },
+    {
+      "Main": "Muscle",
+      "Related": [
+        "Contract",
+        "Fiber",
+        "Tendon",
+        "Strength"
+      ]
+    },
+    {
+      "Main": "Nerve",
+      "Related": [
+        "Neuron",
+        "Signal",
+        "Axon",
+        "Synapse"
+      ]
+    },
+    {
+      "Main": "Blood",
+      "Related": [
+        "Plasma",
+        "Red Cells",
+        "Hemoglobin",
+        "Clot"
+      ]
+    },
+    {
+      "Main": "Artery",
+      "Related": [
+        "Oxygen",
+        "Vessel",
+        "Pulse",
+        "Aorta"
+      ]
+    },
+    {
+      "Main": "Cardiology",
+      "Related": [
+        "Heart",
+        "ECG",
+        "Ventricle",
+        "Arrhythmia"
+      ]
+    },
+    {
+      "Main": "Neurology",
+      "Related": [
+        "Brain",
+        "Nerves",
+        "Stroke",
+        "Seizure"
+      ]
+    },
+    {
+      "Main": "Oncology",
+      "Related": [
+        "Cancer",
+        "Tumor",
+        "Chemo",
+        "Radiation"
+      ]
+    },
+    {
+      "Main": "Pediatrics",
+      "Related": [
+        "Children",
+        "Vaccine",
+        "Growth",
+        "Neonatal"
+      ]
+    },
+    {
+      "Main": "Dermatology",
+      "Related": [
+        "Skin",
+        "Acne",
+        "Eczema",
+        "Biopsy"
+      ]
+    },
+    {
+      "Main": "Radiology",
+      "Related": [
+        "X-ray",
+        "MRI",
+        "Scan",
+        "Imaging"
+      ]
+    },
+    {
+      "Main": "Psychiatry",
+      "Related": [
+        "Mental",
+        "Therapy",
+        "Disorder",
+        "Medication"
+      ]
+    },
+    {
+      "Main": "Gynecology",
+      "Related": [
+        "Repro",
+        "Uterus",
+        "Pregnancy",
+        "Cycle"
+      ]
+    },
+    {
+      "Main": "Orthopedics",
+      "Related": [
+        "Bones",
+        "Joints",
+        "Fracture",
+        "Surgery"
+      ]
+    },
+    {
+      "Main": "Anesthesiology",
+      "Related": [
+        "Anesthesia",
+        "Sedate",
+        "Pain",
+        "Intubate"
+      ]
+    },
+    {
+      "Main": "Diabetes",
+      "Related": [
+        "Insulin",
+        "Glucose",
+        "Type1",
+        "Type2"
+      ]
+    },
+    {
+      "Main": "Cancer",
+      "Related": [
+        "Tumor",
+        "Malign",
+        "Chemo",
+        "Spread"
+      ]
+    },
+    {
+      "Main": "Asthma",
+      "Related": [
+        "Bronchi",
+        "Wheezing",
+        "Inhaler",
+        "Allergy"
+      ]
+    },
+    {
+      "Main": "Pneumonia",
+      "Related": [
+        "Lung",
+        "Fever",
+        "Cough",
+        "Antibiotic"
+      ]
+    },
+    {
+      "Main": "Arthritis",
+      "Related": [
+        "Joint",
+        "Inflame",
+        "Pain",
+        "Rheuma"
+      ]
+    },
+    {
+      "Main": "Migraine",
+      "Related": [
+        "Headache",
+        "Aura",
+        "Nausea",
+        "Trigger"
+      ]
+    },
+    {
+      "Main": "Epilepsy",
+      "Related": [
+        "Seizure",
+        "Neurologic",
+        "Convulse",
+        "Medication"
+      ]
+    },
+    {
+      "Main": "Tuberculosis",
+      "Related": [
+        "Infect",
+        "Lung",
+        "Cough",
+        "BCG"
+      ]
+    },
+    {
+      "Main": "Influenza",
+      "Related": [
+        "Flu",
+        "Virus",
+        "Fever",
+        "Vaccine"
+      ]
+    },
+    {
+      "Main": "Hypertension",
+      "Related": [
+        "High BP",
+        "Cardio",
+        "Medicate",
+        "Risk"
+      ]
+    },
+    {
+      "Main": "MRI",
+      "Related": [
+        "Imaging",
+        "Magnetic",
+        "Scan",
+        "Brain"
+      ]
+    },
+    {
+      "Main": "X-ray",
+      "Related": [
+        "Radiate",
+        "Bone",
+        "Image",
+        "Fracture"
+      ]
+    },
+    {
+      "Main": "Ultrasound",
+      "Related": [
+        "Sound",
+        "Imaging",
+        "Fetus",
+        "Doppler"
+      ]
+    },
+    {
+      "Main": "Blood Test",
+      "Related": [
+        "Sample",
+        "Lab",
+        "Hemoglobin",
+        "Glucose"
+      ]
+    },
+    {
+      "Main": "Biopsy",
+      "Related": [
+        "Tissue",
+        "Sample",
+        "Cancer",
+        "Diagnosis"
+      ]
+    },
+    {
+      "Main": "CT Scan",
+      "Related": [
+        "Imaging",
+        "Radiate",
+        "Cross",
+        "Diagnosis"
+      ]
+    },
+    {
+      "Main": "ECG",
+      "Related": [
+        "Heart",
+        "Electrical",
+        "Rhythm",
+        "Arrhythmia"
+      ]
+    },
+    {
+      "Main": "Endoscopy",
+      "Related": [
+        "Scope",
+        "Digest",
+        "Camera",
+        "Biopsy"
+      ]
+    },
+    {
+      "Main": "Syringe",
+      "Related": [
+        "Injection",
+        "Needle",
+        "Vaccine",
+        "Dose"
+      ]
+    },
+    {
+      "Main": "Scalpel",
+      "Related": [
+        "Surgery",
+        "Blade",
+        "Cut",
+        "Sterile"
+      ]
+    },
+    {
+      "Main": "Stethoscope",
+      "Related": [
+        "Heartbeat",
+        "Lungs",
+        "Doctor",
+        "Listen"
+      ]
+    },
+    {
+      "Main": "Thermometer",
+      "Related": [
+        "Temp",
+        "Fever",
+        "Measure",
+        "Digital"
+      ]
+    },
+    {
+      "Main": "Defibrillator",
+      "Related": [
+        "Heart",
+        "Shock",
+        "Rescue",
+        "Arrhythmia"
+      ]
+    },
+    {
+      "Main": "Ventilator",
+      "Related": [
+        "Breath",
+        "Machine",
+        "Respire",
+        "Support"
+      ]
+    },
+    {
+      "Main": "Wheelchair",
+      "Related": [
+        "Mobility",
+        "Disability",
+        "Patient",
+        "Manual"
+      ]
+    },
+    {
+      "Main": "Crutches",
+      "Related": [
+        "Support",
+        "Injury",
+        "Walking",
+        "Aid"
+      ]
+    },
+    {
+      "Main": "Tablet",
+      "Related": [
+        "Medication",
+        "Dose",
+        "Pill",
+        "Prescription"
+      ]
+    },
+    {
+      "Main": "Antibiotic",
+      "Related": [
+        "Bacteria",
+        "Infect",
+        "Penicillin",
+        "Treatment"
+      ]
+    },
+    {
+      "Main": "Vaccine",
+      "Related": [
+        "Immunize",
+        "Injection",
+        "Prevent",
+        "Virus"
+      ]
+    },
+    {
+      "Main": "Painkiller",
+      "Related": [
+        "Analgesic",
+        "Relief",
+        "Medicate",
+        "Opioid"
+      ]
+    },
+    {
+      "Main": "Insulin",
+      "Related": [
+        "Diabetes",
+        "Hormone",
+        "Glucose",
+        "Inject"
+      ]
+    },
+    {
+      "Main": "Steroid",
+      "Related": [
+        "Hormone",
+        "Inflame",
+        "Medicate",
+        "Anabolic"
+      ]
+    },
+    {
+      "Main": "Chemotherapy",
+      "Related": [
+        "Cancer",
+        "Treatment",
+        "Drugs",
+        "Radiate"
+      ]
+    },
+    {
+      "Main": "Radiation",
+      "Related": [
+        "Cancer",
+        "Therapy",
+        "X-ray",
+        "Exposure"
+      ]
+    },
+    {
+      "Main": "Surgery",
+      "Related": [
+        "Operation",
+        "Cut",
+        "Anesthesia",
+        "Surgeon"
+      ]
+    },
+    {
+      "Main": "Transplant",
+      "Related": [
+        "Organ",
+        "Donate",
+        "Surgery",
+        "Rejection"
+      ]
+    },
+    {
+      "Main": "Dialysis",
+      "Related": [
+        "Kidney",
+        "Blood",
+        "Filter",
+        "Treatment"
+      ]
+    },
+    {
+      "Main": "Vaccination",
+      "Related": [
+        "Immunize",
+        "Prevent",
+        "Injection",
+        "Disease"
+      ]
+    },
+    {
+      "Main": "Injection",
+      "Related": [
+        "Syringe",
+        "Needle",
+        "Vaccine",
+        "Dose"
+      ]
+    },
+    {
+      "Main": "Physical Therapy",
+      "Related": [
+        "Rehab",
+        "Exercise",
+        "Recovery",
+        "Mobility"
+      ]
+    },
+    {
+      "Main": "Surgeon",
+      "Related": [
+        "Operation",
+        "Scalpel",
+        "Surgery",
+        "Anesthesia"
+      ]
+    },
+    {
+      "Main": "Nurse",
+      "Related": [
+        "Care",
+        "Hospital",
+        "Patient",
+        "Medicate"
+      ]
+    },
+    {
+      "Main": "Pharmacist",
+      "Related": [
+        "Medication",
+        "Prescription",
+        "Pharmacy",
+        "Drugs"
+      ]
+    },
+    {
+      "Main": "Therapist",
+      "Related": [
+        "Counsel",
+        "Rehab",
+        "Support",
+        "Treatment"
+      ]
+    },
+    {
+      "Main": "Paramedic",
+      "Related": [
+        "Emergency",
+        "Ambulance",
+        "First Aid",
+        "Rescue"
+      ]
+    },
+    {
+      "Main": "Dentist",
+      "Related": [
+        "Teeth",
+        "Oral",
+        "Cavity",
+        "Cleaning"
+      ]
+    },
+    {
+      "Main": "Radiologist",
+      "Related": [
+        "Imaging",
+        "X-ray",
+        "Diagnosis",
+        "Scan"
+      ]
+    },
+    {
+      "Main": "Anesthetist",
+      "Related": [
+        "Anesthesia",
+        "Sedate",
+        "Surgery",
+        "Pain"
+      ]
+    },
+    {
+      "Main": "Pediatrician",
+      "Related": [
+        "Children",
+        "Growth",
+        "Vaccine",
+        "Care"
+      ]
+    },
+    {
+      "Main": "Cardiologist",
+      "Related": [
+        "Heart",
+        "ECG",
+        "Valve",
+        "Arrhythmia"
+      ]
+    },
+    {
+      "Main": "Pathologist",
+      "Related": [
+        "Diagnosis",
+        "Lab",
+        "Tissue",
+        "Biopsy"
+      ]
+    },
+    {
+      "Main": "Phlebotomist",
+      "Related": [
+        "Blood",
+        "Draw",
+        "Sample",
+        "Lab"
+      ]
+    },
+    {
+      "Main": "Epidemiologist",
+      "Related": [
+        "Disease",
+        "Spread",
+        "Outbreak",
+        "Stats"
+      ]
+    },
+    {
+      "Main": "Pulse",
+      "Related": [
+        "Heartbeat",
+        "Rate",
+        "Rhythm",
+        "Artery"
+      ]
+    },
+    {
+      "Main": "Symptom",
+      "Related": [
+        "Sign",
+        "Disease",
+        "Diagnosis",
+        "Condition"
+      ]
+    },
+    {
+      "Main": "Diagnosis",
+      "Related": [
+        "Test",
+        "Result",
+        "Condition",
+        "Doctor"
+      ]
+    },
+    {
+      "Main": "Prognosis",
+      "Related": [
+        "Outcome",
+        "Prediction",
+        "Recovery",
+        "Condition"
+      ]
+    },
+    {
+      "Main": "Infection",
+      "Related": [
+        "Bacteria",
+        "Virus",
+        "Inflame",
+        "Contagious"
+      ]
+    },
+    {
+      "Main": "Inflammation",
+      "Related": [
+        "Swelling",
+        "Pain",
+        "Immune",
+        "Reaction"
+      ]
+    },
+    {
+      "Main": "Tumor",
+      "Related": [
+        "Cancer",
+        "Growth",
+        "Benign",
+        "Malign"
+      ]
+    },
+    {
+      "Main": "Lesion",
+      "Related": [
+        "Tissue",
+        "Injury",
+        "Skin",
+        "Ulcer"
+      ]
+    },
+    {
+      "Main": "Fracture",
+      "Related": [
+        "Bone",
+        "Break",
+        "Cast",
+        "Injury"
+      ]
+    },
+    {
+      "Main": "Allergy",
+      "Related": [
+        "Immune",
+        "Reaction",
+        "Antigen",
+        "Symptoms"
+      ]
+    },
+    {
+      "Main": "Antibody",
+      "Related": [
+        "Immune",
+        "Protein",
+        "Virus",
+        "Response"
+      ]
+    },
+    {
+      "Main": "Antigen",
+      "Related": [
+        "Immune",
+        "Protein",
+        "Pathogen",
+        "Response"
+      ]
+    },
+    {
+      "Main": "Chronic",
+      "Related": [
+        "Long-term",
+        "Disease",
+        "Condition",
+        "Manage"
+      ]
+    },
+    {
+      "Main": "Acute",
+      "Related": [
+        "Severe",
+        "Sudden",
+        "Condition",
+        "Treatment"
+      ]
+    },
+    {
+      "Main": "Benign",
+      "Related": [
+        "Noncancer",
+        "Tumor",
+        "Growth",
+        "Harmless"
+      ]
+    },
+    {
+      "Main": "Malignant",
+      "Related": [
+        "Cancerous",
+        "Tumor",
+        "Aggressive",
+        "Spread"
+      ]
+    },
+    {
+      "Main": "Immunity",
+      "Related": [
+        "Resistance",
+        "Antibody",
+        "Vaccine",
+        "Protection"
+      ]
+    },
+    {
+      "Main": "Suture",
+      "Related": [
+        "Stitch",
+        "Wound",
+        "Surgery",
+        "Close"
+      ]
+    },
+    {
+      "Main": "Gauze",
+      "Related": [
+        "Bandage",
+        "Wound",
+        "Dress",
+        "Sterile"
+      ]
+    },
+    {
+      "Main": "Bandage",
+      "Related": [
+        "Wrap",
+        "Wound",
+        "Dress",
+        "Support"
+      ]
+    },
+    {
+      "Main": "Cast",
+      "Related": [
+        "Immobilize",
+        "Fracture",
+        "Bone",
+        "Plaster"
+      ]
+    },
+    {
+      "Main": "IV Drip",
+      "Related": [
+        "Intravenous",
+        "Fluid",
+        "Needle",
+        "Hospital"
+      ]
+    },
+    {
+      "Main": "Pacemaker",
+      "Related": [
+        "Heart",
+        "Device",
+        "Electric",
+        "Rhythm"
+      ]
+    },
+    {
+      "Main": "Catheter",
+      "Related": [
+        "Tube",
+        "Urine",
+        "Insert",
+        "Drain"
+      ]
+    },
+    {
+      "Main": "Incision",
+      "Related": [
+        "Cut",
+        "Surgery",
+        "Scalpel",
+        "Wound"
+      ]
+    },
+    {
+      "Main": "Anesthesia",
+      "Related": [
+        "Pain",
+        "Sedate",
+        "Surgery",
+        "Medication"
+      ]
+    },
+    {
+      "Main": "Recovery",
+      "Related": [
+        "Heal",
+        "Rehab",
+        "Rest",
+        "Improve"
+      ]
+    }
+  ]
+}
