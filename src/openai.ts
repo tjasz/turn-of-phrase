@@ -1,5 +1,5 @@
 import { AzureOpenAI } from "openai";
-import type { ChatCompletion, ChatCompletionMessageParam } from "openai/resources";
+import type { ChatCompletionMessageParam } from "openai/resources";
 
 export async function getAiTheme(title: string, description: string, apiKey: string): Promise<Challenge[]> {
   // You will need to set these environment variables or edit the following values
@@ -9,8 +9,71 @@ export async function getAiTheme(title: string, description: string, apiKey: str
 
   const client = new AzureOpenAI({ endpoint, apiKey, apiVersion, deployment, dangerouslyAllowBrowser: true });
 
-  const systemPrompt: ChatCompletionMessageParam = { role: "system", content: "You are an AI model designed to help create new sets of challenges in the word game \"Turn of Phrase\". A set consists of 100 Phrase Challenges.\n\nOn each phrase challenge is written a 1-2 word improper or proper noun phrase such as \"refrigerator\", \"ice ax\", or \"Lion King\". Gerund phrases such as \"sightseeing\" could also be included.\n\nEach phrase challenge also includes 4 additional related 1-2 word phrases (these can be any part of speech). A challenge where the main phrase is \"George Washington\" might include \"First\", \"President\", \"United States\", and \"Founding Father\". Small, common words such as \"the\" or \"of\" will not be included.\n\nUser input should be considered to be a description of a theme. Generate a new set of Phrase Challenges for that theme. Output a JSON document that is a list of objects where each object contains a string property \"Main\" and a list of strings property \"Related\"." };
-  const userPrompt: ChatCompletionMessageParam = { role: "user", content: `Title: ${title}\n\nDescription: ${description}` };
+  const systemPrompt: ChatCompletionMessageParam = {
+    role: "system",
+    content: `You are an AI model designed to help create new sets of challenges in the word game "Turn of Phrase".
+    In "Turn of Phrase", players attempt to describe a short noun phrase to their teammates without using the phrase itself,
+    any part of the phrase, or any part of related phrases included in the challenge.
+
+    A set consists of 100 Phrase Challenges, which fit a certain theme of the set.
+    Each phrase challenge includes a 1-2 word common or proper noun phrase such as "refrigerator", "ice ax", or "Lion King".
+    Gerund phrases such as "sightseeing" could also be included.
+
+    Example: for a theme of "Food", phrase challenges could include "Pizza", "Sushi", "Burger", and "Pasta".
+
+    Each phrase challenge also includes 4 additional related 1-2 word phrases (these can be any part of speech).
+    These should be selected to make it difficult to describe the main phrase without using them.
+
+    Example: for a challenge where the main phrase is "George Washington",
+    the related phrases might include "First President", "United States", "Founding Father", and "American Revolution".
+    Small, common words should not be included in related phrases.
+    This includes the articles "a" and "the" and small prepositions such as "in", "on", "at", or "of".
+
+    User messages should be considered to be a description of a theme.
+    Generate a new set of 100 Phrase Challenges for that theme.
+
+    Output a JSON document that is a list of objects where each object contains a string property "Main" and a list of strings property "Related".
+    Example: For the theme of "Animals", the output may start with the following phrase challenges...
+    [
+      {
+        "Main": "Lion",
+        "Related": ["Big Cat", "Jungle", "Pride", "Roar"]
+      },
+      {
+        "Main": "Elephant",
+        "Related": ["Trunk", "Tusks", "Safari", "Africa"]
+      },
+      {
+        "Main": "Eagle",
+        "Related": ["Bird", "American", "Bald", "Freedom"]
+      },
+      {
+        "Main": "Dolphin",
+        "Related": ["Intelligent", "Ocean", "Mammal", "Playful"]
+      },
+      ...
+    ]
+
+    DO:
+    - Ensure that the output is valid JSON.
+    - Generate a new set of at least 100 Phrase Challenges for that theme.
+    - Ensure that each challenge has a Main string property that is a noun phrase of 1-2 words.
+    - Ensure that each main phrase is unique within the set.
+    - Ensure that each challenge has a Related array property that contains exactly 4 strings, each 1-2 words long.
+    - Ensure that each Related phrase is unique within its challenge.
+    - Ensure that each Related phrase is not a subset of the Main phrase.
+    - Ensure that each Related phrase does not contain articles or short prepositions.
+
+    Include only the JSON as output.
+    Do not include additional text, even to explain or apologize for mistakes.
+    `
+  };
+  const userPrompt: ChatCompletionMessageParam = {
+    role: "user",
+    content: `Generate a set of at least 100 challenges for the following theme.
+    Title: ${title}\n\nDescription: ${description}
+    `
+  };
   let messages = [systemPrompt, userPrompt];
 
   let challenges: Challenge[] | null = null;
