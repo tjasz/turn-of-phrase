@@ -6,7 +6,7 @@ export async function getChallenges(
   mainPhrases: string[],
   messages: ChatCompletionMessageParam[],
   getResponse: (messages: ChatCompletionMessageParam[]) => Promise<ChatCompletionMessage>
-): Promise<Challenge[]> {
+): Promise<[Challenge[], ChallengeErrors[]]> {
   const promptForChallenges: ChatCompletionMessageParam = {
     role: "user",
     content: `For each of these ${mainPhrases.length} main phrases,
@@ -38,12 +38,7 @@ export async function getChallenges(
     throw new Error(`The returned array does not contain at least 100 unique challenges: ${challengeResponse.content}`);
   }
 
-  const challengeErrors = validateChallenges(challengeResponseParsed);
-  if (challengeErrors.length > 0) {
-    throw new Error(`The following challenges are invalid: ${JSON.stringify(challengeErrors)}`);
-  }
-
-  return challengeResponseParsed;
+  return validateChallenges(challengeResponseParsed);
 }
 
 export default getChallenges;

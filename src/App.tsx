@@ -138,7 +138,7 @@ function App() {
         <ThemeSelector onSelectTheme={theme => {
           setTheme(theme);
           const challengeErrors = validateChallenges(theme.Challenges);
-          if (challengeErrors.length > 0) {
+          if (challengeErrors[1].length > 0) {
             console.warn(`Selected theme "${theme.Title}" has invalid challenges:`, challengeErrors);
           }
         }} />

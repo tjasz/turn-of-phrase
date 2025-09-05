@@ -43,12 +43,15 @@ async function getAiTheme(title: string, description: string, apiKey: string): P
       if (error && typeof error === 'object' && 'status' in error && error.status === 429) {
         console.error("Rate limit exceeded");
       }
-      else {
+      else if (error instanceof Error) {
         messages.push({
           role: "user",
-          content: `The assistant response caused the following error: ${JSON.stringify(error)}.\n\nPlease try again.`
+          content: `The assistant response caused the following error: ${error.toString()}.\n\nPlease try again.`
         });
         continue;
+      }
+      else {
+        throw error;
       }
     }
   }
@@ -65,12 +68,15 @@ async function getAiTheme(title: string, description: string, apiKey: string): P
         if (error && typeof error === 'object' && 'status' in error && error.status === 429) {
           console.error("Rate limit exceeded");
         }
-        else {
+        else if (error instanceof Error) {
           messages.push({
             role: "user",
-            content: `The assistant response caused the following error: ${JSON.stringify(error)}.\n\nPlease try again.`
+            content: `The assistant response caused the following error: ${error.toString()}.\n\nPlease try again.`
           });
           continue;
+        }
+        else {
+          throw error;
         }
       }
     }
@@ -78,9 +84,17 @@ async function getAiTheme(title: string, description: string, apiKey: string): P
     // try to get challenges
     if (mainPhrases) {
       let challenges: Challenge[] | null = null;
-      for (let tryCount = 0; !challenges && tryCount < maxRetries; ++tryCount) {
+      let challengeErrors: ChallengeErrors[] | null = null;
+      for (let tryCount = 0; (!challenges || challengeErrors && challengeErrors.length > 0) && tryCount < maxRetries; ++tryCount) {
         try {
-          challenges = await getChallenges(mainPhrases, messages, getResponse);
+          [challenges, challengeErrors] = await getChallenges(mainPhrases, messages, getResponse);
+          if (challengeErrors && challengeErrors.length > 0) {
+            messages.push({
+              role: "user",
+              content: `The following challenges are invalid: ${JSON.stringify(challengeErrors)}.`
+            });
+            continue;
+          }
         }
         catch (error) {
           console.error(error);
