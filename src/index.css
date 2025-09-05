@@ -82,8 +82,17 @@ button {
   transition: color 0.25s;
 }
 
+button:disabled {
+  background-color: var(--secondary);
+  cursor: not-allowed;
+}
+
 button:hover {
   background-color: var(--accent-hover);
+}
+
+button:disabled:hover {
+  background-color: var(--secondary);
 }
 
 button:focus,
