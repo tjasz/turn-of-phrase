@@ -1,0 +1,960 @@
+{
+  "Title": "Cosas Comunes",
+  "Description": "Comida diaria, objetos del hogar, medios de transporte, animales domésticos, ropa y accesorios, elementos de oficina, electrodomésticos, plantas comunes, instrumentos musicales, y juguetes infantiles.",
+  "Challenges": [
+    {
+      "Main": "Pan",
+      "Related": [
+        "Harina",
+        "Horno",
+        "Desayuno",
+        "Miga"
+      ]
+    },
+    {
+      "Main": "Leche",
+      "Related": [
+        "Vaca",
+        "Lácteo",
+        "Blanco",
+        "Frío"
+      ]
+    },
+    {
+      "Main": "Arroz",
+      "Related": [
+        "Grano",
+        "Blanco",
+        "Cocido",
+        "Comida"
+      ]
+    },
+    {
+      "Main": "Fruta",
+      "Related": [
+        "Dulce",
+        "Árbol",
+        "Jugo",
+        "Vitaminas"
+      ]
+    },
+    {
+      "Main": "Carne",
+      "Related": [
+        "Roja",
+        "Proteína",
+        "Cocinar",
+        "Animal"
+      ]
+    },
+    {
+      "Main": "Huevo",
+      "Related": [
+        "Blanco",
+        "Clara",
+        "Yema",
+        "Gallina"
+      ]
+    },
+    {
+      "Main": "Queso",
+      "Related": [
+        "Lácteo",
+        "Duro",
+        "Suave",
+        "Corteza"
+      ]
+    },
+    {
+      "Main": "Verdura",
+      "Related": [
+        "Hoja",
+        "Verde",
+        "Jardín",
+        "Fibra"
+      ]
+    },
+    {
+      "Main": "Agua",
+      "Related": [
+        "Líquido",
+        "Río",
+        "Bebida",
+        "Transparente"
+      ]
+    },
+    {
+      "Main": "Café",
+      "Related": [
+        "Taza",
+        "Oscuro",
+        "Aroma",
+        "Tostado"
+      ]
+    },
+    {
+      "Main": "Té",
+      "Related": [
+        "Infusión",
+        "Hojas",
+        "Caliente",
+        "Verde"
+      ]
+    },
+    {
+      "Main": "Azúcar",
+      "Related": [
+        "Dulce",
+        "Blanco",
+        "Cocina",
+        "Cristal"
+      ]
+    },
+    {
+      "Main": "Sal",
+      "Related": [
+        "Mar",
+        "Blanca",
+        "Sabor",
+        "Mineral"
+      ]
+    },
+    {
+      "Main": "Aceite",
+      "Related": [
+        "Oliva",
+        "Líquido",
+        "Cocinar",
+        "Vegetal"
+      ]
+    },
+    {
+      "Main": "Sopa",
+      "Related": [
+        "Caldo",
+        "Cuchara",
+        "Caliente",
+        "Verdura"
+      ]
+    },
+    {
+      "Main": "Pescado",
+      "Related": [
+        "Mar",
+        "Pez",
+        "Fresco",
+        "Filete"
+      ]
+    },
+    {
+      "Main": "Pollo",
+      "Related": [
+        "Ave",
+        "Carne",
+        "Asado",
+        "Blanco"
+      ]
+    },
+    {
+      "Main": "Yogur",
+      "Related": [
+        "Lácteo",
+        "Fruta",
+        "Crema",
+        "Griego"
+      ]
+    },
+    {
+      "Main": "Mantequilla",
+      "Related": [
+        "Dairy",
+        "Crema",
+        "Tostada",
+        "Suave"
+      ]
+    },
+    {
+      "Main": "Jugo",
+      "Related": [
+        "Fruta",
+        "Bebida",
+        "Natural",
+        "Vaso"
+      ]
+    },
+    {
+      "Main": "Silla",
+      "Related": [
+        "Mueble",
+        "Asiento",
+        "Madera",
+        "Respaldo"
+      ]
+    },
+    {
+      "Main": "Mesa",
+      "Related": [
+        "Mueble",
+        "Comer",
+        "Superficie",
+        "Cuadrada"
+      ]
+    },
+    {
+      "Main": "Cama",
+      "Related": [
+        "Dormir",
+        "Colchón",
+        "Sábanas",
+        "Descanso"
+      ]
+    },
+    {
+      "Main": "Puerta",
+      "Related": [
+        "Entrada",
+        "Madera",
+        "Manilla",
+        "Abrir"
+      ]
+    },
+    {
+      "Main": "Ventana",
+      "Related": [
+        "Cristal",
+        "Luz",
+        "Casa",
+        "Cortina"
+      ]
+    },
+    {
+      "Main": "Lámpara",
+      "Related": [
+        "Luz",
+        "Electricidad",
+        "Bombilla",
+        "Mesa"
+      ]
+    },
+    {
+      "Main": "Espejo",
+      "Related": [
+        "Reflejo",
+        "Vidrio",
+        "Baño",
+        "Pareja"
+      ]
+    },
+    {
+      "Main": "Sofá",
+      "Related": [
+        "Mueble",
+        "Salón",
+        "Almohadón",
+        "Descanso"
+      ]
+    },
+    {
+      "Main": "Estante",
+      "Related": [
+        "Mueble",
+        "Libros",
+        "Pared",
+        "Almacenaje"
+      ]
+    },
+    {
+      "Main": "Reloj",
+      "Related": [
+        "Tiempo",
+        "Pulsera",
+        "Manecillas",
+        "Alarma"
+      ]
+    },
+    {
+      "Main": "Bicicleta",
+      "Related": [
+        "Dos ruedas",
+        "Pedales",
+        "Casco",
+        "Ciclismo"
+      ]
+    },
+    {
+      "Main": "Auto",
+      "Related": [
+        "Motor",
+        "Carretera",
+        "Volante",
+        "Ruedas"
+      ]
+    },
+    {
+      "Main": "Avión",
+      "Related": [
+        "Vuelo",
+        "Aeropuerto",
+        "Alas",
+        "Pasajero"
+      ]
+    },
+    {
+      "Main": "Tren",
+      "Related": [
+        "Vías",
+        "Estación",
+        "Locomotora",
+        "Pasajeros"
+      ]
+    },
+    {
+      "Main": "Barco",
+      "Related": [
+        "Agua",
+        "Mar",
+        "Velas",
+        "Navegar"
+      ]
+    },
+    {
+      "Main": "Moto",
+      "Related": [
+        "Dos ruedas",
+        "Motor",
+        "Casco",
+        "Velocidad"
+      ]
+    },
+    {
+      "Main": "Taxi",
+      "Related": [
+        "Conductor",
+        "Ciudad",
+        "Pasajero",
+        "Carril"
+      ]
+    },
+    {
+      "Main": "Metro",
+      "Related": [
+        "Subterráneo",
+        "Estación",
+        "Tren",
+        "Ciudad"
+      ]
+    },
+    {
+      "Main": "Camión",
+      "Related": [
+        "Carga",
+        "Ruedas",
+        "Transporte",
+        "Carretera"
+      ]
+    },
+    {
+      "Main": "Perro",
+      "Related": [
+        "Mascota",
+        "Ladrido",
+        "Collar",
+        "Amigo"
+      ]
+    },
+    {
+      "Main": "Gato",
+      "Related": [
+        "Mascota",
+        "Bigotes",
+        "Ronroneo",
+        "Pelaje"
+      ]
+    },
+    {
+      "Main": "Pájaro",
+      "Related": [
+        "Alas",
+        "Canto",
+        "Plumas",
+        "Nido"
+      ]
+    },
+    {
+      "Main": "Pez",
+      "Related": [
+        "Agua",
+        "Escamas",
+        "Nadar",
+        "Acuario"
+      ]
+    },
+    {
+      "Main": "Conejo",
+      "Related": [
+        "Orejas",
+        "Cola",
+        "Salto",
+        "Pelaje"
+      ]
+    },
+    {
+      "Main": "Hamster",
+      "Related": [
+        "Jaula",
+        "Rueda",
+        "Roedor",
+        "Pequeño"
+      ]
+    },
+    {
+      "Main": "Tortuga",
+      "Related": [
+        "Caparazón",
+        "Lenta",
+        "Patas",
+        "Vida"
+      ]
+    },
+    {
+      "Main": "Serpiente",
+      "Related": [
+        "Reptil",
+        "Veneno",
+        "Escamas",
+        "Deslizamiento"
+      ]
+    },
+    {
+      "Main": "Caballo",
+      "Related": [
+        "Crin",
+        "Montar",
+        "Establo",
+        "Galopar"
+      ]
+    },
+    {
+      "Main": "Vaca",
+      "Related": [
+        "Leche",
+        "Granja",
+        "Cuernos",
+        "Pastar"
+      ]
+    },
+    {
+      "Main": "Camisa",
+      "Related": [
+        "Cuello",
+        "Manga",
+        "Botones",
+        "Tela"
+      ]
+    },
+    {
+      "Main": "Pantalón",
+      "Related": [
+        "Piernas",
+        "Cintura",
+        "Bolsillos",
+        "Tela"
+      ]
+    },
+    {
+      "Main": "Zapato",
+      "Related": [
+        "Pie",
+        "Cordones",
+        "Suela",
+        "Cuero"
+      ]
+    },
+    {
+      "Main": "Sombrero",
+      "Related": [
+        "Cabeza",
+        "Ala",
+        "Tela",
+        "Moda"
+      ]
+    },
+    {
+      "Main": "Bufanda",
+      "Related": [
+        "Cuello",
+        "Lana",
+        "Invierno",
+        "Tejido"
+      ]
+    },
+    {
+      "Main": "Calcetín",
+      "Related": [
+        "Pie",
+        "Tela",
+        "Suave",
+        "Par"
+      ]
+    },
+    {
+      "Main": "Chaqueta",
+      "Related": [
+        "Abrigo",
+        "Manga",
+        "Cremallera",
+        "Frío"
+      ]
+    },
+    {
+      "Main": "Vestido",
+      "Related": [
+        "Tela",
+        "Mujer",
+        "Fiesta",
+        "Corte"
+      ]
+    },
+    {
+      "Main": "Falda",
+      "Related": [
+        "Tela",
+        "Mujer",
+        "Cintura",
+        "Moda"
+      ]
+    },
+    {
+      "Main": "Guantes",
+      "Related": [
+        "Manos",
+        "Invierno",
+        "Tela",
+        "Dedos"
+      ]
+    },
+    {
+      "Main": "Bolso",
+      "Related": [
+        "Mano",
+        "Correa",
+        "Cartera",
+        "Moda"
+      ]
+    },
+    {
+      "Main": "Bolígrafo",
+      "Related": [
+        "Escribir",
+        "Tinta",
+        "Papel",
+        "Plástico"
+      ]
+    },
+    {
+      "Main": "Cuaderno",
+      "Related": [
+        "Papel",
+        "Escribir",
+        "Anotar",
+        "Tapa"
+      ]
+    },
+    {
+      "Main": "Escritorio",
+      "Related": [
+        "Oficina",
+        "Trabajo",
+        "Silla",
+        "Superficie"
+      ]
+    },
+    {
+      "Main": "Silla de oficina",
+      "Related": [
+        "Ruedas",
+        "Escritorio",
+        "Respaldo",
+        "Brazo"
+      ]
+    },
+    {
+      "Main": "Carpeta",
+      "Related": [
+        "Papel",
+        "Archivar",
+        "Oficina",
+        "Documentos"
+      ]
+    },
+    {
+      "Main": "Regla",
+      "Related": [
+        "Medir",
+        "Línea",
+        "Papel",
+        "Plástico"
+      ]
+    },
+    {
+      "Main": "Tijeras",
+      "Related": [
+        "Cortar",
+        "Hojas",
+        "Metal",
+        "Manos"
+      ]
+    },
+    {
+      "Main": "Teléfono",
+      "Related": [
+        "Llamada",
+        "Pantalla",
+        "Móvil",
+        "Contacto"
+      ]
+    },
+    {
+      "Main": "Computadora",
+      "Related": [
+        "Teclado",
+        "Pantalla",
+        "Ratón",
+        "Internet"
+      ]
+    },
+    {
+      "Main": "Impresora",
+      "Related": [
+        "Papel",
+        "Tinta",
+        "Documento",
+        "Oficina"
+      ]
+    },
+    {
+      "Main": "Monitor",
+      "Related": [
+        "Pantalla",
+        "Computadora",
+        "Imagen",
+        "Tamaño"
+      ]
+    },
+    {
+      "Main": "Teclado",
+      "Related": [
+        "Letras",
+        "Computadora",
+        "Manos",
+        "Teclas"
+      ]
+    },
+    {
+      "Main": "Ratón",
+      "Related": [
+        "Computadora",
+        "Click",
+        "Cursor",
+        "Cable"
+      ]
+    },
+    {
+      "Main": "Refrigerador",
+      "Related": [
+        "Frío",
+        "Comida",
+        "Cocina",
+        "Alimentos"
+      ]
+    },
+    {
+      "Main": "Microondas",
+      "Related": [
+        "Calentar",
+        "Cocina",
+        "Electrónico",
+        "Comida"
+      ]
+    },
+    {
+      "Main": "Lavadora",
+      "Related": [
+        "Ropa",
+        "Agua",
+        "Ciclo",
+        "Electrodoméstico"
+      ]
+    },
+    {
+      "Main": "Televisor",
+      "Related": [
+        "Pantalla",
+        "Canal",
+        "Imagen",
+        "Control"
+      ]
+    },
+    {
+      "Main": "Tostadora",
+      "Related": [
+        "Pan",
+        "Cocinar",
+        "Desayuno",
+        "Calor"
+      ]
+    },
+    {
+      "Main": "Plancha",
+      "Related": [
+        "Ropa",
+        "Calor",
+        "Arrugas",
+        "Electrodoméstico"
+      ]
+    },
+    {
+      "Main": "Ventilador",
+      "Related": [
+        "Aire",
+        "Motor",
+        "Frío",
+        "Electrodoméstico"
+      ]
+    },
+    {
+      "Main": "Planta",
+      "Related": [
+        "Hojas",
+        "Maceta",
+        "Jardín",
+        "Verde"
+      ]
+    },
+    {
+      "Main": "Árbol",
+      "Related": [
+        "Tronco",
+        "Hojas",
+        "Bosque",
+        "Raíces"
+      ]
+    },
+    {
+      "Main": "Flor",
+      "Related": [
+        "Pétalos",
+        "Jardín",
+        "Color",
+        "Aroma"
+      ]
+    },
+    {
+      "Main": "Hierba",
+      "Related": [
+        "Verde",
+        "Campo",
+        "Planta",
+        "Suave"
+      ]
+    },
+    {
+      "Main": "Cactus",
+      "Related": [
+        "Desierto",
+        "Espinas",
+        "Sucia",
+        "Planta"
+      ]
+    },
+    {
+      "Main": "Helecho",
+      "Related": [
+        "Verde",
+        "Hojas",
+        "Bosque",
+        "Planta"
+      ]
+    },
+    {
+      "Main": "Rosa",
+      "Related": [
+        "Flor",
+        "Pétalos",
+        "Color",
+        "Espinas"
+      ]
+    },
+    {
+      "Main": "Tulipán",
+      "Related": [
+        "Flor",
+        "Color",
+        "Jardín",
+        "Primavera"
+      ]
+    },
+    {
+      "Main": "Guitarra",
+      "Related": [
+        "Cuerdas",
+        "Música",
+        "Instrumento",
+        "Tocar"
+      ]
+    },
+    {
+      "Main": "Piano",
+      "Related": [
+        "Teclas",
+        "Música",
+        "Instrumento",
+        "Concierto"
+      ]
+    },
+    {
+      "Main": "Batería",
+      "Related": [
+        "Instrumento",
+        "Percusión",
+        "Baquetas",
+        "Ritmo"
+      ]
+    },
+    {
+      "Main": "Violín",
+      "Related": [
+        "Cuerdas",
+        "Arco",
+        "Música",
+        "Clásico"
+      ]
+    },
+    {
+      "Main": "Flauta",
+      "Related": [
+        "Viento",
+        "Música",
+        "Instrumento",
+        "Melodía"
+      ]
+    },
+    {
+      "Main": "Saxofón",
+      "Related": [
+        "Viento",
+        "Jazz",
+        "Instrumento",
+        "Metal"
+      ]
+    },
+    {
+      "Main": "Trompeta",
+      "Related": [
+        "Viento",
+        "Brass",
+        "Instrumento",
+        "Sonido"
+      ]
+    },
+    {
+      "Main": "Maracas",
+      "Related": [
+        "Percusión",
+        "Instrumento",
+        "Ritmo",
+        "Shake"
+      ]
+    },
+    {
+      "Main": "Tambor",
+      "Related": [
+        "Percusión",
+        "Golpe",
+        "Instrumento",
+        "Ritmo"
+      ]
+    },
+    {
+      "Main": "Muñeca",
+      "Related": [
+        "Juguete",
+        "Niña",
+        "Ropa",
+        "Cabeza"
+      ]
+    },
+    {
+      "Main": "Pelota",
+      "Related": [
+        "Jugar",
+        "Redonda",
+        "Deporte",
+        "Béisbol"
+      ]
+    },
+    {
+      "Main": "Rompecabezas",
+      "Related": [
+        "Piezas",
+        "Juego",
+        "Armar",
+        "Imagen"
+      ]
+    },
+    {
+      "Main": "Carro de juguete",
+      "Related": [
+        "Niño",
+        "Ruedas",
+        "Pequeño",
+        "Jugar"
+      ]
+    },
+    {
+      "Main": "Bloques",
+      "Related": [
+        "Construir",
+        "Niño",
+        "Colores",
+        "Jugar"
+      ]
+    },
+    {
+      "Main": "Títere",
+      "Related": [
+        "Mano",
+        "Teatro",
+        "Niño",
+        "Jugar"
+      ]
+    },
+    {
+      "Main": "Cometa",
+      "Related": [
+        "Viento",
+        "Cielo",
+        "Jugar",
+        "Cuerda"
+      ]
+    },
+    {
+      "Main": "Aro",
+      "Related": [
+        "Redondo",
+        "Jugar",
+        "Niño",
+        "Girar"
+      ]
+    },
+    {
+      "Main": "Patineta",
+      "Related": [
+        "Ruedas",
+        "Deporte",
+        "Niño",
+        "Equilibrio"
+      ]
+    }
+  ]
+}
