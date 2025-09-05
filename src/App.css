@@ -8,13 +8,18 @@
 .mainGameBody {
   height: 50vh;
   max-width: 50vh;
-  overflow-y: auto;
+  overflow-y: hidden;
   background: var(--secondary);
   border: 1px solid var(--text);
   border-radius: 8px;
   margin: 0 auto 2vh auto;
   padding: 0;
   filter: drop-shadow(2px 2px 2px var(--shadow));
+}
+
+.innerGameBody {
+  height: 50vh;
+  overflow-y: scroll;
 }
 
 .mainGameBody ul {

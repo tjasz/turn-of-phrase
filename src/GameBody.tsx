@@ -17,8 +17,10 @@ const GameBody: React.FC<GameBodyProps> = ({ title, actions, children }) => {
   return (
     <div className="gameBodyContainer">
       <div className="mainGameBody">
-        <h3>{title}</h3>
-        {children}
+        <div className="innerGameBody">
+          <h3>{title}</h3>
+          {children}
+        </div>
       </div>
       <div className="actions">
         {actions.map((a, idx) => (
