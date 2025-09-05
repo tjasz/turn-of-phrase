@@ -9,12 +9,12 @@
   height: 50vh;
   max-width: 50vh;
   overflow-y: auto;
-  background: #888;
-  border: 1px solid #000;
+  background: var(--secondary);
+  border: 1px solid var(--text);
   border-radius: 8px;
   margin: 0 auto 2vh auto;
   padding: 0;
-  filter: drop-shadow(2px 2px 2px #000);
+  filter: drop-shadow(2px 2px 2px var(--text));
 }
 
 .mainGameBody ul {
@@ -31,8 +31,9 @@
 .timer {
   max-width: 50vh;
   margin: 1vh auto;
-  border: 1px solid #000;
+  border: 1px solid var(--text);
   border-radius: 8px;
+  font-weight: bold;
 }
 
 .themeDescriptionContainer {
