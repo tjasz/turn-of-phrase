@@ -18,7 +18,14 @@ const ThemeCreator: React.FC<ThemeCreatorProps> = ({ onCreateTheme }) => {
     setThemeError(null);
     getAiTheme(title, description, apiKey)
       .then(data => {
-        onCreateTheme({ Challenges: data, Title: title, Description: description });
+        // Save theme to localStorage before calling onCreateTheme
+        const themeObj = {
+          Title: title,
+          Description: description,
+          Challenges: data
+        };
+        localStorage.setItem(`theme:${title}`, JSON.stringify(themeObj));
+        onCreateTheme(themeObj);
         setLoadingTheme(false);
       })
       .catch(err => {
