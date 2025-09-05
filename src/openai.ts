@@ -9,18 +9,18 @@ export async function getAiTheme(title: string, description: string, apiKey: str
 
   const client = new AzureOpenAI({ endpoint, apiKey, apiVersion, deployment, dangerouslyAllowBrowser: true });
 
-  const systemPrompt: ChatCompletionMessageParam = { role: "system", content: "You are an AI model designed to help create new sets of challenges in the word game \"Turn of Phrase\". A set consists of 100 Phrase Challenges.\n\nOn each phrase challenge is written a 1-3 word improper or proper noun phrase such as \"refrigerator\", \"ice ax\", or \"Lion King\". Gerund phrases such as \"cutting the cheese\" could also be included.\n\nEach phrase challenge also includes 4 additional related 1-2 word phrases (these can be any part of speech). A challenge where the main phrase is \"George Washington\" might include \"First\", \"President\", \"United States\", and \"Founding Father\". Small, common words such as \"the\" or \"of\" will not be included.\n\nUser input should be considered to be a description of a theme. Generate a new set of Phrase Challenges for that theme. Output a JSON document that is a list of objects where each object contains a string property \"Main\" and a list of strings property \"Related\"." };
+  const systemPrompt: ChatCompletionMessageParam = { role: "system", content: "You are an AI model designed to help create new sets of challenges in the word game \"Turn of Phrase\". A set consists of 100 Phrase Challenges.\n\nOn each phrase challenge is written a 1-2 word improper or proper noun phrase such as \"refrigerator\", \"ice ax\", or \"Lion King\". Gerund phrases such as \"sightseeing\" could also be included.\n\nEach phrase challenge also includes 4 additional related 1-2 word phrases (these can be any part of speech). A challenge where the main phrase is \"George Washington\" might include \"First\", \"President\", \"United States\", and \"Founding Father\". Small, common words such as \"the\" or \"of\" will not be included.\n\nUser input should be considered to be a description of a theme. Generate a new set of Phrase Challenges for that theme. Output a JSON document that is a list of objects where each object contains a string property \"Main\" and a list of strings property \"Related\"." };
   const userPrompt: ChatCompletionMessageParam = { role: "user", content: `Title: ${title}\n\nDescription: ${description}` };
   let messages = [systemPrompt, userPrompt];
 
-  let result: ChatCompletion | null = null;
-  const maxRetries = 5;
-  for (let i = 0; i < maxRetries; ++i) {
+  let challenges: Challenge[] | null = null;
+  const maxRetries = 3;
+  for (let tryCount = 0; tryCount < maxRetries; ++tryCount) {
     console.log(messages);
-    result = await client.chat.completions.create({
+    const result = await client.chat.completions.create({
       messages,
       model: deployment,
-      max_tokens: 13107,
+      max_tokens: 16384,
       temperature: 0.7,
       top_p: 0.95,
       frequency_penalty: 0,
@@ -39,9 +39,9 @@ export async function getAiTheme(title: string, description: string, apiKey: str
     messages.push({ role: "assistant", content: result.choices[0].message.content });
 
     // if response cannot be parsed as JSON, include the original response for context, reprompt, and continue
-    let challenges: Challenge[] | null = null;
     try {
       challenges = JSON.parse(result.choices[0].message.content);
+      console.log(challenges);
     } catch (error) {
       messages.push({ role: "user", content: "The assistant did not generate a valid JSON response. Please try again. Include only the JSON as output. Do not apologize or explain your error." });
       continue;
@@ -55,15 +55,21 @@ export async function getAiTheme(title: string, description: string, apiKey: str
 
     // ensure each challenge has a main phrase
     let hasChallengeError = false;
-    for (const challenge of challenges!) {
+    for (let i = 0; i < challenges!.length; ++i) {
+      const challenge = challenges![i];
       if (!challenge.Main || typeof challenge.Main !== "string") {
-        messages.push({ role: "user", content: "The assistant did not generate valid challenges. Each Challenge should have a string property named \"Main\". Try again. Include only the JSON as output. Do not apologize or explain your error." });
+        messages.push({ role: "user", content: `The assistant did not generate valid challenges. Each Challenge should have a string property named "Main", but the ${i + 1}th Challenge did not. Try again. Include only the JSON as output. Do not apologize or explain your error.` });
         hasChallengeError = true;
         break;
       }
-      if (!challenge.Related || !Array.isArray(challenge.Related) || challenge.Related.length !== 4 || typeof challenge.Related[0] !== "string") {
-        messages.push({ role: "user", content: "The assistant did not generate valid challenges. Each Challenge should have a property named \"Related\" that is an array of 4 strings. Try again. Include only the JSON as output. Do not apologize or explain your error." });
+      if (challenge.Main.split(" ").length > 2) {
+        messages.push({ role: "user", content: `The assistant did not generate valid challenges. The main phrase ${challenge.Main} is more than 2 words long. Try again. Include only the JSON as output. Do not apologize or explain your error.` });
+        break;
+      }
+      if (!challenge.Related || !Array.isArray(challenge.Related) || challenge.Related.length !== 4 || typeof challenge.Related[0] !== "string" || challenge.Related.some(c => c.split(" ").length > 2)) {
+        messages.push({ role: "user", content: `The assistant did not generate valid challenges. Each Challenge should have a property named "Related" that is an array of exactly 4 strings, each 1-2 words long. Try again. Include only the JSON as output. Do not apologize or explain your error.` });
         hasChallengeError = true;
+        break;
       }
     }
     if (hasChallengeError) {
@@ -72,5 +78,11 @@ export async function getAiTheme(title: string, description: string, apiKey: str
 
     return challenges!;
   }
+
+  // we tried our best, even though there were still some errors
+  if (challenges) {
+    return challenges;
+  }
+
   throw new Error("Failed to generate AI theme");
 }
