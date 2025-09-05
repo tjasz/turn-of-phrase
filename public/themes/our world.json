@@ -3,111 +3,318 @@
   "Description": "Well known geography concepts, landmarks, major countries and cities of the world, continents, oceans, large seas, famous historical and political events and figures.",
   "Challenges": [
     {
-      "Main": "Mount Everest",
+      "Main": "Asia",
       "Related": [
-        "Himalayas",
-        "Highest Peak",
-        "Nepal",
-        "Climbing"
-      ]
-    },
-    {
-      "Main": "Sahara Desert",
-      "Related": [
-        "Africa",
-        "Sand",
-        "Dunes",
-        "Arid"
-      ]
-    },
-    {
-      "Main": "Amazon River",
-      "Related": [
-        "South America",
-        "Longest",
-        "Rainforest",
-        "Water"
-      ]
-    },
-    {
-      "Main": "Great Wall",
-      "Related": [
+        "Largest Continent",
         "China",
+        "India",
+        "Mount Everest"
+      ]
+    },
+    {
+      "Main": "Africa",
+      "Related": [
+        "Sahara",
+        "Nile",
+        "Savannah",
+        "Kilimanjaro"
+      ]
+    },
+    {
+      "Main": "Europe",
+      "Related": [
+        "EU",
+        "Paris",
+        "Rome",
+        "Berlin"
+      ]
+    },
+    {
+      "Main": "North America",
+      "Related": [
+        "USA",
+        "Canada",
+        "Mexico",
+        "Rockies"
+      ]
+    },
+    {
+      "Main": "South America",
+      "Related": [
+        "Amazon",
+        "Brazil",
+        "Andes",
+        "Argentina"
+      ]
+    },
+    {
+      "Main": "Australia",
+      "Related": [
+        "Sydney",
+        "Coral Reef",
+        "Outback",
+        "Kangaroo"
+      ]
+    },
+    {
+      "Main": "Antarctica",
+      "Related": [
+        "South Pole",
+        "Ice",
+        "Penguins",
+        "Research"
+      ]
+    },
+    {
+      "Main": "Pacific Ocean",
+      "Related": [
+        "Largest Ocean",
+        "Coral",
+        "Islands",
+        "Tsunami"
+      ]
+    },
+    {
+      "Main": "Atlantic Ocean",
+      "Related": [
+        "Mid-Atlantic",
+        "Hurricane",
+        "Shipping",
+        "Caribbean"
+      ]
+    },
+    {
+      "Main": "Indian Ocean",
+      "Related": [
+        "Monsoon",
+        "Maldives",
+        "Shipping",
+        "Coral"
+      ]
+    },
+    {
+      "Main": "Arctic Ocean",
+      "Related": [
+        "Ice Cap",
+        "Polar Bear",
+        "Frozen",
+        "Sea"
+      ]
+    },
+    {
+      "Main": "Southern Ocean",
+      "Related": [
+        "Antarctic",
+        "Penguins",
+        "Icebergs",
+        "Cold"
+      ]
+    },
+    {
+      "Main": "Caribbean Sea",
+      "Related": [
+        "Islands",
+        "Pirates",
+        "Tourism",
+        "Coral"
+      ]
+    },
+    {
+      "Main": "Mediterranean Sea",
+      "Related": [
         "Ancient",
-        "Fortification",
-        "Ming Dynasty"
+        "Trade",
+        "Islands",
+        "Warm"
+      ]
+    },
+    {
+      "Main": "Baltic Sea",
+      "Related": [
+        "Northern Europe",
+        "Brackish",
+        "Ports",
+        "Ice"
+      ]
+    },
+    {
+      "Main": "Red Sea",
+      "Related": [
+        "Coral",
+        "Suez",
+        "Salt",
+        "Shipping"
+      ]
+    },
+    {
+      "Main": "Black Sea",
+      "Related": [
+        "Europe",
+        "Straits",
+        "Fishing",
+        "Coast"
+      ]
+    },
+    {
+      "Main": "Casablanca",
+      "Related": [
+        "Morocco",
+        "Atlantic",
+        "Economic",
+        "Historic"
+      ]
+    },
+    {
+      "Main": "Tokyo",
+      "Related": [
+        "Japan",
+        "Metropolis",
+        "Shibuya",
+        "Technology"
+      ]
+    },
+    {
+      "Main": "New York",
+      "Related": [
+        "Manhattan",
+        "Broadway",
+        "Empire",
+        "Statue"
+      ]
+    },
+    {
+      "Main": "Paris",
+      "Related": [
+        "France",
+        "Seine",
+        "Louvre",
+        "Eiffel"
+      ]
+    },
+    {
+      "Main": "London",
+      "Related": [
+        "Big Ben",
+        "Thames",
+        "UK",
+        "Westminster"
+      ]
+    },
+    {
+      "Main": "Sydney",
+      "Related": [
+        "Opera",
+        "Australia",
+        "Harbour",
+        "Beaches"
+      ]
+    },
+    {
+      "Main": "Cairo",
+      "Related": [
+        "Egypt",
+        "Nile",
+        "Pyramids",
+        "Sphinx"
+      ]
+    },
+    {
+      "Main": "Rio de Janeiro",
+      "Related": [
+        "Brazil",
+        "Carnival",
+        "Christ",
+        "Beaches"
+      ]
+    },
+    {
+      "Main": "Moscow",
+      "Related": [
+        "Russia",
+        "Kremlin",
+        "Red Square",
+        "Winter"
+      ]
+    },
+    {
+      "Main": "Dubai",
+      "Related": [
+        "Skyscrapers",
+        "Desert",
+        "Luxury",
+        "UAE"
+      ]
+    },
+    {
+      "Main": "Toronto",
+      "Related": [
+        "Canada",
+        "CN Tower",
+        "Multicultural",
+        "Ontario"
+      ]
+    },
+    {
+      "Main": "Bangkok",
+      "Related": [
+        "Thailand",
+        "Temples",
+        "Food",
+        "Chao Phraya"
+      ]
+    },
+    {
+      "Main": "Istanbul",
+      "Related": [
+        "Turkey",
+        "Bosporus",
+        "Historic",
+        "Mosques"
       ]
     },
     {
       "Main": "Eiffel Tower",
       "Related": [
         "Paris",
-        "France",
+        "Iron",
         "Landmark",
-        "Iron"
+        "Tourists"
       ]
     },
     {
-      "Main": "Grand Canyon",
+      "Main": "Great Wall",
       "Related": [
-        "Arizona",
-        "USA",
-        "Geology",
-        "Colorado River"
-      ]
-    },
-    {
-      "Main": "Niagara Falls",
-      "Related": [
-        "Waterfall",
-        "Canada",
-        "USA",
-        "Hydropower"
-      ]
-    },
-    {
-      "Main": "Sydney Opera",
-      "Related": [
-        "Australia",
-        "Landmark",
-        "Harbor",
-        "Performing Arts"
-      ]
-    },
-    {
-      "Main": "Great Barrier",
-      "Related": [
-        "Coral Reef",
-        "Australia",
-        "Marine",
-        "Biodiversity"
-      ]
-    },
-    {
-      "Main": "Mount Kilimanjaro",
-      "Related": [
-        "Tanzania",
-        "Africa",
-        "Volcano",
-        "Snow"
-      ]
-    },
-    {
-      "Main": "Victoria Falls",
-      "Related": [
-        "Zambia",
-        "Zimbabwe",
-        "Waterfall",
-        "Africa"
-      ]
-    },
-    {
-      "Main": "Stonehenge",
-      "Related": [
-        "England",
+        "China",
+        "Fortress",
         "Ancient",
-        "Megalith",
-        "Archaeology"
+        "Watchtower"
+      ]
+    },
+    {
+      "Main": "Pyramids",
+      "Related": [
+        "Egypt",
+        "Tombs",
+        "Pharaohs",
+        "Giza"
+      ]
+    },
+    {
+      "Main": "Statue of Liberty",
+      "Related": [
+        "New York",
+        "Freedom",
+        "Gift",
+        "America"
+      ]
+    },
+    {
+      "Main": "Colosseum",
+      "Related": [
+        "Rome",
+        "Gladiators",
+        "Ancient",
+        "Arena"
       ]
     },
     {
@@ -120,57 +327,12 @@
       ]
     },
     {
-      "Main": "Bali Island",
-      "Related": [
-        "Indonesia",
-        "Tourism",
-        "Beach",
-        "Culture"
-      ]
-    },
-    {
-      "Main": "Yellowstone",
-      "Related": [
-        "USA",
-        "National Park",
-        "Geothermal",
-        "Wildlife"
-      ]
-    },
-    {
-      "Main": "Ganges River",
-      "Related": [
-        "India",
-        "Holy",
-        "Water",
-        "Bengal"
-      ]
-    },
-    {
-      "Main": "Angkor Wat",
-      "Related": [
-        "Cambodia",
-        "Temple",
-        "Khmer",
-        "Ancient"
-      ]
-    },
-    {
-      "Main": "Mount Fuji",
-      "Related": [
-        "Japan",
-        "Volcano",
-        "Iconic",
-        "Snow"
-      ]
-    },
-    {
       "Main": "Big Ben",
       "Related": [
         "London",
-        "Clock Tower",
-        "UK",
-        "Parliament"
+        "Clock",
+        "Parliament",
+        "Iconic"
       ]
     },
     {
@@ -179,52 +341,61 @@
         "India",
         "Mausoleum",
         "Marble",
-        "Mughal"
+        "Love"
       ]
     },
     {
-      "Main": "Statue Liberty",
+      "Main": "Mount Rushmore",
       "Related": [
         "USA",
-        "New York",
-        "Freedom",
-        "Gift"
+        "Presidents",
+        "Sculpture",
+        "Dakota"
       ]
     },
     {
-      "Main": "Cape Horn",
+      "Main": "Christ the Redeemer",
       "Related": [
-        "Chile",
-        "South America",
-        "Cape",
-        "Rough Seas"
+        "Brazil",
+        "Statue",
+        "Corcovado",
+        "Rio"
       ]
     },
     {
-      "Main": "Alps Mountains",
+      "Main": "Sydney Opera",
       "Related": [
-        "Europe",
-        "Skiing",
-        "Switzerland",
-        "Peaks"
+        "Australia",
+        "Arts",
+        "Harbour",
+        "Icon"
       ]
     },
     {
-      "Main": "Great Lakes",
+      "Main": "Mount Everest",
       "Related": [
-        "USA",
-        "Canada",
-        "Freshwater",
-        "Superior"
+        "Nepal",
+        "Highest",
+        "Himalayas",
+        "Climbing"
       ]
     },
     {
-      "Main": "Suez Canal",
+      "Main": "Grand Canyon",
       "Related": [
-        "Egypt",
-        "Shipping",
-        "Red Sea",
-        "Trade"
+        "Arizona",
+        "River",
+        "Geology",
+        "Park"
+      ]
+    },
+    {
+      "Main": "Sahara Desert",
+      "Related": [
+        "Africa",
+        "Sand",
+        "Arid",
+        "Nomads"
       ]
     },
     {
@@ -232,8 +403,350 @@
       "Related": [
         "Brazil",
         "Biodiversity",
-        "Trees",
-        "Deforestation"
+        "River",
+        "Tropical"
+      ]
+    },
+    {
+      "Main": "Niagara Falls",
+      "Related": [
+        "Canada",
+        "USA",
+        "Waterfall",
+        "Tourism"
+      ]
+    },
+    {
+      "Main": "Great Barrier Reef",
+      "Related": [
+        "Australia",
+        "Coral",
+        "Marine",
+        "World"
+      ]
+    },
+    {
+      "Main": "Victoria Falls",
+      "Related": [
+        "Zambia",
+        "Zimbabwe",
+        "Waterfall",
+        "Zambezi"
+      ]
+    },
+    {
+      "Main": "Matterhorn",
+      "Related": [
+        "Alps",
+        "Switzerland",
+        "Mountain",
+        "Climbing"
+      ]
+    },
+    {
+      "Main": "Serengeti",
+      "Related": [
+        "Tanzania",
+        "Wildlife",
+        "Migration",
+        "Savannah"
+      ]
+    },
+    {
+      "Main": "Canada",
+      "Related": [
+        "Ottawa",
+        "Maple",
+        "Mounties",
+        "Lakes"
+      ]
+    },
+    {
+      "Main": "Brazil",
+      "Related": [
+        "Amazon",
+        "Rio",
+        "Carnival",
+        "Football"
+      ]
+    },
+    {
+      "Main": "China",
+      "Related": [
+        "Beijing",
+        "Wall",
+        "Pandas",
+        "Dynasty"
+      ]
+    },
+    {
+      "Main": "India",
+      "Related": [
+        "Delhi",
+        "Taj",
+        "Bollywood",
+        "Ganges"
+      ]
+    },
+    {
+      "Main": "Russia",
+      "Related": [
+        "Moscow",
+        "Siberia",
+        "Kremlin",
+        "Vodka"
+      ]
+    },
+    {
+      "Main": "Germany",
+      "Related": [
+        "Berlin",
+        "Oktoberfest",
+        "Brandenburg",
+        "Rhine"
+      ]
+    },
+    {
+      "Main": "France",
+      "Related": [
+        "Paris",
+        "Louvre",
+        "Wine",
+        "Eiffel"
+      ]
+    },
+    {
+      "Main": "Italy",
+      "Related": [
+        "Rome",
+        "Colosseum",
+        "Venice",
+        "Pasta"
+      ]
+    },
+    {
+      "Main": "Mexico",
+      "Related": [
+        "City",
+        "Aztecs",
+        "Tacos",
+        "Cancun"
+      ]
+    },
+    {
+      "Main": "Japan",
+      "Related": [
+        "Tokyo",
+        "Sushi",
+        "Samurai",
+        "Fuji"
+      ]
+    },
+    {
+      "Main": "Washington",
+      "Related": [
+        "USA",
+        "Capital",
+        "White House",
+        "Monument"
+      ]
+    },
+    {
+      "Main": "Berlin",
+      "Related": [
+        "Germany",
+        "Gate",
+        "Wall",
+        "History"
+      ]
+    },
+    {
+      "Main": "Ottawa",
+      "Related": [
+        "Canada",
+        "Parliament",
+        "Canal",
+        "Capital"
+      ]
+    },
+    {
+      "Main": "Canberra",
+      "Related": [
+        "Australia",
+        "Capital",
+        "Parliament",
+        "Bush"
+      ]
+    },
+    {
+      "Main": "Rome",
+      "Related": [
+        "Italy",
+        "Vatican",
+        "Colosseum",
+        "Forum"
+      ]
+    },
+    {
+      "Main": "Madrid",
+      "Related": [
+        "Spain",
+        "Palace",
+        "Flamenco",
+        "Museums"
+      ]
+    },
+    {
+      "Main": "Beijing",
+      "Related": [
+        "China",
+        "Forbidden City",
+        "Wall",
+        "Olympics"
+      ]
+    },
+    {
+      "Main": "Kremlin",
+      "Related": [
+        "Moscow",
+        "Russia",
+        "Fortress",
+        "Government"
+      ]
+    },
+    {
+      "Main": "Napoleon",
+      "Related": [
+        "France",
+        "Emperor",
+        "Military",
+        "Corsica"
+      ]
+    },
+    {
+      "Main": "Cleopatra",
+      "Related": [
+        "Egypt",
+        "Pharaoh",
+        "Queen",
+        "Nile"
+      ]
+    },
+    {
+      "Main": "Genghis Khan",
+      "Related": [
+        "Mongolia",
+        "Empire",
+        "Conqueror",
+        "Nomads"
+      ]
+    },
+    {
+      "Main": "Winston Churchill",
+      "Related": [
+        "UK",
+        "Prime Minister",
+        "War",
+        "Orator"
+      ]
+    },
+    {
+      "Main": "Abraham Lincoln",
+      "Related": [
+        "USA",
+        "President",
+        "Civil War",
+        "Emancipation"
+      ]
+    },
+    {
+      "Main": "Mahatma Gandhi",
+      "Related": [
+        "India",
+        "Nonviolence",
+        "Independence",
+        "Salt"
+      ]
+    },
+    {
+      "Main": "Nelson Mandela",
+      "Related": [
+        "South Africa",
+        "Apartheid",
+        "President",
+        "Freedom"
+      ]
+    },
+    {
+      "Main": "Queen Victoria",
+      "Related": [
+        "UK",
+        "Empire",
+        "19th Century",
+        "Monarch"
+      ]
+    },
+    {
+      "Main": "Martin Luther",
+      "Related": [
+        "Reformation",
+        "Germany",
+        "Protestant",
+        "Theses"
+      ]
+    },
+    {
+      "Main": "Cold War",
+      "Related": [
+        "USA",
+        "USSR",
+        "Nuclear",
+        "Iron Curtain"
+      ]
+    },
+    {
+      "Main": "French Revolution",
+      "Related": [
+        "France",
+        "1789",
+        "Bastille",
+        "Liberty"
+      ]
+    },
+    {
+      "Main": "American Revolution",
+      "Related": [
+        "USA",
+        "Independence",
+        "1776",
+        "Colonies"
+      ]
+    },
+    {
+      "Main": "World War One",
+      "Related": [
+        "1914",
+        "Trenches",
+        "Allies",
+        "Central Powers"
+      ]
+    },
+    {
+      "Main": "World War Two",
+      "Related": [
+        "1939",
+        "Axis",
+        "Allies",
+        "Holocaust"
+      ]
+    },
+    {
+      "Main": "Moon Landing",
+      "Related": [
+        "Apollo",
+        "1969",
+        "NASA",
+        "Armstrong"
       ]
     },
     {
@@ -246,525 +759,246 @@
       ]
     },
     {
-      "Main": "Denali Peak",
+      "Main": "United Nations",
       "Related": [
-        "Alaska",
-        "USA",
-        "Highest",
-        "Snow"
+        "Peace",
+        "Global",
+        "Headquarters",
+        "Diplomacy"
       ]
     },
     {
-      "Main": "Gobi Desert",
+      "Main": "NATO",
       "Related": [
-        "Asia",
-        "Mongolia",
-        "Arid",
-        "Sand"
-      ]
-    },
-    {
-      "Main": "Petra Ruins",
-      "Related": [
-        "Jordan",
-        "Ancient",
-        "Rock-cut",
-        "Nabatean"
-      ]
-    },
-    {
-      "Main": "Victoria Island",
-      "Related": [
-        "Canada",
-        "Arctic",
-        "Northern",
-        "Territory"
-      ]
-    },
-    {
-      "Main": "Elbrus Peak",
-      "Related": [
-        "Russia",
-        "Europe",
-        "Volcano",
-        "Highest"
-      ]
-    },
-    {
-      "Main": "Lake Baikal",
-      "Related": [
-        "Russia",
-        "Deepest",
-        "Freshwater",
-        "Siberia"
-      ]
-    },
-    {
-      "Main": "Rushmore Mount",
-      "Related": [
-        "USA",
-        "Presidents",
-        "South Dakota",
-        "Monument"
-      ]
-    },
-    {
-      "Main": "Bermuda Triangle",
-      "Related": [
-        "Atlantic Ocean",
-        "Mystery",
-        "Disappearances",
-        "Triangle"
-      ]
-    },
-    {
-      "Main": "Casablanca",
-      "Related": [
-        "Morocco",
+        "Alliance",
+        "Military",
         "Atlantic",
-        "Port",
-        "Africa"
+        "Defense"
       ]
     },
     {
-      "Main": "Coral Sea",
+      "Main": "Red Cross",
       "Related": [
-        "Australia",
-        "Ocean",
-        "Reef",
-        "Marine"
+        "Aid",
+        "Disaster",
+        "Volunteers",
+        "Humanity"
       ]
     },
     {
-      "Main": "Himalayan Range",
+      "Main": "European Union",
       "Related": [
-        "Asia",
-        "Mountains",
-        "Nepal",
-        "India"
+        "Europe",
+        "Euro",
+        "Schengen",
+        "Members"
       ]
     },
     {
-      "Main": "Lake Victoria",
+      "Main": "World Bank",
       "Related": [
-        "Africa",
-        "Largest",
-        "Freshwater",
-        "Nile"
+        "Finance",
+        "Loans",
+        "Development",
+        "Global"
       ]
     },
     {
-      "Main": "Galapagos",
+      "Main": "Amazon",
       "Related": [
-        "Ecuador",
-        "Wildlife",
-        "Darwin",
-        "Volcano"
-      ]
-    },
-    {
-      "Main": "Maldives",
-      "Related": [
-        "Indian Ocean",
-        "Resort",
-        "Coral",
-        "Tropical"
-      ]
-    },
-    {
-      "Main": "Red Sea",
-      "Related": [
-        "Middle East",
-        "Saltwater",
-        "Egypt",
-        "Coral"
-      ]
-    },
-    {
-      "Main": "Smoky Mountains",
-      "Related": [
-        "USA",
-        "National Park",
-        "Tennessee",
-        "Cumberland"
-      ]
-    },
-    {
-      "Main": "Yangtze River",
-      "Related": [
-        "China",
-        "Longest",
-        "Asia",
-        "Hydroelectric"
-      ]
-    },
-    {
-      "Main": "Vesuvius",
-      "Related": [
-        "Italy",
-        "Volcano",
-        "Pompeii",
-        "Eruption"
-      ]
-    },
-    {
-      "Main": "Iguazu Falls",
-      "Related": [
-        "Argentina",
-        "Brazil",
-        "Waterfall",
-        "Jungle"
-      ]
-    },
-    {
-      "Main": "Rocky Mountains",
-      "Related": [
-        "USA",
-        "Canada",
-        "Peaks",
-        "Hiking"
-      ]
-    },
-    {
-      "Main": "Lake Michigan",
-      "Related": [
-        "USA",
-        "Great Lakes",
-        "Chicago",
-        "Freshwater"
-      ]
-    },
-    {
-      "Main": "Sydney Harbor",
-      "Related": [
-        "Australia",
-        "Bridge",
-        "Opera",
-        "Waterfront"
-      ]
-    },
-    {
-      "Main": "Olympus",
-      "Related": [
-        "Greece",
-        "Mythology",
-        "Peak",
-        "Ancient"
-      ]
-    },
-    {
-      "Main": "K2",
-      "Related": [
-        "Pakistan",
-        "China",
-        "Peak",
-        "Climbing"
-      ]
-    },
-    {
-      "Main": "Amazon Basin",
-      "Related": [
-        "South America",
+        "River",
         "Rainforest",
         "Biodiversity",
-        "River"
+        "South America"
       ]
     },
     {
-      "Main": "Lake Titicaca",
-      "Related": [
-        "Peru",
-        "Bolivia",
-        "High Altitude",
-        "Largest"
-      ]
-    },
-    {
-      "Main": "Chichen Itza",
-      "Related": [
-        "Mexico",
-        "Mayan",
-        "Pyramid",
-        "Ancient"
-      ]
-    },
-    {
-      "Main": "Loch Ness",
-      "Related": [
-        "Scotland",
-        "Lake",
-        "Monster",
-        "Nessie"
-      ]
-    },
-    {
-      "Main": "Kremlin",
-      "Related": [
-        "Russia",
-        "Government",
-        "Fortress",
-        "Red Square"
-      ]
-    },
-    {
-      "Main": "Etna",
-      "Related": [
-        "Italy",
-        "Volcano",
-        "Sicily",
-        "Eruption"
-      ]
-    },
-    {
-      "Main": "Superior Lake",
-      "Related": [
-        "Great Lakes",
-        "USA",
-        "Canada",
-        "Freshwater"
-      ]
-    },
-    {
-      "Main": "Death Valley",
-      "Related": [
-        "USA",
-        "California",
-        "Hot",
-        "Desert"
-      ]
-    },
-    {
-      "Main": "Istanbul",
-      "Related": [
-        "Turkey",
-        "Bosporus",
-        "Europe Asia",
-        "Historic"
-      ]
-    },
-    {
-      "Main": "Siberian Tundra",
-      "Related": [
-        "Russia",
-        "Cold",
-        "Permafrost",
-        "Arctic"
-      ]
-    },
-    {
-      "Main": "Rainier",
-      "Related": [
-        "USA",
-        "Washington",
-        "Volcano",
-        "Snow"
-      ]
-    },
-    {
-      "Main": "Zion Park",
-      "Related": [
-        "USA",
-        "Utah",
-        "Canyon",
-        "National"
-      ]
-    },
-    {
-      "Main": "Victoria Desert",
-      "Related": [
-        "Australia",
-        "Arid",
-        "Outback",
-        "Sand"
-      ]
-    },
-    {
-      "Main": "Kosciuszko",
-      "Related": [
-        "Australia",
-        "Peak",
-        "Snowy Mountains",
-        "Highest"
-      ]
-    },
-    {
-      "Main": "Tahoe Lake",
-      "Related": [
-        "USA",
-        "California",
-        "Nevada",
-        "Freshwater"
-      ]
-    },
-    {
-      "Main": "Sinai",
-      "Related": [
-        "Egypt",
-        "Biblical",
-        "Mountain",
-        "Religious"
-      ]
-    },
-    {
-      "Main": "Bengal Bay",
-      "Related": [
-        "Indian Ocean",
-        "Asia",
-        "Coast",
-        "Tropical"
-      ]
-    },
-    {
-      "Main": "Ararat",
-      "Related": [
-        "Turkey",
-        "Volcano",
-        "Biblical",
-        "Peak"
-      ]
-    },
-    {
-      "Main": "Elgon",
-      "Related": [
-        "Uganda",
-        "Kenya",
-        "Volcano",
-        "Peak"
-      ]
-    },
-    {
-      "Main": "Chad Lake",
-      "Related": [
-        "Africa",
-        "Shrinking",
-        "Freshwater",
-        "Sahel"
-      ]
-    },
-    {
-      "Main": "Makalu",
-      "Related": [
-        "Nepal",
-        "Himalayas",
-        "Peak",
-        "Climbing"
-      ]
-    },
-    {
-      "Main": "Logan Peak",
-      "Related": [
-        "Canada",
-        "Yukon",
-        "Snow",
-        "Highest"
-      ]
-    },
-    {
-      "Main": "Loire Valley",
-      "Related": [
-        "France",
-        "Rivers",
-        "Castles",
-        "Wine"
-      ]
-    },
-    {
-      "Main": "Aconcagua",
-      "Related": [
-        "Argentina",
-        "Peak",
-        "Andes",
-        "Highest"
-      ]
-    },
-    {
-      "Main": "Winnipeg Lake",
-      "Related": [
-        "Canada",
-        "Freshwater",
-        "Manitoba",
-        "Large"
-      ]
-    },
-    {
-      "Main": "Pelée",
-      "Related": [
-        "Martinique",
-        "Volcano",
-        "Eruption",
-        "Caribbean"
-      ]
-    },
-    {
-      "Main": "Hood",
-      "Related": [
-        "USA",
-        "Oregon",
-        "Volcano",
-        "Snow"
-      ]
-    },
-    {
-      "Main": "Ontario Lake",
-      "Related": [
-        "Great Lakes",
-        "USA",
-        "Canada",
-        "Freshwater"
-      ]
-    },
-    {
-      "Main": "Blanc",
-      "Related": [
-        "Europe",
-        "Alps",
-        "Peak",
-        "France Italy"
-      ]
-    },
-    {
-      "Main": "Kailash",
-      "Related": [
-        "Tibet",
-        "Sacred",
-        "Peak",
-        "Pilgrimage"
-      ]
-    },
-    {
-      "Main": "Kinabalu",
-      "Related": [
-        "Malaysia",
-        "Borneo",
-        "Peak",
-        "Tropical"
-      ]
-    },
-    {
-      "Main": "Geneva Lake",
-      "Related": [
-        "Switzerland",
-        "France",
-        "Freshwater",
-        "Alps"
-      ]
-    },
-    {
-      "Main": "Meru",
+      "Main": "Mount Kilimanjaro",
       "Related": [
         "Tanzania",
-        "Volcano",
         "Africa",
-        "Peak"
+        "Volcano",
+        "Summit"
       ]
     },
     {
-      "Main": "McKinley",
+      "Main": "Great Lakes",
       "Related": [
+        "North America",
+        "Freshwater",
+        "Canada",
+        "USA"
+      ]
+    },
+    {
+      "Main": "Bering Strait",
+      "Related": [
+        "Russia",
         "Alaska",
+        "Sea",
+        "Migration"
+      ]
+    },
+    {
+      "Main": "Andes",
+      "Related": [
+        "South America",
+        "Mountains",
+        "Peru",
+        "Volcanoes"
+      ]
+    },
+    {
+      "Main": "Himalayas",
+      "Related": [
+        "Asia",
+        "Everest",
+        "Nepal",
+        "Tibet"
+      ]
+    },
+    {
+      "Main": "Suez Canal",
+      "Related": [
+        "Egypt",
+        "Shipping",
+        "Mediterranean",
+        "Red Sea"
+      ]
+    },
+    {
+      "Main": "Panama Canal",
+      "Related": [
+        "Shipping",
+        "Central America",
+        "Engineering",
+        "Waterway"
+      ]
+    },
+    {
+      "Main": "Venice Carnival",
+      "Related": [
+        "Italy",
+        "Masks",
+        "Festival",
+        "Canals"
+      ]
+    },
+    {
+      "Main": "Oktoberfest",
+      "Related": [
+        "Germany",
+        "Beer",
+        "Munich",
+        "Festival"
+      ]
+    },
+    {
+      "Main": "Rio Carnival",
+      "Related": [
+        "Brazil",
+        "Parade",
+        "Samba",
+        "Festival"
+      ]
+    },
+    {
+      "Main": "Diwali",
+      "Related": [
+        "India",
+        "Festival",
+        "Lights",
+        "Hindu"
+      ]
+    },
+    {
+      "Main": "Chinese New Year",
+      "Related": [
+        "China",
+        "Lunar",
+        "Dragon",
+        "Fireworks"
+      ]
+    },
+    {
+      "Main": "Day of Dead",
+      "Related": [
+        "Mexico",
+        "Festival",
+        "Altars",
+        "Skulls"
+      ]
+    },
+    {
+      "Main": "Burning Man",
+      "Related": [
+        "Nevada",
+        "Festival",
+        "Art",
+        "Community"
+      ]
+    },
+    {
+      "Main": "Mardi Gras",
+      "Related": [
+        "New Orleans",
+        "Parade",
+        "Carnival",
+        "Masks"
+      ]
+    },
+    {
+      "Main": "D-Day",
+      "Related": [
+        "World War",
+        "Normandy",
+        "Allies",
+        "Invasion"
+      ]
+    },
+    {
+      "Main": "Pearl Harbor",
+      "Related": [
         "USA",
-        "Denali",
-        "Peak"
+        "Attack",
+        "Japan",
+        "WWII"
+      ]
+    },
+    {
+      "Main": "Watergate",
+      "Related": [
+        "Scandal",
+        "USA",
+        "Nixon",
+        "Politics"
+      ]
+    },
+    {
+      "Main": "Apartheid",
+      "Related": [
+        "South Africa",
+        "Segregation",
+        "Mandela",
+        "Racism"
+      ]
+    },
+    {
+      "Main": "Iron Curtain",
+      "Related": [
+        "Cold War",
+        "Europe",
+        "Division",
+        "Soviet"
+      ]
+    },
+    {
+      "Main": "Gulf War",
+      "Related": [
+        "Iraq",
+        "Kuwait",
+        "Coalition",
+        "Desert"
       ]
     }
   ]

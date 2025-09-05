@@ -1,149 +1,59 @@
 {
   "Title": "Media",
-  "Description": "well known books, plays, TV shows, movies, magazines, music, podcasts and celebrities",
+  "Description": "well known art, books, plays, TV shows, movies, magazines, music, podcasts and celebrities",
   "Challenges": [
     {
-      "Main": "Harry Potter",
+      "Main": "Inception",
       "Related": [
-        "Wizard",
-        "Hogwarts",
-        "J.K. Rowling",
-        "Magic"
+        "Christopher Nolan",
+        "Dreams",
+        "Mind-Bending",
+        "DiCaprio"
       ]
     },
     {
-      "Main": "Game of Thrones",
+      "Main": "Titanic",
       "Related": [
-        "Dragons",
-        "Westeros",
-        "Fantasy",
-        "HBO"
+        "James Cameron",
+        "Ship",
+        "Iceberg",
+        "DiCaprio"
       ]
     },
     {
-      "Main": "Breaking Bad",
+      "Main": "Avatar",
       "Related": [
-        "Meth",
-        "Chemistry",
-        "Walter White",
-        "AMC"
+        "Pandora",
+        "James Cameron",
+        "Blue People",
+        "Sci-Fi"
       ]
     },
     {
-      "Main": "The Beatles",
+      "Main": "Joker",
       "Related": [
-        "Band",
-        "Liverpool",
-        "John Lennon",
-        "1960s"
+        "Heath Ledger",
+        "Batman",
+        "Villain",
+        "Psychological"
       ]
     },
     {
-      "Main": "The Simpsons",
+      "Main": "Frozen",
       "Related": [
-        "Cartoon",
-        "Springfield",
-        "Homer",
-        "Fox"
+        "Disney",
+        "Elsa",
+        "Snow",
+        "Song"
       ]
     },
     {
-      "Main": "Friends",
-      "Related": [
-        "Sitcom",
-        "Central Perk",
-        "Rachel",
-        "NBC"
-      ]
-    },
-    {
-      "Main": "Lord of the Rings",
-      "Related": [
-        "Tolkien",
-        "Middle-earth",
-        "Frodo",
-        "Fantasy"
-      ]
-    },
-    {
-      "Main": "Forbes",
-      "Related": [
-        "Magazine",
-        "Business",
-        "Finance",
-        "Entrepreneurship"
-      ]
-    },
-    {
-      "Main": "The Crown",
-      "Related": [
-        "Netflix",
-        "Queen Elizabeth",
-        "Royalty",
-        "Drama"
-      ]
-    },
-    {
-      "Main": "Stranger Things",
-      "Related": [
-        "Netflix",
-        "Hawkins",
-        "Upside Down",
-        "80s"
-      ]
-    },
-    {
-      "Main": "Moby Dick",
-      "Related": [
-        "Whale",
-        "Ishmael",
-        "Melville",
-        "Sea"
-      ]
-    },
-    {
-      "Main": "New York Times",
-      "Related": [
-        "Newspaper",
-        "Journalism",
-        "Breaking News",
-        "Editorial"
-      ]
-    },
-    {
-      "Main": "The Godfather",
+      "Main": "Godfather",
       "Related": [
         "Mafia",
-        "Corleone",
+        "Marlon Brando",
         "Crime",
-        "Coppola"
-      ]
-    },
-    {
-      "Main": "The Daily",
-      "Related": [
-        "Podcast",
-        "News",
-        "New York",
-        "Michael Barbaro"
-      ]
-    },
-    {
-      "Main": "The Wire",
-      "Related": [
-        "Baltimore",
-        "Police",
-        "HBO",
-        "Crime"
-      ]
-    },
-    {
-      "Main": "Vogue",
-      "Related": [
-        "Fashion",
-        "Magazine",
-        "Style",
-        "Runway"
+        "Corleone"
       ]
     },
     {
@@ -151,62 +61,323 @@
       "Related": [
         "Jedi",
         "Lightsaber",
-        "Skywalker",
-        "Space"
+        "Galactic",
+        "Empire"
+      ]
+    },
+    {
+      "Main": "Gladiator",
+      "Related": [
+        "Roman",
+        "Maximus",
+        "Crowe",
+        "Arena"
+      ]
+    },
+    {
+      "Main": "Psycho",
+      "Related": [
+        "Hitchcock",
+        "Shower",
+        "Thriller",
+        "Norman Bates"
+      ]
+    },
+    {
+      "Main": "Casablanca",
+      "Related": [
+        "Bogart",
+        "Love",
+        "War",
+        "Rick's Cafe"
+      ]
+    },
+    {
+      "Main": "Matrix",
+      "Related": [
+        "Keanu Reeves",
+        "Simulation",
+        "Red Pill",
+        "Cyberpunk"
+      ]
+    },
+    {
+      "Main": "Interstellar",
+      "Related": [
+        "Space",
+        "Christopher Nolan",
+        "Wormhole",
+        "McConaughey"
+      ]
+    },
+    {
+      "Main": "Up",
+      "Related": [
+        "Pixar",
+        "Balloon",
+        "Adventure",
+        "Fredricksen"
+      ]
+    },
+    {
+      "Main": "Jumanji",
+      "Related": [
+        "Board Game",
+        "Jungle",
+        "Robin Williams",
+        "Adventure"
+      ]
+    },
+    {
+      "Main": "Rocky",
+      "Related": [
+        "Boxing",
+        "Stallone",
+        "Philadelphia",
+        "Champion"
+      ]
+    },
+    {
+      "Main": "Alien",
+      "Related": [
+        "Ridley Scott",
+        "Xenomorph",
+        "Sci-Fi",
+        "Sigourney Weaver"
+      ]
+    },
+    {
+      "Main": "Amelie",
+      "Related": [
+        "French",
+        "Montmartre",
+        "Romance",
+        "Whimsical"
+      ]
+    },
+    {
+      "Main": "Skyfall",
+      "Related": [
+        "James Bond",
+        "007",
+        "Craig",
+        "Spy"
+      ]
+    },
+    {
+      "Main": "Dunkirk",
+      "Related": [
+        "War",
+        "Christopher Nolan",
+        "Evacuation",
+        "World War"
+      ]
+    },
+    {
+      "Main": "Gravity",
+      "Related": [
+        "Space",
+        "Sandra Bullock",
+        "Cuaron",
+        "Survival"
+      ]
+    },
+    {
+      "Main": "Friends",
+      "Related": [
+        "Sitcom",
+        "Central Perk",
+        "Rachel Green",
+        "New York"
+      ]
+    },
+    {
+      "Main": "Breaking Bad",
+      "Related": [
+        "Meth",
+        "Walter White",
+        "Heisenberg",
+        "Crime"
+      ]
+    },
+    {
+      "Main": "Game of Thrones",
+      "Related": [
+        "Dragons",
+        "Winterfell",
+        "Fantasy",
+        "HBO"
       ]
     },
     {
       "Main": "The Office",
       "Related": [
-        "Sitcom",
-        "Dunder Mifflin",
         "Michael Scott",
-        "NBC"
+        "Comedy",
+        "Dunder Mifflin",
+        "Mockumentary"
       ]
     },
     {
-      "Main": "Hamilton",
+      "Main": "Stranger Things",
       "Related": [
-        "Musical",
-        "Founding Father",
-        "Lin-Manuel Miranda",
-        "Broadway"
+        "Upside Down",
+        "Hawkins",
+        "Eleven",
+        "80s"
       ]
     },
     {
-      "Main": "The Guardian",
+      "Main": "Sherlock",
       "Related": [
-        "Newspaper",
-        "UK",
-        "Journalism",
-        "News"
+        "Detective",
+        "Cumberbatch",
+        "London",
+        "Mystery"
       ]
     },
     {
-      "Main": "Twilight",
+      "Main": "The Simpsons",
       "Related": [
-        "Vampires",
-        "Bella",
-        "Stephenie Meyer",
-        "Team Edward"
+        "Springfield",
+        "Homer",
+        "Groening",
+        "Animated"
       ]
     },
     {
-      "Main": "Rolling Stone",
+      "Main": "Westworld",
       "Related": [
-        "Magazine",
-        "Music",
-        "Culture",
-        "Interviews"
+        "Robots",
+        "Theme Park",
+        "HBO",
+        "Sci-Fi"
       ]
     },
     {
-      "Main": "Washington Post",
+      "Main": "Lost",
       "Related": [
-        "Newspaper",
-        "Journalism",
-        "US Politics",
-        "Breaking News"
+        "Island",
+        "Survivors",
+        "Mystery",
+        "Plane Crash"
+      ]
+    },
+    {
+      "Main": "Seinfeld",
+      "Related": [
+        "Comedy",
+        "New York",
+        "Jerry",
+        "Sitcom"
+      ]
+    },
+    {
+      "Main": "The Crown",
+      "Related": [
+        "Queen Elizabeth",
+        "Netflix",
+        "Royal Family",
+        "Drama"
+      ]
+    },
+    {
+      "Main": "Harry Potter",
+      "Related": [
+        "Wizard",
+        "Hogwarts",
+        "Rowling",
+        "Magic"
+      ]
+    },
+    {
+      "Main": "To Kill a Mockingbird",
+      "Related": [
+        "Harper Lee",
+        "Racism",
+        "Courtroom",
+        "Southern"
+      ]
+    },
+    {
+      "Main": "Moby Dick",
+      "Related": [
+        "Whale",
+        "Captain Ahab",
+        "Sea",
+        "Classic"
+      ]
+    },
+    {
+      "Main": "The Odyssey",
+      "Related": [
+        "Homer",
+        "Epic",
+        "Journey",
+        "Greek"
+      ]
+    },
+    {
+      "Main": "Pride and Prejudice",
+      "Related": [
+        "Jane Austen",
+        "Romance",
+        "Regency",
+        "England"
+      ]
+    },
+    {
+      "Main": "The Great Gatsby",
+      "Related": [
+        "Fitzgerald",
+        "Jazz Age",
+        "Wealth",
+        "Long Island"
+      ]
+    },
+    {
+      "Main": "1984",
+      "Related": [
+        "Orwell",
+        "Dystopia",
+        "Big Brother",
+        "Totalitarian"
+      ]
+    },
+    {
+      "Main": "The Hobbit",
+      "Related": [
+        "Tolkien",
+        "Bilbo",
+        "Middle-earth",
+        "Adventure"
+      ]
+    },
+    {
+      "Main": "War and Peace",
+      "Related": [
+        "Tolstoy",
+        "Napoleon",
+        "Russia",
+        "Epic"
+      ]
+    },
+    {
+      "Main": "The Catcher",
+      "Related": [
+        "Salinger",
+        "Holden",
+        "Coming-of-age",
+        "Novel"
+      ]
+    },
+    {
+      "Main": "Bohemian Rhapsody",
+      "Related": [
+        "Queen",
+        "Mercury",
+        "Rock",
+        "Classic"
       ]
     },
     {
@@ -219,273 +390,561 @@
       ]
     },
     {
-      "Main": "The Hobbit",
+      "Main": "The Beatles",
       "Related": [
-        "Tolkien",
-        "Middle-earth",
-        "Bilbo",
-        "Fantasy"
+        "Band",
+        "Liverpool",
+        "Lennon",
+        "Rock"
       ]
     },
     {
-      "Main": "Black Panther",
+      "Main": "Taylor Swift",
       "Related": [
-        "Marvel",
-        "Wakanda",
-        "Chadwick Boseman",
-        "Superhero"
+        "Country",
+        "Pop",
+        "Singer",
+        "Grammy"
       ]
     },
     {
-      "Main": "Daily Show",
+      "Main": "Elvis Presley",
       "Related": [
-        "Comedy",
-        "Jon Stewart",
+        "King",
+        "Rock",
+        "Memphis",
+        "1950s"
+      ]
+    },
+    {
+      "Main": "Beyonce",
+      "Related": [
+        "Singer",
+        "Destiny's Child",
+        "R&B",
+        "Queen B"
+      ]
+    },
+    {
+      "Main": "Led Zeppelin",
+      "Related": [
+        "Rock",
+        "Jimmy Page",
+        "Classic",
+        "Band"
+      ]
+    },
+    {
+      "Main": "Adele",
+      "Related": [
+        "Singer",
+        "Soul",
+        "Ballads",
+        "Grammy"
+      ]
+    },
+    {
+      "Main": "Kanye West",
+      "Related": [
+        "Rapper",
+        "Producer",
+        "Controversy",
+        "Fashion"
+      ]
+    },
+    {
+      "Main": "Coldplay",
+      "Related": [
+        "Band",
+        "Chris Martin",
+        "Alternative",
+        "Rock"
+      ]
+    },
+    {
+      "Main": "Drake",
+      "Related": [
+        "Rapper",
+        "Toronto",
+        "Hip-Hop",
+        "Grammy"
+      ]
+    },
+    {
+      "Main": "Ed Sheeran",
+      "Related": [
+        "Singer",
+        "Guitar",
+        "Pop",
+        "Ballads"
+      ]
+    },
+    {
+      "Main": "Vogue",
+      "Related": [
+        "Fashion",
+        "Magazine",
+        "Editorial",
+        "Wintour"
+      ]
+    },
+    {
+      "Main": "Time",
+      "Related": [
+        "Magazine",
         "News",
-        "Satire"
+        "Cover",
+        "Weekly"
       ]
     },
     {
-      "Main": "Great Gatsby",
+      "Main": "National Geographic",
       "Related": [
-        "Fitzgerald",
-        "1920s",
+        "Nature",
+        "Photography",
+        "Magazine",
+        "Science"
+      ]
+    },
+    {
+      "Main": "Forbes",
+      "Related": [
+        "Business",
+        "Magazine",
         "Wealth",
-        "Novel"
+        "Entrepreneurs"
+      ]
+    },
+    {
+      "Main": "People",
+      "Related": [
+        "Celebrity",
+        "Magazine",
+        "Entertainment",
+        "Profiles"
+      ]
+    },
+    {
+      "Main": "Rolling Stone",
+      "Related": [
+        "Music",
+        "Magazine",
+        "Rock",
+        "Interviews"
+      ]
+    },
+    {
+      "Main": "The New Yorker",
+      "Related": [
+        "Magazine",
+        "Essays",
+        "Cartoons",
+        "Literature"
+      ]
+    },
+    {
+      "Main": "Wired",
+      "Related": [
+        "Technology",
+        "Magazine",
+        "Innovation",
+        "Science"
+      ]
+    },
+    {
+      "Main": "Cosmopolitan",
+      "Related": [
+        "Magazine",
+        "Women",
+        "Fashion",
+        "Lifestyle"
+      ]
+    },
+    {
+      "Main": "Serial",
+      "Related": [
+        "Podcast",
+        "Crime",
+        "Investigative",
+        "Storytelling"
+      ]
+    },
+    {
+      "Main": "Radiolab",
+      "Related": [
+        "Podcast",
+        "Science",
+        "Stories",
+        "Innovation"
+      ]
+    },
+    {
+      "Main": "This American Life",
+      "Related": [
+        "Podcast",
+        "Stories",
+        "Glass",
+        "Documentary"
+      ]
+    },
+    {
+      "Main": "The Daily",
+      "Related": [
+        "Podcast",
+        "News",
+        "Times",
+        "Current"
+      ]
+    },
+    {
+      "Main": "TED Talks",
+      "Related": [
+        "Podcast",
+        "Ideas",
+        "Inspiration",
+        "Speeches"
+      ]
+    },
+    {
+      "Main": "Freakonomics",
+      "Related": [
+        "Podcast",
+        "Economics",
+        "Behavior",
+        "Analysis"
+      ]
+    },
+    {
+      "Main": "Pod Save America",
+      "Related": [
+        "Podcast",
+        "Politics",
+        "Democratic",
+        "Comedy"
+      ]
+    },
+    {
+      "Main": "The Joe Rogan Experience",
+      "Related": [
+        "Podcast",
+        "Interviews",
+        "Comedy",
+        "Controversy"
+      ]
+    },
+    {
+      "Main": "Ellen DeGeneres",
+      "Related": [
+        "Comedian",
+        "Talk Show",
+        "Host",
+        "LGBTQ"
       ]
     },
     {
       "Main": "Oprah Winfrey",
       "Related": [
         "Talk Show",
-        "Host",
-        "Television",
-        "Interview"
+        "Philanthropy",
+        "Media",
+        "Influencer"
       ]
     },
     {
-      "Main": "Shakespeare",
+      "Main": "Dwayne Johnson",
       "Related": [
-        "Playwright",
-        "Romeo",
-        "Hamlet",
-        "Elizabethan"
+        "Wrestler",
+        "Actor",
+        "The Rock",
+        "Hollywood"
       ]
     },
     {
-      "Main": "The Atlantic",
+      "Main": "Tom Hanks",
       "Related": [
-        "Magazine",
-        "Politics",
-        "Culture",
-        "Essays"
+        "Actor",
+        "Forrest Gump",
+        "Oscar",
+        "Hollywood"
       ]
     },
     {
-      "Main": "Twilight Zone",
+      "Main": "Brad Pitt",
       "Related": [
-        "TV Show",
-        "Sci-Fi",
-        "Rod Serling",
-        "Twist"
+        "Actor",
+        "Fight Club",
+        "Hollywood",
+        "Producer"
       ]
     },
     {
-      "Main": "Big Bang Theory",
+      "Main": "Angelina Jolie",
       "Related": [
-        "Sitcom",
-        "Sheldon",
-        "Nerds",
-        "CBS"
+        "Actress",
+        "Humanitarian",
+        "Hollywood",
+        "Maleficent"
       ]
     },
     {
-      "Main": "New York Post",
+      "Main": "Leonardo DiCaprio",
       "Related": [
-        "Newspaper",
-        "Tabloid",
-        "NYC",
-        "Headlines"
+        "Actor",
+        "Titanic",
+        "Oscar",
+        "Environmentalist"
       ]
     },
     {
-      "Main": "Wall Street Journal",
+      "Main": "Johnny Depp",
       "Related": [
-        "Newspaper",
-        "Finance",
-        "Business",
-        "Editorial"
+        "Actor",
+        "Pirates",
+        "Hollywood",
+        "Jack Sparrow"
       ]
     },
     {
-      "Main": "Daily Mail",
+      "Main": "Jennifer Lopez",
       "Related": [
-        "Newspaper",
-        "UK",
-        "Tabloid",
-        "News"
+        "Singer",
+        "Actress",
+        "Dancer",
+        "Hollywood"
       ]
     },
     {
-      "Main": "The Incredibles",
+      "Main": "Hamilton",
       "Related": [
-        "Pixar",
-        "Superheroes",
-        "Animation",
-        "Family"
+        "Musical",
+        "Miranda",
+        "Revolution",
+        "Broadway"
       ]
     },
     {
-      "Main": "Hunger Games",
+      "Main": "Death of a Salesman",
       "Related": [
-        "Dystopia",
-        "Katniss",
-        "Suzanne Collins",
-        "Rebellion"
+        "Play",
+        "Miller",
+        "Tragedy",
+        "Dream"
       ]
     },
     {
-      "Main": "The Matrix",
+      "Main": "Cats",
       "Related": [
-        "Simulation",
-        "Keanu Reeves",
-        "Sci-Fi",
-        "Action"
+        "Musical",
+        "Lions",
+        "Broadway",
+        "Jellicle"
       ]
     },
     {
-      "Main": "Fault in Our Stars",
+      "Main": "Les Miserables",
       "Related": [
-        "John Green",
-        "Romance",
-        "Cancer",
-        "Young Adult"
+        "Musical",
+        "Hugo",
+        "Revolution",
+        "Broadway"
       ]
     },
     {
-      "Main": "The Avengers",
+      "Main": "The Phantom",
       "Related": [
-        "Marvel",
-        "Superheroes",
-        "Infinity War",
-        "Earth"
+        "Musical",
+        "Opera",
+        "Broadway",
+        "Love"
       ]
     },
     {
-      "Main": "Big Lebowski",
+      "Main": "Wicked",
       "Related": [
-        "Coen Brothers",
-        "Cult Classic",
-        "Bowling",
-        "Dude Abides"
+        "Musical",
+        "Witches",
+        "Broadway",
+        "Prequel"
       ]
     },
     {
-      "Main": "West Wing",
+      "Main": "The Lion King",
       "Related": [
-        "Politics",
-        "White House",
-        "Drama",
-        "NBC"
+        "Disney",
+        "Musical",
+        "Africa",
+        "Simba"
       ]
     },
     {
-      "Main": "Crown Jewels",
+      "Main": "Chicago",
       "Related": [
-        "Royalty",
-        "British",
-        "Regalia",
-        "Monarchy"
-      ]
-    },
-    {
-      "Main": "Social Network",
-      "Related": [
-        "Facebook",
-        "Mark Zuckerberg",
-        "Drama",
-        "Movie"
-      ]
-    },
-    {
-      "Main": "The Irishman",
-      "Related": [
-        "Scorsese",
-        "Mafia",
-        "De Niro",
+        "Musical",
+        "Jazz",
+        "Broadway",
         "Crime"
       ]
     },
     {
-      "Main": "Daily Telegraph",
+      "Main": "Rent",
       "Related": [
-        "Newspaper",
-        "UK",
-        "Conservative",
-        "News"
+        "Musical",
+        "New York",
+        "Bohemian",
+        "Broadway"
       ]
     },
     {
-      "Main": "Handmaid's Tale",
+      "Main": "Aladdin",
       "Related": [
-        "Dystopia",
-        "Margaret Atwood",
-        "TV Show",
-        "Gilead"
+        "Disney",
+        "Magic Lamp",
+        "Genie",
+        "Musical"
       ]
     },
     {
-      "Main": "Daily Beast",
+      "Main": "Oklahoma",
       "Related": [
-        "News",
-        "Online",
-        "Journalism",
-        "Media"
+        "Musical",
+        "Rodgers",
+        "Broadway",
+        "Cowboy"
       ]
     },
     {
-      "Main": "Great British Bake Off",
+      "Main": "Spider-Man",
       "Related": [
-        "Cooking",
-        "Competition",
-        "BBC",
-        "Baking"
+        "Marvel",
+        "Superhero",
+        "Parker",
+        "Web"
       ]
     },
     {
-      "Main": "The Witcher",
+      "Main": "Batman",
       "Related": [
-        "Netflix",
-        "Fantasy",
-        "Geralt",
-        "Books"
+        "DC",
+        "Wayne",
+        "Gotham",
+        "Superhero"
       ]
     },
     {
-      "Main": "The Economist",
+      "Main": "Superman",
       "Related": [
-        "Magazine",
-        "Finance",
-        "Politics",
-        "Global"
+        "DC",
+        "Kent",
+        "Kryptonite",
+        "Hero"
       ]
     },
     {
-      "Main": "The Mandalorian",
+      "Main": "Wonder Woman",
       "Related": [
-        "Star Wars",
-        "Disney+",
-        "Baby Yoda",
-        "Bounty Hunter"
+        "DC",
+        "Amazon",
+        "Lasso",
+        "Superhero"
       ]
     },
     {
-      "Main": "Matrix Reloaded",
+      "Main": "Iron Man",
       "Related": [
-        "Sequel",
-        "Keanu Reeves",
-        "Sci-Fi",
-        "Action"
+        "Marvel",
+        "Stark",
+        "Armor",
+        "Avengers"
+      ]
+    },
+    {
+      "Main": "Hulk",
+      "Related": [
+        "Marvel",
+        "Banner",
+        "Green",
+        "Strength"
+      ]
+    },
+    {
+      "Main": "Deadpool",
+      "Related": [
+        "Marvel",
+        "Mercenary",
+        "Humor",
+        "Antihero"
+      ]
+    },
+    {
+      "Main": "Pac-Man",
+      "Related": [
+        "Arcade",
+        "Game",
+        "Maze",
+        "Ghosts"
+      ]
+    },
+    {
+      "Main": "Mario",
+      "Related": [
+        "Nintendo",
+        "Plumber",
+        "Game",
+        "Princess"
+      ]
+    },
+    {
+      "Main": "Zelda",
+      "Related": [
+        "Nintendo",
+        "Adventure",
+        "Hyrule",
+        "Princess"
+      ]
+    },
+    {
+      "Main": "Minecraft",
+      "Related": [
+        "Sandbox",
+        "Blocks",
+        "Survival",
+        "Game"
+      ]
+    },
+    {
+      "Main": "Fortnite",
+      "Related": [
+        "Battle",
+        "Epic Games",
+        "Building",
+        "Game"
+      ]
+    },
+    {
+      "Main": "Call of Duty",
+      "Related": [
+        "Shooter",
+        "Multiplayer",
+        "War",
+        "Game"
+      ]
+    },
+    {
+      "Main": "Tetris",
+      "Related": [
+        "Puzzle",
+        "Blocks",
+        "Classic",
+        "Game"
+      ]
+    },
+    {
+      "Main": "The Legend",
+      "Related": [
+        "Myth",
+        "Story",
+        "Folk",
+        "Hero"
       ]
     }
   ]
