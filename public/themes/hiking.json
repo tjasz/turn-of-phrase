@@ -1,0 +1,1086 @@
+{
+  "Title": "Hiking",
+  "Description": "Hiking, camping, backpacking, mountaineering.",
+  "Challenges": [
+    {
+      "Main": "Forest Trail",
+      "Related": [
+        "Dense Trees",
+        "Wildlife Path",
+        "Nature Walk",
+        "Shaded Route"
+      ]
+    },
+    {
+      "Main": "Rocky Path",
+      "Related": [
+        "Uneven Terrain",
+        "Boulder Field",
+        "Rugged Walk",
+        "Mountain Trail"
+      ]
+    },
+    {
+      "Main": "Mountain Pass",
+      "Related": [
+        "High Altitude",
+        "Snowy Peak",
+        "Steep Slope",
+        "Alpine Route"
+      ]
+    },
+    {
+      "Main": "River Crossing",
+      "Related": [
+        "Water Stream",
+        "Slippery Rocks",
+        "Bridge Walk",
+        "Current Flow"
+      ]
+    },
+    {
+      "Main": "Desert Trek",
+      "Related": [
+        "Arid Land",
+        "Sand Dunes",
+        "Heat Wave",
+        "Oasis Spot"
+      ]
+    },
+    {
+      "Main": "Coastal Walk",
+      "Related": [
+        "Ocean Breeze",
+        "Seaside Path",
+        "Beach Trail",
+        "Cliff Edge"
+      ]
+    },
+    {
+      "Main": "Snowy Ridge",
+      "Related": [
+        "Icy Trail",
+        "Frosty Peak",
+        "Winter Hike",
+        "Cold Summit"
+      ]
+    },
+    {
+      "Main": "Jungle Trail",
+      "Related": [
+        "Tropical Forest",
+        "Dense Foliage",
+        "Exotic Birds",
+        "Wild Paths"
+      ]
+    },
+    {
+      "Main": "Alpine Route",
+      "Related": [
+        "Mountain Climb",
+        "Glacier Edge",
+        "Snow Cap",
+        "Rocky Terrain"
+      ]
+    },
+    {
+      "Main": "Valley Path",
+      "Related": [
+        "Lowland Walk",
+        "River Bed",
+        "Green Meadow",
+        "Floral Scenery"
+      ]
+    },
+    {
+      "Main": "Loop Trail",
+      "Related": [
+        "Circular Route",
+        "Trail Markers",
+        "Hiking Path",
+        "Scenic View"
+      ]
+    },
+    {
+      "Main": "Backcountry Route",
+      "Related": [
+        "Remote Area",
+        "Wilderness Trek",
+        "Off Trail",
+        "Rugged Landscape"
+      ]
+    },
+    {
+      "Main": "Scenic Overlook",
+      "Related": [
+        "Panoramic View",
+        "Cliff Edge",
+        "Sunset Spot",
+        "Photo Point"
+      ]
+    },
+    {
+      "Main": "Steep Climb",
+      "Related": [
+        "Inclined Slope",
+        "Rocky Ascent",
+        "Challenging Path",
+        "Mountain Face"
+      ]
+    },
+    {
+      "Main": "Wildflower Meadow",
+      "Related": [
+        "Colorful Blooms",
+        "Open Field",
+        "Spring Season",
+        "Butterfly Habitat"
+      ]
+    },
+    {
+      "Main": "Glacier Trail",
+      "Related": [
+        "Ice Field",
+        "Frozen Path",
+        "Cold Climate",
+        "Snowy Surface"
+      ]
+    },
+    {
+      "Main": "Canyon Hike",
+      "Related": [
+        "Deep Gorge",
+        "Rock Walls",
+        "River Bed",
+        "Narrow Path"
+      ]
+    },
+    {
+      "Main": "Hilltop View",
+      "Related": [
+        "Elevated Spot",
+        "Panorama",
+        "Sunrise Point",
+        "Clear Sky"
+      ]
+    },
+    {
+      "Main": "Creekside Path",
+      "Related": [
+        "Flowing Water",
+        "Pebble Trail",
+        "Shady Trees",
+        "Rippling Stream"
+      ]
+    },
+    {
+      "Main": "Sand Dunes",
+      "Related": [
+        "Wind Swept",
+        "Desert Hills",
+        "Grainy Surface",
+        "Sun Baked"
+      ]
+    },
+    {
+      "Main": "Tent",
+      "Related": [
+        "Camping Shelter",
+        "Canvas Material",
+        "Sleeping Area",
+        "Pole Support"
+      ]
+    },
+    {
+      "Main": "Sleeping Bag",
+      "Related": [
+        "Insulated Cover",
+        "Outdoor Bedding",
+        "Thermal Layer",
+        "Zipper Closure"
+      ]
+    },
+    {
+      "Main": "Backpack",
+      "Related": [
+        "Shoulder Straps",
+        "Storage Pockets",
+        "Hydration Pack",
+        "Outdoor Gear"
+      ]
+    },
+    {
+      "Main": "Hiking Boots",
+      "Related": [
+        "Waterproof Footwear",
+        "Ankle Support",
+        "Durable Soles",
+        "Trail Shoes"
+      ]
+    },
+    {
+      "Main": "Camping Stove",
+      "Related": [
+        "Portable Burner",
+        "Fuel Source",
+        "Cooking Gear",
+        "Compact Design"
+      ]
+    },
+    {
+      "Main": "Water Bottle",
+      "Related": [
+        "Hydration Container",
+        "Plastic Flask",
+        "Reusable Vessel",
+        "Leak Proof"
+      ]
+    },
+    {
+      "Main": "Trekking Poles",
+      "Related": [
+        "Walking Sticks",
+        "Adjustable Length",
+        "Grip Handles",
+        "Shock Absorber"
+      ]
+    },
+    {
+      "Main": "First Aid Kit",
+      "Related": [
+        "Medical Supplies",
+        "Bandages",
+        "Antiseptics",
+        "Emergency Care"
+      ]
+    },
+    {
+      "Main": "Headlamp",
+      "Related": [
+        "Hands Free",
+        "LED Light",
+        "Battery Powered",
+        "Adjustable Strap"
+      ]
+    },
+    {
+      "Main": "Compass",
+      "Related": [
+        "Navigation Tool",
+        "Magnetic Needle",
+        "Direction Finder",
+        "Map Use"
+      ]
+    },
+    {
+      "Main": "Map",
+      "Related": [
+        "Trail Guide",
+        "Topography",
+        "Route Planner",
+        "Scale Indicator"
+      ]
+    },
+    {
+      "Main": "Fire Starter",
+      "Related": [
+        "Ignition Tool",
+        "Flint Stone",
+        "Kindling",
+        "Spark Maker"
+      ]
+    },
+    {
+      "Main": "Sleeping Pad",
+      "Related": [
+        "Foam Mat",
+        "Insulation Layer",
+        "Camping Comfort",
+        "Lightweight"
+      ]
+    },
+    {
+      "Main": "Rain Jacket",
+      "Related": [
+        "Waterproof Coat",
+        "Windbreaker",
+        "Hooded Outerwear",
+        "Breathable Fabric"
+      ]
+    },
+    {
+      "Main": "Insect Repellent",
+      "Related": [
+        "Bug Spray",
+        "Mosquito Guard",
+        "Pest Control",
+        "Outdoor Protection"
+      ]
+    },
+    {
+      "Main": "Multi-tool",
+      "Related": [
+        "Pocket Knife",
+        "Plier Set",
+        "Compact Gadget",
+        "Utility Device"
+      ]
+    },
+    {
+      "Main": "Tent Pegs",
+      "Related": [
+        "Ground Stakes",
+        "Anchor Points",
+        "Camping Hardware",
+        "Metal Spikes"
+      ]
+    },
+    {
+      "Main": "Bear Spray",
+      "Related": [
+        "Animal Deterrent",
+        "Pepper Aerosol",
+        "Safety Device",
+        "Wildlife Protection"
+      ]
+    },
+    {
+      "Main": "Water Filter",
+      "Related": [
+        "Purification Device",
+        "Portable Cleaner",
+        "Hiking Gear",
+        "Contaminant Removal"
+      ]
+    },
+    {
+      "Main": "Climbing Rope",
+      "Related": [
+        "Safety Line",
+        "Durable Fiber",
+        "Belay Equipment",
+        "Knotted Cord"
+      ]
+    },
+    {
+      "Main": "Mount Everest",
+      "Related": [
+        "Highest Peak",
+        "Himalayas",
+        "Summit Climb",
+        "Nepal Border"
+      ]
+    },
+    {
+      "Main": "Kilimanjaro",
+      "Related": [
+        "African Mountain",
+        "Volcanic Peak",
+        "Tanzania",
+        "Snow Cap"
+      ]
+    },
+    {
+      "Main": "Denali",
+      "Related": [
+        "Alaska Peak",
+        "North America",
+        "Glacier Fields",
+        "High Altitude"
+      ]
+    },
+    {
+      "Main": "Matterhorn",
+      "Related": [
+        "Swiss Alps",
+        "Pyramid Shape",
+        "Famous Mountain",
+        "Climbing Spot"
+      ]
+    },
+    {
+      "Main": "Mont Blanc",
+      "Related": [
+        "European Alps",
+        "Highest Summit",
+        "France Alps",
+        "Snow Covered"
+      ]
+    },
+    {
+      "Main": "Mount Fuji",
+      "Related": [
+        "Japan Peak",
+        "Volcanic Mountain",
+        "Sacred Site",
+        "Snowy Cap"
+      ]
+    },
+    {
+      "Main": "El Capitan",
+      "Related": [
+        "Yosemite",
+        "Granite Wall",
+        "Rock Climbing",
+        "Big Wall"
+      ]
+    },
+    {
+      "Main": "Half Dome",
+      "Related": [
+        "Yosemite Park",
+        "Granite Formation",
+        "Popular Hike",
+        "Steep Face"
+      ]
+    },
+    {
+      "Main": "Grand Teton",
+      "Related": [
+        "Wyoming Range",
+        "Sharp Peaks",
+        "National Park",
+        "Glacial Lakes"
+      ]
+    },
+    {
+      "Main": "Mount Rainier",
+      "Related": [
+        "Washington State",
+        "Volcano",
+        "Snowfields",
+        "National Park"
+      ]
+    },
+    {
+      "Main": "Mount Whitney",
+      "Related": [
+        "California Peak",
+        "Highest State",
+        "Sierra Nevada",
+        "Summit Trail"
+      ]
+    },
+    {
+      "Main": "Mount McKinley",
+      "Related": [
+        "Denali Name",
+        "Alaska Mountain",
+        "Tallest Peak",
+        "Glacier"
+      ]
+    },
+    {
+      "Main": "Aconcagua",
+      "Related": [
+        "South America",
+        "Andes Range",
+        "Argentina Peak",
+        "High Altitude"
+      ]
+    },
+    {
+      "Main": "Mount Olympus",
+      "Related": [
+        "Greek Mythology",
+        "Highest Greece",
+        "Sacred Mountain",
+        "Olympic Range"
+      ]
+    },
+    {
+      "Main": "Pikes Peak",
+      "Related": [
+        "Colorado Mountain",
+        "Tourist Spot",
+        "Summit Road",
+        "High Elevation"
+      ]
+    },
+    {
+      "Main": "Navigation",
+      "Related": [
+        "Direction Finding",
+        "Route Planning",
+        "Map Reading",
+        "GPS Use"
+      ]
+    },
+    {
+      "Main": "GPS Device",
+      "Related": [
+        "Satellite Receiver",
+        "Location Tracker",
+        "Trail Guide",
+        "Digital Map"
+      ]
+    },
+    {
+      "Main": "Trail Map",
+      "Related": [
+        "Hiking Guide",
+        "Route Details",
+        "Topographic Lines",
+        "Landmarks"
+      ]
+    },
+    {
+      "Main": "Topographic Map",
+      "Related": [
+        "Elevation Lines",
+        "Contour Detail",
+        "Terrain Features",
+        "Trail Guide"
+      ]
+    },
+    {
+      "Main": "Compass Needle",
+      "Related": [
+        "Magnetic Pointer",
+        "Direction Indicator",
+        "Navigation Tool",
+        "Map Use"
+      ]
+    },
+    {
+      "Main": "Altimeter",
+      "Related": [
+        "Elevation Gauge",
+        "Barometric Sensor",
+        "Height Meter",
+        "Mountain Tool"
+      ]
+    },
+    {
+      "Main": "Waypoints",
+      "Related": [
+        "Navigation Points",
+        "Trail Markers",
+        "GPS Coordinates",
+        "Route Stops"
+      ]
+    },
+    {
+      "Main": "Route Marker",
+      "Related": [
+        "Trail Sign",
+        "Directional Indicator",
+        "Path Guide",
+        "Hiking Symbol"
+      ]
+    },
+    {
+      "Main": "Map Scale",
+      "Related": [
+        "Distance Ratio",
+        "Measurement Guide",
+        "Topographic Detail",
+        "Navigation Aid"
+      ]
+    },
+    {
+      "Main": "Handheld GPS",
+      "Related": [
+        "Portable Device",
+        "Trail Tracker",
+        "Satellite Navigation",
+        "Outdoor Gear"
+      ]
+    },
+    {
+      "Main": "Wildlife",
+      "Related": [
+        "Forest Animals",
+        "Natural Habitat",
+        "Animal Sightings",
+        "Outdoor Fauna"
+      ]
+    },
+    {
+      "Main": "Black Bear",
+      "Related": [
+        "Forest Mammal",
+        "North America",
+        "Hibernation",
+        "Omnivore"
+      ]
+    },
+    {
+      "Main": "Mountain Lion",
+      "Related": [
+        "Cougar",
+        "Big Cat",
+        "Predator",
+        "Stealth Hunter"
+      ]
+    },
+    {
+      "Main": "Deer",
+      "Related": [
+        "Herbivore",
+        "Antlers",
+        "Forest Dweller",
+        "Graceful Animal"
+      ]
+    },
+    {
+      "Main": "Elk",
+      "Related": [
+        "Large Deer",
+        "Antlered",
+        "North American",
+        "Grazing"
+      ]
+    },
+    {
+      "Main": "Rattlesnake",
+      "Related": [
+        "Venomous",
+        "Desert Reptile",
+        "Warning Sound",
+        "Fangs"
+      ]
+    },
+    {
+      "Main": "Eagle",
+      "Related": [
+        "Raptor",
+        "Sharp Vision",
+        "Soaring Flight",
+        "Nest"
+      ]
+    },
+    {
+      "Main": "Hawk",
+      "Related": [
+        "Raptor",
+        "Keen Eyesight",
+        "Fast Flyer",
+        "Predator"
+      ]
+    },
+    {
+      "Main": "Chipmunk",
+      "Related": [
+        "Small Rodent",
+        "Striped Fur",
+        "Forest Dweller",
+        "Food Hoarder"
+      ]
+    },
+    {
+      "Main": "Squirrel",
+      "Related": [
+        "Tree Climber",
+        "Bushy Tail",
+        "Nut Gatherer",
+        "Agile Animal"
+      ]
+    },
+    {
+      "Main": "Moose",
+      "Related": [
+        "Large Mammal",
+        "Antlers",
+        "Wetlands",
+        "Northern Forest"
+      ]
+    },
+    {
+      "Main": "Backpacking",
+      "Related": [
+        "Long Trek",
+        "Gear Carrying",
+        "Camping Trip",
+        "Outdoor Adventure"
+      ]
+    },
+    {
+      "Main": "Campfire",
+      "Related": [
+        "Open Flame",
+        "Cooking Spot",
+        "Gathering Place",
+        "Firewood"
+      ]
+    },
+    {
+      "Main": "Water Purification",
+      "Related": [
+        "Filter System",
+        "Safe Drinking",
+        "Chemical Treatment",
+        "Portable Device"
+      ]
+    },
+    {
+      "Main": "Trailhead",
+      "Related": [
+        "Starting Point",
+        "Parking Area",
+        "Information Board",
+        "Signage"
+      ]
+    },
+    {
+      "Main": "Campsite",
+      "Related": [
+        "Tent Area",
+        "Fire Ring",
+        "Picnic Table",
+        "Rest Spot"
+      ]
+    },
+    {
+      "Main": "Dry Bag",
+      "Related": [
+        "Waterproof Sack",
+        "Gear Protection",
+        "Outdoor Equipment",
+        "Sealed Closure"
+      ]
+    },
+    {
+      "Main": "Food Rations",
+      "Related": [
+        "Trail Snacks",
+        "Energy Bars",
+        "Lightweight Meals",
+        "Non-perishable"
+      ]
+    },
+    {
+      "Main": "Bear Canister",
+      "Related": [
+        "Food Storage",
+        "Wildlife Safety",
+        "Hard Container",
+        "Camping Gear"
+      ]
+    },
+    {
+      "Main": "Survival",
+      "Related": [
+        "Emergency Skills",
+        "Shelter Building",
+        "Fire Making",
+        "Water Sourcing"
+      ]
+    },
+    {
+      "Main": "First Aid",
+      "Related": [
+        "Wound Care",
+        "Bandaging",
+        "Medical Treatment",
+        "Injury Help"
+      ]
+    },
+    {
+      "Main": "Emergency Blanket",
+      "Related": [
+        "Heat Retention",
+        "Compact Size",
+        "Reflective Material",
+        "Survival Gear"
+      ]
+    },
+    {
+      "Main": "Signal Mirror",
+      "Related": [
+        "Rescue Tool",
+        "Reflective Surface",
+        "Emergency Use",
+        "Light Flash"
+      ]
+    },
+    {
+      "Main": "Whistle",
+      "Related": [
+        "Sound Signal",
+        "Emergency Device",
+        "Loud Noise",
+        "Safety Gear"
+      ]
+    },
+    {
+      "Main": "Shelter",
+      "Related": [
+        "Camping Tent",
+        "Natural Cover",
+        "Survival Hut",
+        "Temporary Home"
+      ]
+    },
+    {
+      "Main": "Hypothermia",
+      "Related": [
+        "Cold Exposure",
+        "Body Temperature",
+        "Medical Condition",
+        "Winter Risk"
+      ]
+    },
+    {
+      "Main": "Blister Treatment",
+      "Related": [
+        "Foot Care",
+        "Bandage",
+        "Pain Relief",
+        "Skin Protection"
+      ]
+    },
+    {
+      "Main": "Appalachian Trail",
+      "Related": [
+        "East Coast",
+        "Long Distance",
+        "Hiking Path",
+        "USA"
+      ]
+    },
+    {
+      "Main": "Pacific Crest",
+      "Related": [
+        "West Coast",
+        "Mountain Range",
+        "Trail Network",
+        "Long Hike"
+      ]
+    },
+    {
+      "Main": "Continental Divide",
+      "Related": [
+        "Watershed",
+        "Mountain Range",
+        "Hiking Route",
+        "North America"
+      ]
+    },
+    {
+      "Main": "John Muir Trail",
+      "Related": [
+        "Sierra Nevada",
+        "California",
+        "Scenic Hike",
+        "Mountain Path"
+      ]
+    },
+    {
+      "Main": "Inca Trail",
+      "Related": [
+        "Peru",
+        "Machu Picchu",
+        "Ancient Path",
+        "Cloud Forest"
+      ]
+    },
+    {
+      "Main": "Camino de Santiago",
+      "Related": [
+        "Pilgrimage",
+        "Spain",
+        "Historic Route",
+        "Saint James"
+      ]
+    },
+    {
+      "Main": "Overland Track",
+      "Related": [
+        "Tasmania",
+        "Wilderness Walk",
+        "Australia",
+        "Long Distance"
+      ]
+    },
+    {
+      "Main": "West Coast Trail",
+      "Related": [
+        "Canada",
+        "Rainforest",
+        "Pacific Shore",
+        "Challenging Hike"
+      ]
+    },
+    {
+      "Main": "Tour du Mont Blanc",
+      "Related": [
+        "Alps",
+        "France Alps",
+        "Mountain Circuit",
+        "Popular Trek"
+      ]
+    },
+    {
+      "Main": "Climbing Harness",
+      "Related": [
+        "Safety Gear",
+        "Rope Attachment",
+        "Adjustable Straps",
+        "Belay Device"
+      ]
+    },
+    {
+      "Main": "Carabiner",
+      "Related": [
+        "Metal Clip",
+        "Climbing Gear",
+        "Locking Mechanism",
+        "Rope Connector"
+      ]
+    },
+    {
+      "Main": "Belay Device",
+      "Related": [
+        "Rope Control",
+        "Safety Equipment",
+        "Climbing Partner",
+        "Friction Brake"
+      ]
+    },
+    {
+      "Main": "Crampons",
+      "Related": [
+        "Spiked Footwear",
+        "Ice Climbing",
+        "Traction Device",
+        "Winter Gear"
+      ]
+    },
+    {
+      "Main": "Ice Axe",
+      "Related": [
+        "Mountaineering Tool",
+        "Self Arrest",
+        "Climbing Aid",
+        "Snow Axe"
+      ]
+    },
+    {
+      "Main": "Helmet",
+      "Related": [
+        "Head Protection",
+        "Climbing Safety",
+        "Impact Resistant",
+        "Outdoor Gear"
+      ]
+    },
+    {
+      "Main": "Chalk Bag",
+      "Related": [
+        "Climbing Accessory",
+        "Magnesium Carbonate",
+        "Hand Grip",
+        "Harness Attachment"
+      ]
+    },
+    {
+      "Main": "Quickdraw",
+      "Related": [
+        "Climbing Connector",
+        "Carabiners Pair",
+        "Rope Clip",
+        "Protection Gear"
+      ]
+    },
+    {
+      "Main": "Outdoor Jacket",
+      "Related": [
+        "Weatherproof Coat",
+        "Wind Resistant",
+        "Waterproof Layer",
+        "Breathable Fabric"
+      ]
+    },
+    {
+      "Main": "Fleece",
+      "Related": [
+        "Insulating Layer",
+        "Soft Fabric",
+        "Cold Weather",
+        "Lightweight"
+      ]
+    },
+    {
+      "Main": "Base Layer",
+      "Related": [
+        "Moisture Wicking",
+        "Thermal Wear",
+        "Under Clothing",
+        "Comfort Fit"
+      ]
+    },
+    {
+      "Main": "Gaiters",
+      "Related": [
+        "Leg Protection",
+        "Mud Guard",
+        "Water Resistant",
+        "Hiking Accessory"
+      ]
+    },
+    {
+      "Main": "Hiking Pants",
+      "Related": [
+        "Durable Fabric",
+        "Quick Dry",
+        "Flexible Fit",
+        "Outdoor Wear"
+      ]
+    },
+    {
+      "Main": "Windbreaker",
+      "Related": [
+        "Light Jacket",
+        "Wind Resistant",
+        "Packable Coat",
+        "Breathable Material"
+      ]
+    },
+    {
+      "Main": "Sun Hat",
+      "Related": [
+        "Wide Brim",
+        "UV Protection",
+        "Breathable Fabric",
+        "Outdoor Accessory"
+      ]
+    },
+    {
+      "Main": "Gloves",
+      "Related": [
+        "Hand Protection",
+        "Cold Weather",
+        "Grip Aid",
+        "Outdoor Gear"
+      ]
+    },
+    {
+      "Main": "Thermal Socks",
+      "Related": [
+        "Insulated Footwear",
+        "Cold Protection",
+        "Wool Blend",
+        "Comfort Layer"
+      ]
+    },
+    {
+      "Main": "Rain Pants",
+      "Related": [
+        "Waterproof Bottoms",
+        "Outdoor Wear",
+        "Packable Gear",
+        "Weather Protection"
+      ]
+    },
+    {
+      "Main": "Hiking Shirt",
+      "Related": [
+        "Breathable Fabric",
+        "Quick Dry",
+        "Sun Protection",
+        "Lightweight"
+      ]
+    }
+  ]
+}

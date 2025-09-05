@@ -1,0 +1,978 @@
+{
+  "Title": "United States",
+  "Description": "",
+  "Challenges": [
+    {
+      "Main": "George Washington",
+      "Related": [
+        "First President",
+        "Revolutionary War",
+        "Mount Vernon",
+        "Constitution"
+      ]
+    },
+    {
+      "Main": "Abraham Lincoln",
+      "Related": [
+        "Emancipation",
+        "Civil War",
+        "Gettysburg",
+        "Assassination"
+      ]
+    },
+    {
+      "Main": "Thomas Jefferson",
+      "Related": [
+        "Declaration",
+        "Louisiana",
+        "Monticello",
+        "Founding Father"
+      ]
+    },
+    {
+      "Main": "Theodore Roosevelt",
+      "Related": [
+        "Rough Riders",
+        "Panama",
+        "National Parks",
+        "Bull Moose"
+      ]
+    },
+    {
+      "Main": "Franklin Roosevelt",
+      "Related": [
+        "New Deal",
+        "WWII",
+        "Polio",
+        "Four Freedoms"
+      ]
+    },
+    {
+      "Main": "John F. Kennedy",
+      "Related": [
+        "Cuban Crisis",
+        "Space Race",
+        "Assassination",
+        "Camelot"
+      ]
+    },
+    {
+      "Main": "Barack Obama",
+      "Related": [
+        "Healthcare",
+        "Nobel Prize",
+        "Illinois",
+        "First African"
+      ]
+    },
+    {
+      "Main": "Ronald Reagan",
+      "Related": [
+        "Cold War",
+        "Actor",
+        "Reaganomics",
+        "Berlin"
+      ]
+    },
+    {
+      "Main": "Benjamin Franklin",
+      "Related": [
+        "Electricity",
+        "Founding",
+        "Poor Richard",
+        "Diplomat"
+      ]
+    },
+    {
+      "Main": "James Madison",
+      "Related": [
+        "Federalist",
+        "War 1812",
+        "Constitution",
+        "Father"
+      ]
+    },
+    {
+      "Main": "Andrew Jackson",
+      "Related": [
+        "Trail Tears",
+        "Bank War",
+        "Democrat",
+        "New Orleans"
+      ]
+    },
+    {
+      "Main": "Ulysses Grant",
+      "Related": [
+        "Civil War",
+        "Union",
+        "Presidency",
+        "Whiskey"
+      ]
+    },
+    {
+      "Main": "Dwight Eisenhower",
+      "Related": [
+        "D-Day",
+        "Highway",
+        "Cold War",
+        "NATO"
+      ]
+    },
+    {
+      "Main": "Woodrow Wilson",
+      "Related": [
+        "League",
+        "WWI",
+        "Fourteen",
+        "Segregation"
+      ]
+    },
+    {
+      "Main": "Harry Truman",
+      "Related": [
+        "Atomic",
+        "Marshall",
+        "Korea",
+        "Fair Deal"
+      ]
+    },
+    {
+      "Main": "Lyndon Johnson",
+      "Related": [
+        "Great Society",
+        "Civil Rights",
+        "Vietnam",
+        "Medicare"
+      ]
+    },
+    {
+      "Main": "Richard Nixon",
+      "Related": [
+        "Watergate",
+        "China",
+        "Resign",
+        "Vietnam"
+      ]
+    },
+    {
+      "Main": "John Adams",
+      "Related": [
+        "Second",
+        "Federalist",
+        "Declaration",
+        "Alien"
+      ]
+    },
+    {
+      "Main": "Martin Van Buren",
+      "Related": [
+        "Panic",
+        "Democrat",
+        "Trail Tears",
+        "Vice"
+      ]
+    },
+    {
+      "Main": "James Monroe",
+      "Related": [
+        "Doctrine",
+        "Good Feelings",
+        "Missouri",
+        "President"
+      ]
+    },
+    {
+      "Main": "California",
+      "Related": [
+        "Sacramento",
+        "Gold Rush",
+        "Silicon",
+        "Hollywood"
+      ]
+    },
+    {
+      "Main": "Texas",
+      "Related": [
+        "Austin",
+        "Alamo",
+        "Oil",
+        "Rodeo"
+      ]
+    },
+    {
+      "Main": "New York",
+      "Related": [
+        "Albany",
+        "Liberty",
+        "Wall Street",
+        "Empire"
+      ]
+    },
+    {
+      "Main": "Florida",
+      "Related": [
+        "Tallahassee",
+        "Everglades",
+        "Disney",
+        "Beaches"
+      ]
+    },
+    {
+      "Main": "Illinois",
+      "Related": [
+        "Springfield",
+        "Chicago",
+        "Lincoln",
+        "Lakes"
+      ]
+    },
+    {
+      "Main": "Pennsylvania",
+      "Related": [
+        "Harrisburg",
+        "Philadelphia",
+        "Liberty",
+        "Steel"
+      ]
+    },
+    {
+      "Main": "Ohio",
+      "Related": [
+        "Columbus",
+        "Rock",
+        "Buckeyes",
+        "Lakes"
+      ]
+    },
+    {
+      "Main": "Georgia",
+      "Related": [
+        "Atlanta",
+        "Peach",
+        "Civil Rights",
+        "Savannah"
+      ]
+    },
+    {
+      "Main": "North Carolina",
+      "Related": [
+        "Raleigh",
+        "Triangle",
+        "Outer Banks",
+        "Tobacco"
+      ]
+    },
+    {
+      "Main": "Michigan",
+      "Related": [
+        "Lansing",
+        "Detroit",
+        "Lakes",
+        "Auto"
+      ]
+    },
+    {
+      "Main": "Sacramento",
+      "Related": [
+        "California",
+        "Gold Rush",
+        "River",
+        "Capitol"
+      ]
+    },
+    {
+      "Main": "Austin",
+      "Related": [
+        "Texas",
+        "Music",
+        "University",
+        "Tech"
+      ]
+    },
+    {
+      "Main": "Albany",
+      "Related": [
+        "New York",
+        "Hudson",
+        "Government",
+        "Empire"
+      ]
+    },
+    {
+      "Main": "Tallahassee",
+      "Related": [
+        "Florida",
+        "State",
+        "Capitol",
+        "Apalachicola"
+      ]
+    },
+    {
+      "Main": "Springfield",
+      "Related": [
+        "Illinois",
+        "Lincoln",
+        "Capitol",
+        "Sangamon"
+      ]
+    },
+    {
+      "Main": "Harrisburg",
+      "Related": [
+        "Pennsylvania",
+        "Susquehanna",
+        "Museum",
+        "Governor"
+      ]
+    },
+    {
+      "Main": "Columbus",
+      "Related": [
+        "Ohio",
+        "State",
+        "Scioto",
+        "Statehouse"
+      ]
+    },
+    {
+      "Main": "Atlanta",
+      "Related": [
+        "Georgia",
+        "Civil Rights",
+        "Airport",
+        "Peachtree"
+      ]
+    },
+    {
+      "Main": "Raleigh",
+      "Related": [
+        "North Carolina",
+        "Triangle",
+        "Capitol",
+        "Pullen"
+      ]
+    },
+    {
+      "Main": "Lansing",
+      "Related": [
+        "Michigan",
+        "Auto",
+        "Capitol",
+        "Grand"
+      ]
+    },
+    {
+      "Main": "Statue of Liberty",
+      "Related": [
+        "Ellis",
+        "New York",
+        "Freedom",
+        "Bartholdi"
+      ]
+    },
+    {
+      "Main": "Mount Rushmore",
+      "Related": [
+        "South Dakota",
+        "Presidents",
+        "Carving",
+        "Black Hills"
+      ]
+    },
+    {
+      "Main": "Golden Gate",
+      "Related": [
+        "San Francisco",
+        "Bridge",
+        "Bay",
+        "Fog"
+      ]
+    },
+    {
+      "Main": "Lincoln Memorial",
+      "Related": [
+        "Washington",
+        "Lincoln",
+        "Pool",
+        "Mall"
+      ]
+    },
+    {
+      "Main": "Grand Canyon",
+      "Related": [
+        "Arizona",
+        "Colorado",
+        "Park",
+        "Canyon"
+      ]
+    },
+    {
+      "Main": "Empire State",
+      "Related": [
+        "New York",
+        "Skyscraper",
+        "Deck",
+        "Art Deco"
+      ]
+    },
+    {
+      "Main": "Alcatraz Island",
+      "Related": [
+        "San Francisco",
+        "Prison",
+        "Penitentiary",
+        "Escape"
+      ]
+    },
+    {
+      "Main": "Liberty Bell",
+      "Related": [
+        "Philadelphia",
+        "Independence",
+        "Crack",
+        "Revolution"
+      ]
+    },
+    {
+      "Main": "Space Needle",
+      "Related": [
+        "Seattle",
+        "Tower",
+        "Fair",
+        "Northwest"
+      ]
+    },
+    {
+      "Main": "Hollywood Sign",
+      "Related": [
+        "Los Angeles",
+        "Movies",
+        "Entertainment",
+        "Hills"
+      ]
+    },
+    {
+      "Main": "Trail of Tears",
+      "Related": [
+        "Native",
+        "Cherokee",
+        "Relocation",
+        "1830s"
+      ]
+    },
+    {
+      "Main": "Boston Tea Party",
+      "Related": [
+        "Revolt",
+        "Protest",
+        "Taxes",
+        "Harbor"
+      ]
+    },
+    {
+      "Main": "Civil War",
+      "Related": [
+        "Union",
+        "Confederacy",
+        "1861",
+        "Gettysburg"
+      ]
+    },
+    {
+      "Main": "Great Depression",
+      "Related": [
+        "1929",
+        "Stocks",
+        "Unemployment",
+        "Dust"
+      ]
+    },
+    {
+      "Main": "Moon Landing",
+      "Related": [
+        "Apollo",
+        "Armstrong",
+        "1969",
+        "NASA"
+      ]
+    },
+    {
+      "Main": "Women's Suffrage",
+      "Related": [
+        "Amendment",
+        "Voting",
+        "Activists",
+        "Seneca"
+      ]
+    },
+    {
+      "Main": "Civil Rights",
+      "Related": [
+        "Martin Luther",
+        "Segregation",
+        "Equality",
+        "1960s"
+      ]
+    },
+    {
+      "Main": "Declaration of Independence",
+      "Related": [
+        "1776",
+        "Jefferson",
+        "Congress",
+        "Freedom"
+      ]
+    },
+    {
+      "Main": "Pearl Harbor",
+      "Related": [
+        "WWII",
+        "Attack",
+        "Hawaii",
+        "December"
+      ]
+    },
+    {
+      "Main": "September 11",
+      "Related": [
+        "Terrorism",
+        "Twin Towers",
+        "Pentagon",
+        "New York"
+      ]
+    },
+    {
+      "Main": "New York City",
+      "Related": [
+        "Manhattan",
+        "Times",
+        "Broadway",
+        "Subway"
+      ]
+    },
+    {
+      "Main": "Los Angeles",
+      "Related": [
+        "Hollywood",
+        "Beaches",
+        "Entertainment",
+        "Traffic"
+      ]
+    },
+    {
+      "Main": "Chicago",
+      "Related": [
+        "Windy",
+        "Michigan",
+        "Deep Dish",
+        "Skyscraper"
+      ]
+    },
+    {
+      "Main": "Houston",
+      "Related": [
+        "Texas",
+        "NASA",
+        "Space",
+        "Energy"
+      ]
+    },
+    {
+      "Main": "Phoenix",
+      "Related": [
+        "Arizona",
+        "Desert",
+        "Heat",
+        "Cactus"
+      ]
+    },
+    {
+      "Main": "Philadelphia",
+      "Related": [
+        "Liberty",
+        "Independence",
+        "Cheesesteak",
+        "Founders"
+      ]
+    },
+    {
+      "Main": "San Antonio",
+      "Related": [
+        "Texas",
+        "Alamo",
+        "River",
+        "Fiesta"
+      ]
+    },
+    {
+      "Main": "San Diego",
+      "Related": [
+        "California",
+        "Beaches",
+        "Zoo",
+        "Navy"
+      ]
+    },
+    {
+      "Main": "Dallas",
+      "Related": [
+        "Texas",
+        "Oil",
+        "Cowboys",
+        "Kennedy"
+      ]
+    },
+    {
+      "Main": "San Jose",
+      "Related": [
+        "Silicon",
+        "Tech",
+        "California",
+        "Innovation"
+      ]
+    },
+    {
+      "Main": "Yellowstone",
+      "Related": [
+        "Wyoming",
+        "Geysers",
+        "Wildlife",
+        "Park"
+      ]
+    },
+    {
+      "Main": "Yosemite",
+      "Related": [
+        "California",
+        "Waterfalls",
+        "Granite",
+        "Park"
+      ]
+    },
+    {
+      "Main": "Grand Teton",
+      "Related": [
+        "Wyoming",
+        "Mountains",
+        "Park",
+        "Jackson"
+      ]
+    },
+    {
+      "Main": "Zion",
+      "Related": [
+        "Utah",
+        "Canyon",
+        "Park",
+        "Hiking"
+      ]
+    },
+    {
+      "Main": "Acadia",
+      "Related": [
+        "Maine",
+        "Coast",
+        "Park",
+        "Desert"
+      ]
+    },
+    {
+      "Main": "Everglades",
+      "Related": [
+        "Florida",
+        "Swamp",
+        "Alligators",
+        "Wetlands"
+      ]
+    },
+    {
+      "Main": "Rocky Mountains",
+      "Related": [
+        "Colorado",
+        "Peaks",
+        "Hiking",
+        "Wildlife"
+      ]
+    },
+    {
+      "Main": "Sequoia",
+      "Related": [
+        "California",
+        "Giant",
+        "Park",
+        "Redwoods"
+      ]
+    },
+    {
+      "Main": "Glacier National",
+      "Related": [
+        "Montana",
+        "Mountains",
+        "Glaciers",
+        "Wildlife"
+      ]
+    },
+    {
+      "Main": "Bald Eagle",
+      "Related": [
+        "Bird",
+        "Symbol",
+        "Freedom",
+        "Raptor"
+      ]
+    },
+    {
+      "Main": "American Flag",
+      "Related": [
+        "Stars",
+        "Stripes",
+        "Patriotism",
+        "Independence"
+      ]
+    },
+    {
+      "Main": "Uncle Sam",
+      "Related": [
+        "Recruitment",
+        "Symbol",
+        "Patriotism",
+        "Government"
+      ]
+    },
+    {
+      "Main": "Betsy Ross",
+      "Related": [
+        "Flag",
+        "Revolution",
+        "Sewing",
+        "Philadelphia"
+      ]
+    },
+    {
+      "Main": "Constitution",
+      "Related": [
+        "Founding",
+        "Bill Rights",
+        "Federalism",
+        "1787"
+      ]
+    },
+    {
+      "Main": "Bill of Rights",
+      "Related": [
+        "Amendments",
+        "Freedom",
+        "Speech",
+        "Religion"
+      ]
+    },
+    {
+      "Main": "Emancipation Proclamation",
+      "Related": [
+        "Lincoln",
+        "Slavery",
+        "Civil War",
+        "Freedom"
+      ]
+    },
+    {
+      "Main": "Federalist Papers",
+      "Related": [
+        "Madison",
+        "Hamilton",
+        "Jay",
+        "Constitution"
+      ]
+    },
+    {
+      "Main": "Gettysburg Address",
+      "Related": [
+        "Lincoln",
+        "Civil War",
+        "Battle",
+        "Speech"
+      ]
+    },
+    {
+      "Main": "New York Yankees",
+      "Related": [
+        "Baseball",
+        "Bronx",
+        "Championship",
+        "Pinstripes"
+      ]
+    },
+    {
+      "Main": "Los Angeles Lakers",
+      "Related": [
+        "Basketball",
+        "NBA",
+        "Championship",
+        "Hollywood"
+      ]
+    },
+    {
+      "Main": "Chicago Bulls",
+      "Related": [
+        "Basketball",
+        "Jordan",
+        "NBA",
+        "Championship"
+      ]
+    },
+    {
+      "Main": "Green Bay Packers",
+      "Related": [
+        "Football",
+        "Lambeau",
+        "NFL",
+        "Wisconsin"
+      ]
+    },
+    {
+      "Main": "Boston Red Sox",
+      "Related": [
+        "Baseball",
+        "Fenway",
+        "Boston",
+        "Championship"
+      ]
+    },
+    {
+      "Main": "Dallas Cowboys",
+      "Related": [
+        "Football",
+        "NFL",
+        "Texas",
+        "America's Team"
+      ]
+    },
+    {
+      "Main": "San Francisco 49ers",
+      "Related": [
+        "Football",
+        "NFL",
+        "California",
+        "Super Bowl"
+      ]
+    },
+    {
+      "Main": "Miami Dolphins",
+      "Related": [
+        "Football",
+        "NFL",
+        "Florida",
+        "Dolphins"
+      ]
+    },
+    {
+      "Main": "Pittsburgh Steelers",
+      "Related": [
+        "Football",
+        "NFL",
+        "Steel City",
+        "Super Bowl"
+      ]
+    },
+    {
+      "Main": "Detroit Tigers",
+      "Related": [
+        "Baseball",
+        "Detroit",
+        "MLB",
+        "Motor City"
+      ]
+    },
+    {
+      "Main": "Martin Luther King",
+      "Related": [
+        "Civil Rights",
+        "Dream",
+        "Montgomery",
+        "Nonviolence"
+      ]
+    },
+    {
+      "Main": "Susan B. Anthony",
+      "Related": [
+        "Suffrage",
+        "Women's Rights",
+        "Activist",
+        "Amendment"
+      ]
+    },
+    {
+      "Main": "Helen Keller",
+      "Related": [
+        "Deafblind",
+        "Author",
+        "Activist",
+        "Sullivan"
+      ]
+    },
+    {
+      "Main": "Frederick Douglass",
+      "Related": [
+        "Abolition",
+        "Orator",
+        "Slave",
+        "Autobiography"
+      ]
+    },
+    {
+      "Main": "Harriet Tubman",
+      "Related": [
+        "Railroad",
+        "Abolition",
+        "Escape",
+        "Civil War"
+      ]
+    },
+    {
+      "Main": "Mark Twain",
+      "Related": [
+        "Author",
+        "Mississippi",
+        "Huck Finn",
+        "Satire"
+      ]
+    },
+    {
+      "Main": "Amelia Earhart",
+      "Related": [
+        "Aviator",
+        "Disappearance",
+        "Pilot",
+        "Transatlantic"
+      ]
+    },
+    {
+      "Main": "Wright Brothers",
+      "Related": [
+        "Aviation",
+        "Kitty Hawk",
+        "Flight",
+        "Inventors"
+      ]
+    },
+    {
+      "Main": "Eleanor Roosevelt",
+      "Related": [
+        "First Lady",
+        "Human Rights",
+        "United Nations",
+        "Activist"
+      ]
+    },
+    {
+      "Main": "John Muir",
+      "Related": [
+        "Conservation",
+        "Sierra",
+        "National Parks",
+        "Wilderness"
+      ]
+    }
+  ]
+}
