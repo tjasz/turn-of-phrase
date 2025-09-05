@@ -4,9 +4,10 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  --background: light-dark(#ffe, #332);
+  --background: light-dark(#ffe, #221);
   --text: light-dark(#221, #ffe);
-  --secondary: light-dark(#ffa, #ffa);
+  --shadow: #000;
+  --secondary: light-dark(#ffa, #554);
   --accent: light-dark(#c60, #c60);
   --accent-hover: light-dark(#a40, #f80);
   background-color: var(--background);
@@ -70,8 +71,10 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: var(--secondary);
+  color: var(--text);
   cursor: pointer;
   transition: border-color 0.25s;
+  transition: color 0.25s;
 }
 
 button:hover {
