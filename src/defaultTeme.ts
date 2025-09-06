@@ -1,4 +1,4 @@
-{
+const defaultTheme: Theme = {
   "Title": "General Knowledge",
   "Description": "Common everyday things that many people know.",
   "Challenges": [
@@ -1317,4 +1317,6 @@
       ]
     }
   ]
-}
+};
+
+export default defaultTheme;

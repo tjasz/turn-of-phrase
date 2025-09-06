@@ -5,10 +5,8 @@ import EndOfTurn from './EndOfTurn';
 import './App.css';
 import StartOfTurn from './StartOfTurn';
 import EndOfGame from './EndOfGame';
-import ThemeSelector from './ThemeSelector';
-import { validateChallenges } from './openai';
-
-const TURN_TIME_OPTIONS = [10, 20, 30, 40, 50, 60];
+import GameSettingsView from './GameSettingsView';
+import defaultTheme from './defaultTeme';
 
 function shuffle<T>(array: T[]): T[] {
   let arr = array.slice();
@@ -43,39 +41,37 @@ function getWinner(scores: number[]): number {
 }
 
 function App() {
-  // Game setup states
-  const [numTeams, setNumTeams] = useState(2);
-  const [playersPerTeam, setPlayersPerTeam] = useState([2, 2]);
-  const [turnTime, setTurnTime] = useState(60);
-  const [pointsToWin, setPointsToWin] = useState(15);
-  const [penalty, setPenalty] = useState(-1);
-  const [gameStarted, setGameStarted] = useState(false);
-
-  const [theme, setTheme] = useState<Theme | null>(null);
-
   // Game states
+  const [gameSettings, setGameSettings] = useState<GameSettings>({
+    numberOfTeams: 2,
+    numberOfPlayersByTeam: [2, 2],
+    turnTimeSeconds: 60,
+    pointsToWin: 15,
+    skipPenalty: -1,
+    theme: defaultTheme
+  });
+  const [gameStarted, setGameStarted] = useState(false);
   const [challenges, setChallenges] = useState<Challenge[]>([]);
   const [currentChallengeIdx, setCurrentChallengeIdx] = useState(0);
-  const [timer, setTimer] = useState(turnTime * 1000);
+  const [timer, setTimer] = useState((gameSettings.turnTimeSeconds) * 1000);
   const [timerActive, setTimerActive] = useState(false);
-  const [score, setScore] = useState(Array(numTeams).fill(0));
+  const [score, setScore] = useState(Array(gameSettings.numberOfTeams).fill(0));
   const [turnTeam, setTurnTeam] = useState(0);
-  const [turnPlayer, setTurnPlayer] = useState(Array(numTeams).fill(0));
+  const [turnPlayer, setTurnPlayer] = useState(Array(gameSettings.numberOfTeams).fill(0));
   // Track challenge results for the current turn
   const [turnChallenges, setTurnChallenges] = useState<{ main: string; succeeded: boolean }[]>([]);
   const [showResults, setShowResults] = useState(false);
 
   // Start game
   const startGame = () => {
-    if (!theme) return;
-    setChallenges(shuffle(theme.Challenges));
+    setChallenges(shuffle(gameSettings.theme.Challenges));
     setCurrentChallengeIdx(0);
-    setScore(Array(numTeams).fill(0));
+    setScore(Array(gameSettings.numberOfTeams).fill(0));
     setTurnTeam(0);
-    setTurnPlayer(Array(numTeams).fill(0));
+    setTurnPlayer(Array(gameSettings.numberOfTeams).fill(0));
     setGameStarted(true);
     setShowResults(false);
-    setTimer(turnTime * 1000);
+    setTimer(gameSettings.turnTimeSeconds * 1000);
     setTimerActive(false);
     setTurnChallenges([]);
   };
@@ -112,81 +108,31 @@ function App() {
   const endTurn = (correctCount: number, skippedCount: number) => {
     setScore((prev) => {
       const newScore = [...prev];
-      newScore[turnTeam] += correctCount + penalty * skippedCount;
+      newScore[turnTeam] += correctCount + (gameSettings.skipPenalty ?? -1) * skippedCount;
       return newScore;
     });
     // Next team/player
-    setTurnTeam((team) => (team + 1) % numTeams);
-    setTurnPlayer((player) => player.map((p, i) => i === turnTeam ? (p + 1) % playersPerTeam[turnTeam] : p));
+    setTurnTeam((team) => (team + 1) % gameSettings.numberOfTeams);
+    setTurnPlayer((player) => player.map((p, i) => i === turnTeam ? (p + 1) % gameSettings.numberOfPlayersByTeam[turnTeam] : p));
     setCurrentChallengeIdx((idx) => idx + 1);
-    setTimer(turnTime * 1000);
+    setTimer(gameSettings.turnTimeSeconds * 1000);
     setTimerActive(false);
     setTurnChallenges([]);
     setShowResults(false);
   };
 
   // Check for winner
-  const winnerIdx = score.some(s => s >= pointsToWin) && (turnTeam === 0)
+  const winnerIdx = score.some(s => s >= gameSettings.pointsToWin) && (turnTeam === 0)
     ? getWinner(score)
     : -1;
 
   // UI
   if (!gameStarted) {
     return (
-      <div className="setup">
-        <h1>Turn of Phrase</h1>
-        <ThemeSelector onSelectTheme={theme => {
-          setTheme(theme);
-          const challengeErrors = validateChallenges(theme.Challenges);
-          if (challengeErrors[1].length > 0) {
-            console.warn(`Selected theme "${theme.Title}" has invalid challenges:`, challengeErrors);
-          }
-        }} />
-        <div>
-          <label>Number of Teams: </label>
-          <input type="number" min={2} max={5} value={numTeams} onChange={e => {
-            const val = Math.max(2, Math.min(5, Number(e.target.value)));
-            setNumTeams(val);
-            setPlayersPerTeam(Array(val).fill(2));
-          }} />
-        </div>
-        <div>
-          {Array(numTeams).fill(0).map((_, i) => (
-            <div key={i}>
-              <label>Players in Team {i + 1}: </label>
-              <input type="number" min={2} max={12} value={playersPerTeam[i] || 2} onChange={e => {
-                const val = Math.max(2, Math.min(12, Number(e.target.value)));
-                setPlayersPerTeam(prev => {
-                  const arr = [...prev];
-                  arr[i] = val;
-                  return arr;
-                });
-              }} />
-            </div>
-          ))}
-        </div>
-        <div>
-          <label>Turn Time (seconds): </label>
-          <select value={turnTime} onChange={e => setTurnTime(Number(e.target.value))}>
-            {TURN_TIME_OPTIONS.map(t => <option key={t} value={t}>{t}</option>)}
-          </select>
-        </div>
-        <div>
-          <label>Points to Win: </label>
-          <input type="number" min={5} max={50} value={pointsToWin} onChange={e => setPointsToWin(Number(e.target.value))} />
-        </div>
-        <div>
-          <label>Penalty for Skip/Violation: </label>
-          <select value={penalty} onChange={e => setPenalty(Number(e.target.value))}>
-            <option value={0}>0</option>
-            <option value={-0.25}>-0.25</option>
-            <option value={-0.5}>-0.5</option>
-            <option value={-1}>-1</option>
-            <option value={-2}>-2</option>
-          </select>
-        </div>
-        <button className="start-btn" onClick={startGame} disabled={!theme}>Start Game</button>
-      </div>
+      <GameSettingsView currentSettings={gameSettings} onConfirm={theme => {
+        setGameSettings(theme);
+        startGame();
+      }} />
     );
   }
 
@@ -197,12 +143,12 @@ function App() {
   return (
     <div className="gameplay">
       <h2>Team {turnTeam + 1} - Player {turnPlayer[turnTeam] + 1}'s Turn</h2>
-      <Timer timeLeft={timer} totalTime={turnTime * 1000} />
+      <Timer timeLeft={timer} totalTime={gameSettings.turnTimeSeconds * 1000} />
       {winnerIdx !== -1 && (
         <EndOfGame
           winnerIdx={winnerIdx}
           scores={score}
-          pointsToWin={pointsToWin}
+          pointsToWin={gameSettings.pointsToWin}
           onConfirm={() => setGameStarted(false)}
         />
       )}
@@ -223,8 +169,8 @@ function App() {
       {!timerActive && !showResults && winnerIdx === -1 && (
         <StartOfTurn
           scores={score}
-          pointsToWin={pointsToWin}
-          isFinalRound={score.some(s => s >= pointsToWin)}
+          pointsToWin={gameSettings.pointsToWin}
+          isFinalRound={score.some(s => s >= gameSettings.pointsToWin)}
           onConfirm={() => setTimerActive(true)}
         />
       )}

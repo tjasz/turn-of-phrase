@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ThemeCreator from "./ThemeCreator";
+import defaultTheme from "./defaultTeme";
 
 interface ThemeSelectorProps {
   onSelectTheme: (theme: Theme) => void;
@@ -29,7 +30,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectTheme }) => {
   }
 
   // Store all selectable themes: built-in and local
-  const [allThemes, setAllThemes] = useState<Array<{ type: 'public' | 'local'; name: string; key?: string; file?: string; theme?: Theme }>>([]);
+  const [allThemes, setAllThemes] = useState<Array<{ type: 'default' | 'public' | 'local'; name: string; key?: string; file?: string; theme?: Theme }>>([]);
   const [selectedThemeIndex, setSelectedThemeIndex] = useState<number>(0);
   const [loadingTheme, setLoadingTheme] = useState(false);
   const [themeError, setThemeError] = useState<string | null>(null);
@@ -38,7 +39,8 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectTheme }) => {
   // On mount, populate allThemes
   useEffect(() => {
     const localThemes = getLocalThemes();
-    const combined: Array<{ type: 'public' | 'local'; name: string; key?: string; file?: string; theme?: Theme }> = [
+    const combined: Array<{ type: 'default' | 'public' | 'local'; name: string; key?: string; file?: string; theme?: Theme }> = [
+      { type: 'default', name: 'Default', theme: defaultTheme },
       ...themeFiles.map(file => ({ type: 'public' as const, name: file.replace('.json', ''), file })),
       ...localThemes.map(({ key, theme }) => ({ type: 'local' as const, name: theme.Title, key, theme }))
     ];
@@ -68,6 +70,10 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectTheme }) => {
           setLoadingTheme(false);
         });
     } else if (selected.type === 'local') {
+      setTheme(selected.theme!);
+      onSelectTheme(selected.theme!);
+      setLoadingTheme(false);
+    } else if (selected.type === 'default') {
       setTheme(selected.theme!);
       onSelectTheme(selected.theme!);
       setLoadingTheme(false);
