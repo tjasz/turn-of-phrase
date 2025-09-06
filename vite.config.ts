@@ -8,6 +8,9 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,json}']
+      },
       base: '/turn-of-phrase/',
       manifest: {
         name: 'Turn of Phrase',
