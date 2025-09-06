@@ -20,7 +20,6 @@ export const GameSettingsView: React.FC<GameSettingsProps> = ({ currentSettings,
 
   return (
     <div className="setup">
-      <h1>Turn of Phrase</h1>
       <ThemeSelector onSelectTheme={theme => {
         setTheme(theme);
         const challengeErrors = validateChallenges(theme.Challenges);

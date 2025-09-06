@@ -126,56 +126,60 @@ function App() {
     ? getWinner(score)
     : -1;
 
-  // UI
-  if (!gameStarted) {
-    return (
-      <GameSettingsView currentSettings={gameSettings} onConfirm={theme => {
-        setGameSettings(theme);
-        startGame();
-      }} />
-    );
-  }
-
   // Gameplay UI
   const challenge: Challenge | undefined = challenges[currentChallengeIdx];
   // Exclude the last challenge (timed out) from review
   const reviewedChallenges = turnChallenges;
-  return (
-    <div className="gameplay">
-      <h2>Team {turnTeam + 1} - Player {turnPlayer[turnTeam] + 1}'s Turn</h2>
-      <Timer timeLeft={timer} totalTime={gameSettings.turnTimeSeconds * 1000} />
-      {winnerIdx !== -1 && (
-        <EndOfGame
-          winnerIdx={winnerIdx}
-          scores={score}
-          pointsToWin={gameSettings.pointsToWin}
-          onConfirm={() => setGameStarted(false)}
-        />
-      )}
-      {timerActive && challenge && (
-        <Challenge
-          main={challenge.Main}
-          related={challenge.Related}
-          onSkip={handleSkip}
-          onCorrect={handleCorrect}
-        />
-      )}
-      {showResults && (
-        <EndOfTurn
-          challenges={reviewedChallenges}
-          onConfirm={endTurn}
-        />
-      )}
-      {!timerActive && !showResults && winnerIdx === -1 && (
-        <StartOfTurn
-          scores={score}
-          pointsToWin={gameSettings.pointsToWin}
-          isFinalRound={score.some(s => s >= gameSettings.pointsToWin)}
-          onConfirm={() => setTimerActive(true)}
-        />
-      )}
+  return <div id="app">
+    <div id="appHeading">
+      <img
+        src={`${import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL}/logo.svg`}
+        alt="Turn of Phrase Logo"
+      />
+      <h1>Turn of Phrase</h1>
     </div>
-  );
+    <div id="appBody">
+      {!gameStarted
+        ? <GameSettingsView currentSettings={gameSettings} onConfirm={theme => {
+          setGameSettings(theme);
+          startGame();
+        }} />
+        : <div className="gameplay">
+          <h2>Team {turnTeam + 1} - Player {turnPlayer[turnTeam] + 1}'s Turn</h2>
+          <Timer timeLeft={timer} totalTime={gameSettings.turnTimeSeconds * 1000} />
+          {winnerIdx !== -1 && (
+            <EndOfGame
+              winnerIdx={winnerIdx}
+              scores={score}
+              pointsToWin={gameSettings.pointsToWin}
+              onConfirm={() => setGameStarted(false)}
+            />
+          )}
+          {timerActive && challenge && (
+            <Challenge
+              main={challenge.Main}
+              related={challenge.Related}
+              onSkip={handleSkip}
+              onCorrect={handleCorrect}
+            />
+          )}
+          {showResults && (
+            <EndOfTurn
+              challenges={reviewedChallenges}
+              onConfirm={endTurn}
+            />
+          )}
+          {!timerActive && !showResults && winnerIdx === -1 && (
+            <StartOfTurn
+              scores={score}
+              pointsToWin={gameSettings.pointsToWin}
+              isFinalRound={score.some(s => s >= gameSettings.pointsToWin)}
+              onConfirm={() => setTimerActive(true)}
+            />
+          )}
+        </div>}
+    </div>
+  </div>
 }
 
 export default App;

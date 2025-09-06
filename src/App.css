@@ -1,8 +1,42 @@
-#root {
+#appHeading {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--text);
+  background-color: var(--secondary);
+  overflow: hidden;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#appHeading img {
+  margin: 0 1vh;
+  height: 90%;
+  display: inline;
+}
+
+#appHeading h1 {
+  margin: 0;
+  padding: 0;
+  height: 5vh;
+  font-size: 4vh;
+  display: inline;
+  line-height: 5vh;
+}
+
+#appBody {
   max-width: 1280px;
-  margin: 0 auto;
+  height: calc(100vh - 5vh - 1px);
+  margin: calc(5vh + 1px) auto 0 auto;
   padding: 0 2rem;
   text-align: center;
+  place-items: center;
+  min-width: 320px;
 }
 
 .mainGameBody {
