@@ -8,3 +8,8 @@ type Challenge = {
   Main: string;
   Related: string[];
 };
+
+type ChallengeErrors = {
+  index: number,
+  message: string
+};

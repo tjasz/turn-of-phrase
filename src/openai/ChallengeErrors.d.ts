@@ -1,1 +1,0 @@
-type ChallengeErrors = { index: number, message: string };
