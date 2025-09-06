@@ -16,8 +16,8 @@ export default defineConfig({
         name: 'Turn of Phrase',
         short_name: 'Phrase',
         description: 'Team game for guessing phrases',
-        theme_color: '#ffffff',
-        background_color: '#ffffff',
+        theme_color: '#26c',
+        background_color: '#cdf',
         display: 'standalone',
         start_url: '.',
         icons: [
