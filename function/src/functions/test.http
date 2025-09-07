@@ -1,0 +1,6 @@
+POST http://localhost:7071/api/getTheme
+
+{
+  "Title": "TJasz",
+  "Description": "A fantasy name for a wizard or sorcerer."
+}
