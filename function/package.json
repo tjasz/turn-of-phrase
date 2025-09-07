@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@azure/functions": "^4.7.2",
-    "@azure/identity": "^4.11.1"
+    "@azure/identity": "^4.11.1",
+    "openai": "^5.19.1"
   },
   "devDependencies": {
     "@types/node": "^20.x",
