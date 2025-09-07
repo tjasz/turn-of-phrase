@@ -2,6 +2,7 @@ import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/fu
 import { DefaultAzureCredential, getBearerTokenProvider } from "@azure/identity";
 import { AzureOpenAI } from "openai";
 import BadRequestError from "../errors/BadRequestError";
+import { getAiTheme } from "../openai";
 
 export async function getTheme(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
     context.log(`Http function processed request for url "${request.url}"`);
@@ -9,34 +10,9 @@ export async function getTheme(request: HttpRequest, context: InvocationContext)
     try {
         var requestObject = await getRequestObject(request);
 
-        // You will need to set these environment variables or edit the following values
-        const endpoint = process.env["AZURE_OPENAI_ENDPOINT"] || "https://top-ai.openai.azure.com/";
-        const apiVersion = "2025-01-01-preview";
-        const deployment = "gpt-4.1-mini"; // This must match your deployment name
+        var theme = await getAiTheme(requestObject.Title, requestObject.Description);
 
-        // Initialize the DefaultAzureCredential
-        const credential = new DefaultAzureCredential();
-        const scope = "https://cognitiveservices.azure.com/.default";
-        const azureADTokenProvider = getBearerTokenProvider(credential, scope);
-
-        // Initialize the AzureOpenAI client with Entra ID (Azure AD) authentication
-        const client = new AzureOpenAI({ endpoint, azureADTokenProvider, apiVersion, deployment });
-
-        const result = await client.chat.completions.create({
-            messages: [
-                { role: "system", content: "You are an AI assistant that helps people find information." },
-                { role: "user", content: `What is the theme for ${requestObject.Title}?` }
-            ],
-            model: deployment,
-            max_tokens: 13107,
-            temperature: 0.7,
-            top_p: 0.95,
-            frequency_penalty: 0,
-            presence_penalty: 0,
-            stop: null
-        });
-
-        return { body: JSON.stringify(result.choices[0].message.content, null, 2) };
+        return { body: JSON.stringify(theme) };
     } catch (error) {
         if (error instanceof BadRequestError) {
             return { status: 400, body: `${error.message}` };
