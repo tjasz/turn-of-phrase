@@ -1,14 +1,14 @@
 POST http://localhost:7071/api/getTheme
 
 {
-  "Title": "TJasz",
-  "Description": "A fantasy name for a wizard or sorcerer."
+  "Title": "Computing",
+  "Description": "A field of study that deals with the theory, development, and application of computer systems and software."
 }
 
 ### deployed
 POST https://top-func.azurewebsites.net/api/getTheme
 
 {
-  "Title": "TJasz",
-  "Description": "A fantasy name for a wizard or sorcerer."
+  "Title": "Computing",
+  "Description": "A field of study that deals with the theory, development, and application of computer systems and software."
 }
