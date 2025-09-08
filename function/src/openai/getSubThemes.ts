@@ -4,11 +4,7 @@ export function getPromptForSubThemes(title: string, description: string): ChatC
   return {
     role: "user",
     content:
-      `We are generating a new set of Phrase Challenges for theme described below.
-Title: ${title}
-Description: ${description}
-
-First, list 5 or more sub-themes that fall under the broad theme "${title}".
+      `First, list 5 or more sub-themes that fall under the broad theme "${title}".
 Output only a JSON array of strings.`
   };
 }

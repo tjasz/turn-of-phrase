@@ -36,7 +36,7 @@ Do not include additional text, even to explain or apologize for mistakes.`
 export function getChallengesPrompt(mainPhrases: string[]): ChatCompletionMessageParam {
   return {
     role: "user",
-    content: `For each of these ${mainPhrases.length} main phrases,
+    content: `For each of these ${mainPhrases.length} main phrases: "${mainPhrases.join('", "')}",
 generate a Phrase Challenge with the following properties:
 {
   "Main": "<main_phrase>",

@@ -3,19 +3,24 @@ import { systemPrompt } from "../openai";
 import { getPromptForSubThemes } from "../openai/getSubThemes";
 import { getMainPhrasePrompt } from "../openai/getMainPhrases";
 import { getChallengePrompt, getChallengesPrompt } from "../openai/getChallenges";
+import getGenerationPrompt from "../openai/getGenerationPrompt";
 
 const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (context) {
   // Step 0: Get input
   const input = context.df.getInput();
+  const title = input['Title'];
+  const description = input['Description'];
   const results = {};
-  results['Title'] = input['Title'];
-  results['Description'] = input['Description'];
+  results['Title'] = title;
+  results['Description'] = description;
   context.df.setCustomStatus({ message: "Started", data: results });
+
+  const generationPrompt = getGenerationPrompt(title, description);
 
   // Step 1: Get Sub-Themes
   context.df.setCustomStatus({ message: "Generating sub-themes...", data: results });
-  const subThemePrompt = getPromptForSubThemes(input['Title'], input['Description']);
-  const subThemesResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, subThemePrompt] });
+  const subThemePrompt = getPromptForSubThemes(title, description);
+  const subThemesResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, generationPrompt, subThemePrompt] });
   const subThemes = JSON.parse(subThemesResponse.content!);
   results['SubThemes'] = subThemes;
   context.df.setCustomStatus({
@@ -32,8 +37,8 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
       message: `Generated ${mainPhrases.length} phrases so far. Generating main phrases for sub-theme ${i + 1}/${subThemes.length}: "${subTheme}"...`,
       data: { SubThemes: subThemes },
     });
-    const mainPhrasePrompt = getMainPhrasePrompt(input['Title'], subTheme, targetCount);
-    const mainPhraseResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, mainPhrasePrompt] });
+    const mainPhrasePrompt = getMainPhrasePrompt(title, subTheme, targetCount);
+    const mainPhraseResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, generationPrompt, mainPhrasePrompt] });
     mainPhrases = [...mainPhrases, ...JSON.parse(mainPhraseResponse.content!)];
     results['MainPhrases'] = mainPhrases;
   }
@@ -54,15 +59,15 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
       data: { results },
     });
     const challengePrompt = getChallengesPrompt(mainPhrases.slice(i, i + batchLength));
-    const challengeResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, challengePrompt] });
+    const challengeResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, generationPrompt, challengePrompt] });
     challenges = [...challenges, ...JSON.parse(challengeResponse.content!)];
     context.df.setCustomStatus({ message: `Generated ${challenges.length}/${mainPhrases.length} challenges`, data: results });
   }
   context.df.setCustomStatus({ message: `Generated ${challenges.length} challenges`, data: results });
 
   return {
-    Title: input['Title'],
-    Description: input['Description'],
+    Title: title,
+    Description: description,
     SubThemes: subThemes,
     Challenges: challenges
   };

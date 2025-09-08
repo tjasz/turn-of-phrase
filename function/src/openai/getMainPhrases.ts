@@ -15,7 +15,8 @@ Output only a JSON array of strings.`,
   }
   return {
     role: "user",
-    content: `For each of these ${subThemesArray.length} sub-themes as they relate to the broader theme ${mainTheme},
+    content: `For each of these ${subThemesArray.length} sub-themes: "${subThemesArray.join('", "')}"
+as they relate to the broader theme ${mainTheme},
 list ${targetCount} or more noun phrases of 1-2 words each that would be good main phrases on a Phrase Challenge.
 Combine the results into a single array. Output only a JSON array of strings.`,
   };
