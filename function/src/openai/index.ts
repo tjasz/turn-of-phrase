@@ -40,10 +40,11 @@ async function getAiTheme(title: string, description: string): Promise<Challenge
 
   // try to get main phrases
   if (subThemes) {
+    const targetCount = Math.ceil(100 / subThemes.length);
     let mainPhrases: string[] | null = null;
     for (let tryCount = 0; !mainPhrases && tryCount < maxRetries; ++tryCount) {
       try {
-        mainPhrases = await getMainPhrases(subThemes, messages, getResponseFromClient);
+        mainPhrases = await getMainPhrases(title, subThemes, targetCount, messages, getResponseFromClient);
       }
       catch (error) {
         console.error(error);

@@ -27,16 +27,21 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
   });
 
   // Step 2: Get Main Phrases
-  context.df.setCustomStatus({
-    message: `Generating main phrases for ${subThemes.length} sub-themes...`,
-    data: { SubThemes: subThemes },
-  });
-  messages.push(getMainPhrasePrompt(subThemes));
-  const mainPhrasesResponse = yield context.df.callActivity("getResponseActivity", { messages });
-  messages.push(mainPhrasesResponse);
-  const mainPhrases = JSON.parse(mainPhrasesResponse.content!);
-  results['MainPhrases'] = mainPhrases;
-  context.df.setCustomStatus({ message: `Generated ${mainPhrases.length} main phrases`, data: results });
+  const targetCount = Math.ceil(100 / subThemes.length);
+  let mainPhrases: string[] = [];
+  for (let i = 0; i < subThemes.length; i++) {
+    const subTheme = subThemes[i];
+    context.df.setCustomStatus({
+      message: `Generated ${mainPhrases.length} phrases so far. Generating main phrases for sub-theme ${i + 1}/${subThemes.length}: "${subTheme}"...`,
+      data: { SubThemes: subThemes },
+    });
+    messages.push(getMainPhrasePrompt(input['Title'], subTheme, targetCount));
+    const mainPhraseResponse = yield context.df.callActivity("getResponseActivity", { messages });
+    messages.push(mainPhraseResponse);
+    mainPhrases = [...mainPhrases, ...JSON.parse(mainPhraseResponse.content!)];
+    results['MainPhrases'] = mainPhrases;
+  }
+  context.df.setCustomStatus({ message: `Generated ${mainPhrases.length} main phrases.`, data: results });
 
   // Step 3: Get Challenges
   context.df.setCustomStatus({ message: `Generating challenges for ${mainPhrases.length} main phrases...`, data: results });

@@ -8,7 +8,7 @@ export function getPromptForSubThemes(title: string, description: string): ChatC
 Title: ${title}
 Description: ${description}
 
-First, list 5-10 sub-themes that fall under the broad theme "${title}".
+First, list 5 or more sub-themes that fall under the broad theme "${title}".
 Output only a JSON array of strings.`
   };
 }

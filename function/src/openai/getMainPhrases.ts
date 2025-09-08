@@ -1,20 +1,34 @@
 import type { ChatCompletionMessage, ChatCompletionMessageParam } from "openai/resources";
 
-export function getMainPhrasePrompt(subThemes: string[]): ChatCompletionMessageParam {
+export function getMainPhrasePrompt(mainTheme: string, subThemes: string[] | string, targetCount: number): ChatCompletionMessageParam {
+  const subThemesArray = Array.isArray(subThemes) ? subThemes : [subThemes];
+  if (subThemesArray.length === 0) {
+    throw new Error("subThemes array is empty");
+  }
+  if (subThemesArray.length === 1) {
+    return {
+      role: "user",
+      content: `For the sub-theme "${subThemesArray[0]}" as it relates to the broader theme ${mainTheme},
+list ${targetCount} or more noun phrases of 1-2 words each that would be good main phrases on a Phrase Challenge.
+Output only a JSON array of strings.`,
+    }
+  }
   return {
     role: "user",
-    content: `For each of these ${subThemes.length} sub-themes,
-list 20-30 noun phrases of 1-2 words each that would be good main phrases on a Phrase Challenge.
+    content: `For each of these ${subThemesArray.length} sub-themes as they relate to the broader theme ${mainTheme},
+list ${targetCount} or more noun phrases of 1-2 words each that would be good main phrases on a Phrase Challenge.
 Combine the results into a single array. Output only a JSON array of strings.`,
   };
 }
 
 export async function getMainPhrases(
+  mainTheme: string,
   subThemes: string[],
+  targetCount: number,
   messages: ChatCompletionMessageParam[],
   getResponse: (messages: ChatCompletionMessageParam[]) => Promise<ChatCompletionMessage>
 ): Promise<string[]> {
-  const promptForMainPhrases = getMainPhrasePrompt(subThemes);
+  const promptForMainPhrases = getMainPhrasePrompt(mainTheme, subThemes, targetCount);
   messages.push(promptForMainPhrases);
 
   var mainPhraseResponse = await getResponse(messages);
