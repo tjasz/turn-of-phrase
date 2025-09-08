@@ -1,40 +1,15 @@
-import { DefaultAzureCredential, getBearerTokenProvider } from "@azure/identity";
-import { AzureOpenAI } from "openai";
 import type { ChatCompletionMessageParam } from "openai/resources";
 import systemPrompt from "./systemPrompt";
 import validateChallenges from "./validateChallenges";
 import getSubThemes from "./getSubThemes";
 import { getMainPhrases } from "./getMainPhrases";
 import { getChallenges } from "./getChallenges";
+import getOpenAiClient from "./getOpenAiClient";
+import getResponse from "./getResponse";
 
 async function getAiTheme(title: string, description: string): Promise<Challenge[]> {
-  // You will need to set these environment variables or edit the following values
-  const endpoint = process.env["AZURE_OPENAI_ENDPOINT"] || "https://top-ai.openai.azure.com/";
-  const apiVersion = "2025-01-01-preview";
-  const deployment = "gpt-4.1-mini"; // This must match your deployment name
-
-  // Initialize the DefaultAzureCredential
-  const credential = new DefaultAzureCredential();
-  const scope = "https://cognitiveservices.azure.com/.default";
-  const azureADTokenProvider = getBearerTokenProvider(credential, scope);
-
-  // Initialize the AzureOpenAI client with Entra ID (Azure AD) authentication
-  const client = new AzureOpenAI({ endpoint, azureADTokenProvider, apiVersion, deployment });
-
-  const getResponse = async (messages: ChatCompletionMessageParam[]) => {
-    console.log(messages);
-    const result = await client.chat.completions.create({
-      messages,
-      model: deployment,
-      max_tokens: 16384,
-      temperature: 0.7,
-      top_p: 0.95,
-      frequency_penalty: 0,
-      presence_penalty: 0,
-      stop: null
-    });
-    return result.choices[0].message;
-  }
+  const client = getOpenAiClient();
+  const getResponseFromClient = (messages: ChatCompletionMessageParam[]) => getResponse(client, messages);
 
   const messages = [systemPrompt];
   const maxRetries = 3;
@@ -43,7 +18,7 @@ async function getAiTheme(title: string, description: string): Promise<Challenge
   let subThemes: string[] | null = null;
   for (let tryCount = 0; !subThemes && tryCount < maxRetries; ++tryCount) {
     try {
-      subThemes = await getSubThemes(title, description, messages, getResponse);
+      subThemes = await getSubThemes(title, description, messages, getResponseFromClient);
     }
     catch (error) {
       console.error(error);
@@ -68,7 +43,7 @@ async function getAiTheme(title: string, description: string): Promise<Challenge
     let mainPhrases: string[] | null = null;
     for (let tryCount = 0; !mainPhrases && tryCount < maxRetries; ++tryCount) {
       try {
-        mainPhrases = await getMainPhrases(subThemes, messages, getResponse);
+        mainPhrases = await getMainPhrases(subThemes, messages, getResponseFromClient);
       }
       catch (error) {
         console.error(error);
@@ -94,7 +69,7 @@ async function getAiTheme(title: string, description: string): Promise<Challenge
       let challengeErrors: ChallengeErrors[] | null = null;
       for (let tryCount = 0; (!challenges || challengeErrors && challengeErrors.length > 0) && tryCount < maxRetries; ++tryCount) {
         try {
-          [challenges, challengeErrors] = await getChallenges(mainPhrases, messages, getResponse);
+          [challenges, challengeErrors] = await getChallenges(mainPhrases, messages, getResponseFromClient);
           if (challengeErrors && challengeErrors.length > 0) {
             messages.push({
               role: "user",
@@ -131,4 +106,4 @@ async function getAiTheme(title: string, description: string): Promise<Challenge
   throw new Error("Failed to generate AI theme");
 }
 
-export { validateChallenges, getAiTheme };
+export { systemPrompt, validateChallenges, getAiTheme, getOpenAiClient, getResponse, getSubThemes, getMainPhrases, getChallenges };
