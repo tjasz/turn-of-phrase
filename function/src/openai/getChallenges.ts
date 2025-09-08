@@ -2,6 +2,37 @@ import type { ChatCompletionMessage, ChatCompletionMessageParam } from "openai/r
 import finalOutputGuidance from "./finalOutputGuidance";
 import validateChallenges from "./validateChallenges";
 
+export function getChallengePrompt(mainPhrase: string): ChatCompletionMessageParam {
+  return {
+    role: "user",
+    content: `Generate a Phrase Challenge for the main phrase: "${mainPhrase}".
+The challenge should include the main phrase and 4 related phrases each 1-2 words long
+that are thematically connected to the main phrase and that a person might use to describe the main phrase.
+Output only a JSON object with the following properties:
+{
+  "Main": "<main_phrase>",
+  "Related": ["<related_phrase_1>", "<related_phrase_2>", "<related_phrase_3>", "<related_phrase_4>"]
+}
+  
+Example: For the main phrase of "Elephant", the output may be...
+{
+  "Main": "Elephant",
+  "Related": ["Trunk", "Tusks", "Safari", "Africa"]
+}
+
+DO:
+- Ensure that the output is valid JSON.
+- Ensure that the challenge has a Main string property that is a noun phrase of 1-2 words.
+- Ensure that the challenge has a Related array property that contains exactly 4 strings, each 1-2 words long.
+- Ensure that each Related phrase is unique within its challenge.
+- Ensure that each Related phrase is not a subset of the Main phrase.
+- Ensure that each Related phrase does not contain articles or short prepositions.
+
+Include only the JSON as output.
+Do not include additional text, even to explain or apologize for mistakes.`
+  };
+}
+
 export function getChallengesPrompt(mainPhrases: string[]): ChatCompletionMessageParam {
   return {
     role: "user",

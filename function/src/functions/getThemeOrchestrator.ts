@@ -2,7 +2,7 @@ import * as df from "durable-functions";
 import { systemPrompt } from "../openai";
 import { getPromptForSubThemes } from "../openai/getSubThemes";
 import { getMainPhrasePrompt } from "../openai/getMainPhrases";
-import { getChallengesPrompt } from "../openai/getChallenges";
+import { getChallengePrompt, getChallengesPrompt } from "../openai/getChallenges";
 
 const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (context) {
   // Step 0: Get input
@@ -43,13 +43,26 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
   }
   context.df.setCustomStatus({ message: `Generated ${mainPhrases.length} main phrases.`, data: results });
 
+  // Get only unique, short main phrases
+  mainPhrases = Array.from(new Set(mainPhrases));
+  mainPhrases = mainPhrases.filter((phrase) => phrase.split(" ").length <= 4 && phrase.length <= 30);
+  results['MainPhrases'] = mainPhrases;
+
   // Step 3: Get Challenges
-  context.df.setCustomStatus({ message: `Generating challenges for ${mainPhrases.length} main phrases...`, data: results });
-  messages.push(getChallengesPrompt(mainPhrases));
-  const challengesResponse = yield context.df.callActivity("getResponseActivity", { messages });
-  messages.push(challengesResponse);
-  const challenges = JSON.parse(challengesResponse.content!);
-  results['Challenges'] = challenges;
+  const batchLength = 10;
+  let challenges: Challenge[] = [];
+  for (let i = 0; i < mainPhrases.length; i += batchLength) {
+    const mainPhrase = mainPhrases[i];
+    context.df.setCustomStatus({
+      message: `Generating challenges for main phrase ${i + 1}/${mainPhrases.length}: "${mainPhrase}"...`,
+      data: { results },
+    });
+    const challengePrompt = getChallengesPrompt(mainPhrases.slice(i, i + batchLength));
+    const challengeResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, challengePrompt] });
+    challenges = [...challenges, ...JSON.parse(challengeResponse.content!)];
+    results['Challenges'] = challenges;
+    context.df.setCustomStatus({ message: `Generated ${challenges.length}/${mainPhrases.length} challenges`, data: results });
+  }
   context.df.setCustomStatus({ message: `Generated ${challenges.length} challenges`, data: results });
 
   return {
