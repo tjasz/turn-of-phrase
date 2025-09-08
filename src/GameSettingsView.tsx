@@ -1,7 +1,7 @@
 import type React from "react";
 import { useState } from "react";
 import ThemeSelector from "./ThemeSelector";
-import { validateChallenges } from "./openai";
+import validateChallenges from "./validateChallenges";
 
 const TURN_TIME_OPTIONS = [10, 20, 30, 40, 50, 60];
 
