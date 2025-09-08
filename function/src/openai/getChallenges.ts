@@ -2,23 +2,26 @@ import type { ChatCompletionMessage, ChatCompletionMessageParam } from "openai/r
 import finalOutputGuidance from "./finalOutputGuidance";
 import validateChallenges from "./validateChallenges";
 
+export function getChallengesPrompt(mainPhrases: string[]): ChatCompletionMessageParam {
+  return {
+    role: "user",
+    content: `For each of these ${mainPhrases.length} main phrases,
+generate a Phrase Challenge with the following properties:
+{
+  "Main": "<main_phrase>",
+  "Related": ["<related_phrase_1>", "<related_phrase_2>", "<related_phrase_3>", "<related_phrase_4>"]
+}
+
+${finalOutputGuidance}`,
+  };
+}
+
 export async function getChallenges(
   mainPhrases: string[],
   messages: ChatCompletionMessageParam[],
   getResponse: (messages: ChatCompletionMessageParam[]) => Promise<ChatCompletionMessage>
 ): Promise<[Challenge[], ChallengeErrors[]]> {
-  const promptForChallenges: ChatCompletionMessageParam = {
-    role: "user",
-    content: `For each of these ${mainPhrases.length} main phrases,
-      generate a Phrase Challenge with the following properties:
-      {
-        "Main": "<main_phrase>",
-        "Related": ["<related_phrase_1>", "<related_phrase_2>", "<related_phrase_3>", "<related_phrase_4>"]
-      }
-
-      ${finalOutputGuidance}
-      `,
-  };
+  const promptForChallenges = getChallengesPrompt(mainPhrases);
   messages.push(promptForChallenges);
 
   var challengeResponse = await getResponse(messages);

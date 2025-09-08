@@ -1,17 +1,20 @@
 import type { ChatCompletionMessage, ChatCompletionMessageParam } from "openai/resources";
 
+export function getMainPhrasePrompt(subThemes: string[]): ChatCompletionMessageParam {
+  return {
+    role: "user",
+    content: `For each of these ${subThemes.length} sub-themes,
+list 20-30 noun phrases of 1-2 words each that would be good main phrases on a Phrase Challenge.
+Combine the results into a single array. Output only a JSON array of strings.`,
+  };
+}
+
 export async function getMainPhrases(
   subThemes: string[],
   messages: ChatCompletionMessageParam[],
   getResponse: (messages: ChatCompletionMessageParam[]) => Promise<ChatCompletionMessage>
 ): Promise<string[]> {
-  const promptForMainPhrases: ChatCompletionMessageParam = {
-    role: "user",
-    content: `For each of these ${subThemes.length} sub-themes,
-      list 20-30 noun phrases of 1-2 words each that would be good main phrases on a Phrase Challenge.
-      
-      Combine the results into a single array. Output only a JSON array of strings.`,
-  };
+  const promptForMainPhrases = getMainPhrasePrompt(subThemes);
   messages.push(promptForMainPhrases);
 
   var mainPhraseResponse = await getResponse(messages);

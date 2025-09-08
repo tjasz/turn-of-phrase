@@ -1,21 +1,25 @@
 import type { ChatCompletionMessage, ChatCompletionMessageParam } from "openai/resources";
 
+export function getPromptForSubThemes(title: string, description: string): ChatCompletionMessageParam {
+  return {
+    role: "user",
+    content:
+      `We are generating a new set of Phrase Challenges for theme described below.
+Title: ${title}
+Description: ${description}
+
+First, list 5-10 sub-themes that fall under the broad theme "${title}".
+Output only a JSON array of strings.`
+  };
+}
+
 export async function getSubThemes(
   title: string,
   description: string,
   messages: ChatCompletionMessageParam[],
   getResponse: (messages: ChatCompletionMessageParam[]) => Promise<ChatCompletionMessage>
 ): Promise<string[]> {
-  const promptForSubThemes: ChatCompletionMessageParam = {
-    role: "user",
-    content: `We are generating a new set of Phrase Challenges for theme described below.
-    Title: ${title}
-    Description: ${description}
-
-    First, list 5-10 sub-themes that fall under the broad theme "${title}".
-    Output only a JSON array of strings.
-    `
-  };
+  const promptForSubThemes = getPromptForSubThemes(title, description);
   messages.push(promptForSubThemes);
 
   var subThemeResponse = await getResponse(messages);
