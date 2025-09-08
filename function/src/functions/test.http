@@ -7,7 +7,7 @@ POST http://localhost:7071/api/getTheme
 }
 
 ### get status
-GET http://localhost:7071/api/getTheme/status/e5b202561e214bd0a4ca275cc9541936
+GET http://localhost:7071/api/getTheme/status/2e5db12f7f4045e89b3d74b07d8dcaeb
 
 ### deployed
 POST https://top-func.azurewebsites.net/api/getTheme
