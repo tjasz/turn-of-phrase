@@ -1,6 +1,6 @@
 import { ChatCompletionMessageParam } from "openai/resources";
-import { getOpenAiClient, getResponse, systemPrompt } from "../../openai";
-import getSubThemes from "../../openai/getSubThemes";
+import { getOpenAiClient, getResponse, systemPrompt } from "../openai";
+import getSubThemes from "../openai/getSubThemes";
 import * as df from "durable-functions";
 
 export const getSubThemesActivity: df.ActivityHandler = async (input: { Title: string; Description: string }) => {
