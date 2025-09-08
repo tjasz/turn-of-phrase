@@ -63,15 +63,15 @@ function App() {
   const [showResults, setShowResults] = useState(false);
 
   // Start game
-  const startGame = () => {
-    setChallenges(shuffle(gameSettings.theme.Challenges));
+  const startGame = (settings: GameSettings) => {
+    setChallenges(shuffle(settings.theme.Challenges));
     setCurrentChallengeIdx(0);
-    setScore(Array(gameSettings.numberOfTeams).fill(0));
+    setScore(Array(settings.numberOfTeams).fill(0));
     setTurnTeam(0);
-    setTurnPlayer(Array(gameSettings.numberOfTeams).fill(0));
+    setTurnPlayer(Array(settings.numberOfTeams).fill(0));
     setGameStarted(true);
     setShowResults(false);
-    setTimer(gameSettings.turnTimeSeconds * 1000);
+    setTimer(settings.turnTimeSeconds * 1000);
     setTimerActive(false);
     setTurnChallenges([]);
   };
@@ -140,9 +140,9 @@ function App() {
     </div>
     <div id="appBody">
       {!gameStarted
-        ? <GameSettingsView currentSettings={gameSettings} onConfirm={theme => {
-          setGameSettings(theme);
-          startGame();
+        ? <GameSettingsView currentSettings={gameSettings} onConfirm={settings => {
+          setGameSettings(settings);
+          startGame(settings);
         }} />
         : <div className="gameplay">
           <h2>Team {turnTeam + 1} - Player {turnPlayer[turnTeam] + 1}'s Turn</h2>
