@@ -12,13 +12,10 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
   results['Description'] = input['Description'];
   context.df.setCustomStatus({ message: "Started", data: results });
 
-  const messages = [systemPrompt];
-
   // Step 1: Get Sub-Themes
   context.df.setCustomStatus({ message: "Generating sub-themes...", data: results });
-  messages.push(getPromptForSubThemes(input['Title'], input['Description']));
-  const subThemesResponse = yield context.df.callActivity("getResponseActivity", { messages });
-  messages.push(subThemesResponse);
+  const subThemePrompt = getPromptForSubThemes(input['Title'], input['Description']);
+  const subThemesResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, subThemePrompt] });
   const subThemes = JSON.parse(subThemesResponse.content!);
   results['SubThemes'] = subThemes;
   context.df.setCustomStatus({
@@ -35,9 +32,8 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
       message: `Generated ${mainPhrases.length} phrases so far. Generating main phrases for sub-theme ${i + 1}/${subThemes.length}: "${subTheme}"...`,
       data: { SubThemes: subThemes },
     });
-    messages.push(getMainPhrasePrompt(input['Title'], subTheme, targetCount));
-    const mainPhraseResponse = yield context.df.callActivity("getResponseActivity", { messages });
-    messages.push(mainPhraseResponse);
+    const mainPhrasePrompt = getMainPhrasePrompt(input['Title'], subTheme, targetCount);
+    const mainPhraseResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, mainPhrasePrompt] });
     mainPhrases = [...mainPhrases, ...JSON.parse(mainPhraseResponse.content!)];
     results['MainPhrases'] = mainPhrases;
   }
@@ -60,7 +56,6 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
     const challengePrompt = getChallengesPrompt(mainPhrases.slice(i, i + batchLength));
     const challengeResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, challengePrompt] });
     challenges = [...challenges, ...JSON.parse(challengeResponse.content!)];
-    results['Challenges'] = challenges;
     context.df.setCustomStatus({ message: `Generated ${challenges.length}/${mainPhrases.length} challenges`, data: results });
   }
   context.df.setCustomStatus({ message: `Generated ${challenges.length} challenges`, data: results });
