@@ -1,6 +1,6 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
 import BadRequestError from "../errors/BadRequestError";
-import { getAiTheme } from "../openai";
+import * as df from "durable-functions";
 
 const corsHeaders = {
     "Access-Control-Allow-Origin": "http://localhost:5173,https://tjasz.github.io",
@@ -11,15 +11,35 @@ const corsHeaders = {
 export async function getTheme(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
     context.log(`Http function processed request for url "${request.url}"`);
 
-    try {
-        var requestObject = await getRequestObject(request);
-
-        var theme = await getAiTheme(requestObject.Title, requestObject.Description);
-
+    // Status endpoint: /api/getTheme/status/{instanceId}
+    const statusMatch = request.url.match(/\/status\/(.+)$/);
+    if (statusMatch) {
+        const instanceId = statusMatch[1];
+        const client = df.getClient(context);
+        const status = await client.getStatus(instanceId);
+        if (!status) {
+            return {
+                status: 404,
+                headers: corsHeaders,
+                body: `No orchestration found for instanceId: ${instanceId}`,
+            };
+        }
         return {
             status: 200,
             headers: corsHeaders,
-            body: JSON.stringify(theme),
+            body: JSON.stringify(status),
+        };
+    }
+
+    // Start orchestration
+    try {
+        var requestObject = await getRequestObject(request);
+        const client = df.getClient(context);
+        const instanceId = await client.startNew("getThemeOrchestrator", { input: requestObject });
+        return {
+            status: 202,
+            headers: corsHeaders,
+            body: JSON.stringify({ instanceId, statusQueryGetUri: `/api/getTheme/status/${instanceId}` }),
         };
     } catch (error) {
         if (error instanceof BadRequestError) {
@@ -35,7 +55,7 @@ export async function getTheme(request: HttpRequest, context: InvocationContext)
             body: `Internal server error: ${error.message}`,
         };
     }
-};
+}
 
 async function getRequestObject(request: HttpRequest): Promise<GetThemeRequest | null> {
     try {
@@ -79,5 +99,7 @@ async function getRequestObject(request: HttpRequest): Promise<GetThemeRequest |
 app.http('getTheme', {
     methods: ['GET', 'POST'],
     authLevel: 'anonymous',
-    handler: getTheme
+    route: 'getTheme/{*status}',
+    handler: getTheme,
+    extraInputs: [df.input.durableClient()]
 });

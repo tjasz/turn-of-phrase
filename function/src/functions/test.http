@@ -1,9 +1,13 @@
+### local test
 POST http://localhost:7071/api/getTheme
 
 {
   "Title": "Computing",
   "Description": "A field of study that deals with the theory, development, and application of computer systems and software."
 }
+
+### get status
+GET http://localhost:7071/api/getTheme/status/129c8668983d4f988153f29fafb197b1
 
 ### deployed
 POST https://top-func.azurewebsites.net/api/getTheme
@@ -12,3 +16,6 @@ POST https://top-func.azurewebsites.net/api/getTheme
   "Title": "Computing",
   "Description": "A field of study that deals with the theory, development, and application of computer systems and software."
 }
+
+### get status
+GET https://top-func.azurewebsites.net/api/getTheme/status/129c8668983d4f988153f29fafb197b1
