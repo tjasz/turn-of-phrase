@@ -86,3 +86,8 @@
   width: 60vw;
   max-width: 800px;
 }
+
+#themeCreator textarea {
+  width: 100%;
+  resize: vertical;
+}

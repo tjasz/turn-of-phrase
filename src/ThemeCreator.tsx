@@ -90,7 +90,7 @@ const ThemeCreator: React.FC<ThemeCreatorProps> = ({ onCreateTheme }) => {
     <div id="themeCreator">
       <h2>Create a Theme</h2>
       <input type="text" placeholder="Theme Title" value={title} onChange={e => setTitle(e.target.value)} />
-      <input type="text" placeholder="Theme Description" value={description} onChange={e => setDescription(e.target.value)} />
+      <textarea placeholder="Theme Description" value={description} onChange={e => setDescription(e.target.value)} />
       <button onClick={createTheme} disabled={loadingTheme}>
         {loadingTheme ? "Creating..." : "Create Theme"}
       </button>
