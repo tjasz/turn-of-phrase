@@ -9,16 +9,43 @@ export function getMainPhrasePrompt(mainTheme: string, subThemes: string[] | str
     return {
       role: "user",
       content: `For the sub-theme "${subThemesArray[0]}" as it relates to the broader theme ${mainTheme},
-list ${targetCount} or more noun phrases of 1-2 words each that would be good main phrases on a Phrase Challenge.
-Output only a JSON array of strings.`,
+list ${targetCount} or more phrases that would be good main phrases on a Phrase Challenge.
+- Each phrase should be a noun, noun phrase, or gerund.
+- Each phrase should be 1-2 words in length.
+- Each phrase should be no more than 30 characters in length.
+- Each phrase should be something that people familiar with ${mainTheme} would know.
+Output only a semi-colon separated sequence of strings.`,
     }
   }
   return {
     role: "user",
     content: `For each of these ${subThemesArray.length} sub-themes: "${subThemesArray.join('", "')}"
 as they relate to the broader theme ${mainTheme},
-list ${targetCount} or more noun phrases of 1-2 words each that would be good main phrases on a Phrase Challenge.
-Combine the results into a single array. Output only a JSON array of strings.`,
+list ${targetCount} or more phrases that would be good main phrases on a Phrase Challenge.
+- Each phrase should be a noun, noun phrase, or gerund.
+- Each phrase should be 1-2 words in length.
+- Each phrase should be no more than 30 characters in length.
+- Each phrase should be something that people familiar with ${mainTheme} would know.
+Combine the results into a single sequence. Output only a semi-colon separated sequence of strings.`,
+  };
+}
+
+export function getReplaceMainPhrasesPrompt(mainTheme: string, invalidPhrases: string[]): ChatCompletionMessageParam {
+  return {
+    role: "user",
+    content: `The following main phrases are too long: "${invalidPhrases.join('", "')}"
+For each phrase, consider whether it can be shortened to be 1-2 words in length while still being clear and specific.
+For example, "Machine Learning Algorithms" could be shortened to "Machine Learning".
+Or "Seattle Art Museum" could be shortened to "Art Museum" if the theme is "Seattle" or "Washington State".
+If a phrase cannot be reasonably shortened, then
+generate an additional phrase that would be a good main phrase on a Phrase Challenge.
+- Each phrase should be a noun, noun phrase, or gerund.
+- Each phrase should be 1-2 words in length.
+- Each phrase should be no more than 30 characters in length.
+- Each phrase should be something that people familiar with ${mainTheme} would know.
+
+Output the edited phrases and additional phrases as a single semi-colon separated sequence of strings.
+Output only a semi-colon separated sequence of strings.`,
   };
 }
 

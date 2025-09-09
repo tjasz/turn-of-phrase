@@ -1,9 +1,10 @@
 import * as df from "durable-functions";
 import { systemPrompt } from "../openai";
 import { getPromptForSubThemes } from "../openai/getSubThemes";
-import { getMainPhrasePrompt } from "../openai/getMainPhrases";
+import { getMainPhrasePrompt, getReplaceMainPhrasesPrompt } from "../openai/getMainPhrases";
 import { getChallengePrompt, getChallengesPrompt } from "../openai/getChallenges";
 import getGenerationPrompt from "../openai/getGenerationPrompt";
+import partitionArray from "../partitionArray";
 
 const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (context) {
   // Step 0: Get input
@@ -21,14 +22,14 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
   context.df.setCustomStatus({ message: "Generating sub-themes...", data: results });
   const subThemePrompt = getPromptForSubThemes(title, description);
   const subThemesResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, generationPrompt, subThemePrompt] });
-  const subThemes = JSON.parse(subThemesResponse.content!);
+  const subThemes = subThemesResponse.content!.split(";").map((s) => s.trim());
   results['SubThemes'] = subThemes;
   context.df.setCustomStatus({
     message: `Generated ${subThemes.length} sub-themes`,
     data: results,
   });
 
-  // Step 2: Get Main Phrases
+  // Step 2a: Get Main Phrases
   const targetCount = Math.ceil(100 / subThemes.length);
   let mainPhrases: string[] = [];
   for (let i = 0; i < subThemes.length; i++) {
@@ -39,18 +40,33 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
     });
     const mainPhrasePrompt = getMainPhrasePrompt(title, subTheme, targetCount);
     const mainPhraseResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, generationPrompt, mainPhrasePrompt] });
-    mainPhrases = [...mainPhrases, ...JSON.parse(mainPhraseResponse.content!)];
+    const mainPhrasesForSubTheme = mainPhraseResponse.content!.split(";").map((s) => s.trim());
+    mainPhrases = [...mainPhrases, ...mainPhrasesForSubTheme];
     results['MainPhrases'] = mainPhrases;
   }
+  mainPhrases = Array.from(new Set(mainPhrases));
   context.df.setCustomStatus({ message: `Generated ${mainPhrases.length} main phrases.`, data: results });
 
-  // Get only unique, short main phrases
+  // Step 2b: Ask for replacements for invalid phrases
+  // Soft requirement that phrases be 2 words or less: ask for replacements here
+  const [validPhrases, invalidPhrases] = partitionArray(mainPhrases, (phrase) => phrase.split(" ").length <= 2 && phrase.length <= 30);
+  if (invalidPhrases.length > 0) {
+    context.df.setCustomStatus({ message: `Found ${invalidPhrases.length} invalid phrases. Generating replacements...`, data: results });
+    const replacementPrompt = getReplaceMainPhrasesPrompt(title, invalidPhrases);
+    const replacementResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, generationPrompt, replacementPrompt] });
+    const replacementPhrases = replacementResponse.content!.split(";").map((s) => s.trim());
+    mainPhrases = [...validPhrases, ...replacementPhrases];
+    context.df.setCustomStatus({ message: `Replaced invalid phrases. Now have ${mainPhrases.length} main phrases.`, data: results });
+  }
+
+  // Step 2c: Filter out non-compliant phrases: keep only unique, short main phrases
+  // Hard requirement that phrases be 4 words or less and 30 characters or less: filter out invalid ones
   mainPhrases = Array.from(new Set(mainPhrases));
   mainPhrases = mainPhrases.filter((phrase) => phrase.split(" ").length <= 4 && phrase.length <= 30);
   results['MainPhrases'] = mainPhrases;
 
   // Step 3: Get Challenges
-  const batchLength = 10;
+  const batchLength = 5;
   let challenges: Challenge[] = [];
   for (let i = 0; i < mainPhrases.length; i += batchLength) {
     const mainPhrase = mainPhrases[i];
