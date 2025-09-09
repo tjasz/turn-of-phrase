@@ -1,10 +1,9 @@
 import * as df from "durable-functions";
 import { systemPrompt } from "../openai";
 import { getPromptForSubThemes } from "../openai/getSubThemes";
-import { getMainPhrasePrompt, getReplaceMainPhrasesPrompt } from "../openai/getMainPhrases";
-import { getChallengePrompt, getChallengesPrompt } from "../openai/getChallenges";
+import { getMainPhrasePrompt } from "../openai/getMainPhrases";
+import { getChallengesPrompt } from "../openai/getChallenges";
 import getGenerationPrompt from "../openai/getGenerationPrompt";
-import partitionArray from "../partitionArray";
 
 const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (context) {
   // Step 0: Get input
@@ -36,31 +35,18 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
     const subTheme = subThemes[i];
     context.df.setCustomStatus({
       message: `Generated ${mainPhrases.length} phrases so far. Generating main phrases for sub-theme ${i + 1}/${subThemes.length}: "${subTheme}"...`,
-      data: { SubThemes: subThemes },
+      data: results,
     });
     const mainPhrasePrompt = getMainPhrasePrompt(title, subTheme, targetCount);
     const mainPhraseResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, generationPrompt, mainPhrasePrompt] });
-    const mainPhrasesForSubTheme = mainPhraseResponse.content!.split(";").map((s) => s.trim());
+    const mainPhrasesForSubTheme = mainPhraseResponse.content!.split(";").map((s) => s.trim()).filter((s) => s.length > 0);
     mainPhrases = [...mainPhrases, ...mainPhrasesForSubTheme];
     results['MainPhrases'] = mainPhrases;
   }
   mainPhrases = Array.from(new Set(mainPhrases));
   context.df.setCustomStatus({ message: `Generated ${mainPhrases.length} main phrases.`, data: results });
 
-  // Step 2b: Ask for replacements for invalid phrases
-  // Soft requirement that phrases be 2 words or less: ask for replacements here
-  const [validPhrases, invalidPhrases] = partitionArray(mainPhrases, (phrase) => phrase.split(" ").length <= 2 && phrase.length <= 30);
-  if (invalidPhrases.length > 0) {
-    context.df.setCustomStatus({ message: `Found ${invalidPhrases.length} invalid phrases. Generating replacements...`, data: results });
-    const replacementPrompt = getReplaceMainPhrasesPrompt(title, invalidPhrases);
-    const replacementResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, generationPrompt, replacementPrompt] });
-    const replacementPhrases = replacementResponse.content!.split(";").map((s) => s.trim());
-    mainPhrases = [...validPhrases, ...replacementPhrases];
-    context.df.setCustomStatus({ message: `Replaced invalid phrases. Now have ${mainPhrases.length} main phrases.`, data: results });
-  }
-
-  // Step 2c: Filter out non-compliant phrases: keep only unique, short main phrases
-  // Hard requirement that phrases be 4 words or less and 30 characters or less: filter out invalid ones
+  // Step 2b: Filter out non-compliant phrases: keep only unique, short main phrases
   mainPhrases = Array.from(new Set(mainPhrases));
   mainPhrases = mainPhrases.filter((phrase) => phrase.split(" ").length <= 4 && phrase.length <= 30);
   results['MainPhrases'] = mainPhrases;
@@ -72,7 +58,7 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
     const mainPhrase = mainPhrases[i];
     context.df.setCustomStatus({
       message: `Generating challenges for main phrase ${i + 1}/${mainPhrases.length}: "${mainPhrase}"...`,
-      data: { results },
+      data: results,
     });
     const challengePrompt = getChallengesPrompt(mainPhrases.slice(i, i + batchLength));
     const challengeResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, generationPrompt, challengePrompt] });
