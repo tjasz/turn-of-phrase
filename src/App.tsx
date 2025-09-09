@@ -133,7 +133,7 @@ function App() {
   return <div id="app">
     <div id="appHeading">
       <img
-        src={`${import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL}/logo.svg`}
+        src={`${import.meta.env.BASE_URL}logo.svg`}
         alt="Turn of Phrase Logo"
       />
       <h1>Turn of Phrase</h1>

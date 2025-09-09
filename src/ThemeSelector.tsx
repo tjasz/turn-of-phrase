@@ -55,7 +55,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectTheme }) => {
     setThemeError(null);
     const selected = allThemes[selectedThemeIndex];
     if (selected.type === 'public') {
-      fetch(`${import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL}/themes/${selected.file}`)
+      fetch(`${import.meta.env.BASE_URL}themes/${selected.file}`)
         .then(res => {
           if (!res.ok) throw new Error('Failed to load theme');
           return res.json();
