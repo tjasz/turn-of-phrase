@@ -1,4 +1,4 @@
-#appHeading {
+header {
   margin: 0;
   padding: 0;
   border-bottom: 1px solid var(--text);
@@ -14,13 +14,13 @@
   left: 0;
 }
 
-#appHeading img {
+header img {
   margin: 0 1vh;
   height: 90%;
   display: inline;
 }
 
-#appHeading h1 {
+header h1 {
   margin: 0;
   padding: 0;
   height: 5vh;
@@ -29,7 +29,7 @@
   line-height: 5vh;
 }
 
-#appBody {
+main {
   max-width: 1280px;
   height: calc(100vh - 5vh - 1px);
   margin: calc(5vh + 1px) auto 0 auto;

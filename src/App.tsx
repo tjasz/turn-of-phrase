@@ -130,15 +130,15 @@ function App() {
   const challenge: Challenge | undefined = challenges[currentChallengeIdx];
   // Exclude the last challenge (timed out) from review
   const reviewedChallenges = turnChallenges;
-  return <div id="app">
-    <div id="appHeading">
+  return <>
+    <header>
       <img
         src={`${import.meta.env.BASE_URL}logo.svg`}
         alt="Turn of Phrase Logo"
       />
       <h1>Turn of Phrase</h1>
-    </div>
-    <div id="appBody">
+    </header>
+    <main>
       {!gameStarted
         ? <GameSettingsView currentSettings={gameSettings} onConfirm={settings => {
           setGameSettings(settings);
@@ -178,8 +178,8 @@ function App() {
             />
           )}
         </div>}
-    </div>
-  </div>
+    </main>
+  </>
 }
 
 export default App;
