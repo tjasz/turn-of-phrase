@@ -179,6 +179,9 @@ function App() {
           )}
         </div>}
     </main>
+    <footer>
+      <p>&copy; 2025 Tyler Jaszkowiak | <a href="https://github.com/tjasz/turn-of-phrase" target="_blank">GitHub</a></p>
+    </footer>
   </>
 }
 

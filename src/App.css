@@ -31,12 +31,33 @@ header h1 {
 
 main {
   max-width: 1280px;
-  height: calc(100vh - 2rem - 1px);
-  margin: calc(2rem + 1px) auto 0 auto;
-  padding: 0 2rem;
+  margin: calc(2rem + 1px) auto calc(1rem + 1px) auto;
+  padding: 1px 2rem;
   text-align: center;
   place-items: center;
   min-width: 320px;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--text);
+  background-color: var(--secondary);
+  height: 1rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+  height: 90%;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
 }
 
 .mainGameBody {
