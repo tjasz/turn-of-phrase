@@ -6,7 +6,7 @@
   color-scheme: light dark;
   --background: light-dark(#def, #123);
   --text: light-dark(#123, #def);
-  --shadowColor: light-dark(#0008, #7778);
+  --shadowColor: light-dark(#123f, #123f);
   --shadow: 0 0 6px var(--shadowColor);
   --secondary: light-dark(#cdf, #124);
   --accent: light-dark(#26c, #26c);
@@ -76,7 +76,7 @@ button {
   font-family: inherit;
   background-color: var(--accent);
   color: var(--accent-text);
-  text-shadow: var(--text) 0 0 4px;
+  text-shadow: var(--shadowColor) 0 0 4px;
   cursor: pointer;
   transition: background-color 0.25s;
   transition: color 0.25s;

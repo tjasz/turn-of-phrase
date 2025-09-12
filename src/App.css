@@ -131,9 +131,6 @@ footer p {
   border-radius: 8px;
   font-weight: bold;
   box-shadow: var(--shadow);
-  color: var(--accent-text);
-  -webkit-text-stroke: 0.2px var(--text);
-  text-shadow: var(--text) 0 0 4px;
 }
 
 .themeDescriptionContainer {
