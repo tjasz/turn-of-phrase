@@ -6,7 +6,7 @@ import './App.css';
 import StartOfTurn from './StartOfTurn';
 import EndOfGame from './EndOfGame';
 import GameSettingsView from './GameSettingsView';
-import defaultTheme from './defaultTeme';
+import defaultTheme from './defaultTheme';
 
 function shuffle<T>(array: T[]): T[] {
   let arr = array.slice();

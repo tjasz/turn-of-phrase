@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ThemeCreator from "./ThemeCreator";
-import defaultTheme from "./defaultTeme";
+import defaultTheme from "./defaultTheme";
 
 interface ThemeSelectorProps {
   onSelectTheme: (theme: Theme) => void;
