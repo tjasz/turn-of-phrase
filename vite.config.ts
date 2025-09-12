@@ -17,7 +17,7 @@ export default defineConfig({
         short_name: 'Phrase',
         description: 'Team game for guessing phrases',
         theme_color: '#26c',
-        background_color: '#cdf',
+        background_color: '#26c',
         display: 'standalone',
         start_url: '.',
         icons: [
