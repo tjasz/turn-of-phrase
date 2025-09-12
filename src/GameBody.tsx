@@ -21,11 +21,13 @@ const GameBody: React.FC<GameBodyProps> = ({ title, actions, children }) => {
         <div className="innerGameBody">
           <h3>{title}</h3>
           {children}
-          <img
-            src={`${import.meta.env.BASE_URL}logo.svg`}
-            alt="Turn of Phrase Logo"
-            style={{ transform: `translate(-50%, -50%) rotate(${backgroundRotation}deg)` }}
-          />
+          <div className="logo">
+            <img
+              src={`${import.meta.env.BASE_URL}logo.svg`}
+              alt="Turn of Phrase Logo"
+              style={{ transform: `translate(-50%, -50%) rotate(${backgroundRotation}deg)` }}
+            />
+          </div>
         </div>
       </div>
       <div className="actions">
