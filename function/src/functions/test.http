@@ -2,28 +2,32 @@
 POST http://localhost:7071/api/getTheme
 
 {
-  "Title": "Computing",
-  "Description": "A field of study that deals with the theory, development, and application of computer systems and software."
+  "Title": "Computing"
 }
 
 ### get status
-GET http://localhost:7071/api/getTheme/status/1d6d8effc6064e1da5ba5f3a982fe955
+GET http://localhost:7071/api/getTheme/status/0c4d99162afa47a9ad5c518a4bb30440
 
 ### get sub themes
 POST http://localhost:7071/api/getSubThemes
 
 {
-  "Title": "Computing",
-  "Description": "A field of study that deals with the theory, development, and application of computer systems and software."
+  "Title": "Geography"
 }
 
 ### deployed
 POST https://top-func.azurewebsites.net/api/getTheme
 
 {
-  "Title": "Computing",
-  "Description": "A field of study that deals with the theory, development, and application of computer systems and software."
+  "Title": "Computing"
 }
 
 ### get status
 GET https://top-func.azurewebsites.net/api/getTheme/status/129c8668983d4f988153f29fafb197b1
+
+### get sub themes
+POST https://top-func.azurewebsites.net/api/getSubThemes
+
+{
+  "Title": "Geography"
+}
