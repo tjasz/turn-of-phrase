@@ -81,6 +81,7 @@ footer p {
   position: relative;
   height: 50vh;
   overflow-y: auto;
+  container-type: size;
 }
 
 .innerGameBody img {
@@ -94,9 +95,19 @@ footer p {
   user-select: none;
 }
 
+.innerGameBody h3 {
+  margin: 0.5vh;
+  font-size: 9cqw;
+}
+
 .mainGameBody ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+.mainGameBody li,
+.mainGameBody p {
+  font-size: calc(min(9cqw, 9cqh));
 }
 
 .counter {
