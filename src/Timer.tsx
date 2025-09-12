@@ -14,7 +14,7 @@ const Timer: React.FC<TimerProps> = ({ timeLeft, totalTime }) => {
       color: percentLeft < 50 ? 'var(--text)' : 'var(--accent-text)',
       textShadow: `${percentLeft < 50 ? '#0000' : 'var(--shadowColor)'} 0 0 4px`,
     }}>
-      <span>Time Left: <Counter value={Math.ceil(timeLeft / 1000)} width={2} />s</span>
+      <Counter value={Math.ceil(timeLeft / 1000)} width={2} />s
     </div>
   );
 }
