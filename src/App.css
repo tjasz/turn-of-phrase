@@ -12,6 +12,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  box-shadow: var(--shadow);
 }
 
 header img {
@@ -50,6 +51,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
+  box-shadow: var(--shadow);
 }
 
 footer p {

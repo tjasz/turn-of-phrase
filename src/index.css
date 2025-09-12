@@ -7,7 +7,7 @@
   --background: light-dark(#def, #123);
   --text: light-dark(#123, #def);
   --shadowColor: light-dark(#0008, #7778);
-  --shadow: 2px 2px 6px var(--shadowColor);
+  --shadow: 0 0 6px var(--shadowColor);
   --secondary: light-dark(#cdf, #124);
   --accent: light-dark(#26c, #26c);
   --accent-hover: light-dark(#04a, #04a);
