@@ -81,18 +81,6 @@ export async function getRequestObject(request: HttpRequest): Promise<GetThemeRe
         throw new BadRequestError('Field "Title" must not be empty');
     }
 
-    if (!requestJson.Description) {
-        throw new BadRequestError('Missing field "Description" in request body');
-    }
-
-    if (typeof requestJson.Description !== 'string') {
-        throw new BadRequestError('Field "Description" must be a string');
-    }
-
-    if (requestJson.Description === '') {
-        throw new BadRequestError('Field "Description" must not be empty');
-    }
-
     return requestJson as GetThemeRequest;
 }
 
