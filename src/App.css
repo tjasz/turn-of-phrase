@@ -126,7 +126,6 @@ footer p {
 }
 
 .timer {
-  max-width: 50vh;
   margin: 1vh auto 2vh auto;
   border: 2px solid var(--text);
   border-radius: 8px;
