@@ -2,7 +2,7 @@ import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/fu
 import BadRequestError from "../errors/BadRequestError";
 import * as df from "durable-functions";
 
-const corsHeaders = {
+export const corsHeaders = {
     "Access-Control-Allow-Origin": "http://localhost:5173,https://tjasz.github.io",
     "Access-Control-Allow-Headers": "Content-Type",
     "Access-Control-Allow-Methods": "GET,POST,OPTIONS"
@@ -57,7 +57,7 @@ export async function getTheme(request: HttpRequest, context: InvocationContext)
     }
 }
 
-async function getRequestObject(request: HttpRequest): Promise<GetThemeRequest | null> {
+export async function getRequestObject(request: HttpRequest): Promise<GetThemeRequest | null> {
     try {
         var requestText = await request.text();
         var requestJson = JSON.parse(requestText || '{}');
