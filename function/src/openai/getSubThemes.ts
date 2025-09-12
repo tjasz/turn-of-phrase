@@ -5,6 +5,7 @@ export function getPromptForSubThemes(title: string, description: string): ChatC
     role: "user",
     content:
       `First, list 5 or more sub-themes that fall under the broad theme "${title}".
+Each sub-theme should be capable of supporting a set of 20 related terms.
 Output only a semi-colon separated sequence of strings. Do not write any text other than the sub-themes.`
   };
 }

@@ -19,6 +19,8 @@ const systemPrompt: ChatCompletionMessageParam = {
     the related phrases might include "First President", "United States", "Founding Father", and "American Revolution".
     Small, common words should not be included in related phrases.
     This includes the articles "a" and "the" and small prepositions such as "in", "on", "at", or "of".
+
+    The target audience for the game is people in the United States with a high school education and a general knowledge of the theme.
     `
 };
 
