@@ -74,7 +74,7 @@ footer p {
   border-radius: 8px;
   margin: 0 auto 2vh auto;
   padding: 0;
-  filter: drop-shadow(2px 2px 2px var(--shadow));
+  box-shadow: var(--shadow);
 }
 
 .innerGameBody {
@@ -99,6 +99,7 @@ footer p {
   border: 1px solid var(--text);
   border-radius: 8px;
   font-weight: bold;
+  box-shadow: var(--shadow);
 }
 
 .themeDescriptionContainer {
