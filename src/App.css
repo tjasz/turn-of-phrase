@@ -78,8 +78,20 @@ footer p {
 }
 
 .innerGameBody {
+  position: relative;
   height: 50vh;
   overflow-y: auto;
+}
+
+.innerGameBody img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  opacity: 0.05;
+  pointer-events: none;
+  user-select: none;
 }
 
 .mainGameBody ul {
