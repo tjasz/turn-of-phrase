@@ -145,6 +145,10 @@ footer p {
   max-width: 800px;
 }
 
+.themeList {
+  text-align: left;
+}
+
 #themeCreator textarea {
   width: 100%;
   resize: vertical;
