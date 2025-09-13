@@ -1,13 +1,13 @@
+
 import React, { useEffect, useState } from "react";
 import ThemeCreator from "./ThemeCreator";
 import defaultTheme from "./defaultTheme";
 
 interface ThemeSelectorProps {
-  onSelectTheme: (theme: Theme) => void;
+  onSelectChallenges: (challenges: Challenge[]) => void;
 }
 
-const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectTheme }) => {
-
+const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => {
   // Get built-in theme files
   const themeModules = import.meta.glob('/public/themes/*.json');
   const themeFiles = Object.keys(themeModules).map(path => path.split('/').pop()!);
@@ -31,10 +31,10 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectTheme }) => {
 
   // Store all selectable themes: built-in and local
   const [allThemes, setAllThemes] = useState<Array<{ type: 'default' | 'public' | 'local'; name: string; key?: string; file?: string; theme?: Theme }>>([]);
-  const [selectedThemeIndex, setSelectedThemeIndex] = useState<number>(0);
-  const [loadingTheme, setLoadingTheme] = useState(false);
-  const [themeError, setThemeError] = useState<string | null>(null);
-  const [theme, setTheme] = useState<Theme | null>(null);
+  const [selectedThemeIndices, setSelectedThemeIndices] = useState<Set<number>>(new Set([0]));
+  const [loadingThemes, setLoadingThemes] = useState(false);
+  const [themeErrors, setThemeErrors] = useState<string[]>([]);
+  const [themes, setThemes] = useState<Theme[]>([defaultTheme]);
 
   // On mount, populate allThemes
   useEffect(() => {
@@ -47,66 +47,88 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectTheme }) => {
     setAllThemes(combined);
   }, []);
 
-  // Load theme when selectedThemeIndex changes
+  // Load selected themes when selection changes
   useEffect(() => {
     if (allThemes.length === 0) return;
-    setLoadingTheme(true);
-    setTheme(null);
-    setThemeError(null);
-    const selected = allThemes[selectedThemeIndex];
-    if (selected.type === 'public') {
-      fetch(`${import.meta.env.BASE_URL}themes/${selected.file}`)
-        .then(res => {
-          if (!res.ok) throw new Error('Failed to load theme');
-          return res.json();
-        })
-        .then((data: Theme) => {
-          setTheme(data);
-          onSelectTheme(data);
-          setLoadingTheme(false);
-        })
-        .catch(err => {
-          setThemeError(err.message);
-          setLoadingTheme(false);
-        });
-    } else if (selected.type === 'local') {
-      setTheme(selected.theme!);
-      onSelectTheme(selected.theme!);
-      setLoadingTheme(false);
-    } else if (selected.type === 'default') {
-      setTheme(selected.theme!);
-      onSelectTheme(selected.theme!);
-      setLoadingTheme(false);
-    }
-  }, [selectedThemeIndex, allThemes]);
+    setLoadingThemes(true);
+    setThemes([]);
+    setThemeErrors([]);
+    const indices = Array.from(selectedThemeIndices);
+    const themePromises = indices.map(idx => {
+      const selected = allThemes[idx];
+      if (selected.type === 'public') {
+        return fetch(`${import.meta.env.BASE_URL}themes/${selected.file}`)
+          .then(res => {
+            if (!res.ok) throw new Error('Failed to load theme');
+            return res.json();
+          })
+          .catch(err => ({ error: err.message }));
+      } else {
+        return Promise.resolve(selected.theme!);
+      }
+    });
+    Promise.all(themePromises).then(results => {
+      const loadedThemes: Theme[] = [];
+      const errors: string[] = [];
+      results.forEach((result, i) => {
+        if (result && !result.error) {
+          loadedThemes.push(result as Theme);
+        } else {
+          errors.push(`Error loading theme: ${result.error}`);
+        }
+      });
+      setThemes(loadedThemes);
+      setThemeErrors(errors);
+      // Concatenate all challenges and return
+      const allChallenges = loadedThemes.flatMap(t => t.Challenges);
+      onSelectChallenges(allChallenges);
+      setLoadingThemes(false);
+    });
+  }, [selectedThemeIndices, allThemes]);
+
+  const handleCheckboxChange = (idx: number) => {
+    setSelectedThemeIndices(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(idx)) {
+        newSet.delete(idx);
+      } else {
+        newSet.add(idx);
+      }
+      // Always keep at least one theme selected
+      if (newSet.size === 0) newSet.add(0);
+      return newSet;
+    });
+  };
 
   return (
     <div id="themeSelector">
-      <h2>Select a Theme</h2>
-      <div className="themeDescriptionContainer">
-        <button onClick={() => setSelectedThemeIndex(i => (i - 1 + allThemes.length) % allThemes.length)}>
-          &lt;
-        </button>
-        <div className="themeDescription">
-          {loadingTheme && <p>Loading theme...</p>}
-          {themeError && <p>Error loading theme: {themeError}</p>}
-          {theme && (
-            <>
-              <h3>{theme.Title}</h3>
-              <p>{theme.Description}</p>
-              {allThemes[selectedThemeIndex]?.type === 'local' && <span style={{ fontStyle: 'italic', fontSize: '0.9em' }}>(Saved theme)</span>}
-            </>
-          )}
-        </div>
-        <button onClick={() => setSelectedThemeIndex(i => (i + 1) % allThemes.length)}>
-          &gt;
-        </button>
+      <h2>Select Themes</h2>
+      <div className="themeListContainer">
+        <ul className="themeList">
+          {allThemes.map((theme, idx) => (
+            <li key={idx}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={selectedThemeIndices.has(idx)}
+                  onChange={() => handleCheckboxChange(idx)}
+                />
+                <strong>{theme.name}</strong>
+                {theme.type === 'local' && <span style={{ fontStyle: 'italic', fontSize: '0.9em' }}> (Saved theme)</span>}
+              </label>
+            </li>
+          ))}
+        </ul>
+        {loadingThemes && <p>Loading themes...</p>}
+        {themeErrors.length > 0 && themeErrors.map((err, i) => <p key={i} style={{ color: 'red' }}>{err}</p>)}
       </div>
       <ThemeCreator onCreateTheme={theme => {
-        setTheme(theme);
-        onSelectTheme(theme);
+        setThemes(prev => [...prev, theme]);
+        // Add new theme to allThemes and select it
+        setAllThemes(prev => [...prev, { type: 'local', name: theme.Title, theme }]);
+        setSelectedThemeIndices(prev => new Set([...prev, prev.size]));
       }} />
-    </div >
+    </div>
   );
 };
 

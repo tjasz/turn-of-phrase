@@ -16,15 +16,15 @@ export const GameSettingsView: React.FC<GameSettingsProps> = ({ currentSettings,
   const [turnTimeSeconds, setTurnTimeSeconds] = useState(currentSettings.turnTimeSeconds);
   const [pointsToWin, setPointsToWin] = useState(currentSettings.pointsToWin);
   const [skipPenalty, setSkipPenalty] = useState(currentSettings.skipPenalty);
-  const [theme, setTheme] = useState<Theme | null>(currentSettings.theme);
+  const [challenges, setChallenges] = useState<Challenge[]>(currentSettings.theme?.Challenges ?? []);
 
   return (
     <div className="setup">
-      <ThemeSelector onSelectTheme={theme => {
-        setTheme(theme);
-        const challengeErrors = validateChallenges(theme.Challenges);
+      <ThemeSelector onSelectChallenges={challenges => {
+        setChallenges(challenges);
+        const challengeErrors = validateChallenges(challenges);
         if (challengeErrors[1].length > 0) {
-          console.warn(`Selected theme "${theme.Title}" has invalid challenges:`, challengeErrors);
+          console.warn(`Selected challenges have invalid entries:`, challengeErrors);
         }
       }} />
       <div>
@@ -76,8 +76,8 @@ export const GameSettingsView: React.FC<GameSettingsProps> = ({ currentSettings,
         turnTimeSeconds,
         pointsToWin,
         skipPenalty,
-        theme: theme!
-      })} disabled={!theme}>Start Game</button>
+        theme: { Title: "Custom", Description: "Custom set of challenges", Challenges: challenges }
+      })} disabled={challenges.length === 0}>Start Game</button>
     </div>
   );
 }
