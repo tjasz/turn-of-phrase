@@ -65,7 +65,6 @@ function App() {
   // Start game
   const startGame = (settings: GameSettings) => {
     setChallenges(shuffle(settings.theme.Challenges));
-    setCurrentChallengeIdx(0);
     setScore(Array(settings.numberOfTeams).fill(0));
     setTurnTeam(0);
     setTurnPlayer(Array(settings.numberOfTeams).fill(0));
@@ -93,13 +92,13 @@ function App() {
   // Handle challenge actions
   const handleCorrect = () => {
     // Mark current challenge as succeeded
-    const challenge = challenges[currentChallengeIdx];
+    const challenge = challenges[currentChallengeIdx % challenges.length];
     setTurnChallenges(prev => [...prev, { main: challenge.Main, succeeded: true }]);
     setCurrentChallengeIdx((idx) => idx + 1);
   };
   const handleSkip = () => {
     // Mark current challenge as skipped
-    const challenge = challenges[currentChallengeIdx];
+    const challenge = challenges[currentChallengeIdx % challenges.length];
     setTurnChallenges(prev => [...prev, { main: challenge.Main, succeeded: false }]);
     setCurrentChallengeIdx((idx) => idx + 1);
   };
@@ -127,7 +126,7 @@ function App() {
     : -1;
 
   // Gameplay UI
-  const challenge: Challenge | undefined = challenges[currentChallengeIdx];
+  const challenge: Challenge | undefined = challenges[currentChallengeIdx % challenges.length];
   // Exclude the last challenge (timed out) from review
   const reviewedChallenges = turnChallenges;
   return <main>
