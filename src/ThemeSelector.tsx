@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import ThemeCreator from "./ThemeCreator";
 import defaultTheme from "./defaultTheme";
+import ThemeCreatorStepper from "./ThemeCreation/ThemeCreatorStepper";
 
 interface ThemeSelectorProps {
   onSelectChallenges: (challenges: Challenge[]) => void;
@@ -30,6 +31,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
   }
 
   // Store all selectable themes: built-in and local
+  const [creatingTheme, setCreatingTheme] = useState(false);
   const [allThemes, setAllThemes] = useState<Array<{ type: 'default' | 'public' | 'local'; name: string; key?: string; file?: string; theme?: Theme }>>([]);
   const [selectedThemeIndices, setSelectedThemeIndices] = useState<Set<number>>(new Set([0]));
   const [loadingThemes, setLoadingThemes] = useState(false);
@@ -100,6 +102,15 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
     });
   };
 
+  if (creatingTheme) {
+    return <ThemeCreatorStepper onCreateTheme={theme => {
+      setThemes(prev => [...prev, theme]);
+      // Add new theme to allThemes and select it
+      setAllThemes(prev => [...prev, { type: 'local', name: theme.Title, theme }]);
+      setSelectedThemeIndices(prev => new Set([...prev, prev.size]));
+    }} />;
+  }
+
   return (
     <div id="themeSelector">
       <h2>Select Themes</h2>
@@ -121,13 +132,8 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
         </ul>
         {loadingThemes && <p>Loading themes...</p>}
         {themeErrors.length > 0 && themeErrors.map((err, i) => <p key={i} style={{ color: 'red' }}>{err}</p>)}
+        <a href="#" onClick={e => { e.preventDefault(); setCreatingTheme(true); }}>Create New Theme</a>
       </div>
-      <ThemeCreator onCreateTheme={theme => {
-        setThemes(prev => [...prev, theme]);
-        // Add new theme to allThemes and select it
-        setAllThemes(prev => [...prev, { type: 'local', name: theme.Title, theme }]);
-        setSelectedThemeIndices(prev => new Set([...prev, prev.size]));
-      }} />
     </div>
   );
 };
