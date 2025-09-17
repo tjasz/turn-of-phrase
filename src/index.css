@@ -85,6 +85,7 @@ button {
 button:disabled {
   background-color: var(--secondary);
   cursor: not-allowed;
+  border: 2px solid transparent;
 }
 
 button:hover {
