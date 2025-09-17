@@ -15,7 +15,7 @@
   --team-red: light-dark(#800, #c44);
   --team-green: light-dark(#080, #4c4);
   --team-purple: light-dark(#808, #c4c);
-  --team-yellow: light-dark(#660, #cc4);
+  --team-yellow: light-dark(#a60, #cc4);
   --team-blue: light-dark(#008, #77f);
   background-color: var(--background);
   color: var(--text);

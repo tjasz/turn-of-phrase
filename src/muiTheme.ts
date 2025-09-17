@@ -24,9 +24,9 @@ export const muiTheme = createTheme({
           contrastText: '#123',
         },
         warning: {
-          main: '#660',
-          light: '#882',
-          dark: '#440',
+          main: '#a60',
+          light: '#c82',
+          dark: '#840',
           contrastText: '#123',
         },
         info: {
