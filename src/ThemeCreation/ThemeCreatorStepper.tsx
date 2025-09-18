@@ -1,4 +1,4 @@
-import { Box, Button, Step, StepLabel, Stepper } from "@mui/material";
+import { Box, Button, Step, StepLabel, Stepper, TextField } from "@mui/material";
 import { useState } from "react";
 
 interface IThemeCreatorStepperProps {
@@ -7,6 +7,11 @@ interface IThemeCreatorStepperProps {
 
 const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateTheme }) => {
   const [activeStep, setActiveStep] = useState(0);
+  const [title, setTitle] = useState<string>("");
+  const [description, setDescription] = useState<string>("");
+  const [subThemes, setSubThemes] = useState<string[]>([]);
+  const [mainPhrases, setMainPhrases] = useState<string[]>([]);
+  const [challenges, setChallenges] = useState<Challenge[]>([]);
 
   const stepLabels = ['Define Theme', 'Add Challenges', 'Review & Save'];
 
@@ -29,6 +34,36 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
           </Step>
         ))}
       </Stepper>
+      {activeStep === 0 && (
+        <Box sx={{ mt: 2 }}>
+          <TextField
+            label="Title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            fullWidth
+            variant="outlined"
+            margin="normal"
+          />
+          <TextField
+            label="Description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            fullWidth
+            variant="outlined"
+            margin="normal"
+            multiline
+            rows={4}
+          />
+          <TextField
+            label="Sub-themes"
+            value={subThemes.join(", ")}
+            onChange={(e) => setSubThemes(e.target.value.split(", "))}
+            fullWidth
+            variant="outlined"
+            margin="normal"
+          />
+        </Box>
+      )}
       <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
         <button
           disabled={activeStep === 0}
