@@ -69,14 +69,16 @@ const StepOne: React.FC<IStepOneProps> = ({ title, description, subThemes, setTi
         fullWidth
         variant="outlined"
         margin="normal"
-        InputProps={{
-          endAdornment: (
-            <InputAdornment position="end">
-              <Button onClick={handleFetchSubThemes} disabled={loading || !title} size="small" variant="outlined">
-                {loading ? "Loading..." : "Get Sub-themes"}
-              </Button>
-            </InputAdornment>
-          )
+        slotProps={{
+          input: {
+            endAdornment: (
+              <InputAdornment position="end">
+                <Button onClick={handleFetchSubThemes} disabled={loading || !title} size="small" variant="outlined">
+                  {loading ? "Loading..." : "Get Sub-themes"}
+                </Button>
+              </InputAdornment>
+            )
+          }
         }}
       />
     </Box>
