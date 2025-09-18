@@ -11,7 +11,8 @@ export async function getSubThemesFunction(request: HttpRequest, context: Invoca
   const client = getOpenAiClient();
   const generationPrompt = getGenerationPrompt(requestObject.Title, requestObject.Description);
   const subThemePrompt = getPromptForSubThemes(requestObject.Title, requestObject.Description);
-  const subThemes = await getResponse(client, [systemPrompt, generationPrompt, subThemePrompt]);
+  const subThemesResponse = await getResponse(client, [systemPrompt, generationPrompt, subThemePrompt]);
+  const subThemes = subThemesResponse.content.split(";").map(s => s.trim()).filter(s => s.length > 0);
 
   return {
     status: 200,
