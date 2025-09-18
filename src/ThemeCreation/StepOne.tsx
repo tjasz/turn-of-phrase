@@ -1,4 +1,5 @@
-import { Box, TextField, Button, InputAdornment } from "@mui/material";
+import { Box, TextField, Button, InputAdornment, IconButton } from "@mui/material";
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import { useState } from "react";
 
 interface IStepOneProps {
@@ -73,9 +74,9 @@ const StepOne: React.FC<IStepOneProps> = ({ title, description, subThemes, setTi
           input: {
             endAdornment: (
               <InputAdornment position="end">
-                <Button onClick={handleFetchSubThemes} disabled={loading || !title} size="small" variant="outlined">
-                  {loading ? "Loading..." : "Get Sub-themes"}
-                </Button>
+                <IconButton onClick={handleFetchSubThemes} disabled={loading || !title} title="Generate Sub-themes">
+                  <AutoAwesomeIcon />
+                </IconButton>
               </InputAdornment>
             )
           }
