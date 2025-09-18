@@ -1,5 +1,6 @@
 import { Box, Button, Step, StepLabel, Stepper, TextField } from "@mui/material";
 import { useState } from "react";
+import StepOne from "./StepOne";
 
 interface IThemeCreatorStepperProps {
   onCreateTheme: (theme: Theme) => void;
@@ -35,34 +36,14 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
         ))}
       </Stepper>
       {activeStep === 0 && (
-        <Box sx={{ mt: 2 }}>
-          <TextField
-            label="Title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            fullWidth
-            variant="outlined"
-            margin="normal"
-          />
-          <TextField
-            label="Description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            fullWidth
-            variant="outlined"
-            margin="normal"
-            multiline
-            rows={4}
-          />
-          <TextField
-            label="Sub-themes"
-            value={subThemes.join(", ")}
-            onChange={(e) => setSubThemes(e.target.value.split(", "))}
-            fullWidth
-            variant="outlined"
-            margin="normal"
-          />
-        </Box>
+        <StepOne
+          title={title}
+          description={description}
+          subThemes={subThemes}
+          setTitle={setTitle}
+          setDescription={setDescription}
+          setSubThemes={setSubThemes}
+        />
       )}
       <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
         <button
