@@ -63,6 +63,19 @@ const StepOne: React.FC<IStepOneProps> = ({ title, description, subThemes, setTi
         multiline
         rows={4}
       />
+      <h3>Sub-Themes</h3>
+      {subThemes.map((subTheme, i) => (
+        <Box key={i}>
+          <TextField
+            label={`Sub-Theme ${i + 1}`}
+            value={subTheme}
+            onChange={(e) => setSubThemes(subThemes.map((st, idx) => idx === i ? e.target.value : st))}
+            fullWidth
+            variant="outlined"
+            margin="normal"
+          />
+        </Box>
+      ))}
       <TextField
         label="Sub-themes"
         value={subThemes.join(", ")}
