@@ -1,6 +1,7 @@
 import { Box, TextField, Button, InputAdornment, IconButton } from "@mui/material";
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import { useState } from "react";
+import { Delete } from "@mui/icons-material";
 
 interface IStepOneProps {
   title: string;
@@ -73,28 +74,29 @@ const StepOne: React.FC<IStepOneProps> = ({ title, description, subThemes, setTi
             fullWidth
             variant="outlined"
             margin="normal"
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <>
+                    <IconButton disabled={loading || !title} title="Split with AI">
+                      <AutoAwesomeIcon />
+                    </IconButton>
+                    <IconButton title="Delete" onClick={() => setSubThemes(subThemes.filter((_, idx) => i !== idx))}>
+                      <Delete />
+                    </IconButton>
+                  </>
+                )
+              }
+            }}
           />
         </Box>
       ))}
-      <TextField
-        label="Sub-themes"
-        value={subThemes.join(", ")}
-        onChange={(e) => setSubThemes(e.target.value.split(", "))}
-        fullWidth
-        variant="outlined"
-        margin="normal"
-        slotProps={{
-          input: {
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton onClick={handleFetchSubThemes} disabled={loading || !title} title="Generate Sub-themes">
-                  <AutoAwesomeIcon />
-                </IconButton>
-              </InputAdornment>
-            )
-          }
-        }}
-      />
+      <button onClick={handleFetchSubThemes} disabled={loading || !title} title="Generate Sub-themes">
+        Generate
+      </button>
+      <button onClick={() => setSubThemes([...subThemes, ""])} title="Add Sub-Theme">
+        Add
+      </button>
     </Box>
   );
 }
