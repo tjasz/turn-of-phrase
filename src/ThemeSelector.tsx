@@ -98,8 +98,6 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
       } else {
         newSet.add(idx);
       }
-      // Always keep at least one theme selected
-      if (newSet.size === 0) newSet.add(0);
       return newSet;
     });
   };
