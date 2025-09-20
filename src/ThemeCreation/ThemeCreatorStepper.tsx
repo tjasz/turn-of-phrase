@@ -99,10 +99,22 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
           const statusData = await statusResp.json();
           if (statusData.runtimeStatus === "Running") {
             setStatusMessage(statusData.customStatus?.message || "Generating theme...");
+            if (statusData.customStatus?.data) {
+              if (statusData.customStatus.data.Title) setTitle(statusData.customStatus.data.Title);
+              if (statusData.customStatus.data.Description) setDescription(statusData.customStatus.data.Description);
+              if (statusData.customStatus.data.SubThemes) setSubThemes(statusData.customStatus.data.SubThemes);
+              if (statusData.customStatus.data.MainPhrases) setMainPhrases(statusData.customStatus.data.MainPhrases);
+              if (statusData.customStatus.data.Challenges) setChallenges(statusData.customStatus.data.Challenges);
+            }
             await new Promise(res => setTimeout(res, 1500));
           } else if (statusData.runtimeStatus === "Completed") {
             setStatusMessage(null);
             const themeObj = statusData.output;
+            if (themeObj.Title) setTitle(themeObj.Title);
+            if (themeObj.Description) setDescription(themeObj.Description);
+            if (themeObj.SubThemes) setSubThemes(themeObj.SubThemes);
+            if (themeObj.MainPhrases) setMainPhrases(themeObj.MainPhrases);
+            if (themeObj.Challenges) setChallenges(themeObj.Challenges);
             localStorage.setItem(`turn-of-phrase/theme:${title}`, JSON.stringify(themeObj));
             onCreateTheme(themeObj);
             done = true;
