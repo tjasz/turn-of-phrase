@@ -33,7 +33,7 @@ header h1 {
 
 main {
   max-width: 1280px;
-  width: calc(100vw - 4rem);
+  width: calc(100% - 4rem);
   min-width: 320px;
   margin: calc(3rem + 2px) auto calc(1.5rem + 2px) auto;
   padding: 1px 2rem;
