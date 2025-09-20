@@ -3,6 +3,7 @@ import { useState } from "react";
 import DefineTheme from "./DefineTheme";
 import SetSubThemes from "./SetSubThemes";
 import AddMainPhrases from "./AddMainPhrases";
+import EditChallenges from "./EditChallenges";
 
 interface IThemeCreatorStepperProps {
   onCreateTheme: (theme: Theme) => void;
@@ -187,6 +188,16 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
           subThemes={subThemes}
           mainPhrases={mainPhrases}
           setMainPhrases={setMainPhrases}
+        />
+      )}
+      {activeStep === 3 && (
+        <EditChallenges
+          title={title}
+          description={description}
+          subThemes={subThemes}
+          mainPhrases={mainPhrases}
+          challenges={challenges}
+          setChallenges={setChallenges}
         />
       )}
       <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
