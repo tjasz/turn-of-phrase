@@ -29,7 +29,7 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
   const [themeError, setThemeError] = useState<string | null>(null);
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
 
-  const stepLabels = ['Define Theme', 'Add Sub-Themes', 'Add Challenges', 'Review & Save'];
+  const stepLabels = ['Theme', 'Sub-Themes', 'Main Phrases', 'Challenges'];
 
   const handleBack = () => {
     setActiveStep(prev => Math.max(prev - 1, 0));
