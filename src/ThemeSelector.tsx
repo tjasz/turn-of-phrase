@@ -103,12 +103,15 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
   };
 
   if (creatingTheme) {
-    return <ThemeCreatorStepper onCreateTheme={theme => {
-      setThemes(prev => [...prev, theme]);
-      // Add new theme to allThemes and select it
-      setAllThemes(prev => [...prev, { type: 'local', name: theme.Title, theme }]);
-      setSelectedThemeIndices(prev => new Set([...prev, prev.size]));
-    }} />;
+    return <ThemeCreatorStepper
+      onCreateTheme={theme => {
+        setThemes(prev => [...prev, theme]);
+        // Add new theme to allThemes and select it
+        setAllThemes(prev => [...prev, { type: 'local', name: theme.Title, theme }]);
+        setSelectedThemeIndices(prev => new Set([...prev, prev.size]));
+      }}
+      onCancel={() => setCreatingTheme(false)}
+    />;
   }
 
   return (

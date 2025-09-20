@@ -5,6 +5,7 @@ import SetSubThemes from "./SetSubThemes";
 
 interface IThemeCreatorStepperProps {
   onCreateTheme: (theme: Theme) => void;
+  onCancel: () => void;
 }
 
 type ThemeRequest = {
@@ -16,7 +17,7 @@ type ThemeRequest = {
   OperationId: string;
 }
 
-const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateTheme }) => {
+const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateTheme, onCancel }) => {
   const [activeStep, setActiveStep] = useState(0);
   const [title, setTitle] = useState<string>("");
   const [description, setDescription] = useState<string>("");
@@ -160,8 +161,14 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
       )}
       <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
         <button
-          disabled={activeStep === 0}
+          onClick={onCancel}
+          disabled={loadingTheme}
+        >
+          Cancel
+        </button>
+        <button
           onClick={handleBack}
+          disabled={activeStep === 0}
         >
           Back
         </button>
