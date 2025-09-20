@@ -71,7 +71,8 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
     Title: title,
     Description: description,
     SubThemes: subThemes,
-    Challenges: challenges
+    MainPhrases: mainPhrases,
+    Challenges: challenges,
   };
 });
 
