@@ -151,7 +151,7 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
       <p>Follow the steps below to create your theme.</p>
       {statusMessage && <Typography color="info">{statusMessage}</Typography>}
       {themeError && <Typography color="error">{themeError}</Typography>}
-      <Stepper activeStep={activeStep} nonLinear>
+      <Stepper activeStep={activeStep} nonLinear alternativeLabel className="theme-stepper">
         {stepLabels.map((label, index) => (
           <Step
             key={label}

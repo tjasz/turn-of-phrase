@@ -150,6 +150,12 @@ footer p {
   text-align: left;
 }
 
+.theme-stepper {
+  min-width: 320px;
+  width: calc(100vw - 4rem);
+  max-width: 1280px;
+}
+
 #themeCreator textarea {
   width: 100%;
   resize: vertical;
