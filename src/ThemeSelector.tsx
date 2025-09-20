@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import ThemeCreator from "./ThemeCreator";
 import defaultTheme from "./defaultTheme";
 import ThemeCreatorStepper from "./ThemeCreation/ThemeCreatorStepper";
+import ThemeView from "./ThemeView";
+import { Grid } from "@mui/material";
 
 interface ThemeSelectorProps {
   onSelectChallenges: (challenges: Challenge[]) => void;
@@ -119,21 +121,17 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
     <div id="themeSelector">
       <h2>Select Themes</h2>
       <div className="themeListContainer">
-        <ul className="themeList">
+        <Grid container spacing={1}>
           {allThemes.map((theme, idx) => (
-            <li key={idx}>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={selectedThemeIndices.has(idx)}
-                  onChange={() => handleCheckboxChange(idx)}
-                />
-                <strong>{theme.name}</strong>
-                {theme.type === 'local' && <span style={{ fontStyle: 'italic', fontSize: '0.9em' }}> (Saved theme)</span>}
-              </label>
-            </li>
+            <ThemeView
+              key={idx}
+              theme={theme.theme || { Title: theme.name, Description: '', Challenges: [] }}
+              selected={selectedThemeIndices.has(idx)}
+              onSelectedChange={() => handleCheckboxChange(idx)}
+            />
           ))}
-        </ul>
+        </Grid>
+        {allThemes.length === 0 && <p>No themes available.</p>}
         {loadingThemes && <p>Loading themes...</p>}
         {themeErrors.length > 0 && themeErrors.map((err, i) => <p key={i} style={{ color: 'red' }}>{err}</p>)}
         <a href="#" onClick={e => { e.preventDefault(); setCreatingTheme(true); }}>Create New Theme</a>
