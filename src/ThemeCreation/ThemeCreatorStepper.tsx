@@ -2,6 +2,7 @@ import { Box, Button, Step, StepLabel, Stepper, TextField, Typography } from "@m
 import { useState } from "react";
 import DefineTheme from "./DefineTheme";
 import SetSubThemes from "./SetSubThemes";
+import AddMainPhrases from "./AddMainPhrases";
 
 interface IThemeCreatorStepperProps {
   onCreateTheme: (theme: Theme) => void;
@@ -169,6 +170,15 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
           description={description}
           subThemes={subThemes}
           setSubThemes={setSubThemes}
+        />
+      )}
+      {activeStep === 2 && (
+        <AddMainPhrases
+          title={title}
+          description={description}
+          subThemes={subThemes}
+          mainPhrases={mainPhrases}
+          setMainPhrases={setMainPhrases}
         />
       )}
       <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
