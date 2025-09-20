@@ -1,6 +1,7 @@
 import { Box, Button, Step, StepLabel, Stepper, TextField, Typography } from "@mui/material";
 import { useState } from "react";
-import StepOne from "./StepOne";
+import DefineTheme from "./DefineTheme";
+import SetSubThemes from "./SetSubThemes";
 
 interface IThemeCreatorStepperProps {
   onCreateTheme: (theme: Theme) => void;
@@ -27,7 +28,7 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
   const [themeError, setThemeError] = useState<string | null>(null);
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
 
-  const stepLabels = ['Define Theme', 'Add Challenges', 'Review & Save'];
+  const stepLabels = ['Define Theme', 'Add Sub-Themes', 'Add Challenges', 'Review & Save'];
 
   const handleBack = () => {
     setActiveStep(prev => Math.max(prev - 1, 0));
@@ -129,18 +130,31 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
       {themeError && <Typography color="error">{themeError}</Typography>}
       <Stepper activeStep={activeStep} nonLinear>
         {stepLabels.map((label, index) => (
-          <Step key={label} active={activeStep === index} onClick={() => setActiveStep(index)} style={{ cursor: 'pointer' }}>
+          <Step
+            key={label}
+            active={activeStep === index}
+            disabled={activeStep === 0 && index !== 0 && !title}
+            onClick={() => title && setActiveStep(index)}
+            style={{ cursor: 'pointer' }}
+          >
             <StepLabel>{label}</StepLabel>
           </Step>
         ))}
       </Stepper>
       {activeStep === 0 && (
-        <StepOne
+        <DefineTheme
           title={title}
           description={description}
           subThemes={subThemes}
           setTitle={setTitle}
           setDescription={setDescription}
+        />
+      )}
+      {activeStep === 1 && (
+        <SetSubThemes
+          title={title}
+          description={description}
+          subThemes={subThemes}
           setSubThemes={setSubThemes}
         />
       )}
@@ -154,7 +168,7 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
         <Box sx={{ flex: '1 1 auto' }} />
         <button
           onClick={handleNext}
-          disabled={activeStep === stepLabels.length - 1}
+          disabled={activeStep === stepLabels.length - 1 || activeStep === 0 && !title}
         >
           Next
         </button>

@@ -1,17 +1,13 @@
-import { Box, TextField, Button, InputAdornment, IconButton } from "@mui/material";
-import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import { Box, IconButton, TextField } from "@mui/material";
+import { Delete, AutoAwesome } from "@mui/icons-material";
 import { useState } from "react";
-import { Delete } from "@mui/icons-material";
 
-interface IStepOneProps {
+interface ISetSubThemesProps {
   title: string;
   description: string;
   subThemes: string[];
-  setTitle: (title: string) => void;
-  setDescription: (description: string) => void;
   setSubThemes: (subThemes: string[]) => void;
 }
-
 
 const getSubThemesApiUrl = () => {
   if (window.location.hostname === "localhost") {
@@ -21,7 +17,7 @@ const getSubThemesApiUrl = () => {
   }
 };
 
-const StepOne: React.FC<IStepOneProps> = ({ title, description, subThemes, setTitle, setDescription, setSubThemes }) => {
+const SetSubThemes: React.FC<ISetSubThemesProps> = ({ title, description, subThemes, setSubThemes }) => {
   const [loading, setLoading] = useState(false);
 
   const handleFetchSubThemes = async () => {
@@ -45,26 +41,7 @@ const StepOne: React.FC<IStepOneProps> = ({ title, description, subThemes, setTi
   };
 
   return (
-    <Box sx={{ mt: 2 }}>
-      <TextField
-        label="Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        fullWidth
-        variant="outlined"
-        margin="normal"
-      />
-      <TextField
-        label="Description"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        fullWidth
-        variant="outlined"
-        margin="normal"
-        multiline
-        rows={4}
-      />
-      <h3>Sub-Themes</h3>
+    <Box>
       {subThemes.map((subTheme, i) => (
         <Box key={i}>
           <TextField
@@ -79,7 +56,7 @@ const StepOne: React.FC<IStepOneProps> = ({ title, description, subThemes, setTi
                 endAdornment: (
                   <>
                     <IconButton disabled={loading || !title} title="Split with AI">
-                      <AutoAwesomeIcon />
+                      <AutoAwesome />
                     </IconButton>
                     <IconButton title="Delete" onClick={() => setSubThemes(subThemes.filter((_, idx) => i !== idx))}>
                       <Delete />
@@ -101,4 +78,4 @@ const StepOne: React.FC<IStepOneProps> = ({ title, description, subThemes, setTi
   );
 }
 
-export default StepOne;
+export default SetSubThemes;
