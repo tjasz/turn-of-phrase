@@ -4,6 +4,7 @@ import DefineTheme from "./DefineTheme";
 import SetSubThemes from "./SetSubThemes";
 import AddMainPhrases from "./AddMainPhrases";
 import EditChallenges from "./EditChallenges";
+import useWindowWidth from "../useWindowWidth";
 
 interface IThemeCreatorStepperProps {
   onCreateTheme: (theme: Theme) => void;
@@ -20,6 +21,8 @@ type ThemeRequest = {
 }
 
 const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateTheme, onCancel }) => {
+  const windowWidth = useWindowWidth();
+
   const [activeStep, setActiveStep] = useState(0);
   const [title, setTitle] = useState<string>("");
   const [description, setDescription] = useState<string>("");
@@ -151,7 +154,7 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
       <p>Follow the steps below to create your theme.</p>
       {statusMessage && <Typography color="info">{statusMessage}</Typography>}
       {themeError && <Typography color="error">{themeError}</Typography>}
-      <Stepper activeStep={activeStep} nonLinear alternativeLabel className="theme-stepper">
+      <Stepper activeStep={activeStep} nonLinear alternativeLabel={windowWidth < 640} className="theme-stepper">
         {stepLabels.map((label, index) => (
           <Step
             key={label}
