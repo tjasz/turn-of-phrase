@@ -56,7 +56,17 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
     }
   };
 
-  const handleComplete = async () => {
+  const handleComplete = () => {
+    const themeObj: Theme = {
+      Title: title,
+      Description: description,
+      Challenges: challenges,
+    }
+    localStorage.setItem(`turn-of-phrase/theme:${title}`, JSON.stringify(themeObj));
+    onCreateTheme(themeObj);
+  }
+
+  const handleGenerate = async () => {
     setLoadingTheme(true);
     setThemeError(null);
     setStatusMessage(null);
@@ -116,8 +126,6 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
             if (themeObj.SubThemes) setSubThemes(themeObj.SubThemes);
             if (themeObj.MainPhrases) setMainPhrases(themeObj.MainPhrases);
             if (themeObj.Challenges) setChallenges(themeObj.Challenges);
-            localStorage.setItem(`turn-of-phrase/theme:${title}`, JSON.stringify(themeObj));
-            onCreateTheme(themeObj);
             done = true;
           } else if (statusData.runtimeStatus === "Failed") {
             throw new Error(statusData.output.split(".", 1) || "Theme generation failed.");
@@ -201,12 +209,20 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
         >
           Next
         </button>
-        <button
-          onClick={handleComplete}
-          disabled={!title}
-        >
-          Complete
-        </button>
+        {challenges?.length > 0
+          ? <button
+            onClick={handleComplete}
+            disabled={!title}
+          >
+            Complete
+          </button>
+          : <button
+            onClick={handleGenerate}
+            disabled={!title}
+          >
+            Generate
+          </button>
+        }
       </Box>
     </div>
   );

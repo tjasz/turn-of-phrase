@@ -109,6 +109,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
         // Add new theme to allThemes and select it
         setAllThemes(prev => [...prev, { type: 'local', name: theme.Title, theme }]);
         setSelectedThemeIndices(prev => new Set([...prev, prev.size]));
+        setCreatingTheme(false);
       }}
       onCancel={() => setCreatingTheme(false)}
     />;
