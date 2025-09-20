@@ -4,7 +4,7 @@ import ThemeCreator from "./ThemeCreator";
 import defaultTheme from "./defaultTheme";
 import ThemeCreatorStepper from "./ThemeCreation/ThemeCreatorStepper";
 import ThemeView from "./ThemeView";
-import { Grid } from "@mui/material";
+import { Card, CardHeader, Grid } from "@mui/material";
 
 interface ThemeSelectorProps {
   onSelectChallenges: (challenges: Challenge[]) => void;
@@ -130,11 +130,15 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
               onSelectedChange={() => handleCheckboxChange(idx)}
             />
           ))}
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 2 }}>
+            <Card onClick={() => setCreatingTheme(true)} style={{ cursor: 'pointer', height: '100%', backgroundColor: 'var(--secondary)', color: 'var(--accent)' }}>
+              <CardHeader title="Create New Theme" />
+            </Card>
+          </Grid>
         </Grid>
         {allThemes.length === 0 && <p>No themes available.</p>}
         {loadingThemes && <p>Loading themes...</p>}
         {themeErrors.length > 0 && themeErrors.map((err, i) => <p key={i} style={{ color: 'red' }}>{err}</p>)}
-        <a href="#" onClick={e => { e.preventDefault(); setCreatingTheme(true); }}>Create New Theme</a>
       </div>
     </div>
   );
