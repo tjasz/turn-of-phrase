@@ -83,9 +83,6 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
       });
       setThemes(loadedThemes);
       setThemeErrors(errors);
-      // Concatenate all challenges and return
-      const allChallenges = loadedThemes.flatMap(t => t.Challenges);
-      onSelectChallenges(allChallenges);
       setLoadingThemes(false);
     });
   }, [selectedThemeIndices, allThemes]);
@@ -138,6 +135,9 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
         {loadingThemes && <p>Loading themes...</p>}
         {themeErrors.length > 0 && themeErrors.map((err, i) => <p key={i} style={{ color: 'red' }}>{err}</p>)}
       </div>
+      <button onClick={() => onSelectChallenges(themes.flatMap(t => t.Challenges))} disabled={themes.length === 0 || loadingThemes}>
+        Confirm
+      </button>
     </div>
   );
 };

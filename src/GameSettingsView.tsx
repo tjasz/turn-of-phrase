@@ -17,16 +17,24 @@ export const GameSettingsView: React.FC<GameSettingsProps> = ({ currentSettings,
   const [pointsToWin, setPointsToWin] = useState(currentSettings.pointsToWin);
   const [skipPenalty, setSkipPenalty] = useState(currentSettings.skipPenalty);
   const [challenges, setChallenges] = useState<Challenge[]>(currentSettings.theme?.Challenges ?? []);
+  const [selectingThemes, setSelectingThemes] = useState(false);
 
   return (
     <div className="setup">
-      <ThemeSelector onSelectChallenges={challenges => {
-        setChallenges(challenges);
-        const challengeErrors = validateChallenges(challenges);
-        if (challengeErrors[1].length > 0) {
-          console.warn(`Selected challenges have invalid entries:`, challengeErrors);
-        }
-      }} />
+      {selectingThemes
+        ? <ThemeSelector onSelectChallenges={challenges => {
+          setChallenges(challenges);
+          setSelectingThemes(false);
+          const challengeErrors = validateChallenges(challenges);
+          if (challengeErrors[1].length > 0) {
+            console.warn(`Selected challenges have invalid entries:`, challengeErrors);
+          }
+        }} />
+        : <div>
+          <p>Playing with {challenges.length} challenges.</p>
+          <a href="#" onClick={e => { e.preventDefault(); setSelectingThemes(true); }}>Select Themes</a>
+        </div>
+      }
       <div>
         <label>Number of Teams: </label>
         <input type="number" min={2} max={5} value={numberOfTeams} onChange={e => {
