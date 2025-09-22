@@ -10,6 +10,17 @@ Output only a semi-colon separated sequence of strings. Do not write any text ot
   };
 }
 
+export function getPromptToSplitSubTheme(title: string, description: string, subThemes: string[], toSplit: string): ChatCompletionMessageParam {
+  return {
+    role: "user",
+    content:
+      `First, list 5 or more sub-themes that fall under the broad themes "${title}" and "${toSplit}".
+Each sub-theme should be capable of supporting a set of 20 related terms.
+Do not include the already-existing sub-themes "${subThemes.join(", ")}".
+Output only a semi-colon separated sequence of strings. Do not write any text other than the sub-themes.`
+  };
+}
+
 export async function getSubThemes(
   title: string,
   description: string,
