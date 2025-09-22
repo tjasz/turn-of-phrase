@@ -74,7 +74,13 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ Title: title, Description: description })
+        body: JSON.stringify({
+          Title: title,
+          Description: description,
+          SubThemes: subThemes,
+          MainPhrases: mainPhrases,
+          Challenges: challenges,
+        })
       });
       if (!response.ok) {
         const errorText = await response.text();

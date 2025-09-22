@@ -1,6 +1,9 @@
 type GetThemeRequest = {
   Title: string;
-  Description: string;
+  Description?: string;
+  SubThemes?: string[];
+  MainPhrases?: string[];
+  Challenges?: Challenge[];
 }
 
 type Challenge = {

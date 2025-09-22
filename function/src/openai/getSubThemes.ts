@@ -1,12 +1,18 @@
 import type { ChatCompletionMessage, ChatCompletionMessageParam } from "openai/resources";
 
-export function getPromptForSubThemes(title: string, description: string): ChatCompletionMessageParam {
+export function getPromptForSubThemes(title: string, description: string, subThemes?: string[]): ChatCompletionMessageParam {
+  let content = `First, list 5 or more sub-themes that fall under the broad theme "${title}".
+Each sub-theme should be capable of supporting a set of 20 related terms.
+Output only a semi-colon separated sequence of strings. Do not write any text other than the sub-themes.`;
+
+  if (subThemes && subThemes.length > 0) {
+    content += `\n\nHere are some existing sub-themes: "${subThemes.join(", ")}".
+Generate additional themes that are distinct from these.`;
+  }
+
   return {
     role: "user",
-    content:
-      `First, list 5 or more sub-themes that fall under the broad theme "${title}".
-Each sub-theme should be capable of supporting a set of 20 related terms.
-Output only a semi-colon separated sequence of strings. Do not write any text other than the sub-themes.`
+    content,
   };
 }
 

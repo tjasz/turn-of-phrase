@@ -4,7 +4,7 @@ import { getOpenAiClient, getResponse, systemPrompt } from "../openai";
 import getGenerationPrompt from "../openai/getGenerationPrompt";
 import { ChatCompletionMessageParam } from "openai/resources";
 
-function getPromptForDescription(title: string, description?: string): ChatCompletionMessageParam {
+export function getPromptForDescription(title: string, description?: string): ChatCompletionMessageParam {
   let content = `Provide a concise description for the theme titled "${title}".
 The description should be brief (one sentence) while highlighting the key aspects of the theme.
 Do not include any introductory phrases like "The theme is" or "This theme".
