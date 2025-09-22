@@ -1,17 +1,12 @@
 import { Box, IconButton, TextField } from "@mui/material";
-import { Delete, AutoAwesome } from "@mui/icons-material";
-import { useState } from "react";
+import { Delete } from "@mui/icons-material";
 
 interface IEditChallengesProps {
-  title: string;
-  description: string;
-  subThemes: string[];
-  mainPhrases: string[];
   challenges: Challenge[];
   setChallenges: (challenges: Challenge[]) => void;
 }
 
-const EditChallenges: React.FC<IEditChallengesProps> = ({ title, description, subThemes, mainPhrases, challenges, setChallenges }) => {
+const EditChallenges: React.FC<IEditChallengesProps> = ({ challenges, setChallenges }) => {
 
   return (
     <Box>

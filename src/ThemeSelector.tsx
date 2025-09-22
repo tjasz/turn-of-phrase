@@ -73,7 +73,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
     Promise.all(themePromises).then(results => {
       const loadedThemes: Theme[] = [];
       const errors: string[] = [];
-      results.forEach((result, i) => {
+      results.forEach((result) => {
         if (result && !result.error) {
           loadedThemes.push(result as Theme);
         } else {

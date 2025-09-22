@@ -1,6 +1,5 @@
 import { Box, IconButton, TextField } from "@mui/material";
-import { Delete, AutoAwesome } from "@mui/icons-material";
-import { useState } from "react";
+import { Delete } from "@mui/icons-material";
 
 interface IAddMainPhrasesProps {
   title: string;
@@ -10,7 +9,7 @@ interface IAddMainPhrasesProps {
   setMainPhrases: (mainPhrases: string[]) => void;
 }
 
-const AddMainPhrases: React.FC<IAddMainPhrasesProps> = ({ title, description, subThemes, mainPhrases, setMainPhrases }) => {
+const AddMainPhrases: React.FC<IAddMainPhrasesProps> = ({ mainPhrases, setMainPhrases }) => {
 
   return (
     <Box>

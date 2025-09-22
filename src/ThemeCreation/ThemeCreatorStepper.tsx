@@ -1,4 +1,4 @@
-import { Box, Button, Step, StepLabel, Stepper, TextField, Typography } from "@mui/material";
+import { Box, Step, StepLabel, Stepper, Typography } from "@mui/material";
 import { useState } from "react";
 import DefineTheme from "./DefineTheme";
 import SetSubThemes from "./SetSubThemes";
@@ -9,15 +9,6 @@ import useWindowWidth from "../useWindowWidth";
 interface IThemeCreatorStepperProps {
   onCreateTheme: (theme: Theme) => void;
   onCancel: () => void;
-}
-
-type ThemeRequest = {
-  Title: string;
-  Description?: string;
-  SubThemes: string[];
-  MainPhrases: string[];
-  Challenges: Challenge[];
-  OperationId: string;
 }
 
 const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateTheme, onCancel }) => {
@@ -171,7 +162,6 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
         <DefineTheme
           title={title}
           description={description}
-          subThemes={subThemes}
           setTitle={setTitle}
           setDescription={setDescription}
         />
@@ -195,10 +185,6 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
       )}
       {activeStep === 3 && (
         <EditChallenges
-          title={title}
-          description={description}
-          subThemes={subThemes}
-          mainPhrases={mainPhrases}
           challenges={challenges}
           setChallenges={setChallenges}
         />
