@@ -12,7 +12,8 @@ export async function getSubThemesFunction(request: HttpRequest, context: Invoca
   const generationPrompt = getGenerationPrompt(requestObject.Title, requestObject.Description);
   const subThemePrompt = getPromptForSubThemes(requestObject.Title, requestObject.Description);
   const subThemesResponse = await getResponse(client, [systemPrompt, generationPrompt, subThemePrompt]);
-  const subThemes = subThemesResponse.content.split(";").map(s => s.trim()).filter(s => s.length > 0);
+  const newSubThemes = subThemesResponse.content.split(";").map(s => s.trim()).filter(s => s.length > 0);
+  const subThemes = Array.from(new Set([...(requestObject.SubThemes || []), ...newSubThemes]));
 
   return {
     status: 200,
