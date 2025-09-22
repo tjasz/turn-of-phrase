@@ -10,81 +10,58 @@ interface ThemeSelectorProps {
 }
 
 const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => {
-  // Get built-in theme files
-  const themeModules = import.meta.glob('/public/themes/*.json');
-  const themeFiles = Object.keys(themeModules).map(path => path.split('/').pop()!);
-
   // Get localStorage themes
-  function getLocalThemes(): { key: string; theme: Theme }[] {
-    const themes: { key: string; theme: Theme }[] = [];
-    for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i);
-      if (key && key.startsWith('turn-of-phrase/theme:')) {
-        try {
-          const theme = JSON.parse(localStorage.getItem(key)!);
-          if (theme && theme.Title) {
-            themes.push({ key, theme });
-          }
-        } catch { }
+  function getLocalThemes(): Promise<Theme[]> {
+    const results: Theme[] = [];
+    return new Promise((resolve) => {
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith('turn-of-phrase/theme:')) {
+          try {
+            const theme = JSON.parse(localStorage.getItem(key)!);
+            if (theme && theme.Title) {
+              results.push(theme);
+            }
+          } catch { }
+        }
       }
-    }
-    return themes;
+      resolve(results);
+    });
+  }
+
+  // Get built-in themes
+  async function getBuiltInThemes(): Promise<Theme[]> {
+    const themeModules = import.meta.glob('/public/themes/*.json');
+    const themeFiles = Object.keys(themeModules).map(path => path.split('/').pop()!);
+    return Promise.all(themeFiles.map(async file => {
+      try {
+        const theme = await fetch(`${import.meta.env.BASE_URL}themes/${file}`)
+          .then(async res => {
+            if (!res.ok) throw new Error('Failed to load theme');
+            return await res.json() as Theme;
+          })
+        return theme;
+      } catch {
+        return null;
+      }
+    }).filter(p => p !== null)) as Promise<Theme[]>;
   }
 
   // Store all selectable themes: built-in and local
   const [creatingTheme, setCreatingTheme] = useState(false);
-  const [allThemes, setAllThemes] = useState<Array<{ type: 'default' | 'public' | 'local'; name: string; key?: string; file?: string; theme?: Theme }>>([]);
   const [selectedThemeIndices, setSelectedThemeIndices] = useState<Set<number>>(new Set([0]));
-  const [loadingThemes, setLoadingThemes] = useState(false);
-  const [themeErrors, setThemeErrors] = useState<string[]>([]);
+  const [loadingThemes, setLoadingThemes] = useState(true);
   const [themes, setThemes] = useState<Theme[]>([defaultTheme]);
 
   // On mount, populate allThemes
   useEffect(() => {
-    const localThemes = getLocalThemes();
-    const combined: Array<{ type: 'default' | 'public' | 'local'; name: string; key?: string; file?: string; theme?: Theme }> = [
-      { type: 'default', name: 'Default', theme: defaultTheme },
-      ...themeFiles.map(file => ({ type: 'public' as const, name: file.replace('.json', ''), file })),
-      ...localThemes.map(({ key, theme }) => ({ type: 'local' as const, name: theme.Title, key, theme }))
-    ];
-    setAllThemes(combined);
-  }, []);
-
-  // Load selected themes when selection changes
-  useEffect(() => {
-    if (allThemes.length === 0) return;
-    setLoadingThemes(true);
-    setThemes([]);
-    setThemeErrors([]);
-    const indices = Array.from(selectedThemeIndices);
-    const themePromises = indices.map(idx => {
-      const selected = allThemes[idx];
-      if (selected.type === 'public') {
-        return fetch(`${import.meta.env.BASE_URL}themes/${selected.file}`)
-          .then(res => {
-            if (!res.ok) throw new Error('Failed to load theme');
-            return res.json();
-          })
-          .catch(err => ({ error: err.message }));
-      } else {
-        return Promise.resolve(selected.theme!);
-      }
-    });
-    Promise.all(themePromises).then(results => {
-      const loadedThemes: Theme[] = [];
-      const errors: string[] = [];
-      results.forEach((result) => {
-        if (result && !result.error) {
-          loadedThemes.push(result as Theme);
-        } else {
-          errors.push(`Error loading theme: ${result.error}`);
-        }
-      });
-      setThemes(loadedThemes);
-      setThemeErrors(errors);
+    const promises = [getLocalThemes(), getBuiltInThemes()];
+    Promise.all(promises).then(([localThemes, builtInThemes]) => {
+      const combinedThemes = [defaultTheme, ...builtInThemes, ...localThemes];
+      setThemes(combinedThemes);
       setLoadingThemes(false);
     });
-  }, [selectedThemeIndices, allThemes]);
+  }, [creatingTheme]);
 
   const handleCheckboxChange = (idx: number) => {
     setSelectedThemeIndices(prev => {
@@ -103,7 +80,6 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
       onCreateTheme={theme => {
         setThemes(prev => [...prev, theme]);
         // Add new theme to allThemes and select it
-        setAllThemes(prev => [...prev, { type: 'local', name: theme.Title, theme }]);
         setSelectedThemeIndices(prev => new Set([...prev, prev.size]));
         setCreatingTheme(false);
       }}
@@ -116,10 +92,10 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
       <h2>Select Themes</h2>
       <div className="themeListContainer">
         <Grid container spacing={1}>
-          {allThemes.map((theme, idx) => (
+          {themes.map((theme, idx) => (
             <ThemeView
               key={idx}
-              theme={theme.theme || { Title: theme.name, Description: '', Challenges: [] }}
+              theme={theme}
               selected={selectedThemeIndices.has(idx)}
               onSelectedChange={() => handleCheckboxChange(idx)}
             />
@@ -130,11 +106,10 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
             </Card>
           </Grid>
         </Grid>
-        {allThemes.length === 0 && <p>No themes available.</p>}
+        {themes.length === 0 && <p>No themes available.</p>}
         {loadingThemes && <p>Loading themes...</p>}
-        {themeErrors.length > 0 && themeErrors.map((err, i) => <p key={i} style={{ color: 'red' }}>{err}</p>)}
       </div>
-      <button onClick={() => onSelectChallenges(themes.flatMap(t => t.Challenges))} disabled={themes.length === 0 || loadingThemes}>
+      <button onClick={() => onSelectChallenges(themes.filter((_, idx) => selectedThemeIndices.has(idx)).flatMap(t => t.Challenges))} disabled={themes.length === 0 || loadingThemes}>
         Confirm
       </button>
     </div>
