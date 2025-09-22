@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from "react";
-import ThemeCreator from "./ThemeCreator";
 import defaultTheme from "./defaultTheme";
 import ThemeCreatorStepper from "./ThemeCreation/ThemeCreatorStepper";
 import ThemeView from "./ThemeView";
