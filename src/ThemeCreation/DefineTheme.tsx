@@ -1,6 +1,5 @@
-import { AutoAwesome } from "@mui/icons-material";
-import { Box, CircularProgress, IconButton, TextField } from "@mui/material";
-import { useState } from "react";
+import { Box, TextField } from "@mui/material";
+import TextFieldWithAction from "./TextFieldWithAction";
 
 interface IDefineThemeProps {
   title: string;
@@ -18,7 +17,25 @@ const getDescriptionApiUrl = () => {
 };
 
 const DefineTheme: React.FC<IDefineThemeProps> = ({ title, description, setTitle, setDescription }) => {
-  const [loading, setLoading] = useState(false);
+  const handleGenerateDescription = async () => {
+    const response = await fetch(getDescriptionApiUrl(), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        Title: title,
+        Description: description,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to generate description");
+    }
+
+    const data = await response.json();
+    setDescription(data);
+  };
 
   return (
     <Box sx={{ mt: 2 }}>
@@ -30,52 +47,18 @@ const DefineTheme: React.FC<IDefineThemeProps> = ({ title, description, setTitle
         variant="outlined"
         margin="normal"
       />
-      <TextField
+      <TextFieldWithAction
         label="Description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
         fullWidth
         variant="outlined"
+        actionTitle="Generate description with AI"
+        onActionClick={handleGenerateDescription}
         margin="normal"
         multiline
         rows={4}
-        disabled={loading}
-        slotProps={{
-          input: {
-            endAdornment: (
-              loading
-                ? <CircularProgress />
-                : <IconButton disabled={loading || !title} title="Generate description with AI" onClick={async () => {
-                  setLoading(true);
-                  try {
-                    const response = await fetch(getDescriptionApiUrl(), {
-                      method: "POST",
-                      headers: {
-                        "Content-Type": "application/json",
-                      },
-                      body: JSON.stringify({
-                        Title: title,
-                        Description: description,
-                      }),
-                    });
-
-                    if (!response.ok) {
-                      throw new Error("Failed to generate description");
-                    }
-
-                    const data = await response.json();
-                    setDescription(data);
-                  } catch (error) {
-                    console.error("Error generating description:", error);
-                  } finally {
-                    setLoading(false);
-                  }
-                }}>
-                  <AutoAwesome />
-                </IconButton>
-            )
-          }
-        }}
+        disabled={!title.trim()}
       />
     </Box>
   );
