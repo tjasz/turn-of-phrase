@@ -27,7 +27,7 @@ const EditChallenges: React.FC<IEditChallengesProps> = ({ challenges, setChallen
           Related: [parts[1] || "", parts[2] || "", parts[3] || "", parts[4] || ""]
         };
       });
-      setChallenges(parsed);
+      setChallenges([...challenges, ...parsed]);
     };
     reader.readAsText(file);
     // Reset input so same file can be uploaded again if needed
