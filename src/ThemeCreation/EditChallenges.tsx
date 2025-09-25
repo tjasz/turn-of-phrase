@@ -11,8 +11,9 @@ const EditChallenges: React.FC<IEditChallengesProps> = ({ challenges, setChallen
   return (
     <Box>
       {challenges.map((challenge, i) => (
-        <Accordion key={i}>
+        <Accordion key={i} slotProps={{ transition: { unmountOnExit: true } }}>
           <AccordionSummary expandIcon={<ExpandMore />}>
+            {i + 1}.&nbsp;
             {challenge.Main
               ? `${challenge.Main}${challenge.Related.filter(r => r.trim() !== "").length ? ` - (${challenge.Related.filter(r => r.trim() !== "").join(", ")})` : ""}`
               : "New Challenge"}
