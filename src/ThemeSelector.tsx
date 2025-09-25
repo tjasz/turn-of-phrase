@@ -101,7 +101,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
             />
           ))}
           <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 2 }}>
-            <Card onClick={() => setCreatingTheme(true)} style={{ cursor: 'pointer', height: '100%', backgroundColor: 'var(--secondary)', color: 'var(--accent)' }}>
+            <Card onClick={() => setCreatingTheme(true)} style={{ cursor: 'pointer', height: '100%', color: 'var(--accent)' }}>
               <CardHeader title="Create New Theme" />
             </Card>
           </Grid>

@@ -160,3 +160,7 @@ footer p {
   width: 100%;
   resize: vertical;
 }
+
+.MuiPaper-root {
+  background-color: var(--secondary) !important;
+}
