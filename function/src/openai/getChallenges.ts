@@ -33,17 +33,17 @@ Do not include additional text, even to explain or apologize for mistakes.`
   };
 }
 
-export function getChallengesPrompt(mainPhrases: string[]): ChatCompletionMessageParam {
+export function getChallengesPrompt(partialChallenges: Challenge[]): ChatCompletionMessageParam {
   return {
     role: "user",
-    content: `For each of these ${mainPhrases.length} main phrases: "${mainPhrases.join('", "')}",
-generate a Phrase Challenge with the following properties:
-{
-  "Main": "<main_phrase>",
-  "Related": ["<related_phrase_1>", "<related_phrase_2>", "<related_phrase_3>", "<related_phrase_4>"]
-}
+    content: `Complete this set of partial challenges.
+The main phrase is provided, but one or more of the related phrases are missing.
+For each challenge, generate any missing related phrases so that each challenge has exactly 4 related phrases.
 
-${finalOutputGuidance}`,
+${finalOutputGuidance}
+
+Here are the partial challenges to complete:
+${JSON.stringify(partialChallenges, null, 2)}`,
   };
 }
 
@@ -52,7 +52,7 @@ export async function getChallenges(
   messages: ChatCompletionMessageParam[],
   getResponse: (messages: ChatCompletionMessageParam[]) => Promise<ChatCompletionMessage>
 ): Promise<[Challenge[], ChallengeErrors[]]> {
-  const promptForChallenges = getChallengesPrompt(mainPhrases);
+  const promptForChallenges = getChallengesPrompt(mainPhrases.map(mp => ({ Main: mp, Related: [] })));
   messages.push(promptForChallenges);
 
   var challengeResponse = await getResponse(messages);

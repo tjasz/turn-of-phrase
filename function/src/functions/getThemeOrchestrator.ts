@@ -5,6 +5,7 @@ import { getMainPhrasePrompt } from "../openai/getMainPhrases";
 import { getChallengesPrompt } from "../openai/getChallenges";
 import getGenerationPrompt from "../openai/getGenerationPrompt";
 import { getPromptForDescription } from "./getDescription";
+import partitionArray from "../partitionArray";
 
 const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (context) {
   // Get input request object
@@ -13,7 +14,7 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
     Title: input.Title,
     Description: input.Description,
     SubThemes: input.SubThemes || [],
-    MainPhrases: input.MainPhrases || [],
+    MainPhrases: [...input.MainPhrases || [], ...input.Challenges?.map(c => c.Main) || []],
   };
   context.df.setCustomStatus({ message: "Started", data: result });
 
@@ -44,7 +45,7 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
   // If fewer than 100 main phrases, generate more
   const targetChallengeCount = 100;
   if (result.MainPhrases!.length < targetChallengeCount) {
-    const targetCount = Math.ceil(targetChallengeCount / result.SubThemes.length);
+    const targetCount = Math.ceil((targetChallengeCount - result.MainPhrases!.length) / result.SubThemes.length);
     for (let i = 0; i < result.SubThemes.length; i++) {
       const subTheme = result.SubThemes[i];
       context.df.setCustomStatus({
@@ -66,26 +67,28 @@ const orchestrator = df.app.orchestration("getThemeOrchestrator", function* (con
 
   // Step 3: Get Challenges
   const batchLength = 5;
-  let challenges: Challenge[] = input.Challenges || [];
-  for (let i = 0; i < result.MainPhrases.length; i += batchLength) {
-    const mainPhrase = result.MainPhrases[i];
+  let phrasesInChallenges = new Set(input.Challenges?.map(c => c.Main) || []);
+  let [completeChallenges, incompleteChallenges] = partitionArray(input.Challenges || [], c => c.Related.filter(r => r.trim().length > 0).length >= 4);
+  incompleteChallenges = [...incompleteChallenges, ...result.MainPhrases.filter(mp => !phrasesInChallenges.has(mp)).map(mp => ({ Main: mp, Related: [] }))];
+  for (let i = 0; i < incompleteChallenges.length; i += batchLength) {
+    const mainPhrase = incompleteChallenges[i].Main;
     context.df.setCustomStatus({
-      message: `Generating challenges for main phrase ${i + 1}/${result.MainPhrases.length}: "${mainPhrase}"...`,
+      message: `Generating challenges for main phrase ${i + 1}/${incompleteChallenges.length}: "${mainPhrase}"...`,
       data: result,
     });
-    const challengePrompt = getChallengesPrompt(result.MainPhrases.slice(i, i + batchLength));
+    const challengePrompt = getChallengesPrompt(incompleteChallenges.slice(i, i + batchLength));
     const challengeResponse = yield context.df.callActivity("getResponseActivity", { messages: [systemPrompt, generationPrompt, challengePrompt] });
-    challenges = [...challenges, ...JSON.parse(challengeResponse.content!)];
-    context.df.setCustomStatus({ message: `Generated ${challenges.length}/${result.MainPhrases.length} challenges`, data: result });
+    completeChallenges = [...completeChallenges, ...JSON.parse(challengeResponse.content!)];
+    context.df.setCustomStatus({ message: `Generated ${completeChallenges.length}/${result.MainPhrases.length} challenges`, data: result });
   }
-  context.df.setCustomStatus({ message: `Generated ${challenges.length} challenges`, data: result });
+  context.df.setCustomStatus({ message: `Generated ${completeChallenges.length} challenges`, data: result });
 
   return {
     Title: result.Title,
     Description: result.Description,
     SubThemes: result.SubThemes,
     MainPhrases: result.MainPhrases,
-    Challenges: challenges,
+    Challenges: completeChallenges,
   };
 });
 
