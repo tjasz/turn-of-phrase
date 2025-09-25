@@ -215,20 +215,18 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
         >
           Next
         </Button>
-        {challenges?.length > 0
-          ? <Button
-            onClick={handleComplete}
-            disabled={!title}
-          >
-            Complete
-          </Button>
-          : <Button
-            onClick={handleGenerate}
-            disabled={!title}
-          >
-            Generate
-          </Button>
-        }
+        <Button
+          onClick={handleGenerate}
+          disabled={!title}
+        >
+          Generate
+        </Button>
+        <Button
+          onClick={handleComplete}
+          disabled={!title || loadingTheme || challenges.length === 0}
+        >
+          Save
+        </Button>
       </Box>
     </div>
   );
