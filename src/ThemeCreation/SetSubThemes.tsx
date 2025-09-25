@@ -1,4 +1,4 @@
-import { Box, IconButton, TextField } from "@mui/material";
+import { Box, Button, IconButton, TextField } from "@mui/material";
 import { Delete, AutoAwesome } from "@mui/icons-material";
 import { useState } from "react";
 
@@ -103,12 +103,12 @@ const SetSubThemes: React.FC<ISetSubThemesProps> = ({ title, description, subThe
           />
         </Box>
       ))}
-      <button onClick={handleFetchSubThemes} disabled={loading || !title} title="Generate Sub-themes">
+      <Button onClick={handleFetchSubThemes} disabled={loading || !title} title="Generate Sub-themes">
         Generate
-      </button>
-      <button onClick={() => setSubThemes([...subThemes, ""])} title="Add Sub-Theme">
+      </Button>
+      <Button onClick={() => setSubThemes([...subThemes, ""])} title="Add Sub-Theme">
         Add
-      </button>
+      </Button>
     </Box>
   );
 }

@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Box, IconButton, TextField } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, IconButton, TextField } from "@mui/material";
 import { Delete, ExpandMore } from "@mui/icons-material";
 
 interface IEditChallengesProps {
@@ -43,9 +43,9 @@ const EditChallenges: React.FC<IEditChallengesProps> = ({ challenges, setChallen
           </AccordionDetails>
         </Accordion>
       ))}
-      <button onClick={() => setChallenges([...challenges, { Main: "", Related: ["", "", "", ""] }])} title="Add Challenge">
+      <Button onClick={() => setChallenges([...challenges, { Main: "", Related: ["", "", "", ""] }])} title="Add Challenge">
         Add
-      </button>
+      </Button>
     </Box>
   );
 }

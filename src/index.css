@@ -66,37 +66,3 @@ h5 {
 h6 {
   color: var(--accent);
 }
-
-button {
-  border-radius: 8px;
-  border: 2px solid var(--text);
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: var(--accent);
-  color: var(--accent-text);
-  text-shadow: var(--shadowColor) 0 0 4px;
-  cursor: pointer;
-  transition: background-color 0.25s;
-  transition: color 0.25s;
-}
-
-button:disabled {
-  background-color: var(--secondary);
-  cursor: not-allowed;
-  border: 2px solid transparent;
-}
-
-button:hover {
-  background-color: var(--accent-hover);
-}
-
-button:disabled:hover {
-  background-color: var(--secondary);
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}

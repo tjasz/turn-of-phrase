@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import defaultTheme from "./defaultTheme";
 import ThemeCreatorStepper from "./ThemeCreation/ThemeCreatorStepper";
 import ThemeView from "./ThemeView";
-import { Card, CardHeader, Grid } from "@mui/material";
+import { Button, Card, CardHeader, Grid } from "@mui/material";
 
 interface ThemeSelectorProps {
   onSelectChallenges: (challenges: Challenge[]) => void;
@@ -109,9 +109,9 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
         {themes.length === 0 && <p>No themes available.</p>}
         {loadingThemes && <p>Loading themes...</p>}
       </div>
-      <button onClick={() => onSelectChallenges(themes.filter((_, idx) => selectedThemeIndices.has(idx)).flatMap(t => t.Challenges))} disabled={themes.length === 0 || loadingThemes}>
+      <Button onClick={() => onSelectChallenges(themes.filter((_, idx) => selectedThemeIndices.has(idx)).flatMap(t => t.Challenges))} disabled={themes.length === 0 || loadingThemes}>
         Confirm
-      </button>
+      </Button>
     </div>
   );
 };

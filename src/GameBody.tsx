@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React from "react";
 import type { ReactNode } from "react";
 
@@ -32,9 +33,14 @@ const GameBody: React.FC<GameBodyProps> = ({ title, actions, children }) => {
       </div>
       <div className="actions">
         {actions.map((a, idx) => (
-          <button key={idx} onClick={a.action} style={{ width: `${buttonWidth}%` }}>
+          <Button
+            key={idx}
+            onClick={a.action}
+            style={{ width: `${buttonWidth}%` }}
+            variant="contained"
+          >
             {a.label}
-          </button>
+          </Button>
         ))}
       </div>
     </div>

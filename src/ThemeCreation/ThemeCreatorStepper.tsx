@@ -1,4 +1,4 @@
-import { Box, Step, StepLabel, Stepper, Typography } from "@mui/material";
+import { Box, Button, Step, StepLabel, Stepper, Typography } from "@mui/material";
 import { useState } from "react";
 import DefineTheme from "./DefineTheme";
 import SetSubThemes from "./SetSubThemes";
@@ -196,38 +196,38 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
         />
       )}
       <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-        <button
+        <Button
           onClick={onCancel}
           disabled={loadingTheme}
         >
           Cancel
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={handleBack}
           disabled={activeStep === 0}
         >
           Back
-        </button>
+        </Button>
         <Box sx={{ flex: '1 1 auto' }} />
-        <button
+        <Button
           onClick={handleNext}
           disabled={activeStep === stepLabels.length - 1 || activeStep === 0 && !title}
         >
           Next
-        </button>
+        </Button>
         {challenges?.length > 0
-          ? <button
+          ? <Button
             onClick={handleComplete}
             disabled={!title}
           >
             Complete
-          </button>
-          : <button
+          </Button>
+          : <Button
             onClick={handleGenerate}
             disabled={!title}
           >
             Generate
-          </button>
+          </Button>
         }
       </Box>
     </div>

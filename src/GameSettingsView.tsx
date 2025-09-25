@@ -2,6 +2,7 @@ import type React from "react";
 import { useState } from "react";
 import ThemeSelector from "./ThemeSelector";
 import validateChallenges from "./validateChallenges";
+import { Button } from "@mui/material";
 
 const TURN_TIME_OPTIONS = [10, 20, 30, 40, 50, 60];
 
@@ -33,7 +34,9 @@ export const GameSettingsView: React.FC<GameSettingsProps> = ({ currentSettings,
         : <>
           <div>
             <p>Playing with {challenges.length} challenges.</p>
-            <a href="#" onClick={e => { e.preventDefault(); setSelectingThemes(true); }}>Select Themes</a>
+            <Button onClick={e => { e.preventDefault(); setSelectingThemes(true); }}>
+              Select Themes
+            </Button>
           </div>
           <div>
             <label>Number of Teams: </label>
@@ -78,14 +81,16 @@ export const GameSettingsView: React.FC<GameSettingsProps> = ({ currentSettings,
               <option value={-2}>-2</option>
             </select>
           </div>
-          <button className="start-btn" onClick={() => onConfirm({
+          <Button onClick={() => onConfirm({
             numberOfTeams,
             numberOfPlayersByTeam,
             turnTimeSeconds,
             pointsToWin,
             skipPenalty,
             theme: { Title: "Custom", Description: "Custom set of challenges", Challenges: challenges }
-          })} disabled={challenges.length === 0}>Start Game</button>
+          })} disabled={challenges.length === 0}>
+            Start Game
+          </Button>
         </>}
     </div>
   );

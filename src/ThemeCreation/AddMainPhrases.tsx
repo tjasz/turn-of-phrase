@@ -1,4 +1,4 @@
-import { Box, IconButton, TextField } from "@mui/material";
+import { Box, Button, IconButton, TextField } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 
 interface IAddMainPhrasesProps {
@@ -36,9 +36,9 @@ const AddMainPhrases: React.FC<IAddMainPhrasesProps> = ({ mainPhrases, setMainPh
           />
         </Box>
       ))}
-      <button onClick={() => setMainPhrases([...mainPhrases, ""])} title="Add Main Phrase">
+      <Button onClick={() => setMainPhrases([...mainPhrases, ""])} title="Add Main Phrase">
         Add
-      </button>
+      </Button>
     </Box>
   );
 }
