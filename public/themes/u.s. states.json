@@ -1,0 +1,1374 @@
+{
+  "Title": "U.S. States and Cities",
+  "Description": "U.S. States and capitals, plus the largest cities in the country and each state.",
+  "Challenges": [
+    {
+      "Main": "Alaska",
+      "Related": [
+        "Largest State",
+        "Northern Lights",
+        "Denali",
+        "Oil Industry"
+      ]
+    },
+    {
+      "Main": "Alabama",
+      "Related": [
+        "Civil Rights",
+        "Birmingham",
+        "Cotton",
+        "Appalachian Mountains"
+      ]
+    },
+    {
+      "Main": "Arkansas",
+      "Related": [
+        "Little Rock",
+        "Ozarks",
+        "Delta Region",
+        "Natural State"
+      ]
+    },
+    {
+      "Main": "Arizona",
+      "Related": [
+        "Grand Canyon",
+        "Desert",
+        "Phoenix",
+        "Cactus"
+      ]
+    },
+    {
+      "Main": "California",
+      "Related": [
+        "Hollywood",
+        "Silicon Valley",
+        "San Francisco",
+        "Gold Rush"
+      ]
+    },
+    {
+      "Main": "Colorado",
+      "Related": [
+        "Rocky Mountains",
+        "Denver",
+        "Skiing",
+        "Mile High"
+      ]
+    },
+    {
+      "Main": "Connecticut",
+      "Related": [
+        "New England",
+        "Hartford",
+        "Yale University",
+        "Insurance Capital"
+      ]
+    },
+    {
+      "Main": "Delaware",
+      "Related": [
+        "First State",
+        "Wilmington",
+        "Corporate Law",
+        "Mid-Atlantic"
+      ]
+    },
+    {
+      "Main": "Florida",
+      "Related": [
+        "Miami",
+        "Everglades",
+        "Disney World",
+        "Sunshine State"
+      ]
+    },
+    {
+      "Main": "Georgia",
+      "Related": [
+        "Atlanta",
+        "Peach State",
+        "Savannah",
+        "Civil Rights"
+      ]
+    },
+    {
+      "Main": "Hawaii",
+      "Related": [
+        "Aloha State",
+        "Volcanoes",
+        "Pacific Islands",
+        "Honolulu"
+      ]
+    },
+    {
+      "Main": "Iowa",
+      "Related": [
+        "Cornfields",
+        "Midwest",
+        "Des Moines",
+        "Agriculture"
+      ]
+    },
+    {
+      "Main": "Idaho",
+      "Related": [
+        "Potatoes",
+        "Boise",
+        "Mountain State",
+        "Snake River"
+      ]
+    },
+    {
+      "Main": "Illinois",
+      "Related": [
+        "Chicago",
+        "Midwest",
+        "Great Lakes",
+        "Lincoln"
+      ]
+    },
+    {
+      "Main": "Indiana",
+      "Related": [
+        "Hoosier State",
+        "Indianapolis",
+        "Raceway",
+        "Midwest"
+      ]
+    },
+    {
+      "Main": "Kansas",
+      "Related": [
+        "Sunflower State",
+        "Tornado Alley",
+        "Wheat Fields",
+        "Midwest"
+      ]
+    },
+    {
+      "Main": "Kentucky",
+      "Related": [
+        "Bluegrass",
+        "Derby",
+        "Bourbon",
+        "Appalachia"
+      ]
+    },
+    {
+      "Main": "Louisiana",
+      "Related": [
+        "Bayou",
+        "Cajun",
+        "Jazz",
+        "Mardi Gras"
+      ]
+    },
+    {
+      "Main": "Massachusetts",
+      "Related": [
+        "Pilgrims",
+        "Boston",
+        "Harvard",
+        "Revolution"
+      ]
+    },
+    {
+      "Main": "Maryland",
+      "Related": [
+        "Chesapeake",
+        "Crabs",
+        "Annapolis",
+        "Old Line"
+      ]
+    },
+    {
+      "Main": "Maine",
+      "Related": [
+        "Lobster",
+        "Pine Tree",
+        "Acadia",
+        "New England"
+      ]
+    },
+    {
+      "Main": "Michigan",
+      "Related": [
+        "Great Lakes",
+        "Detroit",
+        "Automotive",
+        "Upper Peninsula"
+      ]
+    },
+    {
+      "Main": "Minnesota",
+      "Related": [
+        "Twin Cities",
+        "Lakes",
+        "Mall of America",
+        "North Star"
+      ]
+    },
+    {
+      "Main": "Missouri",
+      "Related": [
+        "Show Me",
+        "St. Louis",
+        "Ozarks",
+        "Gateway Arch"
+      ]
+    },
+    {
+      "Main": "Mississippi",
+      "Related": [
+        "Delta",
+        "River",
+        "Blues",
+        "Magnolia"
+      ]
+    },
+    {
+      "Main": "Montana",
+      "Related": [
+        "Big Sky",
+        "Rocky Mountains",
+        "Yellowstone",
+        "Bozeman"
+      ]
+    },
+    {
+      "Main": "North Carolina",
+      "Related": [
+        "Charlotte",
+        "Research Triangle",
+        "Outer Banks",
+        "Raleigh"
+      ]
+    },
+    {
+      "Main": "North Dakota",
+      "Related": [
+        "Fargo",
+        "Great Plains",
+        "Bismarck",
+        "Badlands"
+      ]
+    },
+    {
+      "Main": "Nebraska",
+      "Related": [
+        "Cornhusker",
+        "Omaha",
+        "Plains",
+        "Lincoln"
+      ]
+    },
+    {
+      "Main": "New Hampshire",
+      "Related": [
+        "White Mountains",
+        "Granite State",
+        "Concord",
+        "Lake Winnipesaukee"
+      ]
+    },
+    {
+      "Main": "New Jersey",
+      "Related": [
+        "Garden State",
+        "Atlantic City",
+        "Trenton",
+        "Philadelphia Neighbor"
+      ]
+    },
+    {
+      "Main": "New Mexico",
+      "Related": [
+        "Santa Fe",
+        "Desert Southwest",
+        "Albuquerque",
+        "Land of Enchantment"
+      ]
+    },
+    {
+      "Main": "Nevada",
+      "Related": [
+        "Las Vegas",
+        "Silver State",
+        "Reno",
+        "Desert"
+      ]
+    },
+    {
+      "Main": "New York",
+      "Related": [
+        "Empire State",
+        "Manhattan",
+        "Statue of Liberty",
+        "Albany"
+      ]
+    },
+    {
+      "Main": "Ohio",
+      "Related": [
+        "Buckeye State",
+        "Columbus",
+        "Cleveland",
+        "Great Lakes"
+      ]
+    },
+    {
+      "Main": "Oklahoma",
+      "Related": [
+        "Tornado Alley",
+        "Native American",
+        "Oil Industry",
+        "Great Plains"
+      ]
+    },
+    {
+      "Main": "Oregon",
+      "Related": [
+        "Pacific Northwest",
+        "Portland",
+        "Mount Hood",
+        "Willamette Valley"
+      ]
+    },
+    {
+      "Main": "Pennsylvania",
+      "Related": [
+        "Liberty Bell",
+        "Philadelphia",
+        "Keystone State",
+        "Appalachian Mountains"
+      ]
+    },
+    {
+      "Main": "Rhode Island",
+      "Related": [
+        "Smallest State",
+        "Newport",
+        "Narragansett Bay",
+        "Providence"
+      ]
+    },
+    {
+      "Main": "South Carolina",
+      "Related": [
+        "Charleston",
+        "Myrtle Beach",
+        "Palmetto State",
+        "Atlantic Coast"
+      ]
+    },
+    {
+      "Main": "South Dakota",
+      "Related": [
+        "Mount Rushmore",
+        "Badlands",
+        "Sioux",
+        "Pierre"
+      ]
+    },
+    {
+      "Main": "Tennessee",
+      "Related": [
+        "Nashville",
+        "Country Music",
+        "Smoky Mountains",
+        "Memphis"
+      ]
+    },
+    {
+      "Main": "Texas",
+      "Related": [
+        "Lone Star",
+        "Houston",
+        "Ranching",
+        "Oil"
+      ]
+    },
+    {
+      "Main": "Utah",
+      "Related": [
+        "Salt Lake",
+        "Mormons",
+        "Zion",
+        "Desert"
+      ]
+    },
+    {
+      "Main": "Virginia",
+      "Related": [
+        "Jamestown",
+        "Richmond",
+        "Shenandoah",
+        "Colonial"
+      ]
+    },
+    {
+      "Main": "Vermont",
+      "Related": [
+        "Green Mountains",
+        "Maple Syrup",
+        "New England",
+        "Montpelier"
+      ]
+    },
+    {
+      "Main": "Washington",
+      "Related": [
+        "Seattle",
+        "Evergreen State",
+        "Puget Sound",
+        "Mount Rainier"
+      ]
+    },
+    {
+      "Main": "Wisconsin",
+      "Related": [
+        "Cheese",
+        "Milwaukee",
+        "Dairy State",
+        "Great Lakes"
+      ]
+    },
+    {
+      "Main": "West Virginia",
+      "Related": [
+        "Appalachian Mountains",
+        "Charleston",
+        "Coal Mining",
+        "Mountain State"
+      ]
+    },
+    {
+      "Main": "Wyoming",
+      "Related": [
+        "Yellowstone",
+        "Jackson Hole",
+        "Cowboy",
+        "Big Horn Mountains"
+      ]
+    },
+    {
+      "Main": "Montgomery",
+      "Related": [
+        "Alabama",
+        "Capital City",
+        "Civil Rights",
+        "Riverfront"
+      ]
+    },
+    {
+      "Main": "Juneau",
+      "Related": [
+        "Alaska",
+        "Capital City",
+        "Glaciers",
+        "Inside Passage"
+      ]
+    },
+    {
+      "Main": "Phoenix",
+      "Related": [
+        "Arizona",
+        "Desert",
+        "Capital City",
+        "Valley"
+      ]
+    },
+    {
+      "Main": "Little Rock",
+      "Related": [
+        "Arkansas",
+        "Capital City",
+        "River",
+        "Civil Rights"
+      ]
+    },
+    {
+      "Main": "Sacramento",
+      "Related": [
+        "California",
+        "Capital City",
+        "Gold Rush",
+        "Delta"
+      ]
+    },
+    {
+      "Main": "Denver",
+      "Related": [
+        "Colorado",
+        "Mile High",
+        "Rocky Mountains",
+        "Capital City"
+      ]
+    },
+    {
+      "Main": "Hartford",
+      "Related": [
+        "Connecticut",
+        "Insurance Capital",
+        "Charter Oak",
+        "New England"
+      ]
+    },
+    {
+      "Main": "Dover",
+      "Related": [
+        "Delaware",
+        "First State",
+        "State Capital",
+        "Colonial"
+      ]
+    },
+    {
+      "Main": "Tallahassee",
+      "Related": [
+        "Florida",
+        "State Capital",
+        "Southeast",
+        "Seminole"
+      ]
+    },
+    {
+      "Main": "Atlanta",
+      "Related": [
+        "Georgia",
+        "Civil Rights",
+        "Hartsfield-Jackson",
+        "Peachtree"
+      ]
+    },
+    {
+      "Main": "Honolulu",
+      "Related": [
+        "Hawaii",
+        "Pacific Ocean",
+        "Island",
+        "Capital City"
+      ]
+    },
+    {
+      "Main": "Boise",
+      "Related": [
+        "Idaho",
+        "Snake River",
+        "Capital City",
+        "Northwest"
+      ]
+    },
+    {
+      "Main": "Springfield",
+      "Related": [
+        "Illinois",
+        "Abraham Lincoln",
+        "Capital City",
+        "Midwest"
+      ]
+    },
+    {
+      "Main": "Indianapolis",
+      "Related": [
+        "Indiana",
+        "Race Track",
+        "Capital City",
+        "Midwest"
+      ]
+    },
+    {
+      "Main": "Des Moines",
+      "Related": [
+        "Iowa",
+        "Capital City",
+        "Midwest",
+        "Rivers"
+      ]
+    },
+    {
+      "Main": "Topeka",
+      "Related": [
+        "Kansas",
+        "Sunflower State",
+        "Capitol",
+        "Midwest"
+      ]
+    },
+    {
+      "Main": "Frankfort",
+      "Related": [
+        "Kentucky",
+        "Bluegrass State",
+        "State Capital",
+        "Ohio River"
+      ]
+    },
+    {
+      "Main": "Baton Rouge",
+      "Related": [
+        "Louisiana",
+        "Pelican State",
+        "Mississippi River",
+        "Capital City"
+      ]
+    },
+    {
+      "Main": "Augusta",
+      "Related": [
+        "Maine",
+        "Pine Tree State",
+        "State Capital",
+        "Golf Tournament"
+      ]
+    },
+    {
+      "Main": "Annapolis",
+      "Related": [
+        "Maryland",
+        "Chesapeake Bay",
+        "State Capital",
+        "Naval Academy"
+      ]
+    },
+    {
+      "Main": "Boston",
+      "Related": [
+        "Massachusetts",
+        "American Revolution",
+        "Harvard University",
+        "Freedom Trail"
+      ]
+    },
+    {
+      "Main": "Lansing",
+      "Related": [
+        "Michigan",
+        "State Capital",
+        "Automotive Industry",
+        "Midwest"
+      ]
+    },
+    {
+      "Main": "Saint Paul",
+      "Related": [
+        "Minnesota",
+        "Twin Cities",
+        "Mississippi River",
+        "State Capital"
+      ]
+    },
+    {
+      "Main": "Jackson",
+      "Related": [
+        "Mississippi",
+        "State Capital",
+        "Mississippi River",
+        "Civil Rights"
+      ]
+    },
+    {
+      "Main": "Jefferson City",
+      "Related": [
+        "Missouri",
+        "State Capital",
+        "Missouri River",
+        "Midwestern"
+      ]
+    },
+    {
+      "Main": "Helena",
+      "Related": [
+        "Montana",
+        "State Capital",
+        "Gold Rush",
+        "Rocky Mountains"
+      ]
+    },
+    {
+      "Main": "Lincoln",
+      "Related": [
+        "Nebraska",
+        "State Capital",
+        "Prairie",
+        "Cornhusker"
+      ]
+    },
+    {
+      "Main": "Carson City",
+      "Related": [
+        "Nevada",
+        "State Capital",
+        "Silver State",
+        "Sierra Nevada"
+      ]
+    },
+    {
+      "Main": "Concord",
+      "Related": [
+        "New Hampshire",
+        "State Capital",
+        "Revolutionary War",
+        "White Mountains"
+      ]
+    },
+    {
+      "Main": "Trenton",
+      "Related": [
+        "New Jersey",
+        "State Capital",
+        "Delaware River",
+        "Revolutionary Battle"
+      ]
+    },
+    {
+      "Main": "Santa Fe",
+      "Related": [
+        "New Mexico",
+        "Capital City",
+        "Adobe Architecture",
+        "Art Colony"
+      ]
+    },
+    {
+      "Main": "Albany",
+      "Related": [
+        "New York",
+        "Capital City",
+        "Hudson River",
+        "State Government"
+      ]
+    },
+    {
+      "Main": "Raleigh",
+      "Related": [
+        "North Carolina",
+        "Research Triangle",
+        "Capital City",
+        "Technology Hub"
+      ]
+    },
+    {
+      "Main": "Bismarck",
+      "Related": [
+        "North Dakota",
+        "Capital City",
+        "Missouri River",
+        "Prairie"
+      ]
+    },
+    {
+      "Main": "Columbus",
+      "Related": [
+        "Ohio",
+        "Capital City",
+        "Ohio State",
+        "Scioto River"
+      ]
+    },
+    {
+      "Main": "Oklahoma City",
+      "Related": [
+        "Oklahoma",
+        "Capital",
+        "Midwest",
+        "Thunder"
+      ]
+    },
+    {
+      "Main": "Salem",
+      "Related": [
+        "Massachusetts",
+        "Witch Trials",
+        "Historic",
+        "Colonial"
+      ]
+    },
+    {
+      "Main": "Harrisburg",
+      "Related": [
+        "Pennsylvania",
+        "Capital",
+        "Susquehanna River",
+        "State Government"
+      ]
+    },
+    {
+      "Main": "Providence",
+      "Related": [
+        "Rhode Island",
+        "Capital",
+        "Colonial",
+        "Brown University"
+      ]
+    },
+    {
+      "Main": "Columbia",
+      "Related": [
+        "South Carolina",
+        "Capital",
+        "University",
+        "Midlands"
+      ]
+    },
+    {
+      "Main": "Pierre",
+      "Related": [
+        "South Dakota",
+        "Capital",
+        "Missouri River",
+        "Midwest"
+      ]
+    },
+    {
+      "Main": "Nashville",
+      "Related": [
+        "Tennessee",
+        "Country Music",
+        "Music City",
+        "Grand Ole Opry"
+      ]
+    },
+    {
+      "Main": "Austin",
+      "Related": [
+        "Texas",
+        "Live Music",
+        "Capital City",
+        "Silicon Hills"
+      ]
+    },
+    {
+      "Main": "Salt Lake City",
+      "Related": [
+        "Utah",
+        "Great Salt Lake",
+        "Mormon",
+        "Winter Olympics"
+      ]
+    },
+    {
+      "Main": "Montpelier",
+      "Related": [
+        "Vermont",
+        "Smallest Capital",
+        "Green Mountains",
+        "New England"
+      ]
+    },
+    {
+      "Main": "Richmond",
+      "Related": [
+        "Virginia",
+        "Capital City",
+        "James River",
+        "Civil War"
+      ]
+    },
+    {
+      "Main": "Olympia",
+      "Related": [
+        "Washington",
+        "State Capital",
+        "Puget Sound",
+        "Government"
+      ]
+    },
+    {
+      "Main": "Charleston",
+      "Related": [
+        "South Carolina",
+        "Historic",
+        "Harbor",
+        "Civil War"
+      ]
+    },
+    {
+      "Main": "Madison",
+      "Related": [
+        "Wisconsin",
+        "State Capital",
+        "University",
+        "Lakes"
+      ]
+    },
+    {
+      "Main": "Cheyenne",
+      "Related": [
+        "Wyoming",
+        "State Capital",
+        "Frontier Days",
+        "Railroad"
+      ]
+    },
+    {
+      "Main": "Hunstville",
+      "Related": [
+        "Alabama",
+        "Rocket City",
+        "NASA",
+        "Space Center"
+      ]
+    },
+    {
+      "Main": "Anchorage",
+      "Related": [
+        "Alaska",
+        "Largest City",
+        "Northern Lights",
+        "Glaciers"
+      ]
+    },
+    {
+      "Main": "Los Angeles",
+      "Related": [
+        "California",
+        "Hollywood",
+        "Pacific Coast",
+        "Entertainment"
+      ]
+    },
+    {
+      "Main": "Bridgeport",
+      "Related": [
+        "Connecticut",
+        "Seaside",
+        "Historic",
+        "Port City"
+      ]
+    },
+    {
+      "Main": "Wilmington",
+      "Related": [
+        "Delaware",
+        "Riverfront",
+        "Historic District",
+        "Port"
+      ]
+    },
+    {
+      "Main": "Jacksonville",
+      "Related": [
+        "Florida",
+        "St. Johns River",
+        "Largest City",
+        "Atlantic Coast"
+      ]
+    },
+    {
+      "Main": "Chicago",
+      "Related": [
+        "Illinois",
+        "Windy City",
+        "Lake Michigan",
+        "Skyscrapers"
+      ]
+    },
+    {
+      "Main": "Wichita",
+      "Related": [
+        "Kansas",
+        "Aircraft Industry",
+        "Arkansas River",
+        "Midwest"
+      ]
+    },
+    {
+      "Main": "Louisville",
+      "Related": [
+        "Kentucky",
+        "Derby",
+        "Ohio River",
+        "Bourbon"
+      ]
+    },
+    {
+      "Main": "New Orleans",
+      "Related": [
+        "Louisiana",
+        "Mardi Gras",
+        "French Quarter",
+        "Jazz"
+      ]
+    },
+    {
+      "Main": "Portland",
+      "Related": [
+        "Oregon",
+        "Rose City",
+        "Willamette River",
+        "Pacific Northwest"
+      ]
+    },
+    {
+      "Main": "Baltimore",
+      "Related": [
+        "Maryland",
+        "Inner Harbor",
+        "Crab Cakes",
+        "Fort McHenry"
+      ]
+    },
+    {
+      "Main": "Detroit",
+      "Related": [
+        "Michigan",
+        "Motor City",
+        "Automobile Industry",
+        "Great Lakes"
+      ]
+    },
+    {
+      "Main": "Minneapolis",
+      "Related": [
+        "Minnesota",
+        "Twin Cities",
+        "Mississippi River",
+        "Mall of America"
+      ]
+    },
+    {
+      "Main": "Kansas City",
+      "Related": [
+        "Missouri",
+        "Barbecue",
+        "Jazz",
+        "Plaza"
+      ]
+    },
+    {
+      "Main": "Billings",
+      "Related": [
+        "Montana",
+        "Yellowstone River",
+        "Largest City",
+        "Energy Industry"
+      ]
+    },
+    {
+      "Main": "Omaha",
+      "Related": [
+        "Nebraska",
+        "Midwest",
+        "Buffalo Bills",
+        "Missouri River"
+      ]
+    },
+    {
+      "Main": "Las Vegas",
+      "Related": [
+        "Nevada",
+        "Casinos",
+        "Entertainment",
+        "Strip"
+      ]
+    },
+    {
+      "Main": "Manchester",
+      "Related": [
+        "New Hampshire",
+        "Mill Town",
+        "Queen City",
+        "Merrimack River"
+      ]
+    },
+    {
+      "Main": "Newark",
+      "Related": [
+        "New Jersey",
+        "Port City",
+        "Liberty International",
+        "Ironbound"
+      ]
+    },
+    {
+      "Main": "Albuquerque",
+      "Related": [
+        "New Mexico",
+        "Rio Grande",
+        "Desert",
+        "Balloon Festival"
+      ]
+    },
+    {
+      "Main": "New York",
+      "Related": [
+        "Empire State",
+        "Statue Liberty",
+        "Manhattan",
+        "Big Apple"
+      ]
+    },
+    {
+      "Main": "Charlotte",
+      "Related": [
+        "North Carolina",
+        "Banking Hub",
+        "Hornets",
+        "Uptown"
+      ]
+    },
+    {
+      "Main": "Fargo",
+      "Related": [
+        "North Dakota",
+        "Plains",
+        "Red River",
+        "Coen Brothers"
+      ]
+    },
+    {
+      "Main": "Portland",
+      "Related": [
+        "Oregon",
+        "Rose City",
+        "Bridges",
+        "Craft Beer"
+      ]
+    },
+    {
+      "Main": "Philadelphia",
+      "Related": [
+        "Liberty Bell",
+        "Pennsylvania",
+        "Independence Hall",
+        "Brotherly Love"
+      ]
+    },
+    {
+      "Main": "Charleston",
+      "Related": [
+        "South Carolina",
+        "Historic District",
+        "Southern Charm",
+        "Fort Sumter"
+      ]
+    },
+    {
+      "Main": "Sioux Falls",
+      "Related": [
+        "South Dakota",
+        "Falls Park",
+        "Big Sioux River",
+        "Midwest"
+      ]
+    },
+    {
+      "Main": "Houston",
+      "Related": [
+        "Texas",
+        "Space Center",
+        "NASA",
+        "Energy Capital"
+      ]
+    },
+    {
+      "Main": "Burlington",
+      "Related": [
+        "Vermont",
+        "Lake Champlain",
+        "Church Street",
+        "Green Mountains"
+      ]
+    },
+    {
+      "Main": "Viginia Beach",
+      "Related": [
+        "Atlantic Ocean",
+        "Resort City",
+        "Boardwalk",
+        "Virginia"
+      ]
+    },
+    {
+      "Main": "Seattle",
+      "Related": [
+        "Space Needle",
+        "Washington",
+        "Coffee",
+        "Puget Sound"
+      ]
+    },
+    {
+      "Main": "Milwaukee",
+      "Related": [
+        "Wisconsin",
+        "Brewery",
+        "Lake Michigan",
+        "Summerfest"
+      ]
+    },
+    {
+      "Main": "San Antonio",
+      "Related": [
+        "Texas",
+        "Alamo",
+        "Riverwalk",
+        "Mission"
+      ]
+    },
+    {
+      "Main": "San Diego",
+      "Related": [
+        "California",
+        "Navy",
+        "Beaches",
+        "Zoo"
+      ]
+    },
+    {
+      "Main": "Dallas",
+      "Related": [
+        "Texas",
+        "Big D",
+        "Cowboys",
+        "Metroplex"
+      ]
+    },
+    {
+      "Main": "Fort Worth",
+      "Related": [
+        "Texas",
+        "Stockyards",
+        "Cowtown",
+        "Western Heritage"
+      ]
+    },
+    {
+      "Main": "San Jose",
+      "Related": [
+        "California",
+        "Silicon Valley",
+        "Tech Hub",
+        "Santa Clara"
+      ]
+    },
+    {
+      "Main": "San Francisco",
+      "Related": [
+        "Golden Gate",
+        "California",
+        "Alcatraz",
+        "Bay Area"
+      ]
+    },
+    {
+      "Main": "El Paso",
+      "Related": [
+        "Texas",
+        "Border City",
+        "Chihuahuan Desert",
+        "Paso del Norte"
+      ]
+    },
+    {
+      "Main": "Memphis",
+      "Related": [
+        "Tennessee",
+        "Blues",
+        "Graceland",
+        "Mississippi River"
+      ]
+    },
+    {
+      "Main": "Tucson",
+      "Related": [
+        "Arizona",
+        "Sonoran Desert",
+        "University",
+        "Saguaro"
+      ]
+    },
+    {
+      "Main": "Fresno",
+      "Related": [
+        "California",
+        "Central Valley",
+        "Agriculture",
+        "San Joaquin"
+      ]
+    },
+    {
+      "Main": "Mesa",
+      "Related": [
+        "Arizona",
+        "Suburb",
+        "Desert",
+        "Salt River"
+      ]
+    },
+    {
+      "Main": "Colorado Springs",
+      "Related": [
+        "Colorado",
+        "Rocky Mountains",
+        "Garden of the Gods",
+        "Pikes Peak"
+      ]
+    },
+    {
+      "Main": "Miami",
+      "Related": [
+        "Florida",
+        "South Beach",
+        "Everglades",
+        "Cuban Influence"
+      ]
+    },
+    {
+      "Main": "Long Beach",
+      "Related": [
+        "California",
+        "Port",
+        "Coastal City",
+        "Aquarium"
+      ]
+    },
+    {
+      "Main": "Oakland",
+      "Related": [
+        "California",
+        "Bay Area",
+        "Port",
+        "Raiders"
+      ]
+    },
+    {
+      "Main": "Bakersfield",
+      "Related": [
+        "California",
+        "Oil Fields",
+        "Country Music",
+        "San Joaquin"
+      ]
+    },
+    {
+      "Main": "Tulsa",
+      "Related": [
+        "Oklahoma",
+        "Oil Capital",
+        "Art Deco",
+        "Arkansas River"
+      ]
+    },
+    {
+      "Main": "Tampa",
+      "Related": [
+        "Florida",
+        "Bay",
+        "Sunshine State",
+        "Port"
+      ]
+    },
+    {
+      "Main": "Arlington",
+      "Related": [
+        "Virginia",
+        "Pentagon",
+        "Cemetery",
+        "Washington"
+      ]
+    }
+  ]
+}
