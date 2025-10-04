@@ -1,0 +1,978 @@
+{
+  "Title": "Plants",
+  "Description": "Common and notable plants, including flowers, trees, and other vegetation found in nature or cultivation.",
+  "Challenges": [
+    {
+      "Main": "Rose",
+      "Related": [
+        "Thorns",
+        "Petals",
+        "Red Flower",
+        "Fragrance"
+      ]
+    },
+    {
+      "Main": "Sunflower",
+      "Related": [
+        "Seeds",
+        "Yellow Petals",
+        "Helianthus",
+        "Tall Stem"
+      ]
+    },
+    {
+      "Main": "Tulip",
+      "Related": [
+        "Bulb",
+        "Spring Flower",
+        "Netherlands",
+        "Colorful"
+      ]
+    },
+    {
+      "Main": "Daffodil",
+      "Related": [
+        "Yellow Flower",
+        "Trumpet",
+        "Spring Bloom",
+        "Narcissus"
+      ]
+    },
+    {
+      "Main": "Orchid",
+      "Related": [
+        "Exotic",
+        "Tropical",
+        "Epiphyte",
+        "Delicate"
+      ]
+    },
+    {
+      "Main": "Lily",
+      "Related": [
+        "Flower",
+        "White",
+        "Fragrant",
+        "Bulb"
+      ]
+    },
+    {
+      "Main": "Cherry Blossom",
+      "Related": [
+        "Sakura",
+        "Spring",
+        "Pink",
+        "Japan"
+      ]
+    },
+    {
+      "Main": "Magnolia",
+      "Related": [
+        "Tree",
+        "Blossom",
+        "Fragrant",
+        "Southern"
+      ]
+    },
+    {
+      "Main": "Marigold",
+      "Related": [
+        "Orange",
+        "Petals",
+        "Garden",
+        "Herbal"
+      ]
+    },
+    {
+      "Main": "Peony",
+      "Related": [
+        "Flower",
+        "Bloom",
+        "Fragrant",
+        "Pink"
+      ]
+    },
+    {
+      "Main": "Azalea",
+      "Related": [
+        "Flowering Shrub",
+        "Rhododendron",
+        "Spring Bloom",
+        "Acidic Soil"
+      ]
+    },
+    {
+      "Main": "Camellia",
+      "Related": [
+        "Evergreen",
+        "Tea Plant",
+        "Glossy Leaves",
+        "Winter Flower"
+      ]
+    },
+    {
+      "Main": "Hibiscus",
+      "Related": [
+        "Tropical",
+        "Large Flowers",
+        "Red Blossom",
+        "Tea Ingredient"
+      ]
+    },
+    {
+      "Main": "Lavender",
+      "Related": [
+        "Fragrant",
+        "Purple Flowers",
+        "Essential Oil",
+        "Mediterranean"
+      ]
+    },
+    {
+      "Main": "Petunia",
+      "Related": [
+        "Annual",
+        "Colorful Flowers",
+        "Garden Plant",
+        "Hummingbirds"
+      ]
+    },
+    {
+      "Main": "Oak Tree",
+      "Related": [
+        "Deciduous",
+        "Acorns",
+        "Forest",
+        "Hardwood"
+      ]
+    },
+    {
+      "Main": "Maple Tree",
+      "Related": [
+        "Syrup",
+        "Leaves",
+        "Canada",
+        "Autumn"
+      ]
+    },
+    {
+      "Main": "Pine Tree",
+      "Related": [
+        "Conifer",
+        "Needles",
+        "Evergreen",
+        "Cone"
+      ]
+    },
+    {
+      "Main": "Birch Tree",
+      "Related": [
+        "White Bark",
+        "Sap",
+        "Deciduous",
+        "Forest"
+      ]
+    },
+    {
+      "Main": "Redwood",
+      "Related": [
+        "Tallest",
+        "California",
+        "Evergreen",
+        "Giant"
+      ]
+    },
+    {
+      "Main": "Cedar Tree",
+      "Related": [
+        "Evergreen",
+        "Conifer",
+        "Aromatic",
+        "Lebanon"
+      ]
+    },
+    {
+      "Main": "Willow Tree",
+      "Related": [
+        "Weeping",
+        "Riparian",
+        "Flexible",
+        "Salix"
+      ]
+    },
+    {
+      "Main": "Baobab Tree",
+      "Related": [
+        "Africa",
+        "Bottle-shaped",
+        "Drought-resistant",
+        "Fruit"
+      ]
+    },
+    {
+      "Main": "Sequoia",
+      "Related": [
+        "Redwood",
+        "Giant",
+        "California",
+        "Oldest"
+      ]
+    },
+    {
+      "Main": "Aspen Tree",
+      "Related": [
+        "Deciduous",
+        "Quaking",
+        "Clonal",
+        "Leaves"
+      ]
+    },
+    {
+      "Main": "Eucalyptus",
+      "Related": [
+        "Australia",
+        "Essential Oil",
+        "Koala",
+        "Medicinal"
+      ]
+    },
+    {
+      "Main": "Aloe Vera",
+      "Related": [
+        "Succulent",
+        "Skin Care",
+        "Gel",
+        "Healing"
+      ]
+    },
+    {
+      "Main": "Saguaro Cactus",
+      "Related": [
+        "Desert",
+        "Arizona",
+        "Spines",
+        "Sonoran"
+      ]
+    },
+    {
+      "Main": "Jade Plant",
+      "Related": [
+        "Succulent",
+        "Houseplant",
+        "Thick Leaves",
+        "Lucky"
+      ]
+    },
+    {
+      "Main": "Prickly Pear",
+      "Related": [
+        "Cactus",
+        "Fruit",
+        "Spines",
+        "Southwest"
+      ]
+    },
+    {
+      "Main": "Agave",
+      "Related": [
+        "Succulent",
+        "Tequila",
+        "Desert",
+        "Fiber"
+      ]
+    },
+    {
+      "Main": "Barrel Cactus",
+      "Related": [
+        "Spines",
+        "Desert",
+        "Round",
+        "Succulent"
+      ]
+    },
+    {
+      "Main": "Echeveria",
+      "Related": [
+        "Rosette",
+        "Succulent",
+        "Drought",
+        "Houseplant"
+      ]
+    },
+    {
+      "Main": "Christmas Cactus",
+      "Related": [
+        "Holiday",
+        "Succulent",
+        "Bloom",
+        "Houseplant"
+      ]
+    },
+    {
+      "Main": "Haworthia",
+      "Related": [
+        "Succulent",
+        "Striped",
+        "Drought",
+        "Small"
+      ]
+    },
+    {
+      "Main": "Zebra Plant",
+      "Related": [
+        "Striped Leaves",
+        "Houseplant",
+        "Tropical",
+        "Aphelandra"
+      ]
+    },
+    {
+      "Main": "Ponytail Palm",
+      "Related": [
+        "Succulent",
+        "Caudex",
+        "Indoor",
+        "Beaucarnea"
+      ]
+    },
+    {
+      "Main": "Lithops",
+      "Related": [
+        "Living Stones",
+        "Succulent",
+        "Desert",
+        "Camouflage"
+      ]
+    },
+    {
+      "Main": "Golden Barrel",
+      "Related": [
+        "Cactus",
+        "Round",
+        "Succulent",
+        "Desert"
+      ]
+    },
+    {
+      "Main": "Snake Plant",
+      "Related": [
+        "Sansevieria",
+        "Air Purifying",
+        "Succulent",
+        "Leaves"
+      ]
+    },
+    {
+      "Main": "Basil",
+      "Related": [
+        "Herb",
+        "Mediterranean",
+        "Pesto",
+        "Aromatic"
+      ]
+    },
+    {
+      "Main": "Cilantro",
+      "Related": [
+        "Coriander",
+        "Leaf",
+        "Mexican",
+        "Spice"
+      ]
+    },
+    {
+      "Main": "Sage",
+      "Related": [
+        "Herb",
+        "Aromatic",
+        "Mediterranean",
+        "Leaves"
+      ]
+    },
+    {
+      "Main": "Thyme",
+      "Related": [
+        "Herb",
+        "Mediterranean",
+        "Leaves",
+        "Culinary"
+      ]
+    },
+    {
+      "Main": "Rosemary",
+      "Related": [
+        "Herb",
+        "Evergreen",
+        "Mediterranean",
+        "Fragrant"
+      ]
+    },
+    {
+      "Main": "Oregano",
+      "Related": [
+        "Herb",
+        "Mediterranean",
+        "Culinary",
+        "Aromatic"
+      ]
+    },
+    {
+      "Main": "Mint",
+      "Related": [
+        "Herb",
+        "Refreshing",
+        "Peppermint",
+        "Tea"
+      ]
+    },
+    {
+      "Main": "Dill",
+      "Related": [
+        "Herb",
+        "Pickling",
+        "Fronds",
+        "Culinary"
+      ]
+    },
+    {
+      "Main": "Chives",
+      "Related": [
+        "Herb",
+        "Onion",
+        "Green",
+        "Garnish"
+      ]
+    },
+    {
+      "Main": "Parsley",
+      "Related": [
+        "Herb",
+        "Flatleaf",
+        "Curly",
+        "Garnish"
+      ]
+    },
+    {
+      "Main": "Fennel",
+      "Related": [
+        "Herb",
+        "Anise",
+        "Bulb",
+        "Mediterranean"
+      ]
+    },
+    {
+      "Main": "Turmeric",
+      "Related": [
+        "Spice",
+        "Yellow",
+        "Curcumin",
+        "Root"
+      ]
+    },
+    {
+      "Main": "Cumin",
+      "Related": [
+        "Seed",
+        "Spice",
+        "Middle Eastern",
+        "Earthy"
+      ]
+    },
+    {
+      "Main": "Boston fern",
+      "Related": [
+        "Indoor",
+        "Houseplant",
+        "Fronds",
+        "Shade"
+      ]
+    },
+    {
+      "Main": "Maidenhair fern",
+      "Related": [
+        "Delicate",
+        "Fronds",
+        "Shade",
+        "Indoor"
+      ]
+    },
+    {
+      "Main": "Staghorn fern",
+      "Related": [
+        "Epiphytic",
+        "Antlers",
+        "Tropical",
+        "Fronds"
+      ]
+    },
+    {
+      "Main": "Bird's nest fern",
+      "Related": [
+        "Epiphyte",
+        "Nest Shape",
+        "Tropical",
+        "Shade"
+      ]
+    },
+    {
+      "Main": "Sword fern",
+      "Related": [
+        "Evergreen",
+        "Fronds",
+        "Forest",
+        "Shade"
+      ]
+    },
+    {
+      "Main": "Christmas fern",
+      "Related": [
+        "Evergreen",
+        "Winter",
+        "Fronds",
+        "Woodland"
+      ]
+    },
+    {
+      "Main": "Club moss",
+      "Related": [
+        "Lycopodium",
+        "Spores",
+        "Evergreen",
+        "Groundcover"
+      ]
+    },
+    {
+      "Main": "Peat moss",
+      "Related": [
+        "Bog",
+        "Acidic",
+        "Soil Conditioner",
+        "Sphagnum"
+      ]
+    },
+    {
+      "Main": "Sphagnum moss",
+      "Related": [
+        "Peat",
+        "Wetlands",
+        "Absorbent",
+        "Carpet"
+      ]
+    },
+    {
+      "Main": "Reindeer moss",
+      "Related": [
+        "Lichen",
+        "Arctic",
+        "Tundra",
+        "Food Source"
+      ]
+    },
+    {
+      "Main": "Selaginella",
+      "Related": [
+        "Spike Moss",
+        "Ferns",
+        "Tropical",
+        "Moisture"
+      ]
+    },
+    {
+      "Main": "Resurrection plant",
+      "Related": [
+        "Drought",
+        "Revive",
+        "Desert",
+        "Survival"
+      ]
+    },
+    {
+      "Main": "Polypody fern",
+      "Related": [
+        "Evergreen",
+        "Rhizomes",
+        "Shade",
+        "Spore"
+      ]
+    },
+    {
+      "Main": "Bracken fern",
+      "Related": [
+        "Widespread",
+        "Toxic",
+        "Fronds",
+        "Woodland"
+      ]
+    },
+    {
+      "Main": "Water Lily",
+      "Related": [
+        "Aquatic",
+        "Floating",
+        "Flower",
+        "Pond"
+      ]
+    },
+    {
+      "Main": "Duckweed",
+      "Related": [
+        "Tiny",
+        "Floating",
+        "Pond",
+        "Algae"
+      ]
+    },
+    {
+      "Main": "Cattail",
+      "Related": [
+        "Wetland",
+        "Brown Spike",
+        "Marsh",
+        "Reeds"
+      ]
+    },
+    {
+      "Main": "Lotus",
+      "Related": [
+        "Sacred Flower",
+        "Water Plant",
+        "Pink Petals",
+        "Asian Symbol"
+      ]
+    },
+    {
+      "Main": "Hornwort",
+      "Related": [
+        "Aquatic",
+        "Bryophyte",
+        "Nonvascular",
+        "Green Plant"
+      ]
+    },
+    {
+      "Main": "Water Hyacinth",
+      "Related": [
+        "Floating Plant",
+        "Invasive Species",
+        "Purple Flowers",
+        "Aquatic Weed"
+      ]
+    },
+    {
+      "Main": "Pondweed",
+      "Related": [
+        "Freshwater",
+        "Submerged",
+        "Aquatic Plant",
+        "Leafy Stems"
+      ]
+    },
+    {
+      "Main": "Algae",
+      "Related": [
+        "Photosynthesis",
+        "Marine",
+        "Green Growth",
+        "Seaweed"
+      ]
+    },
+    {
+      "Main": "Seagrass",
+      "Related": [
+        "Marine",
+        "Eelgrass",
+        "Coastal",
+        "Underwater"
+      ]
+    },
+    {
+      "Main": "Elodea",
+      "Related": [
+        "Aquatic",
+        "Freshwater",
+        "Pondweed",
+        "Oxygen"
+      ]
+    },
+    {
+      "Main": "Bulrush",
+      "Related": [
+        "Wetland",
+        "Reed",
+        "Marsh",
+        "Sedges"
+      ]
+    },
+    {
+      "Main": "Watercress",
+      "Related": [
+        "Edible",
+        "Peppery",
+        "Pond",
+        "Leafy"
+      ]
+    },
+    {
+      "Main": "Marsh Marigold",
+      "Related": [
+        "Wetland",
+        "Yellow",
+        "Buttercup",
+        "Spring"
+      ]
+    },
+    {
+      "Main": "Bladderwort",
+      "Related": [
+        "Carnivorous",
+        "Aquatic",
+        "Trap",
+        "Floating"
+      ]
+    },
+    {
+      "Main": "Apple",
+      "Related": [
+        "Orchard",
+        "Fruit",
+        "Cider",
+        "Tree"
+      ]
+    },
+    {
+      "Main": "Carrot",
+      "Related": [
+        "Root",
+        "Orange",
+        "Vegetable",
+        "Beta-Carotene"
+      ]
+    },
+    {
+      "Main": "Tomato",
+      "Related": [
+        "Fruit",
+        "Vine",
+        "Red",
+        "Salsa"
+      ]
+    },
+    {
+      "Main": "Banana",
+      "Related": [
+        "Tropical",
+        "Peel",
+        "Yellow",
+        "Plantain"
+      ]
+    },
+    {
+      "Main": "Spinach",
+      "Related": [
+        "Leafy Green",
+        "Iron Rich",
+        "Salad",
+        "Popeye"
+      ]
+    },
+    {
+      "Main": "Blueberry",
+      "Related": [
+        "Berry",
+        "Antioxidants",
+        "Bush",
+        "Breakfast"
+      ]
+    },
+    {
+      "Main": "Potato",
+      "Related": [
+        "Tuber",
+        "Starch",
+        "Fry",
+        "Nightshade"
+      ]
+    },
+    {
+      "Main": "Lettuce",
+      "Related": [
+        "Salad",
+        "Leafy Green",
+        "Romaine",
+        "Garden"
+      ]
+    },
+    {
+      "Main": "Strawberry",
+      "Related": [
+        "Berry",
+        "Red Fruit",
+        "Seeds",
+        "Dessert"
+      ]
+    },
+    {
+      "Main": "Cucumber",
+      "Related": [
+        "Vine",
+        "Green",
+        "Salad",
+        "Cool"
+      ]
+    },
+    {
+      "Main": "Peach",
+      "Related": [
+        "Stone Fruit",
+        "Fuzzy",
+        "Sweet",
+        "Georgia"
+      ]
+    },
+    {
+      "Main": "Pumpkin",
+      "Related": [
+        "Orange",
+        "Halloween",
+        "Gourd",
+        "Harvest"
+      ]
+    },
+    {
+      "Main": "Onion",
+      "Related": [
+        "Bulb",
+        "Tearful",
+        "Pungent",
+        "Layered"
+      ]
+    },
+    {
+      "Main": "Wheat",
+      "Related": [
+        "Grain",
+        "Harvest",
+        "Bread",
+        "Field"
+      ]
+    },
+    {
+      "Main": "Barley",
+      "Related": [
+        "Cereal Grain",
+        "Malt",
+        "Beer Brewing",
+        "Animal Feed"
+      ]
+    },
+    {
+      "Main": "Oats",
+      "Related": [
+        "Breakfast Cereal",
+        "Fiber",
+        "Gluten Free",
+        "Horse Feed"
+      ]
+    },
+    {
+      "Main": "Rye",
+      "Related": [
+        "Bread",
+        "Whiskey",
+        "Winter Grain",
+        "Cereal Crop"
+      ]
+    },
+    {
+      "Main": "Corn",
+      "Related": [
+        "Maize",
+        "Stalk",
+        "Sweet",
+        "Field Crop"
+      ]
+    },
+    {
+      "Main": "Rice",
+      "Related": [
+        "Staple Food",
+        "Paddy",
+        "Grain",
+        "Asia"
+      ]
+    },
+    {
+      "Main": "Sorghum",
+      "Related": [
+        "Grain Crop",
+        "Drought Resistant",
+        "Cereal",
+        "Biofuel"
+      ]
+    },
+    {
+      "Main": "Millet",
+      "Related": [
+        "Small Seed",
+        "Staple Food",
+        "Gluten Free",
+        "Cereal Grass"
+      ]
+    },
+    {
+      "Main": "Sugarcane",
+      "Related": [
+        "Sweetener",
+        "Tropical",
+        "Juice",
+        "Bioenergy"
+      ]
+    },
+    {
+      "Main": "Bamboo",
+      "Related": [
+        "Fast Growing",
+        "Grass Family",
+        "Building Material",
+        "Asian Plant"
+      ]
+    },
+    {
+      "Main": "Switchgrass",
+      "Related": [
+        "Perennial",
+        "Prairie",
+        "Biofuel",
+        "Erosion Control"
+      ]
+    },
+    {
+      "Main": "Timothy",
+      "Related": [
+        "Grass",
+        "Hay",
+        "Forage",
+        "Pasture"
+      ]
+    },
+    {
+      "Main": "Fescue",
+      "Related": [
+        "Cool Season",
+        "Turfgrass",
+        "Ornamental",
+        "Drought Tolerant"
+      ]
+    },
+    {
+      "Main": "Bermuda grass",
+      "Related": [
+        "Warm Season",
+        "Lawn",
+        "Drought Resistant",
+        "Turf"
+      ]
+    }
+  ]
+}
