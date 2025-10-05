@@ -28,7 +28,11 @@ const GameBody: React.FC<GameBodyProps> = ({ title, actions, children }) => {
           <Button
             key={idx}
             onClick={a.action}
-            style={{ width: `${buttonWidth}%` }}
+            style={{
+              width: `calc(${buttonWidth}% - ${(actions.length - 1) / actions.length}rem)`,
+              marginLeft: idx > 0 ? '1rem' : 0,
+              padding: '1rem 0',
+            }}
             variant="contained"
           >
             {a.label}
