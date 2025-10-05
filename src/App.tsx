@@ -129,8 +129,8 @@ function App() {
 
   // Gameplay UI
   const challenge: Challenge | undefined = challenges[currentChallengeIdx % challenges.length];
-  // Exclude the last challenge (timed out) from review
-  const reviewedChallenges = turnChallenges;
+  // Include the last challenge (timed out) in review, as not marked correct
+  const reviewedChallenges = [...turnChallenges, { main: challenge?.Main ?? '', succeeded: false }];
   return <ThemeProvider theme={muiTheme}><main>
     {!gameStarted
       ? <GameSettingsView currentSettings={gameSettings} onConfirm={settings => {
