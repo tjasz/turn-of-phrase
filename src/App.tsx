@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import { ThemeProvider } from '@mui/material';
-import { Home, Play, Guide } from './pages'
+import { Home, Play, Guide, Settings } from './pages'
 import muiTheme from './muiTheme';
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
           <Link to="/">Home</Link>
           <Link to="/guide">Guide</Link>
           <Link to="/play">Play</Link>
+          <Link to="/settings">Settings</Link>
         </nav>
       </header>
       <main>
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/play" element={<Play />} />
           <Route path="/guide" element={<Guide />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </main>
       <footer>
