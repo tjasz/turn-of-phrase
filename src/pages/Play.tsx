@@ -7,8 +7,6 @@ import StartOfTurn from '../StartOfTurn';
 import EndOfGame from '../EndOfGame';
 import GameSettingsView from '../GameSettingsView';
 import defaultTheme from '../defaultTheme';
-import { ThemeProvider } from '@mui/material';
-import muiTheme from '../muiTheme';
 
 function shuffle<T>(array: T[]): T[] {
   let arr = array.slice();
@@ -131,7 +129,7 @@ function Play() {
   const challenge: Challenge | undefined = challenges[currentChallengeIdx % challenges.length];
   // Include the last challenge (timed out) in review, as not marked correct
   const reviewedChallenges = [...turnChallenges, { main: challenge?.Main ?? '', succeeded: false }];
-  return <ThemeProvider theme={muiTheme}><main>
+  return <>
     {!gameStarted
       ? <GameSettingsView currentSettings={gameSettings} onConfirm={settings => {
         setGameSettings(settings);
@@ -171,7 +169,7 @@ function Play() {
           />
         )}
       </div>}
-  </main></ThemeProvider>
+  </>
 }
 
 export default Play;
