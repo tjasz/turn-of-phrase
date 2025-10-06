@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
-import Timer from './Timer';
-import Challenge from './Challenge';
-import EndOfTurn from './EndOfTurn';
-import './App.css';
-import StartOfTurn from './StartOfTurn';
-import EndOfGame from './EndOfGame';
-import GameSettingsView from './GameSettingsView';
-import defaultTheme from './defaultTheme';
+import Timer from '../Timer';
+import Challenge from '../Challenge';
+import EndOfTurn from '../EndOfTurn';
+import '../App.css';
+import StartOfTurn from '../StartOfTurn';
+import EndOfGame from '../EndOfGame';
+import GameSettingsView from '../GameSettingsView';
+import defaultTheme from '../defaultTheme';
 import { ThemeProvider } from '@mui/material';
-import muiTheme from './muiTheme';
+import muiTheme from '../muiTheme';
 
 function shuffle<T>(array: T[]): T[] {
   let arr = array.slice();
@@ -42,7 +42,7 @@ function getWinner(scores: number[]): number {
   return maxI[0];
 }
 
-function App() {
+function Play() {
   // Game states
   const [gameSettings, setGameSettings] = useState<GameSettings>({
     numberOfTeams: 2,
@@ -174,4 +174,4 @@ function App() {
   </main></ThemeProvider>
 }
 
-export default App;
+export default Play;
