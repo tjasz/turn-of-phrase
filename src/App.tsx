@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import { ThemeProvider } from '@mui/material';
-import { Play, Guide } from './pages'
+import { Home, Play, Guide } from './pages'
 import muiTheme from './muiTheme';
 
 function App() {
@@ -12,12 +12,16 @@ function App() {
           alt="Turn of Phrase Logo"
         />
         <h1>Turn of Phrase</h1>
-        <Link to="/guide">Guide</Link>
-        <Link to="/">Play</Link>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/guide">Guide</Link>
+          <Link to="/play">Play</Link>
+        </nav>
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Play />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/play" element={<Play />} />
           <Route path="/guide" element={<Guide />} />
         </Routes>
       </main>
