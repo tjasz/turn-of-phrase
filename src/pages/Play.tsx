@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import shuffle from '../shuffle';
 import Timer from '../Timer';
 import Challenge from '../Challenge';
 import EndOfTurn from '../EndOfTurn';
@@ -7,15 +8,6 @@ import StartOfTurn from '../StartOfTurn';
 import EndOfGame from '../EndOfGame';
 import GameSettingsView from '../GameSettingsView';
 import defaultTheme from '../defaultTheme';
-
-function shuffle<T>(array: T[]): T[] {
-  let arr = array.slice();
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
 
 function getWinner(scores: number[]): number {
   if (scores.length === 0) {
