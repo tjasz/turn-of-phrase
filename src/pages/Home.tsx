@@ -1,11 +1,12 @@
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useLocalStorage } from "react-use";
+import LocalStorageKeys from "../localStorageKeys";
 
 function Home() {
   const navigate = useNavigate();
   const [gameState, _, removeGameState] = useLocalStorage<GameState>(
-    'turn-of-phrase/play'
+    LocalStorageKeys.GAME_STATE
   );
 
   return <div>

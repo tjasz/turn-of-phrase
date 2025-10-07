@@ -12,6 +12,7 @@ import EndOfGame from '../EndOfGame';
 import GameSettingsView from '../GameSettingsView';
 import defaultTheme from '../defaultTheme';
 import { defaultGameSettings } from '../defaultGameSettings';
+import LocalStorageKeys from '../localStorageKeys';
 
 function getWinner(scores: number[]): number {
   if (scores.length === 0) {
@@ -49,9 +50,9 @@ function getNewGameState(settings: GameSettings, challengeIdx?: number): GameSta
 
 function Play() {
   // Game states
-  const [gameSettings] = useLocalStorage<GameSettings>('turn-of-phrase/settings', defaultGameSettings);
+  const [gameSettings] = useLocalStorage<GameSettings>(LocalStorageKeys.GAME_SETTINGS, defaultGameSettings);
   const [gameState, setGameState] = useLocalStorage<GameState>(
-    'turn-of-phrase/play',
+    LocalStorageKeys.GAME_STATE,
     getNewGameState(gameSettings!)
   );
 
