@@ -1,11 +1,39 @@
-import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { useLocalStorage } from "react-use";
 
 function Home() {
-  return <ul>
-    <li><Link to="/play">Play</Link></li>
-    <li><Link to="/guide">How to Play</Link></li>
-    <li><Link to="/settings">Settings</Link></li>
-  </ul>
+  const navigate = useNavigate();
+  const [gameState, _, removeGameState] = useLocalStorage<GameState>(
+    'turn-of-phrase/play'
+  );
+
+  return <div>
+    <Button variant="contained" color="primary" onClick={() => {
+      removeGameState();
+      navigate("/play");
+    }}>
+      New Game
+    </Button>
+    <br />
+    <Button variant="contained" color="primary" disabled={!gameState} onClick={() => {
+      navigate("/play");
+    }}>
+      Resume Game
+    </Button>
+    <br />
+    <Button variant="contained" color="primary" onClick={() => {
+      navigate("/guide");
+    }}>
+      How to Play
+    </Button>
+    <br />
+    <Button variant="contained" color="primary" onClick={() => {
+      navigate("/settings");
+    }}>
+      Settings
+    </Button>
+  </div>
 }
 
 export default Home;
