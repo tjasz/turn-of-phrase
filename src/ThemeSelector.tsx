@@ -4,6 +4,7 @@ import defaultTheme from "./defaultTheme";
 import ThemeCreatorStepper from "./ThemeCreation/ThemeCreatorStepper";
 import ThemeView from "./ThemeView";
 import { Button, Card, CardHeader, Grid } from "@mui/material";
+import LocalStorageKeys from "./localStorageKeys";
 
 interface ThemeSelectorProps {
   onSelectChallenges: (challenges: Challenge[]) => void;
@@ -16,7 +17,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
     return new Promise((resolve) => {
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key && key.startsWith('turn-of-phrase/theme:')) {
+        if (key && key.startsWith(LocalStorageKeys.THEME_PREFIX)) {
           try {
             const theme = JSON.parse(localStorage.getItem(key)!);
             if (theme && theme.Title) {

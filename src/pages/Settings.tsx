@@ -3,11 +3,15 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, InputLabel, MenuItem, Select, Slider, Typography } from "@mui/material";
 import { defaultGameSettings } from "../defaultGameSettings";
+import LocalStorageKeys from "../localStorageKeys";
 
 function Settings() {
   const navigate = useNavigate();
 
-  const [settings, setSettings, removeSettings] = useLocalStorage<GameSettings>('turn-of-phrase/settings', defaultGameSettings);
+  const [settings, setSettings, removeSettings] = useLocalStorage<GameSettings>(
+    LocalStorageKeys.GAME_SETTINGS,
+    defaultGameSettings
+  );
 
   const [numberOfTeams, setNumberOfTeams] = useState(settings!.numberOfTeams);
   const [numberOfPlayersByTeam, setNumberOfPlayersByTeam] = useState(settings!.numberOfPlayersByTeam);

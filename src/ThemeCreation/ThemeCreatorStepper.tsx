@@ -5,6 +5,7 @@ import SetSubThemes from "./SetSubThemes";
 import AddMainPhrases from "./AddMainPhrases";
 import EditChallenges from "./EditChallenges";
 import useWindowWidth from "../useWindowWidth";
+import LocalStorageKeys from "../localStorageKeys";
 
 interface IThemeCreatorStepperProps {
   onCreateTheme: (theme: Theme) => void;
@@ -57,7 +58,7 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
       Description: description,
       Challenges: challenges,
     }
-    localStorage.setItem(`turn-of-phrase/theme:${title}`, JSON.stringify(themeObj));
+    localStorage.setItem(`${LocalStorageKeys.THEME_PREFIX}${title}`, JSON.stringify(themeObj));
     onCreateTheme(themeObj);
   }
 
@@ -89,7 +90,7 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
       const { instanceId } = await response.json();
       if (!instanceId) throw new Error("No instanceId returned from API");
 
-      localStorage.setItem(`turn-of-phrase/themeRequest:${title}`, JSON.stringify({
+      localStorage.setItem(`${LocalStorageKeys.THEME_REQUEST_PREFIX}${instanceId}`, JSON.stringify({
         Title: title,
         Description: description,
         SubThemes: subThemes,
