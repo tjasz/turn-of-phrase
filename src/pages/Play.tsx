@@ -39,19 +39,49 @@ function getWinner(scores: number[]): number {
 function Play() {
   // Game states
   const [gameSettings] = useLocalStorage<GameSettings>('turn-of-phrase/settings', defaultGameSettings);
+  const [gameState, setGameState, removeGameState] = useLocalStorage<GameState>('turn-of-phrase/play', {
+    timer: (gameSettings!.turnTimeSeconds) * 1000,
+    score: Array(gameSettings!.numberOfTeams).fill(0),
+    turnTeam: 0,
+    turnPlayer: Array(gameSettings!.numberOfTeams).fill(0),
+    turnChallenges: [],
+    currentChallengeIdx: 0,
+  });
+
+  // Since initial values are provided above, this shouldn't ever happen.
+  // But it makes the TypeScript below cleaner.
+  if (!gameSettings || !gameState) {
+    return <p>
+      Unexpected error: critical game information missing.
+    </p>
+  }
 
   const navigate = useNavigate();
 
-  const [challenges, setChallenges] = useState<Challenge[]>([]);
-  const [currentChallengeIdx, setCurrentChallengeIdx] = useState(0);
-  const [timer, setTimer] = useState((gameSettings!.turnTimeSeconds) * 1000);
+  const [timer, setTimer] = useState(gameState.timer);
+  const [score, setScore] = useState(gameState.score);
+  const [turnTeam, setTurnTeam] = useState(gameState.turnTeam);
+  const [turnPlayer, setTurnPlayer] = useState(gameState.turnPlayer);
+  const [turnChallenges, setTurnChallenges] = useState<ChallengeResult[]>(gameState.turnChallenges);
+  const [currentChallengeIdx, setCurrentChallengeIdx] = useState(gameState.currentChallengeIdx);
+
+  const [challenges, setChallenges] = useState<Challenge[]>(defaultTheme.Challenges); // TODO load from settings
   const [timerActive, setTimerActive] = useState(false);
-  const [score, setScore] = useState(Array(gameSettings!.numberOfTeams).fill(0));
-  const [turnTeam, setTurnTeam] = useState(0);
-  const [turnPlayer, setTurnPlayer] = useState(Array(gameSettings!.numberOfTeams).fill(0));
-  // Track challenge results for the current turn
-  const [turnChallenges, setTurnChallenges] = useState<{ main: string; succeeded: boolean }[]>([]);
   const [showResults, setShowResults] = useState(false);
+
+  const saveGameState = () => {
+    setGameState({
+      timer,
+      score,
+      turnTeam,
+      turnPlayer,
+      turnChallenges,
+      currentChallengeIdx,
+    });
+  };
+  useEffect(() => {
+    saveGameState();
+  }, [timer, score, turnTeam, turnPlayer, turnChallenges, currentChallengeIdx]);
 
   // Timer effect
   useEffect(() => {
