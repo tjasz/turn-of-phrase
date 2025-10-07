@@ -143,8 +143,6 @@ function Play() {
 
   // Gameplay UI
   const challenge: Challenge | undefined = challenges[currentChallengeIdx % challenges.length];
-  // Include the last challenge (timed out) in review, as not marked correct
-  const reviewedChallenges = [...turnChallenges, { main: challenge?.Main ?? '', succeeded: false }];
   return <>
     <div className="gameplay">
       <h2>Team {turnTeam + 1} - Player {turnPlayer[turnTeam] + 1}'s Turn</h2>
@@ -175,7 +173,7 @@ function Play() {
       )}
       {showResults && (
         <EndOfTurn
-          challenges={reviewedChallenges}
+          challenges={turnChallenges}
           onConfirm={endTurn}
         />
       )}
