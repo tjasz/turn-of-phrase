@@ -36,17 +36,24 @@ function getWinner(scores: number[]): number {
   return maxI[0];
 }
 
+function getNewGameState(settings: GameSettings, challengeIdx?: number): GameState {
+  return {
+    timer: (settings.turnTimeSeconds) * 1000,
+    score: Array(settings.numberOfTeams).fill(0),
+    turnTeam: 0,
+    turnPlayer: Array(settings.numberOfTeams).fill(0),
+    turnChallenges: [],
+    currentChallengeIdx: challengeIdx ?? 0,
+  };
+}
+
 function Play() {
   // Game states
   const [gameSettings] = useLocalStorage<GameSettings>('turn-of-phrase/settings', defaultGameSettings);
-  const [gameState, setGameState, removeGameState] = useLocalStorage<GameState>('turn-of-phrase/play', {
-    timer: (gameSettings!.turnTimeSeconds) * 1000,
-    score: Array(gameSettings!.numberOfTeams).fill(0),
-    turnTeam: 0,
-    turnPlayer: Array(gameSettings!.numberOfTeams).fill(0),
-    turnChallenges: [],
-    currentChallengeIdx: 0,
-  });
+  const [gameState, setGameState] = useLocalStorage<GameState>(
+    'turn-of-phrase/play',
+    getNewGameState(gameSettings!)
+  );
 
   // Since initial values are provided above, this shouldn't ever happen.
   // But it makes the TypeScript below cleaner.
@@ -146,7 +153,15 @@ function Play() {
           winnerIdx={winnerIdx}
           scores={score}
           pointsToWin={gameSettings!.pointsToWin}
-          onConfirm={() => navigate("/")}
+          onConfirm={() => {
+            const newState = getNewGameState(gameSettings, currentChallengeIdx);
+            setGameState(newState);
+            setTimer(newState.timer);
+            setScore(newState.score);
+            setTurnTeam(newState.turnTeam);
+            setTurnPlayer(newState.turnPlayer);
+            setTurnChallenges(newState.turnChallenges);
+          }}
         />
       )}
       {timerActive && challenge && (
