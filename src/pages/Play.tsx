@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import { useLocalStorage } from "react-use";
+import { useNavigate } from 'react-router-dom';
+
 import shuffle from '../shuffle';
 import Timer from '../Timer';
 import Challenge from '../Challenge';
@@ -8,6 +11,7 @@ import StartOfTurn from '../StartOfTurn';
 import EndOfGame from '../EndOfGame';
 import GameSettingsView from '../GameSettingsView';
 import defaultTheme from '../defaultTheme';
+import { defaultGameSettings } from '../defaultGameSettings';
 
 function getWinner(scores: number[]): number {
   if (scores.length === 0) {
@@ -34,38 +38,20 @@ function getWinner(scores: number[]): number {
 
 function Play() {
   // Game states
-  const [gameSettings, setGameSettings] = useState<GameSettings>({
-    numberOfTeams: 2,
-    numberOfPlayersByTeam: [2, 2],
-    turnTimeSeconds: 60,
-    pointsToWin: 15,
-    skipPenalty: -1,
-    theme: defaultTheme
-  });
-  const [gameStarted, setGameStarted] = useState(false);
+  const [gameSettings] = useLocalStorage<GameSettings>('turn-of-phrase/settings', defaultGameSettings);
+
+  const navigate = useNavigate();
+
   const [challenges, setChallenges] = useState<Challenge[]>([]);
   const [currentChallengeIdx, setCurrentChallengeIdx] = useState(0);
-  const [timer, setTimer] = useState((gameSettings.turnTimeSeconds) * 1000);
+  const [timer, setTimer] = useState((gameSettings!.turnTimeSeconds) * 1000);
   const [timerActive, setTimerActive] = useState(false);
-  const [score, setScore] = useState(Array(gameSettings.numberOfTeams).fill(0));
+  const [score, setScore] = useState(Array(gameSettings!.numberOfTeams).fill(0));
   const [turnTeam, setTurnTeam] = useState(0);
-  const [turnPlayer, setTurnPlayer] = useState(Array(gameSettings.numberOfTeams).fill(0));
+  const [turnPlayer, setTurnPlayer] = useState(Array(gameSettings!.numberOfTeams).fill(0));
   // Track challenge results for the current turn
   const [turnChallenges, setTurnChallenges] = useState<{ main: string; succeeded: boolean }[]>([]);
   const [showResults, setShowResults] = useState(false);
-
-  // Start game
-  const startGame = (settings: GameSettings) => {
-    setChallenges(shuffle(settings.theme.Challenges));
-    setScore(Array(settings.numberOfTeams).fill(0));
-    setTurnTeam(0);
-    setTurnPlayer(Array(settings.numberOfTeams).fill(0));
-    setGameStarted(true);
-    setShowResults(false);
-    setTimer(settings.turnTimeSeconds * 1000);
-    setTimerActive(false);
-    setTurnChallenges([]);
-  };
 
   // Timer effect
   useEffect(() => {
@@ -99,21 +85,21 @@ function Play() {
   const endTurn = (correctCount: number, skippedCount: number) => {
     setScore((prev) => {
       const newScore = [...prev];
-      newScore[turnTeam] += correctCount + (gameSettings.skipPenalty ?? -1) * skippedCount;
+      newScore[turnTeam] += correctCount + (gameSettings!.skipPenalty ?? -1) * skippedCount;
       return newScore;
     });
     // Next team/player
-    setTurnTeam((team) => (team + 1) % gameSettings.numberOfTeams);
-    setTurnPlayer((player) => player.map((p, i) => i === turnTeam ? (p + 1) % gameSettings.numberOfPlayersByTeam[turnTeam] : p));
+    setTurnTeam((team) => (team + 1) % gameSettings!.numberOfTeams);
+    setTurnPlayer((player) => player.map((p, i) => i === turnTeam ? (p + 1) % gameSettings!.numberOfPlayersByTeam[turnTeam] : p));
     setCurrentChallengeIdx((idx) => idx + 1);
-    setTimer(gameSettings.turnTimeSeconds * 1000);
+    setTimer(gameSettings!.turnTimeSeconds * 1000);
     setTimerActive(false);
     setTurnChallenges([]);
     setShowResults(false);
   };
 
   // Check for winner
-  const winnerIdx = score.some(s => s >= gameSettings.pointsToWin) && (turnTeam === 0)
+  const winnerIdx = score.some(s => s >= gameSettings!.pointsToWin) && (turnTeam === 0)
     ? getWinner(score)
     : -1;
 
@@ -122,45 +108,40 @@ function Play() {
   // Include the last challenge (timed out) in review, as not marked correct
   const reviewedChallenges = [...turnChallenges, { main: challenge?.Main ?? '', succeeded: false }];
   return <>
-    {!gameStarted
-      ? <GameSettingsView currentSettings={gameSettings} onConfirm={settings => {
-        setGameSettings(settings);
-        startGame(settings);
-      }} />
-      : <div className="gameplay">
-        <h2>Team {turnTeam + 1} - Player {turnPlayer[turnTeam] + 1}'s Turn</h2>
-        <Timer timeLeft={timer} totalTime={gameSettings.turnTimeSeconds * 1000} />
-        {winnerIdx !== -1 && (
-          <EndOfGame
-            winnerIdx={winnerIdx}
-            scores={score}
-            pointsToWin={gameSettings.pointsToWin}
-            onConfirm={() => setGameStarted(false)}
-          />
-        )}
-        {timerActive && challenge && (
-          <Challenge
-            main={challenge.Main}
-            related={challenge.Related}
-            onSkip={handleSkip}
-            onCorrect={handleCorrect}
-          />
-        )}
-        {showResults && (
-          <EndOfTurn
-            challenges={reviewedChallenges}
-            onConfirm={endTurn}
-          />
-        )}
-        {!timerActive && !showResults && winnerIdx === -1 && (
-          <StartOfTurn
-            scores={score}
-            pointsToWin={gameSettings.pointsToWin}
-            isFinalRound={score.some(s => s >= gameSettings.pointsToWin)}
-            onConfirm={() => setTimerActive(true)}
-          />
-        )}
-      </div>}
+    <div className="gameplay">
+      <h2>Team {turnTeam + 1} - Player {turnPlayer[turnTeam] + 1}'s Turn</h2>
+      <Timer timeLeft={timer} totalTime={gameSettings!!.turnTimeSeconds * 1000} />
+      {winnerIdx !== -1 && (
+        <EndOfGame
+          winnerIdx={winnerIdx}
+          scores={score}
+          pointsToWin={gameSettings!.pointsToWin}
+          onConfirm={() => navigate("/")}
+        />
+      )}
+      {timerActive && challenge && (
+        <Challenge
+          main={challenge.Main}
+          related={challenge.Related}
+          onSkip={handleSkip}
+          onCorrect={handleCorrect}
+        />
+      )}
+      {showResults && (
+        <EndOfTurn
+          challenges={reviewedChallenges}
+          onConfirm={endTurn}
+        />
+      )}
+      {!timerActive && !showResults && winnerIdx === -1 && (
+        <StartOfTurn
+          scores={score}
+          pointsToWin={gameSettings!.pointsToWin}
+          isFinalRound={score.some(s => s >= gameSettings!.pointsToWin)}
+          onConfirm={() => setTimerActive(true)}
+        />
+      )}
+    </div>
   </>
 }
 

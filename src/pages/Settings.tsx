@@ -2,18 +2,12 @@ import { useLocalStorage } from "react-use";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, InputLabel, MenuItem, Select, Slider, Typography } from "@mui/material";
+import { defaultGameSettings } from "../defaultGameSettings";
 
 function Settings() {
   const navigate = useNavigate();
 
-  const [settings, setSettings, removeSettings] = useLocalStorage<GameSettings>('turn-of-phrase/settings', {
-    numberOfTeams: 2,
-    numberOfPlayersByTeam: [2, 2],
-    turnTimeSeconds: 60,
-    pointsToWin: 15,
-    skipPenalty: -1,
-    theme: { Title: 'Null', Description: 'The empty theme', Challenges: [] }
-  });
+  const [settings, setSettings, removeSettings] = useLocalStorage<GameSettings>('turn-of-phrase/settings', defaultGameSettings);
 
   const [numberOfTeams, setNumberOfTeams] = useState(settings!.numberOfTeams);
   const [numberOfPlayersByTeam, setNumberOfPlayersByTeam] = useState(settings!.numberOfPlayersByTeam);
