@@ -1,16 +1,18 @@
 
 import React, { useEffect, useState } from "react";
 import defaultTheme from "./defaultTheme";
-import ThemeCreatorStepper from "./ThemeCreation/ThemeCreatorStepper";
 import ThemeView from "./ThemeView";
 import { Button, Card, CardHeader, Grid } from "@mui/material";
 import LocalStorageKeys from "./localStorageKeys";
+import { useNavigate } from "react-router-dom";
 
 interface ThemeSelectorProps {
   onSelectChallenges: (challenges: Challenge[]) => void;
 }
 
 const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => {
+  const navigate = useNavigate();
+
   // Get localStorage themes
   function getLocalThemes(): Promise<Theme[]> {
     const results: Theme[] = [];
@@ -49,7 +51,6 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
   }
 
   // Store all selectable themes: built-in and local
-  const [creatingTheme, setCreatingTheme] = useState(false);
   const [selectedThemeIndices, setSelectedThemeIndices] = useState<Set<number>>(new Set([0]));
   const [loadingThemes, setLoadingThemes] = useState(true);
   const [themes, setThemes] = useState<Theme[]>([defaultTheme]);
@@ -62,7 +63,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
       setThemes(combinedThemes);
       setLoadingThemes(false);
     });
-  }, [creatingTheme]);
+  }, []);
 
   const handleCheckboxChange = (idx: number) => {
     setSelectedThemeIndices(prev => {
@@ -75,18 +76,6 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
       return newSet;
     });
   };
-
-  if (creatingTheme) {
-    return <ThemeCreatorStepper
-      onCreateTheme={theme => {
-        setThemes(prev => [...prev, theme]);
-        // Add new theme to allThemes and select it
-        setSelectedThemeIndices(prev => new Set([...prev, prev.size]));
-        setCreatingTheme(false);
-      }}
-      onCancel={() => setCreatingTheme(false)}
-    />;
-  }
 
   return (
     <div id="themeSelector">
@@ -102,7 +91,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onSelectChallenges }) => 
             />
           ))}
           <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 2 }}>
-            <Card onClick={() => setCreatingTheme(true)} style={{ cursor: 'pointer', height: '100%', color: 'var(--accent)' }}>
+            <Card onClick={() => navigate("/settings/themes/$create")} style={{ cursor: 'pointer', height: '100%', color: 'var(--accent)' }}>
               <CardHeader title="Create New Theme" />
             </Card>
           </Grid>
