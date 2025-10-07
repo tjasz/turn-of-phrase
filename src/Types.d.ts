@@ -1,8 +1,16 @@
 type Theme = {
+  Id: string;
   Title: string;
   Description: string;
   Challenges: Challenge[];
 };
+
+type ThemeMetadata = {
+  Id: string;
+  Title: string;
+  Description: string;
+  ChallengesCount: number;
+}
 
 type Challenge = {
   Main: string;

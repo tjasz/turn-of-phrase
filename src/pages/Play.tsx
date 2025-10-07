@@ -9,7 +9,6 @@ import EndOfTurn from '../EndOfTurn';
 import '../App.css';
 import StartOfTurn from '../StartOfTurn';
 import EndOfGame from '../EndOfGame';
-import GameSettingsView from '../GameSettingsView';
 import defaultTheme from '../defaultTheme';
 import { defaultGameSettings } from '../defaultGameSettings';
 import LocalStorageKeys from '../localStorageKeys';
