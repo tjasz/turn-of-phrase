@@ -90,7 +90,7 @@ function Settings() {
         turnTimeSeconds,
         pointsToWin,
         skipPenalty,
-        theme: { Title: 'Null', Description: 'The empty theme', Challenges: [] }
+        theme: settings.theme,
       });
       navigate('/play');
     }}>

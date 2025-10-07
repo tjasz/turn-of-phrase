@@ -1,5 +1,19 @@
+import { Link, useNavigate } from "react-router-dom";
+import { useLocalStorage } from "react-use";
+import ThemeSelector from "../ThemeSelector";
+
 function Themes() {
-  return <div>Select a theme:</div>
+  const navigate = useNavigate();
+  const [gameSettings, setGameSettings] = useLocalStorage<GameSettings>('turn-of-phrase/settings');
+
+  if (!gameSettings) {
+    return <p>Game settings are not defined. Go to <Link to="/settings">Settings</Link> to define them.</p>
+  }
+
+  return <ThemeSelector onSelectChallenges={(challenges) => {
+    setGameSettings({ ...gameSettings, theme: { Title: "Composite Theme", Description: "", Challenges: challenges } });
+    navigate("/settings");
+  }} />;
 }
 
 export default Themes;

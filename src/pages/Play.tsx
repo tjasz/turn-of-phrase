@@ -72,7 +72,7 @@ function Play() {
   const [turnChallenges, setTurnChallenges] = useState<ChallengeResult[]>(gameState.turnChallenges);
   const [currentChallengeIdx, setCurrentChallengeIdx] = useState(gameState.currentChallengeIdx);
 
-  const [challenges, setChallenges] = useState<Challenge[]>(defaultTheme.Challenges); // TODO load from settings
+  const [challenges, setChallenges] = useState<Challenge[]>(shuffle(gameSettings.theme.Challenges));
   const [timerActive, setTimerActive] = useState(false);
   const [showResults, setShowResults] = useState(false);
 
