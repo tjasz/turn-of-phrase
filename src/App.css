@@ -63,6 +63,12 @@ footer p {
   line-height: 1.5rem;
 }
 
+#home button {
+  margin: 1rem auto;
+  width: 100%;
+  display: block;
+}
+
 .gameplay {
   min-width: 40vh;
   max-width: calc(max(100vw, 60vh));
