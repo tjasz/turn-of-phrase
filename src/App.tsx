@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import { ThemeProvider } from '@mui/material';
-import { Home, Play, Guide, Settings, CreateTheme, ThemeSelector } from './pages'
+import { Home, Play, Guide, Settings, CreateTheme, ThemeSelector, Theme } from './pages'
 import muiTheme from './muiTheme';
 
 function App() {
@@ -22,7 +22,9 @@ function App() {
           <Route path="/guide" element={<Guide />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/settings/themes" element={<ThemeSelector />} />
+          <Route path="/settings/themes/:themeId" element={<Theme />} />
           <Route path="/settings/themes/$create" element={<CreateTheme />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </main>
       <footer>
