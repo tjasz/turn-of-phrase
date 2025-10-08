@@ -11,7 +11,8 @@ async function getBuiltInTheme(themeId: string): Promise<Theme | null> {
     const response = await fetch(`${import.meta.env.BASE_URL}themes/${themeId}.json`);
     if (!response.ok) throw new Error('Failed to load theme');
     return await response.json() as Theme;
-  } catch {
+  } catch (error) {
+    console.error("Failed to load built-in theme:", themeId, error);
     return null;
   }
 }

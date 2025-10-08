@@ -80,12 +80,10 @@ function Play() {
 
   useEffect(() => {
     Promise.all(themeSelection!.map(theme => {
-      if (theme.Id === defaultTheme.Id) {
-        return Promise.resolve(defaultTheme);
-      }
       return getTheme(theme.Id);
     })).then(themes => {
       const allChallenges = themes.filter(t => t !== null).flatMap(theme => theme.Challenges);
+      console.log(`Loaded ${allChallenges.length} challenges from ${themes.length} themes.`);
       setChallenges(shuffle(allChallenges));
     }).catch(err => {
       console.error("Error loading themes:", err);
