@@ -7,17 +7,13 @@ function App() {
   return <BrowserRouter>
     <ThemeProvider theme={muiTheme}>
       <header>
-        <img
-          src={`${import.meta.env.BASE_URL}logo.svg`}
-          alt="Turn of Phrase Logo"
-        />
+        <Link to=".." relative="path">
+          <img
+            src={`${import.meta.env.BASE_URL}logo.svg`}
+            alt="Turn of Phrase Logo"
+          />
+        </Link>
         <h1>Turn of Phrase</h1>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/guide">Guide</Link>
-          <Link to="/play">Play</Link>
-          <Link to="/settings">Settings</Link>
-        </nav>
       </header>
       <main>
         <Routes>
