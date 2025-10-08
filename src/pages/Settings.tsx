@@ -37,12 +37,22 @@ function Settings() {
       </Typography>
       <Slider
         value={numberOfTeams}
-        onChange={(e, newValue) => setNumberOfTeams(newValue as number)}
+        onChange={(_, newValue) => {
+          if (newValue === numberOfTeams) return;
+          if (newValue as number < numberOfPlayersByTeam.length) {
+            setNumberOfTeams(newValue as number);
+            setNumberOfPlayersByTeam(prev => prev.slice(0, (newValue as number)));
+          }
+          else {
+            setNumberOfTeams(newValue as number);
+            setNumberOfPlayersByTeam(prev => [...prev, ...Array((newValue as number) - prev.length).fill(2)]);
+          }
+        }}
         aria-labelledby="number-of-teams-slider"
         valueLabelDisplay="auto"
         step={1}
-        marks={[1, 2, 3, 4, 5].map(v => ({ value: v, label: v.toString() }))}
-        min={1}
+        marks={[2, 3, 4, 5].map(v => ({ value: v, label: v.toString() }))}
+        min={2}
         max={5}
       />
     </div>
@@ -52,7 +62,7 @@ function Settings() {
       </Typography>
       <Slider
         value={turnTimeSeconds}
-        onChange={(e, newValue) => setTurnTimeSeconds(newValue as number)}
+        onChange={(_, newValue) => setTurnTimeSeconds(newValue as number)}
         aria-labelledby="turn-time-slider"
         valueLabelDisplay="auto"
         step={null}
@@ -67,7 +77,7 @@ function Settings() {
       </Typography>
       <Slider
         value={pointsToWin}
-        onChange={(e, newValue) => setPointsToWin(newValue as number)}
+        onChange={(_, newValue) => setPointsToWin(newValue as number)}
         aria-labelledby="points-to-win-slider"
         valueLabelDisplay="auto"
         step={null}
@@ -93,7 +103,7 @@ function Settings() {
         ))}
       </Select>
     </div>
-    <Button onClick={e => {
+    <Button onClick={_ => {
       setSettings({
         numberOfTeams,
         numberOfPlayersByTeam,
