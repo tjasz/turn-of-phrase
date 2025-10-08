@@ -1,3 +1,4 @@
+import defaultTheme, { defaultThemeMetadata } from "./defaultTheme";
 import LocalStorageKeys from "./localStorageKeys";
 
 function getLocalTheme(themeId: string): Theme | null {
@@ -16,6 +17,9 @@ async function getBuiltInTheme(themeId: string): Promise<Theme | null> {
 }
 
 export async function getTheme(themeId: string): Promise<Theme | null> {
+  if (themeId === defaultThemeMetadata.Id) {
+    return defaultTheme;
+  }
   return getLocalTheme(themeId) ?? await getBuiltInTheme(themeId);
 }
 
@@ -56,11 +60,11 @@ async function getBuiltInThemes(): Promise<Theme[]> {
 }
 
 export async function listThemeMetadata(): Promise<ThemeMetadata[]> {
-  const themes = [...await getLocalThemes(), ...await getBuiltInThemes()];
-  return themes.map(theme => ({
+  const themes = [...await getBuiltInThemes(), ...await getLocalThemes()];
+  return [defaultThemeMetadata, ...themes.map(theme => ({
     Id: theme.Id,
     Title: theme.Title,
     Description: theme.Description,
     ChallengesCount: theme.Challenges.length,
-  }));
+  }))];
 }

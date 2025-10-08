@@ -6,6 +6,7 @@ import AddMainPhrases from "./AddMainPhrases";
 import EditChallenges from "./EditChallenges";
 import useWindowWidth from "../useWindowWidth";
 import LocalStorageKeys from "../localStorageKeys";
+import getRandomId from "../randomId";
 
 interface IThemeCreatorStepperProps {
   onCreateTheme: (theme: Theme) => void;
@@ -54,6 +55,7 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
 
   const handleComplete = () => {
     const themeObj: Theme = {
+      Id: getRandomId(),
       Title: title,
       Description: description,
       Challenges: challenges,

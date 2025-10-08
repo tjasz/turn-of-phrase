@@ -4,13 +4,18 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button, InputLabel, MenuItem, Select, Slider, Typography } from "@mui/material";
 import { defaultGameSettings } from "../defaultGameSettings";
 import LocalStorageKeys from "../localStorageKeys";
+import { defaultThemeMetadata } from "../defaultTheme";
 
 function Settings() {
   const navigate = useNavigate();
 
-  const [settings, setSettings, removeSettings] = useLocalStorage<GameSettings>(
+  const [settings, setSettings] = useLocalStorage<GameSettings>(
     LocalStorageKeys.GAME_SETTINGS,
     defaultGameSettings
+  );
+  const [themeSelection] = useLocalStorage<ThemeMetadata[]>(
+    LocalStorageKeys.THEME_SELECTION,
+    [defaultThemeMetadata]
   );
 
   const [numberOfTeams, setNumberOfTeams] = useState(settings!.numberOfTeams);
@@ -18,11 +23,12 @@ function Settings() {
   const [turnTimeSeconds, setTurnTimeSeconds] = useState(settings!.turnTimeSeconds);
   const [pointsToWin, setPointsToWin] = useState(settings!.pointsToWin);
   const [skipPenalty, setSkipPenalty] = useState(settings!.skipPenalty);
-  const [challenges, setChallenges] = useState<Challenge[]>(settings!.theme?.Challenges ?? []);
+
+  const challengesCount = themeSelection?.reduce((acc, theme) => acc + theme.ChallengesCount, 0) ?? 0;
 
   return <div>
     <div>
-      <p>Playing with {challenges.length} challenges.</p>
+      <p>Playing with {challengesCount} challenges.</p>
       <p><Link to="/settings/themes">Select Themes</Link></p>
     </div>
     <div>
@@ -94,7 +100,6 @@ function Settings() {
         turnTimeSeconds,
         pointsToWin,
         skipPenalty,
-        theme: settings.theme,
       });
       navigate('/play');
     }}>

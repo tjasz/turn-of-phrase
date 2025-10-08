@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useLocalStorage } from "react-use";
-import { useNavigate } from 'react-router-dom';
 
 import shuffle from '../shuffle';
 import Timer from '../Timer';
@@ -9,9 +8,10 @@ import EndOfTurn from '../EndOfTurn';
 import '../App.css';
 import StartOfTurn from '../StartOfTurn';
 import EndOfGame from '../EndOfGame';
-import defaultTheme from '../defaultTheme';
+import defaultTheme, { defaultThemeMetadata } from '../defaultTheme';
 import { defaultGameSettings } from '../defaultGameSettings';
 import LocalStorageKeys from '../localStorageKeys';
+import { getTheme } from '../themeRepository';
 
 function getWinner(scores: number[]): number {
   if (scores.length === 0) {
@@ -50,6 +50,10 @@ function getNewGameState(settings: GameSettings, challengeIdx?: number): GameSta
 function Play() {
   // Game states
   const [gameSettings] = useLocalStorage<GameSettings>(LocalStorageKeys.GAME_SETTINGS, defaultGameSettings);
+  const [themeSelection] = useLocalStorage<ThemeMetadata[]>(
+    LocalStorageKeys.THEME_SELECTION,
+    [defaultThemeMetadata]
+  );
   const [gameState, setGameState] = useLocalStorage<GameState>(
     LocalStorageKeys.GAME_STATE,
     getNewGameState(gameSettings!)
@@ -63,8 +67,6 @@ function Play() {
     </p>
   }
 
-  const navigate = useNavigate();
-
   const [timer, setTimer] = useState(gameState.timer);
   const [score, setScore] = useState(gameState.score);
   const [turnTeam, setTurnTeam] = useState(gameState.turnTeam);
@@ -72,9 +74,24 @@ function Play() {
   const [turnChallenges, setTurnChallenges] = useState<ChallengeResult[]>(gameState.turnChallenges);
   const [currentChallengeIdx, setCurrentChallengeIdx] = useState(gameState.currentChallengeIdx);
 
-  const [challenges, setChallenges] = useState<Challenge[]>(shuffle(gameSettings.theme.Challenges));
+  const [challenges, setChallenges] = useState<Challenge[]>([]);
   const [timerActive, setTimerActive] = useState(false);
   const [showResults, setShowResults] = useState(false);
+
+  useEffect(() => {
+    Promise.all(themeSelection!.map(theme => {
+      if (theme.Id === defaultTheme.Id) {
+        return Promise.resolve(defaultTheme);
+      }
+      return getTheme(theme.Id);
+    })).then(themes => {
+      const allChallenges = themes.filter(t => t !== null).flatMap(theme => theme.Challenges);
+      setChallenges(shuffle(allChallenges));
+    }).catch(err => {
+      console.error("Error loading themes:", err);
+      setChallenges(shuffle(defaultTheme.Challenges));
+    });
+  }, [themeSelection]);
 
   const saveGameState = () => {
     setGameState({

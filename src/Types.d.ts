@@ -33,7 +33,6 @@ type GameSettings = {
   turnTimeSeconds: number;
   pointsToWin: number;
   skipPenalty: number;
-  theme: Theme;
 };
 
 type GameState = {

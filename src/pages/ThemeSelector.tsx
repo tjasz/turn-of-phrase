@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import defaultTheme from "../defaultTheme";
+import { defaultThemeMetadata } from "../defaultTheme";
 import ThemeView from "../ThemeView";
 import { Button, Card, CardHeader, Grid } from "@mui/material";
 import LocalStorageKeys from "../localStorageKeys";
@@ -14,13 +14,18 @@ interface ThemeSelectorProps {
 const ThemeSelector: React.FC<ThemeSelectorProps> = () => {
   const navigate = useNavigate();
 
-  const [storedThemeIds, setStoredThemeIds] = useLocalStorage<string[]>(
+  const [storedThemeSelection, setStoredThemeSelection] = useLocalStorage<ThemeMetadata[]>(
     LocalStorageKeys.THEME_SELECTION,
-    []
+    [defaultThemeMetadata]
   );
 
+  const saveSelection = () => {
+    const selectedThemes = themes.filter(theme => themeIds.has(theme.Id));
+    setStoredThemeSelection(selectedThemes);
+  }
+
   // Store all selectable themes: built-in and local
-  const [themeIds, setThemeIds] = useState<Set<string>>(new Set(storedThemeIds ?? []));
+  const [themeIds, setThemeIds] = useState<Set<string>>(new Set((storedThemeSelection ?? []).map(theme => theme.Id)));
   const [loadingThemes, setLoadingThemes] = useState(true);
   const [themes, setThemes] = useState<ThemeMetadata[]>([]);
 
@@ -60,7 +65,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = () => {
           <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 2 }}>
             <Card
               onClick={() => {
-                setStoredThemeIds(Array.from(themeIds));
+                saveSelection();
                 navigate("/settings/themes/$create");
               }}
               style={{ cursor: 'pointer', height: '100%', color: 'var(--accent)' }}
@@ -74,7 +79,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = () => {
       </div>
       <Button
         onClick={() => {
-          setStoredThemeIds(Array.from(themeIds));
+          saveSelection();
           navigate("/settings");
         }}
         disabled={themes.length === 0 || loadingThemes}

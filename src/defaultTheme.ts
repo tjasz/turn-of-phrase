@@ -1,7 +1,8 @@
-const defaultTheme: Theme = {
-  "Title": "General Knowledge",
-  "Description": "Common everyday things that many people know.",
-  "Challenges": [
+export const defaultTheme: Theme = {
+  Id: "Default",
+  Title: "General Knowledge",
+  Description: "Common everyday things that many people know.",
+  Challenges: [
     {
       "Main": "Eiffel Tower",
       "Related": [
@@ -1317,6 +1318,13 @@ const defaultTheme: Theme = {
       ]
     }
   ]
+};
+
+export const defaultThemeMetadata: ThemeMetadata = {
+  Id: defaultTheme.Id,
+  Title: defaultTheme.Title,
+  Description: defaultTheme.Description,
+  ChallengesCount: defaultTheme.Challenges.length,
 };
 
 export default defaultTheme;
