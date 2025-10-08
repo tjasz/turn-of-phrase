@@ -10,10 +10,10 @@ function CreateTheme() {
   return <ThemeCreatorStepper
     onCreateTheme={(theme) => {
       setThemeIds(prev => [...(prev ?? []), theme.Title]);
-      navigate("/settings/themes");
+      navigate(-1);
     }}
     onCancel={() => {
-      navigate("/settings");
+      navigate(-1);
     }}
   />;
 }

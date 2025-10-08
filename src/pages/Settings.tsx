@@ -101,7 +101,7 @@ function Settings() {
         pointsToWin,
         skipPenalty,
       });
-      navigate('/play');
+      navigate(-1);
     }}>
       Confirm
     </Button>

@@ -80,7 +80,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = () => {
       <Button
         onClick={() => {
           saveSelection();
-          navigate("/settings");
+          navigate(-1);
         }}
         disabled={themes.length === 0 || loadingThemes}
       >
