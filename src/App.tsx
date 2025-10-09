@@ -1,10 +1,10 @@
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { HashRouter, Route, Routes, Link } from "react-router-dom";
 import { ThemeProvider } from '@mui/material';
 import { Home, Play, Guide, Settings, CreateTheme, ThemeSelector, Theme } from './pages'
 import muiTheme from './muiTheme';
 
 function App() {
-  return <BrowserRouter>
+  return <HashRouter>
     <ThemeProvider theme={muiTheme}>
       <header>
         <Link to=".." relative="path">
@@ -32,7 +32,7 @@ function App() {
         <p>&copy; 2025 Tyler Jaszkowiak | <a href="https://github.com/tjasz/turn-of-phrase" target="_blank">GitHub</a></p>
       </footer>
     </ThemeProvider>
-  </BrowserRouter>;
+  </HashRouter>;
 }
 
 export default App;
