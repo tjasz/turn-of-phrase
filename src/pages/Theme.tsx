@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getTheme } from "../themeRepository";
+import { Typography } from "@mui/material";
 
 function Theme() {
   let { themeId } = useParams();
@@ -16,23 +17,17 @@ function Theme() {
   }
 
   return <div>
-    <h2>{theme.Title} ({theme.Id})</h2>
+    <h2>{theme.Title}</h2>
     <p>{theme.Description}</p>
-    <table style={{
-      borderCollapse: "collapse",
-      width: "100%",
-      border: "1px solid black",
-      textAlign: "left",
-    }}>
-      {theme.Challenges.map((challenge, i) => (
-        <tr key={i}>
-          <th>{i + 1}. {challenge.Main}</th>
-          {challenge.Related.filter(r => r.trim() !== "").map((related, j) => (
-            <td key={j}>{related}</td>
-          ))}
-        </tr>
-      ))}
-    </table>
+    {theme.Challenges.map((challenge, i) => (
+      <div key={i}>
+        <p>
+          <strong>{i + 1}. {challenge.Main}</strong>
+          <br />
+          {challenge.Related.filter(r => r.trim() !== "").join(", ")}
+        </p>
+      </div>
+    ))}
   </div>;
 }
 
