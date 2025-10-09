@@ -24,6 +24,30 @@ export async function getTheme(themeId: string): Promise<Theme | null> {
   return getLocalTheme(themeId) ?? await getBuiltInTheme(themeId);
 }
 
+function getThemeRequests(): Promise<ThemeMetadata[]> {
+  const results: ThemeMetadata[] = [];
+  return new Promise((resolve) => {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith(LocalStorageKeys.THEME_REQUEST_PREFIX)) {
+        try {
+          const request = JSON.parse(localStorage.getItem(key)!);
+          if (request && request.OperationId) {
+            results.push({
+              Id: request.OperationId,
+              Title: request.Title,
+              Description: request.Description || "",
+              ChallengesCount: request.Challenges ? request.Challenges.length : 0,
+              Editing: true,
+            });
+          }
+        } catch { }
+      }
+    }
+    resolve(results);
+  });
+}
+
 function getLocalThemes(): Promise<Theme[]> {
   const results: Theme[] = [];
   return new Promise((resolve) => {
@@ -67,5 +91,5 @@ export async function listThemeMetadata(): Promise<ThemeMetadata[]> {
     Title: theme.Title,
     Description: theme.Description,
     ChallengesCount: theme.Challenges.length,
-  }))];
+  })), ...await getThemeRequests()];
 }

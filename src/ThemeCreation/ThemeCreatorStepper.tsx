@@ -1,5 +1,5 @@
 import { Box, Button, Step, StepLabel, Stepper, Typography } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DefineTheme from "./DefineTheme";
 import SetSubThemes from "./SetSubThemes";
 import AddMainPhrases from "./AddMainPhrases";
@@ -7,6 +7,8 @@ import EditChallenges from "./EditChallenges";
 import useWindowWidth from "../useWindowWidth";
 import LocalStorageKeys from "../localStorageKeys";
 import getRandomId from "../randomId";
+import { useParams } from "react-router-dom";
+import { useLocalStorage } from "react-use";
 
 interface IThemeCreatorStepperProps {
   onCreateTheme: (theme: Theme) => void;
@@ -14,6 +16,8 @@ interface IThemeCreatorStepperProps {
 }
 
 const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateTheme, onCancel }) => {
+  const operationId = useParams().operationId;
+
   const windowWidth = useWindowWidth();
 
   const [activeStep, setActiveStep] = useState(0);
@@ -28,6 +32,10 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
 
   const stepLabels = ['Theme', 'Sub-Themes', 'Main Phrases', 'Challenges'];
+
+  const handleCancel = () => {
+    onCancel();
+  }
 
   const handleBack = () => {
     setActiveStep(prev => Math.max(prev - 1, 0));
@@ -60,9 +68,50 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
       Description: description,
       Challenges: challenges,
     }
-    localStorage.setItem(`${LocalStorageKeys.THEME_PREFIX}${title}`, JSON.stringify(themeObj));
+    localStorage.setItem(`${LocalStorageKeys.THEME_PREFIX}${themeObj.Id}`, JSON.stringify(themeObj));
+    localStorage.removeItem(`${LocalStorageKeys.THEME_REQUEST_PREFIX}${operationId}`);
     onCreateTheme(themeObj);
   }
+
+
+  const pollStatus = async (instanceId: string) => {
+    const statusEndpoint = getThemeStatusEndpoint(instanceId);
+    let done = false;
+    while (!done) {
+      const statusResp = await fetch(statusEndpoint, { method: "GET", mode: "cors" });
+      if (!statusResp.ok) {
+        const errorText = await statusResp.text();
+        throw new Error(errorText || `Status HTTP error ${statusResp.status}`);
+      }
+      const statusData = await statusResp.json();
+      if (statusData.runtimeStatus === "Running") {
+        setStatusMessage(statusData.customStatus?.message || "Generating theme...");
+        if (statusData.customStatus?.data) {
+          if (statusData.customStatus.data.Title) setTitle(statusData.customStatus.data.Title);
+          if (statusData.customStatus.data.Description) setDescription(statusData.customStatus.data.Description);
+          if (statusData.customStatus.data.SubThemes) setSubThemes(statusData.customStatus.data.SubThemes);
+          if (statusData.customStatus.data.MainPhrases) setMainPhrases(statusData.customStatus.data.MainPhrases);
+          if (statusData.customStatus.data.Challenges) setChallenges(statusData.customStatus.data.Challenges);
+        }
+        await new Promise(res => setTimeout(res, 1500));
+      } else if (statusData.runtimeStatus === "Completed") {
+        setStatusMessage(null);
+        const themeObj = statusData.output;
+        if (themeObj.Title) setTitle(themeObj.Title);
+        if (themeObj.Description) setDescription(themeObj.Description);
+        if (themeObj.SubThemes) setSubThemes(themeObj.SubThemes);
+        if (themeObj.MainPhrases) setMainPhrases(themeObj.MainPhrases);
+        if (themeObj.Challenges) setChallenges(themeObj.Challenges);
+        done = true;
+      } else if (statusData.runtimeStatus === "Failed") {
+        throw new Error(statusData.output.split(".", 1) || "Theme generation failed.");
+      } else {
+        setStatusMessage(`Status: ${statusData.runtimeStatus}`);
+        await new Promise(res => setTimeout(res, 1500));
+      }
+    }
+    setLoadingTheme(false);
+  };
 
   const handleGenerate = async () => {
     setLoadingTheme(true);
@@ -102,51 +151,19 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
       }));
 
       // Poll for status
-      const pollStatus = async () => {
-        const statusEndpoint = getThemeStatusEndpoint(instanceId);
-        let done = false;
-        while (!done) {
-          const statusResp = await fetch(statusEndpoint, { method: "GET", mode: "cors" });
-          if (!statusResp.ok) {
-            const errorText = await statusResp.text();
-            throw new Error(errorText || `Status HTTP error ${statusResp.status}`);
-          }
-          const statusData = await statusResp.json();
-          if (statusData.runtimeStatus === "Running") {
-            setStatusMessage(statusData.customStatus?.message || "Generating theme...");
-            if (statusData.customStatus?.data) {
-              if (statusData.customStatus.data.Title) setTitle(statusData.customStatus.data.Title);
-              if (statusData.customStatus.data.Description) setDescription(statusData.customStatus.data.Description);
-              if (statusData.customStatus.data.SubThemes) setSubThemes(statusData.customStatus.data.SubThemes);
-              if (statusData.customStatus.data.MainPhrases) setMainPhrases(statusData.customStatus.data.MainPhrases);
-              if (statusData.customStatus.data.Challenges) setChallenges(statusData.customStatus.data.Challenges);
-            }
-            await new Promise(res => setTimeout(res, 1500));
-          } else if (statusData.runtimeStatus === "Completed") {
-            setStatusMessage(null);
-            const themeObj = statusData.output;
-            if (themeObj.Title) setTitle(themeObj.Title);
-            if (themeObj.Description) setDescription(themeObj.Description);
-            if (themeObj.SubThemes) setSubThemes(themeObj.SubThemes);
-            if (themeObj.MainPhrases) setMainPhrases(themeObj.MainPhrases);
-            if (themeObj.Challenges) setChallenges(themeObj.Challenges);
-            done = true;
-          } else if (statusData.runtimeStatus === "Failed") {
-            throw new Error(statusData.output.split(".", 1) || "Theme generation failed.");
-          } else {
-            setStatusMessage(`Status: ${statusData.runtimeStatus}`);
-            await new Promise(res => setTimeout(res, 1500));
-          }
-        }
-        setLoadingTheme(false);
-      };
-      await pollStatus();
+      await pollStatus(instanceId);
     } catch (err: any) {
       setThemeError(err.message);
       setLoadingTheme(false);
       setStatusMessage(null);
     }
   }
+
+  useEffect(() => {
+    if (operationId) {
+      pollStatus(operationId);
+    }
+  }, [operationId]);
 
   return (
     <div>
@@ -200,7 +217,7 @@ const ThemeCreatorStepper: React.FC<IThemeCreatorStepperProps> = ({ onCreateThem
       )}
       <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
         <Button
-          onClick={onCancel}
+          onClick={handleCancel}
           disabled={loadingTheme}
         >
           Cancel

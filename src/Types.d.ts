@@ -10,6 +10,16 @@ type ThemeMetadata = {
   Title: string;
   Description: string;
   ChallengesCount: number;
+  Editing?: boolean;
+}
+
+type ThemeRequest = {
+  OperationId: string;
+  Title: string;
+  Description: string;
+  SubThemes: string[];
+  MainPhrases: string[];
+  Challenges: Challenge[];
 }
 
 type Challenge = {

@@ -24,6 +24,7 @@ function App() {
           <Route path="/settings/themes" element={<ThemeSelector />} />
           <Route path="/settings/themes/:themeId" element={<Theme />} />
           <Route path="/settings/themes/$create" element={<CreateTheme />} />
+          <Route path="/settings/themes/$create/:operationId" element={<CreateTheme />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
